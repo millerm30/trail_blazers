@@ -1,0 +1,28 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+const title = "Rene's Place - About Us";
+import "../styles/styles.css";
+import About from "../components/About.astro";
+---
+<style>
+  main::after {
+      content: "";
+      background-image: url("../assets/view.JPG");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.4;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;   
+  }
+</style>
+
+<MainLayout title={title}>
+  <main>
+    <About />
+  </main>
+</MainLayout>

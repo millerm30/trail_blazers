@@ -1,0 +1,17 @@
+---
+import NavBar from "../components/NavBar.jsx";
+import MainHead from "../components/MainHead.astro";
+import FooterBar from "../components/FooterBar.astro";
+const { title } = Astro.props
+---
+
+<html lang="en">
+	<head>
+		<MainHead title={title}/>
+	</head>
+	<body>
+		<NavBar client:load />
+		<slot />
+		<FooterBar />
+	</body>
+</html>
