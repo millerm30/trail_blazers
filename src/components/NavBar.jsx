@@ -31,12 +31,18 @@ const NavBar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#8ECAE6] rounded-box w-52"
             >
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/">
+                <a
+                  className="hover:bg-[#FB8500] rounded-lg text-black"
+                  href="/trail_blazers/"
+                >
                   Home
                 </a>
               </li>
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/About">
+                <a
+                  className="hover:bg-[#FB8500] rounded-lg text-black"
+                  href="/trail_blazers/About"
+                >
                   About Us
                 </a>
               </li>
@@ -67,15 +73,31 @@ const NavBar = () => {
                       Naked Man Beach
                     </a>
                   </li>
+                  <li>
+                    <a className="hover:bg-[#FB8500] rounded-lg text-black">
+                      Plate Cove West
+                    </a>
+                  </li>
+                  <li>
+                    <a className="hover:bg-[#FB8500] rounded-lg text-black">
+                      Plate Cove East
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/Things">
+                <a
+                  className="hover:bg-[#FB8500] rounded-lg text-black"
+                  href="/trail_blazers/Things"
+                >
                   Around Town
                 </a>
               </li>
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/Contact">
+                <a
+                  className="hover:bg-[#FB8500] rounded-lg text-black"
+                  href="/trail_blazers/Contact"
+                >
                   Contact Us
                 </a>
               </li>
@@ -88,12 +110,18 @@ const NavBar = () => {
         <div className="hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/">
+              <a
+                className="hover:bg-[#FB8500] rounded-lg text-black"
+                href="/trail_blazers/"
+              >
                 Home
               </a>
             </li>
             <li>
-              <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/About">
+              <a
+                className="hover:bg-[#FB8500] rounded-lg text-black"
+                href="/trail_blazers/About"
+              >
                 About Us
               </a>
             </li>
@@ -124,15 +152,31 @@ const NavBar = () => {
                     Naked Man Beach
                   </a>
                 </li>
+                <li>
+                  <a className="hover:bg-[#FB8500] rounded-lg text-black">
+                    Plate Cove West
+                  </a>
+                </li>
+                <li>
+                  <a className="hover:bg-[#FB8500] rounded-lg text-black">
+                    Plate Cove East
+                  </a>
+                </li>
               </ul>
             </li>
             <li>
-              <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/Things">
+              <a
+                className="hover:bg-[#FB8500] rounded-lg text-black"
+                href="/trail_blazers/Things"
+              >
                 Around Town
               </a>
             </li>
             <li>
-              <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/Contact">
+              <a
+                className="hover:bg-[#FB8500] rounded-lg text-black"
+                href="/trail_blazers/Contact"
+              >
                 Contact Us
               </a>
             </li>
