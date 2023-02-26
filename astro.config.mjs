@@ -10,5 +10,7 @@ export default defineConfig({
       external: ["svgo"],
     },
   },
+  site: 'https://millerm30.github.io',
+  base: '/trail_blazers',
   integrations: [tailwind(), react()],
 });
