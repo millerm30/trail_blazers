@@ -1,104 +1,142 @@
 import React from 'react';
 
 const NavBar = () => {
-  const handleClick = () => {
-    const btn = document.querySelector("button.menu-button");
-    const menu = document.querySelector(".mobile-menu");
-    menu.classList.toggle("hidden");
-  }
   
   return (
     <header className="shadow-md">
-      <div className="w-full text-gray-700 bg-[#8ECAE6]">
-        <div className="flex flex-col px-2 mx-auto md:items-center md:justify-between md:flex-row">
-          <div className="px-1 py-4 flex flex-row items-center justify-between">
-            <a
-              href="/"
-              className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline"
+      <div className="navbar justify-between bg-[#8ECAE6]">
+        <div>
+          <div className="dropdown">
+            <label
+              tabIndex={0}
+              className="btn btn-ghost lg:hidden hover:bg-[#FB8500] rounded-lg"
             >
-              Plate CoveTrail Blazers
-            </a>
-          </div>
-          <nav className="hidden flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
-            <a
-              className="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-[#FB8500] focus:bg-[#FB8500] focus:outline-none focus:shadow-outline"
-              href="/"
-            >
-              Home
-            </a>
-            <a
-              className="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-[#FB8500] focus:bg-[#FB8500] focus:outline-none focus:shadow-outline"
-              href="/About"
-            >
-              About
-            </a>
-            <a
-              className="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-[#FB8500] focus:bg-[#FB8500] focus:outline-none focus:shadow-outline"
-              href="Photos"
-            >
-              Photos
-            </a>
-            <a
-              className="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-[#FB8500] focus:bg-[#FB8500] focus:outline-none focus:shadow-outline"
-              href="Things"
-            >
-              Around Town
-            </a>
-            <a
-              className="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-[#FB8500] focus:bg-[#FB8500] focus:outline-none focus:shadow-outline"
-              href="Contact"
-            >
-              Contact
-            </a>
-          </nav>
-          <div className="flex items-center pl-1 md:hidden lg:hidden">
-            <button className="ouline-none menu-button" onClick={handleClick}>
               <svg
-                className="w-8 h-8 text-gray-500"
-                x-show="! showMenu"
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
                 fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                viewBox="0 00 24 24"
+                viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                <path d="M4 12h16M4 6h16M4 18h16"></path>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
               </svg>
-            </button>
+            </label>
+            <ul
+              tabIndex={0}
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#8ECAE6] rounded-box w-52"
+            >
+              <li>
+                <a className="hover:bg-[#FB8500] rounded-lg" href="/">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a className="hover:bg-[#FB8500] rounded-lg" href="About">
+                  About Us
+                </a>
+              </li>
+              <li tabIndex={0}>
+                <a className="justify-between hover:bg-[#FB8500] rounded-lg">
+                  Photos
+                  <svg
+                    className="fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                  </svg>
+                </a>
+                <ul className="p-2 bg-[#8ECAE6]">
+                  <li>
+                    <a
+                      className="hover:bg-[#FB8500] rounded-lg"
+                      href="RedBeachPhotos"
+                    >
+                      Red Beach
+                    </a>
+                  </li>
+                  <li>
+                    <a className="hover:bg-[#FB8500] rounded-lg">
+                      Naked Man Beach
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a className="hover:bg-[#FB8500] rounded-lg" href="Things">
+                  Around Town
+                </a>
+              </li>
+              <li>
+                <a className="hover:bg-[#FB8500] rounded-lg" href="Contact">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
           </div>
-          <div className="hidden mobile-menu my-2">
-            <a
-              className="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-[#FB8500] focus:bg-[#FB8500] focus:outline-none focus:shadow-outline"
-              href="/"
-            >
-              Home
-            </a>
-            <a
-              className="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-[#FB8500] focus:bg-[#FB8500] focus:outline-none focus:shadow-outline"
-              href="/About"
-            >
-              About
-            </a>
-            <a
-              className="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-[#FB8500] focus:bg-[#FB8500] focus:outline-none focus:shadow-outline"
-              href="Photos"
-            >
-              Photos
-            </a>
-            <a
-              className="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-[#FB8500] focus:bg-[#FB8500] focus:outline-none focus:shadow-outline"
-              href="Things"
-            >
-              Around Town
-            </a>
-            <a
-              className="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-[#FB8500] focus:bg-[#FB8500] focus:outline-none focus:shadow-outline"
-              href="Contact"
-            >
-              Contact
-            </a>
-          </div>
+          <a href="/" className="btn btn-ghost normal-case text-xl">
+            Plate Cove Trail Blazers
+          </a>
+        </div>
+        <div className="hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">
+            <li>
+              <a className="hover:bg-[#FB8500] rounded-lg" href="/">
+                Home
+              </a>
+            </li>
+            <li>
+              <a className="hover:bg-[#FB8500] rounded-lg" href="About">
+                About Us
+              </a>
+            </li>
+            <li tabIndex={0}>
+              <a className="hover:bg-[#FB8500] rounded-lg">
+                Photos
+                <svg
+                  className="fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                </svg>
+              </a>
+              <ul className="p-2 bg-[#8ECAE6]">
+                <li>
+                  <a
+                    className="hover:bg-[#FB8500] rounded-lg"
+                    href="RedBeachPhotos"
+                  >
+                    Red Beach
+                  </a>
+                </li>
+                <li>
+                  <a className="hover:bg-[#FB8500] rounded-lg">
+                    Naked Man Beach
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a className="hover:bg-[#FB8500] rounded-lg" href="Things">
+                Around Town
+              </a>
+            </li>
+            <li>
+              <a className="hover:bg-[#FB8500] rounded-lg" href="Contact">
+                Contact Us
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
