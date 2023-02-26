@@ -18,6 +18,10 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "astro-icon": "^0.7.3"
+    "astro-icon": "^0.7.3",
+    "daisyui": "^2.51.1",
+    "react-responsive-carousel": "^3.2.23",
+    "swiper": "^9.0.5",
+    "tw-elements": "^1.0.0-beta1"
   }
 }

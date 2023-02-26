@@ -12,7 +12,7 @@ const NavBar = () => {
       <div className="w-full text-gray-700 bg-white">
         <div className="flex flex-col px-2 mx-auto md:items-center md:justify-between md:flex-row">
           <div className="px-1 py-4 flex flex-row items-center justify-between">
-            <a href="/" className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline">Trail Blazers</a>
+            <a href="/" className="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg focus:outline-none focus:shadow-outline">Plate CoveTrail Blazers</a>
           </div>
           <nav className="hidden flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
             <a className="px-2 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="/">Home</a>

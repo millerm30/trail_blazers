@@ -2,7 +2,9 @@
 import MainLayout from "../layout/MainLayout.astro";
 const title = "Rene's Place - Photos";
 import "../styles/styles.css";
+import PlateCovePhotos from "../components/PlatecoveCarousel";
 ---
+
 <style>
   main::after {
       content: "";
@@ -23,5 +25,6 @@ import "../styles/styles.css";
 <MainLayout title={title}>
   <main>
     <h2 class="text-center pt-6 text-2xl">Photos Section Here!</h2>
+    <PlateCovePhotos />
   </main>
 </MainLayout>
