@@ -12,7 +12,7 @@ import imageNine from "../assets/red_beach/photo9.jpg";
 
 const PhotoCarousel = () => {
   return (
-    <div className="carousel w-5/6 mx-auto my-4 md:w-1/3 lg:w-1/3">
+    <div className="carousel w-11/12 mx-auto my-4 md:w-1/2 lg:w-1/3">
       <CarouselSlider slideNumber={"slide1"} imageSrc={imageOne} slideBack={"#slide9"} slideAhead={"#slide2"} />
       <CarouselSlider slideNumber={"slide2"} imageSrc={imageTwo} slideBack={"#slide1"} slideAhead={"#slide3"} />
       <CarouselSlider slideNumber={"slide3"} imageSrc={imageThree} slideBack={"#slide2"} slideAhead={"#slide4"} />
