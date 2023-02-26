@@ -31,7 +31,7 @@ const NavBar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#8ECAE6] rounded-box w-52"
             >
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers">
+                <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/">
                   Home
                 </a>
               </li>
@@ -88,7 +88,7 @@ const NavBar = () => {
         <div className="hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers">
+              <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/">
                 Home
               </a>
             </li>
