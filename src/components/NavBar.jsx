@@ -103,7 +103,7 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <a href="/" className="btn btn-ghost normal-case text-xl text-black">
+          <a href="/trail_blazers/" className="btn btn-ghost normal-case text-xl text-black">
             Plate Cove Trail Blazers
           </a>
         </div>
