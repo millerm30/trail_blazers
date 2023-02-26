@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CarouselSlide = ({slideNumber, imageSrc, slideBack, slideAhead }) => {
+const CarouselSlide = ({ slideNumber, imageSrc, slideBack, slideAhead }) => {
   return (
     <div id={slideNumber} className="carousel-item relative w-full">
       <img src={imageSrc} className="w-full rounded-xl" />
