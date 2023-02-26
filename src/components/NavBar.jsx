@@ -31,17 +31,17 @@ const NavBar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#8ECAE6] rounded-box w-52"
             >
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/">
+                <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/">
                   Home
                 </a>
               </li>
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/About">
+                <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/About">
                   About Us
                 </a>
               </li>
               <li tabIndex={0}>
-                <a className="justify-between hover:bg-[#FB8500] rounded-lg">
+                <a className="justify-between hover:bg-[#FB8500] rounded-lg text-black">
                   Photos
                   <svg
                     className="fill-current"
@@ -56,49 +56,49 @@ const NavBar = () => {
                 <ul className="p-2 bg-[#8ECAE6]">
                   <li>
                     <a
-                      className="hover:bg-[#FB8500] rounded-lg"
+                      className="hover:bg-[#FB8500] rounded-lg text-black"
                       href="/trail_blazers/RedBeachPhotos"
                     >
                       Red Beach
                     </a>
                   </li>
                   <li>
-                    <a className="hover:bg-[#FB8500] rounded-lg">
+                    <a className="hover:bg-[#FB8500] rounded-lg text-black">
                       Naked Man Beach
                     </a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/Things">
+                <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/Things">
                   Around Town
                 </a>
               </li>
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/Contact">
+                <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/Contact">
                   Contact Us
                 </a>
               </li>
             </ul>
           </div>
-          <a href="/" className="btn btn-ghost normal-case text-xl">
+          <a href="/" className="btn btn-ghost normal-case text-xl text-black">
             Plate Cove Trail Blazers
           </a>
         </div>
         <div className="hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/">
+              <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/">
                 Home
               </a>
             </li>
             <li>
-              <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/About">
+              <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/About">
                 About Us
               </a>
             </li>
             <li tabIndex={0}>
-              <a className="hover:bg-[#FB8500] rounded-lg">
+              <a className="hover:bg-[#FB8500] rounded-lg text-black">
                 Photos
                 <svg
                   className="fill-current"
@@ -113,26 +113,26 @@ const NavBar = () => {
               <ul className="p-2 bg-[#8ECAE6]">
                 <li>
                   <a
-                    className="hover:bg-[#FB8500] rounded-lg"
+                    className="hover:bg-[#FB8500] rounded-lg text-black"
                     href="/trail_blazers/RedBeachPhotos"
                   >
                     Red Beach
                   </a>
                 </li>
                 <li>
-                  <a className="hover:bg-[#FB8500] rounded-lg">
+                  <a className="hover:bg-[#FB8500] rounded-lg text-black">
                     Naked Man Beach
                   </a>
                 </li>
               </ul>
             </li>
             <li>
-              <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/Things">
+              <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/Things">
                 Around Town
               </a>
             </li>
             <li>
-              <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/Contact">
+              <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/Contact">
                 Contact Us
               </a>
             </li>
