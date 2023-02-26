@@ -31,12 +31,12 @@ const NavBar = () => {
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-[#8ECAE6] rounded-box w-52"
             >
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg" href="/">
+                <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers">
                   Home
                 </a>
               </li>
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg" href="About">
+                <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/About">
                   About Us
                 </a>
               </li>
@@ -57,7 +57,7 @@ const NavBar = () => {
                   <li>
                     <a
                       className="hover:bg-[#FB8500] rounded-lg"
-                      href="RedBeachPhotos"
+                      href="/trail_blazers/RedBeachPhotos"
                     >
                       Red Beach
                     </a>
@@ -70,12 +70,12 @@ const NavBar = () => {
                 </ul>
               </li>
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg" href="Things">
+                <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/Things">
                   Around Town
                 </a>
               </li>
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg" href="Contact">
+                <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/Contact">
                   Contact Us
                 </a>
               </li>
@@ -88,12 +88,12 @@ const NavBar = () => {
         <div className="hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a className="hover:bg-[#FB8500] rounded-lg" href="/">
+              <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers">
                 Home
               </a>
             </li>
             <li>
-              <a className="hover:bg-[#FB8500] rounded-lg" href="About">
+              <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/About">
                 About Us
               </a>
             </li>
@@ -114,7 +114,7 @@ const NavBar = () => {
                 <li>
                   <a
                     className="hover:bg-[#FB8500] rounded-lg"
-                    href="RedBeachPhotos"
+                    href="/trail_blazers/RedBeachPhotos"
                   >
                     Red Beach
                   </a>
@@ -127,12 +127,12 @@ const NavBar = () => {
               </ul>
             </li>
             <li>
-              <a className="hover:bg-[#FB8500] rounded-lg" href="Things">
+              <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/Things">
                 Around Town
               </a>
             </li>
             <li>
-              <a className="hover:bg-[#FB8500] rounded-lg" href="Contact">
+              <a className="hover:bg-[#FB8500] rounded-lg" href="/trail_blazers/Contact">
                 Contact Us
               </a>
             </li>
