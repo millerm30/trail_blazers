@@ -69,7 +69,7 @@ const NavBar = () => {
                     </a>
                   </li>
                   <li>
-                    <a className="hover:bg-[#FB8500] rounded-lg text-black">
+                    <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/NakedBeachPhotos">
                       Naked Man Beach
                     </a>
                   </li>
@@ -148,7 +148,7 @@ const NavBar = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="hover:bg-[#FB8500] rounded-lg text-black">
+                  <a className="hover:bg-[#FB8500] rounded-lg text-black" href="/trail_blazers/NakedBeachPhotos">
                     Naked Man Beach
                   </a>
                 </li>
