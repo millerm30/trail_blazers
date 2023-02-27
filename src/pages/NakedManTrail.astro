@@ -2,10 +2,19 @@
 import MainLayout from "../layout/MainLayout.astro";
 const title = "Rene's Place - Naked Man Beach Trail";
 import "../styles/styles.css";
+import NakedManTrailImage from "../assets/nakedman_beach/nakedMan.png"
 ---
 
 <MainLayout title={title}>
   <main>
-    <h2 class="text-center pt-6 text-2xl text-black">Naked Man Beach Trail Section Here!</h2>
+    <h2 class="text-center pt-6 text-2xl text-black">Naked Man Beach Trail Information!</h2>
+    <div class="flex justify-center gap-6 flex-col my-6 md:flex-row lg:flex-row p-2">
+      <div>
+        <img src={NakedManTrailImage} alt="Naked Man Beach Trail" class="max-w-sm mx-auto" />
+      </div>
+      <div class="mx-auto md:mx-0 lg:mx-0 bg-white p-2 rounded-lg border-2 border-gray-300">
+        <p>Trail information package will be placed in this div area.</p>
+      </div>
+    </div>
   </main>
 </MainLayout>
