@@ -1,0 +1,12 @@
+---
+import NavBar from "./NavBar.jsx";
+import WebLogo from "../assets/trailblazers_logo.png"
+---
+
+<header class="shadow-md bg-white">
+  <div class="text-center py-4">
+    <img src={WebLogo} alt="Trailblazers Logo" class="mx-auto" />
+    <h1 class="text-4xl">Plate Cove Community</h1>
+  </div>
+  <NavBar client:load />
+</header>

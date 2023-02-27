@@ -1,7 +1,7 @@
 ---
-import NavBar from "../components/NavBar.jsx";
 import MainHead from "../components/MainHead.astro";
 import FooterBar from "../components/FooterBar.astro";
+import HeaderBar from "../components/HeaderBar.astro";
 const { title } = Astro.props
 ---
 
@@ -9,8 +9,8 @@ const { title } = Astro.props
 	<head>
 		<MainHead title={title}/>
 	</head>
-	<body class="bg-[#023047]">
-		<NavBar client:load />
+	<body class="bg-[#f9f9f9]">
+		<HeaderBar />
 		<slot />
 		<FooterBar />
 	</body>
