@@ -117,6 +117,22 @@ const NavBar = () => {
                     Naked Man Beach Trail
                   </a>
                 </li>
+                <li>
+                  <a
+                    className="hover:bg-[#FB8500] rounded-lg text-white"
+                    href="/trail_blazers/Restaurants"
+                  >
+                    Restaurants
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="hover:bg-[#FB8500] rounded-lg text-white"
+                    href="/trail_blazers/Lodging"
+                  >
+                    Lodging
+                  </a>
+                </li>
               </ul>
             </li>
             <li>
@@ -218,6 +234,22 @@ const NavBar = () => {
                   href="/trail_blazers/NakedManTrail"
                 >
                   Naked Man Beach Trail
+                </a>
+              </li>
+              <li>
+                <a
+                  className="hover:bg-[#FB8500] rounded-lg text-white"
+                  href="/trail_blazers/Restaurants"
+                >
+                  Restaurants
+                </a>
+              </li>
+              <li>
+                <a
+                  className="hover:bg-[#FB8500] rounded-lg text-white"
+                  href="/trail_blazers/Lodging"
+                >
+                  Lodging
                 </a>
               </li>
             </ul>
