@@ -76,12 +76,18 @@ const NavBar = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="hover:bg-[#FB8500] rounded-lg text-white">
+                  <a 
+                    className="hover:bg-[#FB8500] rounded-lg text-white"
+                    href="/trail_blazers/PlateCoveWestPhotos"  
+                  >
                     Plate Cove West
                   </a>
                 </li>
                 <li>
-                  <a className="hover:bg-[#FB8500] rounded-lg text-white">
+                  <a 
+                    className="hover:bg-[#FB8500] rounded-lg text-white"
+                    href="/trail_blazers/PlateCoveEastPhotos"  
+                  >
                     Plate Cove East
                   </a>
                 </li>
@@ -195,12 +201,18 @@ const NavBar = () => {
                 </a>
               </li>
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg text-white">
+                <a 
+                  className="hover:bg-[#FB8500] rounded-lg text-white"
+                  href="/trail_blazers/PlateCoveWestPhotos"
+                >
                   Plate Cove West
                 </a>
               </li>
               <li>
-                <a className="hover:bg-[#FB8500] rounded-lg text-white">
+                <a 
+                  className="hover:bg-[#FB8500] rounded-lg text-white"
+                  href="/trail_blazers/PlateCoveEastPhotos"  
+                >
                   Plate Cove East
                 </a>
               </li>
