@@ -1,5 +1,6 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
+import WeatherComponent from "../components/WeatherComponent.jsx";
 const title = "Plate Cove - Welcome!";
 import "../styles/styles.css";
 ---
@@ -61,23 +62,7 @@ import "../styles/styles.css";
 					labore suscipit laborum quam, nisi architecto quae ducimus molestiae, dolor iusto voluptate explicabo. Consequuntur!
 				</p>
 			</div>
-			<div class="col-span-1 bg-white my-6 p-4 rounded-lg border-2 border-gray-300 mx-4">
-				<p>This will be the location for the local weather api for Plate Cove</p>
-				<p>Location</p>
-				<p>Weather</p>
-				<p>Temperature</p>
-				<p>Wind</p>
-				<p>Humidity</p>
-				<p>Pressure</p>
-				<p>Visibility</p>
-				<p>UV Index</p>
-				<p>Cloud Cover</p>
-				<p>Feels Like</p>
-				<p>Wind Gust</p>
-				<p>Wind Direction</p>
-				<p>Wind Speed</p>
-				<p>Chance of Precipitation</p>
-			</div>
+			<WeatherComponent client:load />
 			</div>
 		</div>
 	</main>
