@@ -2,6 +2,7 @@
 import MainHead from "../components/MainHead.astro";
 import FooterBar from "../components/FooterBar.astro";
 import HeaderBar from "../components/HeaderBar.astro";
+import ScrollTop from "../components/ScrollToTop";
 const { title } = Astro.props
 ---
 
@@ -12,6 +13,7 @@ const { title } = Astro.props
 	<body class="">
 		<HeaderBar />
 		<slot />
+		<ScrollTop client:load />
 		<FooterBar />
 	</body>
 </html>
