@@ -110,9 +110,49 @@ const NavBar = () => {
                 <li>
                   <a
                     className="hover:bg-[#FB8500] rounded-lg text-white"
+                    href="/trail_blazers/Restaurants"
+                  >
+                    Restaurants
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="hover:bg-[#FB8500] rounded-lg text-white"
+                    href="/trail_blazers/Lodging"
+                  >
+                    Lodging
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="hover:bg-[#FB8500] rounded-lg text-white"
+                    href="/trail_blazers/LocalBusiness"
+                  >
+                    Local Businesses
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li tabIndex={0}>
+              <a className="justify-between hover:bg-[#FB8500] rounded-lg text-white">
+                Hiking Trails
+                <svg
+                  className="fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                </svg>
+              </a>
+              <ul className="p-2 bg-[#023047]">
+                <li>
+                  <a
+                    className="hover:bg-[#FB8500] rounded-lg text-white"
                     href="/trail_blazers/RedBeachTrail"
                   >
-                    Red Beach Trail
+                    Red Beach Memorial Trail
                   </a>
                 </li>
                 <li>
@@ -129,22 +169,6 @@ const NavBar = () => {
                     href="/trail_blazers/JigginHeadTrail"
                   >
                     Jiggin Head Trail
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="hover:bg-[#FB8500] rounded-lg text-white"
-                    href="/trail_blazers/Restaurants"
-                  >
-                    Restaurants
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="hover:bg-[#FB8500] rounded-lg text-white"
-                    href="/trail_blazers/Lodging"
-                  >
-                    Lodging
                   </a>
                 </li>
               </ul>
@@ -195,22 +219,6 @@ const NavBar = () => {
               <li>
                 <a
                   className="hover:bg-[#FB8500] rounded-lg text-white"
-                  href="/trail_blazers/RedBeachPhotos"
-                >
-                  Red Beach
-                </a>
-              </li>
-              <li>
-                <a
-                  className="hover:bg-[#FB8500] rounded-lg text-white"
-                  href="/trail_blazers/NakedBeachPhotos"
-                >
-                  Naked Man Beach
-                </a>
-              </li>
-              <li>
-                <a
-                  className="hover:bg-[#FB8500] rounded-lg text-white"
                   href="/trail_blazers/PlateCoveWestPhotos"
                 >
                   Plate Cove West
@@ -222,6 +230,22 @@ const NavBar = () => {
                   href="/trail_blazers/PlateCoveEastPhotos"
                 >
                   Plate Cove East
+                </a>
+              </li>
+              <li>
+                <a
+                  className="hover:bg-[#FB8500] rounded-lg text-white"
+                  href="/trail_blazers/RedBeachPhotos"
+                >
+                  Red Beach
+                </a>
+              </li>
+              <li>
+                <a
+                  className="hover:bg-[#FB8500] rounded-lg text-white"
+                  href="/trail_blazers/NakedBeachPhotos"
+                >
+                  Naked Man Beach
                 </a>
               </li>
             </ul>
@@ -243,9 +267,49 @@ const NavBar = () => {
               <li>
                 <a
                   className="hover:bg-[#FB8500] rounded-lg text-white"
+                  href="/trail_blazers/Restaurants"
+                >
+                  Restaurants
+                </a>
+              </li>
+              <li>
+                <a
+                  className="hover:bg-[#FB8500] rounded-lg text-white"
+                  href="/trail_blazers/Lodging"
+                >
+                  Lodging
+                </a>
+              </li>
+              <li>
+                <a
+                  className="hover:bg-[#FB8500] rounded-lg text-white"
+                  href="/trail_blazers/LocalBusiness"
+                >
+                  Local Businesses
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li tabIndex={0}>
+            <a className="hover:bg-[#FB8500] rounded-lg text-white">
+              Hiking Trails
+              <svg
+                className="fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+              >
+                <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+              </svg>
+            </a>
+            <ul className="p-2 bg-[#023047] z-10">
+              <li>
+                <a
+                  className="hover:bg-[#FB8500] rounded-lg text-white"
                   href="/trail_blazers/RedBeachTrail"
                 >
-                  Red Beach Trail
+                  Red Beach Memorial Trail
                 </a>
               </li>
               <li>
@@ -262,22 +326,6 @@ const NavBar = () => {
                   href="/trail_blazers/JigginHeadTrail"
                 >
                   Jiggin Head Trail
-                </a>
-              </li>
-              <li>
-                <a
-                  className="hover:bg-[#FB8500] rounded-lg text-white"
-                  href="/trail_blazers/Restaurants"
-                >
-                  Restaurants
-                </a>
-              </li>
-              <li>
-                <a
-                  className="hover:bg-[#FB8500] rounded-lg text-white"
-                  href="/trail_blazers/Lodging"
-                >
-                  Lodging
                 </a>
               </li>
             </ul>
