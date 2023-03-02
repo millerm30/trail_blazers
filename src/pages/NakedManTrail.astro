@@ -3,7 +3,7 @@ import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - Naked Man Beach Trail";
 import "../styles/styles.css";
 import NakedManTrailImage from "../assets/nakedman_beach/nakedMan.png"
-import TrailComponent from "../components/TrailComponent";
+import TrailComponent from "../components/TrailComponent.astro";
 ---
 
 <MainLayout title={title}>
@@ -15,7 +15,6 @@ import TrailComponent from "../components/TrailComponent";
       trailDescription={"Generally considered a moderately challenging route, it takes an average of 1 h 47 min to complete. This trail is great for birding, hiking, and walking, and it's unlikely you'll encounter many other people while exploring. The best times to visit this trail are May through September."} 
       trailLength={"5.1 km"} 
       trailLocation={"Location of trail here"} 
-      client:load 
     />
   </main>
 </MainLayout>
