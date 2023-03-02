@@ -6,7 +6,6 @@ import imageThree from "../assets/platecove_west/photo3.jpg";
 import imageFour from "../assets/platecove_west/photo4.jpg";
 import imageFive from "../assets/platecove_west/photo5.jpg";
 import imageSix from "../assets/platecove_west/photo6.jpg";
-import imageSeven from "../assets/platecove_west/photo7.jpg";
 
 
 const PhotoCarousel = () => {
@@ -46,12 +45,6 @@ const PhotoCarousel = () => {
         slideNumber={"slide6"}
         imageSrc={imageSix}
         slideBack={"#slide5"}
-        slideAhead={"#slide7"}
-      />
-      <CarouselSlider
-        slideNumber={"slide7"}
-        imageSrc={imageSeven}
-        slideBack={"#slide6"}
         slideAhead={"#slide1"}
       />
     </div>
