@@ -2,10 +2,12 @@
 import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - Plate Cove West Photos";
 import "../styles/styles.css";
+import PlateCoveWestCarousel from "../components/PlateCoveWestCarousel.jsx";
 ---
 
 <MainLayout title={title}>
   <main>
     <h2 class="text-center my-4 text-2xl text-black">Plate Cove West Photos</h2>
+    <PlateCoveWestCarousel client:load />
   </main>
 </MainLayout>

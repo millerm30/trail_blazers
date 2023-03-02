@@ -76,17 +76,17 @@ const NavBar = () => {
                   </a>
                 </li>
                 <li>
-                  <a 
+                  <a
                     className="hover:bg-[#FB8500] rounded-lg text-white"
-                    href="/trail_blazers/PlateCoveWestPhotos"  
+                    href="/trail_blazers/PlateCoveWestPhotos"
                   >
                     Plate Cove West
                   </a>
                 </li>
                 <li>
-                  <a 
+                  <a
                     className="hover:bg-[#FB8500] rounded-lg text-white"
-                    href="/trail_blazers/PlateCoveEastPhotos"  
+                    href="/trail_blazers/PlateCoveEastPhotos"
                   >
                     Plate Cove East
                   </a>
@@ -121,6 +121,14 @@ const NavBar = () => {
                     href="/trail_blazers/NakedManTrail"
                   >
                     Naked Man Beach Trail
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="hover:bg-[#FB8500] rounded-lg text-white"
+                    href="/trail_blazers/JigginHeadTrail"
+                  >
+                    Jiggin Head Trail
                   </a>
                 </li>
                 <li>
@@ -201,7 +209,7 @@ const NavBar = () => {
                 </a>
               </li>
               <li>
-                <a 
+                <a
                   className="hover:bg-[#FB8500] rounded-lg text-white"
                   href="/trail_blazers/PlateCoveWestPhotos"
                 >
@@ -209,9 +217,9 @@ const NavBar = () => {
                 </a>
               </li>
               <li>
-                <a 
+                <a
                   className="hover:bg-[#FB8500] rounded-lg text-white"
-                  href="/trail_blazers/PlateCoveEastPhotos"  
+                  href="/trail_blazers/PlateCoveEastPhotos"
                 >
                   Plate Cove East
                 </a>
@@ -246,6 +254,14 @@ const NavBar = () => {
                   href="/trail_blazers/NakedManTrail"
                 >
                   Naked Man Beach Trail
+                </a>
+              </li>
+              <li>
+                <a
+                  className="hover:bg-[#FB8500] rounded-lg text-white"
+                  href="/trail_blazers/JigginHeadTrail"
+                >
+                  Jiggin Head Trail
                 </a>
               </li>
               <li>

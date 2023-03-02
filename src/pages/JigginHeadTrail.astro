@@ -1,0 +1,26 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+const title = "Plate Cove - Joggin Head Trail";
+import "../styles/styles.css";
+import JigginHeadTrailImage from "../assets/other_photos/jigginhead.png"
+import TrailComponent from "../components/TrailComponent.astro";
+import TrailActivities from "../components/TrailActivities.astro";
+---
+
+<MainLayout title={title}>
+  <main>
+    <h2 class="text-center pt-6 text-2xl text-black">Jiggin Head Trail Information!</h2>
+    <TrailComponent 
+      trailImage={JigginHeadTrailImage} 
+      trailName={"Jiggin Head Hiking Trail"} 
+      trailDescription={"Great views of Summerville and surrounding bay. The trail is overgrown and the stairs are in disrepair. Use with caution.Access possible from Route 235, though the first 1.4 km of the trail follow a dirt road that is accessible to off road vehicles. The last little portion is a walk through a mix of clearings and woods to the viewpoint"} 
+      trailLength={"3.2 km"} 
+      trailLocation={"Location of trail here"} 
+    >
+    <TrailActivities activity={"Hiking"} />
+    <TrailActivities activity={"Forest"} />
+    <TrailActivities activity={"Views"} />
+    <TrailActivities activity={"Wildlife"} />
+    </TrailComponent>
+  </main>
+</MainLayout>
