@@ -4,6 +4,7 @@ const title = "Plate Cove - Naked Man Beach Trail";
 import "../styles/styles.css";
 import RedBeachTrailImage from "../assets/red_beach/redBeach.png"
 import TrailComponent from "../components/TrailComponent.astro";
+import TrailActivities from "../components/TrailActivities.astro";
 ---
 
 <MainLayout title={title}>
@@ -15,6 +16,12 @@ import TrailComponent from "../components/TrailComponent.astro";
       trailDescription={"This trail is great for bird watching and hiking, and it's unlikely you'll encounter many other people while exploring. Dogs are welcome, but must be on a leash at all times."} 
       trailLength={"2.4 km"} 
       trailLocation={"Location of trail here"} 
-    />
+    >
+    <TrailActivities activity={"Hiking"} />
+    <TrailActivities activity={"Bird Watching"} />
+    <TrailActivities activity={"Picnicking"} />
+    <TrailActivities activity={"Dog Walking"} />
+    <TrailActivities activity={"Beach"} />
+    </TrailComponent>
   </main>
 </MainLayout>
