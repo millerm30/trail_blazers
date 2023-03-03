@@ -1,5 +1,5 @@
 ---
-import NavBar from "./NavBar.jsx";
+import NavBar from "./NavBar.astro";
 import WebLogo from "../assets/trailblazers_logo.png"
 ---
 <style>
@@ -13,5 +13,5 @@ import WebLogo from "../assets/trailblazers_logo.png"
     <img src={WebLogo} alt="Trailblazers Logo" class="mx-auto" />
     <h1 class="text-3xl md:text-4xl lg:text-4xl text-black">Plate Cove Newfoundland</h1>
   </div>
-  <NavBar client:load />
+  <NavBar />
 </header>
