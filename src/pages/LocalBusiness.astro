@@ -2,8 +2,8 @@
 import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - Local Businesses";
 import "../styles/styles.css";
-import { Icon } from "astro-icon";
 import BusinessCard from "../components/BusinessCard.astro";
+import SocialIcon from "../components/SocialIcon.astro";
 import OutputAcresImage from "../assets/business_logos/outputacres.jpg";
 import SomethingFishyImage from "../assets/business_logos/somethingfishy.jpg";
 import TrinityEcoToursImage from "../assets/business_logos/trinityecotours.jpg";
@@ -24,7 +24,7 @@ import DiscoveryGeoPark from "../assets/business_logos/discoverygeo.png";
         businessEmail={"adam@outputacres.com"} 
         businessWebsite={"www.outputacres.com"}
       >
-        <a href="https://www.facebook.com/OutportAcres" target="_blank"><Icon class="w-8 inline transition duration-700 hover:text-[#4267B2]" name="brandico:facebook-rect" /></a>
+        <SocialIcon socialHref={"https://www.facebook.com/OutportAcres"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
       <BusinessCard 
         businessImage={SomethingFishyImage}
@@ -35,7 +35,7 @@ import DiscoveryGeoPark from "../assets/business_logos/discoverygeo.png";
         businessEmail={"furlongs@nf.sympatico.ca"} 
         businessWebsite={"www.furlongfoods.ca"}
       >
-        <a href="https://www.facebook.com/somethinfishyNL" target="_blank"><Icon class="w-8 inline transition duration-700 hover:text-[#4267B2]" name="brandico:facebook-rect" /></a>
+        <SocialIcon socialHref={"https://www.facebook.com/somethinfishyNL"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
       <BusinessCard 
         businessImage={TrinityEcoToursImage}
@@ -46,11 +46,11 @@ import DiscoveryGeoPark from "../assets/business_logos/discoverygeo.png";
         businessEmail={"bobbartlett@trinityeco-tours.com"} 
         businessWebsite={"www.trinityecotours.com"}
       >
-        <a href="https://www.facebook.com/TrinityEcoTours" target="_blank"><Icon class="w-8 mx-1 inline transition duration-700 hover:text-[#4267B2]" name="brandico:facebook-rect" /></a>
-        <a href="https://www.twitter.com/trinityecotours" target="_blank"><Icon class="w-8 mx-1 inline transition duration-700 hover:text-[#1DA1F2]" name="fa:twitter-square" /></a>
-        <a href="https://www.instagram.com/trinityecotours" target="_blank"><Icon class="w-8 mx-1 inline transition duration-700 hover:text-[#F77737]" name="fa:instagram" /></a>
-        <a href="https://ar.pinterest.com/trinityecotours" target="_blank"><Icon class="w-8 mx-1 inline transition duration-700 hover:text-[#E60023]" name="fa:pinterest-square" /></a>
-        <a href="https://www.youtube.com/channel/UCYPO-EQs3RZb66gehK1NoUQ" target="_blank"><Icon class="w-8 mx-1 inline transition duration-700 hover:text-[#FF0000]" name="fa:youtube-play" /></a>
+        <SocialIcon socialHref={"https://www.facebook.com/TrinityEcoTours"} socialName={"brandico:facebook-rect"} />
+        <SocialIcon socialHref={"https://www.twitter.com/trinityecotours"} socialName={"fa:twitter-square"} />
+        <SocialIcon socialHref={"https://www.instagram.com/trinityecotours"} socialName={"fa:instagram"} />
+        <SocialIcon socialHref={"https://ar.pinterest.com/trinityecotours"} socialName={"fa:pinterest-square"} />
+        <SocialIcon socialHref={"https://www.youtube.com/channel/UCYPO-EQs3RZb66gehK1NoUQ"} socialName={"fa:youtube-play"} />
       </BusinessCard>
       <BusinessCard 
         businessImage={BonavistaBiennaleImage}
@@ -61,9 +61,9 @@ import DiscoveryGeoPark from "../assets/business_logos/discoverygeo.png";
         businessEmail={"admin@bonavistabiennale.com"} 
         businessWebsite={"www.bonavistabiennale.com"}
       >
-        <a href="https://www.facebook.com/bonavistabiennale" target="_blank"><Icon class="w-8 inline transition duration-700 hover:text-[#4267B2]" name="brandico:facebook-rect" /></a>
-        <a href="https://www.twitter.com/BBiennale" target="_blank"><Icon class="w-8 mx-1 inline transition duration-700 hover:text-[#1DA1F2]" name="fa:twitter-square" /></a>
-        <a href="https://www.instagram.com/bbiennale" target="_blank"><Icon class="w-8 mx-1 inline transition duration-700 hover:text-[#F77737]" name="fa:instagram" /></a>
+        <SocialIcon socialHref={"https://www.facebook.com/bonavistabiennale"} socialName={"brandico:facebook-rect"} />
+        <SocialIcon socialHref={"https://www.twitter.com/BBiennale"} socialName={"fa:twitter-square"} />
+        <SocialIcon socialHref={"https://www.instagram.com/bbiennale"} socialName={"fa:instagram"} />
       </BusinessCard>
       <BusinessCard 
         businessImage={DiscoveryGeoPark}
@@ -74,10 +74,10 @@ import DiscoveryGeoPark from "../assets/business_logos/discoverygeo.png";
         businessEmail={"info@discoverygeopark.com"} 
         businessWebsite={"www.discoverygeopark.com"}
       >
-        <a href="https://www.facebook.com/discoveryglobalgeopark" target="_blank"><Icon class="w-8 inline transition duration-700 hover:text-[#4267B2]" name="brandico:facebook-rect" /></a>
-        <a href="https://www.twitter.com/discoverygeonl" target="_blank"><Icon class="w-8 mx-1 inline transition duration-700 hover:text-[#1DA1F2]" name="fa:twitter-square" /></a>
-        <a href="https://www.instagram.com/discoverygeonl" target="_blank"><Icon class="w-8 mx-1 inline transition duration-700 hover:text-[#F77737]" name="fa:instagram" /></a>
-        <a href="https://www.linkedin.com/in/discoverygeopark" target="_blank"><Icon class="w-8 mx-1 inline transition duration-700 hover:text-[#0077B5]" name="fa:linkedin-square" /></a>
+        <SocialIcon socialHref={"https://www.facebook.com/discoveryglobalgeopark"} socialName={"brandico:facebook-rect"} />
+        <SocialIcon socialHref={"https://www.twitter.com/discoverygeonl"} socialName={"fa:twitter-square"} />
+        <SocialIcon socialHref={"https://www.instagram.com/discoverygeonl"} socialName={"fa:instagram"} />
+        <SocialIcon socialHref={"https://www.linkedin.com/in/discoverygeopark"} socialName={"fa:linkedin-square"} />
       </BusinessCard>
     </div>
   </main>
