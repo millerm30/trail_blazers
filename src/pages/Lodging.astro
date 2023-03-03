@@ -2,10 +2,26 @@
 import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - Lodging";
 import "../styles/styles.css";
+import { Icon } from "astro-icon";
+import BusinessCard from "../components/BusinessCard.astro";
+import RoundDaBayInnImage  from "../assets/business_logos/rounddabayinn.jpg";
 ---
 
 <MainLayout title={title}>
   <main>
     <h2 class="text-center pt-6 text-2xl text-black">Lodging Section Here!</h2>
+    <div class="flex flex-wrap justify-center my-6 gap-2">
+      <BusinessCard 
+          businessImage={RoundDaBayInnImage}
+          businessName={"Round Da Bay Inn"}
+          businessDescription={"16 Unique Theme Rooms (1 wheelchair accessible, door 32)"}
+          businessAddress={"4 Main Road, Plate Cove West, NL"} 
+          businessPhone={"709-544-2008"} 
+          businessEmail={"rounddabayinn@yahoo.ca"} 
+          businessWebsite={"www.rounddabayinn.com"}
+        >
+          <a href="https://www.facebook.com/RoundDaBayInn" target="_blank"><Icon class="w-8 inline transition duration-700 hover:text-[#4267B2]" name="brandico:facebook-rect" /></a>
+        </BusinessCard>
+      </div>
   </main>
 </MainLayout>

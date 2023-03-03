@@ -1,0 +1,42 @@
+---
+const { businessImage } = Astro.props;
+const { businessName } = Astro.props;
+const { businessDescription } = Astro.props;
+const { businessAddress } = Astro.props;
+const { businessPhone } = Astro.props;
+const { businessEmail } = Astro.props;
+const { businessWebsite } = Astro.props;
+import Icon from 'astro-icon';
+---
+
+<div class="bg-white border-2 border-gray-300 rounded-xl p-6 max-w-sm">
+  <div class="flex justify-between">
+    <img src={businessImage} alt="Business Image" class="w-20 rounded-full" />
+    <div>
+      <slot />
+    </div>
+  </div>
+  <div>
+    <p class="my-2">{businessDescription}</p>
+    <span class="flex my-2">
+      <Icon name="ion:business-sharp" class="w-6 mr-2" />
+      <p>{businessName}</p>
+    </span>
+    <span class="flex my-2">
+      <Icon name="ion:location-sharp" class="w-6 mr-2" />
+      <p>{businessAddress}</p>
+    </span>
+    <span class="flex my-2">
+      <Icon name="ion:call-sharp" class="w-6 mr-2" />
+      <p>{businessPhone}</p>
+    </span>
+    <span class="flex my-2">
+      <Icon name="ion:mail-sharp" class="w-6 mr-2" />
+      <p>{businessEmail}</p>
+    </span>
+    <span class="flex my-2">
+      <Icon name="ion:link-sharp" class="w-6 mr-2" />
+      <p>{businessWebsite}</p>
+    </span>
+  </div>
+</div>
