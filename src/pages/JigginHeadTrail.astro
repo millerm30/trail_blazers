@@ -5,11 +5,13 @@ import "../styles/styles.css";
 import JigginHeadTrailImage from "../assets/other_photos/jigginhead.png"
 import TrailComponent from "../components/TrailComponent.astro";
 import TrailActivities from "../components/TrailActivities.astro";
+import View from "../assets/view.png";
+import HeroBanner from "../components/HeroBanner.astro";
 ---
 
 <MainLayout title={title}>
   <main>
-    <h2 class="text-center pt-6 text-2xl text-black">Jiggin Head Trail Information!</h2>
+    <HeroBanner backgroundImage={View} heroText={"Jiggin Head"} />
     <TrailComponent 
       trailImage={JigginHeadTrailImage} 
       trailName={"Jiggin Head Hiking Trail"} 

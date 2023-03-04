@@ -5,11 +5,13 @@ import "../styles/styles.css";
 import NakedManTrailImage from "../assets/nakedman_beach/nakedMan.png"
 import TrailComponent from "../components/TrailComponent.astro";
 import TrailActivities from "../components/TrailActivities.astro";
+import View from "../assets/view.png";
+import HeroBanner from "../components/HeroBanner.astro";
 ---
 
 <MainLayout title={title}>
   <main>
-    <h2 class="text-center pt-6 text-2xl text-black">Naked Man Beach Trail Information!</h2>
+    <HeroBanner backgroundImage={View} heroText={"Naked Man Beach"} />
     <TrailComponent 
       trailImage={NakedManTrailImage}
       trailName={"Naked Man Hiking Trail"}

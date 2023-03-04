@@ -2,10 +2,12 @@
 import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - Contact Us";
 import "../styles/styles.css";
+import View from "../assets/view.png";
+import HeroBanner from "../components/HeroBanner.astro";
 ---
 
 <MainLayout title={title}>
   <main>
-    <h2 class="text-center pt-6 text-2xl text-black">Contact Us Section Here!</h2>
+    <HeroBanner backgroundImage={View} heroText={"Contact Us"} />
   </main>
 </MainLayout>

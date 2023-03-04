@@ -5,11 +5,13 @@ import "../styles/styles.css";
 import BusinessCard from "../components/BusinessCard.astro";
 import SocialIcon from "../components/SocialIcon.astro";
 import RoundDaBayInnImage  from "../assets/business_logos/rounddabayinn.jpg";
+import View from "../assets/view.png";
+import HeroBanner from "../components/HeroBanner.astro";
 ---
 
 <MainLayout title={title}>
   <main>
-    <h2 class="text-center pt-6 text-2xl text-black">Lodging Section Here!</h2>
+    <HeroBanner backgroundImage={View} heroText={"Lodging Section"} />
     <div class="flex flex-wrap justify-center my-6 gap-2">
       <BusinessCard 
           businessImage={RoundDaBayInnImage}

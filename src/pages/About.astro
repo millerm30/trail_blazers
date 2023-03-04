@@ -2,12 +2,13 @@
 import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - About Us";
 import "../styles/styles.css";
-import About from "../components/About.astro";
+import HeroBanner from "../components/HeroBanner.astro";
+import View from "../assets/view.png";
 ---
 
 
 <MainLayout title={title}>
   <main>
-    <About />
+    <HeroBanner backgroundImage={View} heroText={"About Us"} />
   </main>
 </MainLayout>

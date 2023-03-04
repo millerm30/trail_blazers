@@ -4,20 +4,22 @@ const title = "Plate Cove - Local Businesses";
 import "../styles/styles.css";
 import BusinessCard from "../components/BusinessCard.astro";
 import SocialIcon from "../components/SocialIcon.astro";
-import OutputAcresImage from "../assets/business_logos/outputacres.jpg";
+import OutportAcresImage from "../assets/business_logos/outputacres.jpg";
 import SomethingFishyImage from "../assets/business_logos/somethingfishy.jpg";
 import TrinityEcoToursImage from "../assets/business_logos/trinityecotours.jpg";
 import BonavistaBiennaleImage from "../assets/business_logos/bonavistabiennale.png";
 import DiscoveryGeoPark from "../assets/business_logos/discoverygeo.png";
+import View from "../assets/view.png";
+import HeroBanner from "../components/HeroBanner.astro";
 ---
 
 <MainLayout title={title}>
   <main>
-    <h2 class="text-center pt-6 text-2xl text-black">Local Business Section Here!</h2>
+    <HeroBanner backgroundImage={View} heroText={"Local Business Section"} />
     <div class="flex flex-wrap justify-center my-6 gap-2">
       <BusinessCard 
-        businessImage={OutputAcresImage}
-        businessName={"Output Acres"}
+        businessImage={OutportAcresImage}
+        businessName={"Outport Acres"}
         businessDescription={"Family farm, naturally grown produce, and agricultural sustainably."}
         businessAddress={"Main Road, Musgrave Town, NL"} 
         businessPhone={"709-429-0270"} 
@@ -57,7 +59,7 @@ import DiscoveryGeoPark from "../assets/business_logos/discoverygeo.png";
         businessName={"Bonavista Biennale"}
         businessDescription={"An innovative, rural-based, contemporary art event occuring every two years throughout Newfoundland and Labrador's Bonavista Peninsula."}
         businessAddress={"-"} 
-        businessPhone={"709-545-2251"} 
+        businessPhone={"-"} 
         businessEmail={"admin@bonavistabiennale.com"} 
         businessWebsite={"www.bonavistabiennale.com"}
       >
@@ -70,7 +72,8 @@ import DiscoveryGeoPark from "../assets/business_logos/discoverygeo.png";
         businessName={"Discovery Global Geopark"}
         businessDescription={"Discovery global geopark half a billion years in the making"}
         businessAddress={"P.O. Box 280, Bonavista, NL, Canada"} 
-        businessPhone={"709-545-2251"} 
+        businessPhone={"709-468-7789"} 
+        businessPhone={"709-469-2207"}
         businessEmail={"info@discoverygeopark.com"} 
         businessWebsite={"www.discoverygeopark.com"}
       >
