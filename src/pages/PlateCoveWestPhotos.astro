@@ -9,6 +9,9 @@ import imageThree from "../assets/platecove_west/photo3.jpg";
 import imageFour from "../assets/platecove_west/photo4.jpg";
 import imageFive from "../assets/platecove_west/photo5.jpg";
 import imageSix from "../assets/platecove_west/photo6.jpg";
+import imageSeven from "../assets/platecove_west/photo7.jpg";
+import imageEight from "../assets/platecove_west/photo8.jpg";
+import imageNine from "../assets/platecove_west/photo9.jpg";
 import View from "../assets/hero_images/view1.png";
 import HeroBanner from "../components/HeroBanner.astro";
 ---
@@ -51,6 +54,24 @@ import HeroBanner from "../components/HeroBanner.astro";
         slideNumber={"slide6"}
         imageSrc={imageSix}
         slideBack={"#slide5"}
+        slideAhead={"#slide7"}
+      />
+      <CarouselSlider
+        slideNumber={"slide7"}
+        imageSrc={imageSeven}
+        slideBack={"#slide6"}
+        slideAhead={"#slide8"}
+      />
+      <CarouselSlider
+        slideNumber={"slide8"}
+        imageSrc={imageEight}
+        slideBack={"#slide7"}
+        slideAhead={"#slide9"}
+      />
+      <CarouselSlider
+        slideNumber={"slide9"}
+        imageSrc={imageNine}
+        slideBack={"#slide8"}
         slideAhead={"#slide1"}
       />
     </div>
