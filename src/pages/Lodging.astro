@@ -5,6 +5,8 @@ import "../styles/styles.css";
 import BusinessCard from "../components/BusinessCard.astro";
 import SocialIcon from "../components/SocialIcon.astro";
 import RoundDaBayInnImage  from "../assets/business_logos/rounddabayinn.jpg";
+import BrookSideImage from "../assets/business_logos/brookside.jpg";
+import CedarShakeImage from "../assets/business_logos/cedarshake.jpg";
 import View from "../assets/hero_images/view5.png";
 import HeroBanner from "../components/HeroBanner.astro";
 ---
@@ -23,6 +25,28 @@ import HeroBanner from "../components/HeroBanner.astro";
           businessWebsite={"www.rounddabayinn.com"}
         >
           <SocialIcon socialHref={"https://www.facebook.com/RoundDaBayInn"} socialName={"brandico:facebook-rect"} />
+        </BusinessCard>
+        <BusinessCard 
+          businessImage={BrookSideImage}
+          businessName={"Beautiful Brookside Cottage"}
+          businessDescription={"Beautiful Brookside Cottage has everything you need for a relaxing vacation"}
+          businessAddress={"270 Main Road, Plate Cove West, NL"} 
+          businessPhone={"416-575-8475"} 
+          businessEmail={"-"}
+          businessWebsite={"www.airbnb.ca/rooms/37779479"}
+        >
+          <SocialIcon socialHref={"https://www.airbnb.ca/rooms/37779479"} socialName={"fa-brands:airbnb"} />
+        </BusinessCard>
+        <BusinessCard 
+          businessImage={CedarShakeImage}
+          businessName={"The Cedar Shake"}
+          businessDescription={"The Cedar Shake provides a charming base for exploring the undiscovered side of the Bonavista Peninsula"}
+          businessAddress={"176 Main Road, Plate Cove West, NL"} 
+          businessPhone={"-"} 
+          businessEmail={"-"}
+          businessWebsite={"www.airbnb.ca/h/thecedarshake"}
+        >
+          <SocialIcon socialHref={"https://www.airbnb.ca/h/thecedarshake"} socialName={"fa-brands:airbnb"} />
         </BusinessCard>
       </div>
   </main>
