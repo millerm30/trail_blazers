@@ -7,6 +7,7 @@ import SocialIcon from "../components/SocialIcon.astro";
 import BellasRestaurantImage  from "../assets/business_logos/bellasrestaurant.jpg";
 import View from "../assets/hero_images/view3.png";
 import HeroBanner from "../components/HeroBanner.astro";
+import Amenities from "../components/CardActivities.astro";
 ---
 
 <MainLayout title={title}>
@@ -22,6 +23,10 @@ import HeroBanner from "../components/HeroBanner.astro";
           businessEmail={"rounddabayinn@yahoo.ca"} 
           businessWebsite={"www.rounddabayinn.com/bellas-restaurant"}
         >
+          <Amenities slot="before_social" activity={"Newfoundland Food"} />
+          <Amenities slot="before_social" activity={"Vegetarian"} />
+          <Amenities slot="before_social" activity={"Vegan"} />
+          <Amenities slot="before_social" activity={"Gluten Free"} />
           <SocialIcon socialHref={"https://www.facebook.com/RounddaBayInnNL"} socialName={"brandico:facebook-rect"} />
         </BusinessCard>
       </div>

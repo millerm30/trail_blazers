@@ -9,6 +9,7 @@ import BrookSideImage from "../assets/business_logos/brookside.jpg";
 import CedarShakeImage from "../assets/business_logos/cedarshake.jpg";
 import View from "../assets/hero_images/view3.png";
 import HeroBanner from "../components/HeroBanner.astro";
+import Amenities from "../components/CardActivities.astro";
 ---
 
 <MainLayout title={title}>
@@ -24,6 +25,10 @@ import HeroBanner from "../components/HeroBanner.astro";
           businessEmail={"rounddabayinn@yahoo.ca"} 
           businessWebsite={"www.rounddabayinn.com"}
         >
+          <Amenities slot="before_social" activity={"Room Service"} />
+          <Amenities slot="before_social" activity={"Contact-Less Check In"} />
+          <Amenities slot="before_social" activity={"Gift Shop"} />
+          <Amenities slot="before_social" activity={"Gallery"} />
           <SocialIcon socialHref={"https://www.facebook.com/RoundDaBayInn"} socialName={"brandico:facebook-rect"} />
         </BusinessCard>
         <BusinessCard 
@@ -35,7 +40,14 @@ import HeroBanner from "../components/HeroBanner.astro";
           businessEmail={"-"}
           businessWebsite={"www.airbnb.ca/rooms/37779479"}
         >
-          <SocialIcon socialHref={"https://www.airbnb.ca/rooms/37779479"} socialName={"fa-brands:airbnb"} />
+          <Amenities slot="before_social" activity={"Self Check In"} />
+          <Amenities slot="before_social" activity={"Deck"} />
+          <Amenities slot="before_social" activity={"BBQ"} />
+          <Amenities slot="before_social" activity={"Fire Pit"} />
+          <Amenities slot="before_social" activity={"Wifi"} />
+          <Amenities slot="before_social" activity={"Laundry"} />
+          <Amenities slot="before_social" activity={"Air Conditioning"} />
+          <SocialIcon socialHref={"https://www.airbnb.ca/rooms/37779479"} socialName={"tabler:brand-airbnb"} />
         </BusinessCard>
         <BusinessCard 
           businessImage={CedarShakeImage}
@@ -46,7 +58,14 @@ import HeroBanner from "../components/HeroBanner.astro";
           businessEmail={"-"}
           businessWebsite={"www.airbnb.ca/h/thecedarshake"}
         >
-          <SocialIcon socialHref={"https://www.airbnb.ca/h/thecedarshake"} socialName={"fa-brands:airbnb"} />
+          <Amenities slot="before_social" activity={"Self Check In"} />
+          <Amenities slot="before_social" activity={"Fireplace"} />
+          <Amenities slot="before_social" activity={"BBQ"} />
+          <Amenities slot="before_social" activity={"Wifi"} />
+          <Amenities slot="before_social" activity={"Fire Pit"} />
+          <Amenities slot="before_social" activity={"Bay View"} />
+          <Amenities slot="before_social" activity={"Laundry"} />
+          <SocialIcon socialHref={"https://www.airbnb.ca/h/thecedarshake"} socialName={"tabler:brand-airbnb"} />
         </BusinessCard>
       </div>
   </main>

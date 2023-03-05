@@ -36,7 +36,8 @@ import Icon from 'astro-icon';
         <Icon name="ion:link-sharp" class="w-6 mr-2" />
         <p>{businessWebsite}</p>
       </span>
-    </div>
+      <slot name="before_social" />
+    </div> 
   </div>
   <div class="flex justify-end bg-gray-300 p-2 rounded-b-lg">
     <slot />

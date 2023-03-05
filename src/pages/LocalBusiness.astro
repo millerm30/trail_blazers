@@ -11,6 +11,7 @@ import BonavistaBiennaleImage from "../assets/business_logos/bonavistabiennale.j
 import DiscoveryGeoPark from "../assets/business_logos/discoverygeo.jpg";
 import View from "../assets/hero_images/view4.png";
 import HeroBanner from "../components/HeroBanner.astro";
+import Amenities from "../components/CardActivities.astro";
 ---
 
 <MainLayout title={title}>
@@ -23,9 +24,10 @@ import HeroBanner from "../components/HeroBanner.astro";
         businessDescription={"Family farm, naturally grown produce, and agricultural sustainably."}
         businessAddress={"Main Road, Musgrave Town, NL"} 
         businessPhone={"709-429-0270"} 
-        businessEmail={"adam@outputacres.com"} 
-        businessWebsite={"www.outputacres.com"}
+        businessEmail={"adam@outportacres.com"} 
+        businessWebsite={"www.outportacres.com"}
       >
+        <Amenities slot="before_social" activity={"Agriculture"} />
         <SocialIcon socialHref={"https://www.facebook.com/OutportAcres"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
       <BusinessCard 
@@ -37,6 +39,7 @@ import HeroBanner from "../components/HeroBanner.astro";
         businessEmail={"furlongs@nf.sympatico.ca"} 
         businessWebsite={"www.furlongfoods.ca"}
       >
+        <Amenities slot="before_social" activity={"Seafood Supplier"} />
         <SocialIcon socialHref={"https://www.facebook.com/somethinfishyNL"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
       <BusinessCard 
@@ -48,6 +51,12 @@ import HeroBanner from "../components/HeroBanner.astro";
         businessEmail={"bobbartlett@trinityeco-tours.com"} 
         businessWebsite={"www.trinityecotours.com"}
       >
+        <Amenities slot="before_social" activity={"Sea Kayaking"} />
+        <Amenities slot="before_social" activity={"Whale Watching"} />
+        <Amenities slot="before_social" activity={"ATV Tours"} />
+        <Amenities slot="before_social" activity={"Accomodations"} />
+        <Amenities slot="before_social" activity={"Restaurant"} />
+        <Amenities slot="before_social" activity={"Coffee Shop"} />
         <SocialIcon socialHref={"https://www.facebook.com/TrinityEcoTours"} socialName={"brandico:facebook-rect"} />
         <SocialIcon socialHref={"https://www.twitter.com/trinityecotours"} socialName={"fa:twitter-square"} />
         <SocialIcon socialHref={"https://www.instagram.com/trinityecotours"} socialName={"fa:instagram"} />
@@ -63,6 +72,7 @@ import HeroBanner from "../components/HeroBanner.astro";
         businessEmail={"admin@bonavistabiennale.com"} 
         businessWebsite={"www.bonavistabiennale.com"}
       >
+        <Amenities slot="before_social" activity={"Art"} />
         <SocialIcon socialHref={"https://www.facebook.com/bonavistabiennale"} socialName={"brandico:facebook-rect"} />
         <SocialIcon socialHref={"https://www.twitter.com/BBiennale"} socialName={"fa:twitter-square"} />
         <SocialIcon socialHref={"https://www.instagram.com/bbiennale"} socialName={"fa:instagram"} />
@@ -73,10 +83,12 @@ import HeroBanner from "../components/HeroBanner.astro";
         businessDescription={"Discovery global geopark half a billion years in the making"}
         businessAddress={"P.O. Box 280, Bonavista, NL, Canada"} 
         businessPhone={"709-468-7789"} 
-        businessPhone={"709-469-2207"}
         businessEmail={"info@discoverygeopark.com"} 
         businessWebsite={"www.discoverygeopark.com"}
       >
+        <Amenities slot="before_social" activity={"Geology"} />
+        <Amenities slot="before_social" activity={"Non-Profit"} />
+        <Amenities slot="before_social" activity={"Education"} />
         <SocialIcon socialHref={"https://www.facebook.com/discoveryglobalgeopark"} socialName={"brandico:facebook-rect"} />
         <SocialIcon socialHref={"https://www.twitter.com/discoverygeonl"} socialName={"fa:twitter-square"} />
         <SocialIcon socialHref={"https://www.instagram.com/discoverygeonl"} socialName={"fa:instagram"} />
