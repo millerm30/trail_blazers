@@ -6,6 +6,7 @@ const { businessAddress } = Astro.props;
 const { businessPhone } = Astro.props;
 const { businessEmail } = Astro.props;
 const { businessWebsite } = Astro.props;
+const { businessWebName } = Astro.props;
 import Icon from 'astro-icon';
 ---
 
@@ -34,7 +35,7 @@ import Icon from 'astro-icon';
       </span>
       <span class="flex my-2">
         <Icon name="ion:link-sharp" class="w-6 mr-2" />
-        <p>{businessWebsite}</p>
+        <a href={businessWebsite} target="_blank">{businessWebName}</a>
       </span>
       <slot name="before_social" />
     </div> 
