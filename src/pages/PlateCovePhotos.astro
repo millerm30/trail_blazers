@@ -3,15 +3,20 @@ import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - Plate Cove West Photos";
 import "../styles/styles.css";
 import CarouselSlider from "../components/CarouselSlide.astro";
-import imageOne from "../assets/platecove_west/photo1.jpg";
-import imageTwo from "../assets/platecove_west/photo2.jpg";
-import imageThree from "../assets/platecove_west/photo3.jpg";
-import imageFour from "../assets/platecove_west/photo4.jpg";
-import imageFive from "../assets/platecove_west/photo5.jpg";
-import imageSix from "../assets/platecove_west/photo6.jpg";
-import imageSeven from "../assets/platecove_west/photo7.jpg";
-import imageEight from "../assets/platecove_west/photo8.jpg";
-import imageNine from "../assets/platecove_west/photo9.jpg";
+import imageOne from "../assets/platecove/photo1.jpg";
+import imageTwo from "../assets/platecove/photo2.jpg";
+import imageThree from "../assets/platecove/photo3.jpg";
+import imageFour from "../assets/platecove/photo4.jpg";
+import imageFive from "../assets/platecove/photo5.jpg";
+import imageSix from "../assets/platecove/photo6.jpg";
+import imageSeven from "../assets/platecove/photo7.jpg";
+import imageEight from "../assets/platecove/photo8.jpg";
+import imageNine from "../assets/platecove/photo9.jpg";
+import imageTen from "../assets/platecove/photo10.jpg";
+import imageEleven from "../assets/platecove/photo11.jpg";
+import imageTwelve from "../assets/platecove/photo12.jpg";
+import imageThirteen from "../assets/platecove/photo13.jpg";
+import imageFourteen from "../assets/platecove/photo14.jpg";
 import View from "../assets/hero_images/view1.png";
 import HeroBanner from "../components/HeroBanner.astro";
 ---
@@ -23,7 +28,7 @@ import HeroBanner from "../components/HeroBanner.astro";
       <CarouselSlider
         slideNumber={"slide1"}
         imageSrc={imageOne}
-        slideBack={"#slide6"}
+        slideBack={"#slide14"}
         slideAhead={"#slide2"}
       />
       <CarouselSlider
@@ -72,6 +77,36 @@ import HeroBanner from "../components/HeroBanner.astro";
         slideNumber={"slide9"}
         imageSrc={imageNine}
         slideBack={"#slide8"}
+        slideAhead={"#slide1"}
+      />
+      <CarouselSlider
+        slideNumber={"slide10"}
+        imageSrc={imageTen}
+        slideBack={"#slide9"}
+        slideAhead={"#slide11"}
+      />
+      <CarouselSlider
+        slideNumber={"slide11"}
+        imageSrc={imageEleven}
+        slideBack={"#slide10"}
+        slideAhead={"#slide12"}
+      />
+      <CarouselSlider
+        slideNumber={"slide12"}
+        imageSrc={imageTwelve}
+        slideBack={"#slide11"}
+        slideAhead={"#slide13"}
+      />
+      <CarouselSlider
+        slideNumber={"slide13"}
+        imageSrc={imageThirteen}
+        slideBack={"#slide12"}
+        slideAhead={"#slide14"}
+      />
+      <CarouselSlider
+        slideNumber={"slide14"}
+        imageSrc={imageFourteen}
+        slideBack={"#slide13"}
         slideAhead={"#slide1"}
       />
     </div>
