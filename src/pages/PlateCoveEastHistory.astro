@@ -1,0 +1,28 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+const title = "Plate Cove - History";
+import "../styles/styles.css";
+import HeroBanner from "../components/HeroBanner.astro";
+import View from "../assets/hero_images/view1.png";
+---
+
+<MainLayout title={title}>
+  <main>
+    <HeroBanner backgroundImage={View} heroText={"Plate Cove East History"} />
+    <div class=" bg-white my-6 p-4 rounded-lg border-2 border-gray-300 mx-4 text-black">
+      <h2 class="text-xl font-semibold mb-2">Plate Cove East</h2>
+      <p>
+        Plate Cove East is a small community located in Bonavista Bay, Newfoundland and Labrador. It is part of the federal electoral riding of 
+        Bonavista—Gander—Grand Falls—Windsor. It was officially a town from 1960 until 2004. In 1966 it had a population of 237. In 2011 there 
+        were 89 inhabitants. The town has a primarily Catholic population with some Anglicans. Some of the industries in the community include fishing and farming.
+      </p>
+      <br>
+      <p>
+        There is a fishery nearby in Plate Cove West. This little village has a large number of families named Philpott, or Philpot. 
+        A common family name found in Plate Cove West, Newfoundland and Labrador is Keough. The Keoughs are distant relatives of the Philpotts. 
+        There are also a number of Dooleys, Russells and Murphys. Plate Cove East is also the repository of a number of unique folk songs. 
+        Many of these songs were collected in the 1970s. A come home year was set for July 2012.
+      </p>
+    </div>
+  </main>
+</MainLayout>
