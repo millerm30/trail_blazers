@@ -1,0 +1,19 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+const title = "Plate Cove - History";
+import "../styles/styles.css";
+import HeroBanner from "../components/HeroBanner.astro";
+import View from "../assets/hero_images/view6.jpg";
+---
+
+<MainLayout title={title}>
+  <main>
+    <HeroBanner backgroundImage={View} heroText={"No Seas To Wash Me Off"} />
+    <div class=" bg-white my-6 p-4 rounded-lg border-2 border-gray-300 mx-4 text-black">
+      <h2 class="text-xl font-semibold mb-2">No Seas To Wash Me Off History.</h2>
+      <p>
+        Information to be added.
+      </p>
+    </div>
+  </main>
+</MainLayout>
