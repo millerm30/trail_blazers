@@ -17,18 +17,20 @@ import imageEleven from "../assets/platecove/photo11.jpg";
 import imageTwelve from "../assets/platecove/photo12.jpg";
 import imageThirteen from "../assets/platecove/photo13.jpg";
 import imageFourteen from "../assets/platecove/photo14.jpg";
+import imageFifteen from "../assets/platecove/photo15.jpg";
+import imageSixteen from "../assets/platecove/photo16.jpg";
 import View from "../assets/hero_images/view4.png";
 import HeroBanner from "../components/HeroBanner.astro";
 ---
 
 <MainLayout title={title}>
   <main>
-    <HeroBanner backgroundImage={View} heroText={"Plate Cove West"} />
+    <HeroBanner backgroundImage={View} heroText={"Plate Cove"} />
     <div class="carousel w-11/12 mx-auto my-6 md:w-1/2 lg:w-1/3">
       <CarouselSlider
         slideNumber={"slide1"}
         imageSrc={imageOne}
-        slideBack={"#slide14"}
+        slideBack={"#slide16"}
         slideAhead={"#slide2"}
       />
       <CarouselSlider
@@ -107,6 +109,18 @@ import HeroBanner from "../components/HeroBanner.astro";
         slideNumber={"slide14"}
         imageSrc={imageFourteen}
         slideBack={"#slide13"}
+        slideAhead={"#slide15"}
+      />
+      <CarouselSlider
+        slideNumber={"slide15"}
+        imageSrc={imageFifteen}
+        slideBack={"#slide13"}
+        slideAhead={"#slide16"}
+      />
+      <CarouselSlider
+        slideNumber={"slide16"}
+        imageSrc={imageSixteen}
+        slideBack={"#slide15"}
         slideAhead={"#slide1"}
       />
     </div>
