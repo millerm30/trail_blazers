@@ -5,6 +5,7 @@ import "../styles/styles.css";
 import HeroBanner from "../components/HeroBanner.astro";
 import View from "../assets/hero_images/view1.png";
 import plateCoveWestHistoryOne from "../assets/history/platecoveHistory1.jpg";
+import plateCoveWestHistoryTwo from "../assets/history/platecoveHistory3.jpg";
 import plateCoveEastHistoryOne from "../assets/history/platecoveHistory2.jpg";
 ---
 
@@ -46,10 +47,14 @@ import plateCoveEastHistoryOne from "../assets/history/platecoveHistory2.jpg";
         The first postmistress of Plate Cove West was Catherine Jane Walsh.
       </p>
       <br>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
         <figure>
           <img src={plateCoveWestHistoryOne} alt="Anti Confederation Advertisement" class=" mx-auto">
           <figcaption class="text-center italic font-semibold">Plate Cove West</figcaption>
+        </figure>
+        <figure>
+          <img src={plateCoveWestHistoryTwo} alt="Anti Confederation Advertisement" class=" mx-auto">
+          <figcaption class="text-center italic font-semibold">Plate Cove West - Warf Repairs</figcaption>
         </figure>
         <figure>
           <img src={plateCoveEastHistoryOne} alt="Anti Confederation Advertisement" class=" mx-auto">
