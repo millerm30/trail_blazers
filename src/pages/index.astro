@@ -5,6 +5,7 @@ const title = "Plate Cove - Welcome!";
 import "../styles/styles.css";
 import HeroBanner from "../components/HeroBanner.astro";
 import View from "../assets/hero_images/view1.png";
+import oldRoute235Map from "../assets/other_photos/oldRoute235Map.jpg";
 ---
 
 <MainLayout title={title}>
@@ -24,6 +25,10 @@ import View from "../assets/hero_images/view1.png";
 				dinner bowl or plate give it the name <i>"Plate Cove"</i>. 
 			</p>
 			<br>
+			<figure class="float-right p-2">
+				<img src={oldRoute235Map} alt="Old Route 235 Map" class="rounded-lg"/>
+				<figcaption class="text-center italic font-semibold text-sm">Bonavista Bay - Map (Decks Awash 1984)</figcaption>
+			</figure>
 			<p>
 				There are some local businesses in the community that provide services to the community and surrounding areas. Businesses such as a unique themed room inn
 				that includes a restaurant, Furlong family whom provide fish and homemade fish products that are sold in the community and surrounding areas,
