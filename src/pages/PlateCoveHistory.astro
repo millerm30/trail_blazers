@@ -6,7 +6,10 @@ import HeroBanner from "../components/HeroBanner.astro";
 import View from "../assets/hero_images/view1.png";
 import plateCoveWestHistoryOne from "../assets/history/platecoveHistory1.jpg";
 import plateCoveWestHistoryTwo from "../assets/history/platecoveHistory3.jpg";
+import plateCoveWestHistoryThree from "../assets/history/platecoveHistory4.jpg";
+import plateCoveWestHistoryFour from "../assets/history/platecoveHistory5.jpg";
 import plateCoveEastHistoryOne from "../assets/history/platecoveHistory2.jpg";
+import plateCoveEastHistoryTwo from "../assets/history/platecoveHistory6.jpg";
 ---
 
 <MainLayout title={title}>
@@ -47,18 +50,30 @@ import plateCoveEastHistoryOne from "../assets/history/platecoveHistory2.jpg";
         The first postmistress of Plate Cove West was Catherine Jane Walsh.
       </p>
       <br>
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">
         <figure>
-          <img src={plateCoveWestHistoryOne} alt="Anti Confederation Advertisement" class=" mx-auto">
-          <figcaption class="text-center italic font-semibold">Plate Cove West</figcaption>
+          <img src={plateCoveWestHistoryOne} alt="Plate Cove West Photo">
+          <figcaption class="text-center italic font-semibold text-sm">Plate Cove West</figcaption>
         </figure>
         <figure>
-          <img src={plateCoveWestHistoryTwo} alt="Anti Confederation Advertisement" class=" mx-auto">
-          <figcaption class="text-center italic font-semibold">Plate Cove West - Warf Repairs</figcaption>
+          <img src={plateCoveWestHistoryTwo} alt="Plate Cove warf repairs">
+          <figcaption class="text-center italic font-semibold text-sm">Plate Cove West - Warf Repairs</figcaption>
         </figure>
         <figure>
-          <img src={plateCoveEastHistoryOne} alt="Anti Confederation Advertisement" class=" mx-auto">
-          <figcaption class="text-center italic font-semibold">Plate Cove East</figcaption>
+          <img src={plateCoveEastHistoryOne} alt="Plate Cove East Photo">
+          <figcaption class="text-center italic font-semibold text-sm">Plate Cove East</figcaption>
+        </figure>
+        <figure>
+          <img src={plateCoveWestHistoryThree} alt="Stripping logs for slipway">
+          <figcaption class="text-center italic font-semibold text-sm">Stripping logs for slipway - Plate Cove West</figcaption>
+        </figure>
+        <figure>
+          <img src={plateCoveWestHistoryFour} alt="Workers">
+          <figcaption class="text-center italic font-semibold text-sm">Bill Mews, left and Bill Walsh</figcaption>
+        </figure>
+        <figure>
+          <img src={plateCoveEastHistoryTwo} alt="Plate Cove East Boat Damage">
+          <figcaption class="text-center italic font-semibold text-sm">Plate Cove East</figcaption>
         </figure>
       </div>
     </div>
