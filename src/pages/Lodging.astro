@@ -15,7 +15,7 @@ import Amenities from "../components/CardActivities.astro";
 <MainLayout title={title}>
   <main>
     <HeroBanner backgroundImage={View} heroText={"Lodging"} />
-    <div class="flex flex-wrap justify-center my-6 gap-4">
+    <section class="flex flex-wrap justify-center my-6 gap-4">
       <BusinessCard 
           businessImage={RoundDaBayInnImage}
           businessName={"Round Da Bay Inn"}
@@ -70,6 +70,6 @@ import Amenities from "../components/CardActivities.astro";
           <Amenities slot="before_social" activity={"Laundry"} />
           <SocialIcon socialHref={"https://www.airbnb.ca/h/thecedarshake"} socialName={"tabler:brand-airbnb"} />
         </BusinessCard>
-      </div>
+      </section>
   </main>
 </MainLayout>

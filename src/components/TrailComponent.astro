@@ -1,12 +1,12 @@
 ---
-const { trailImage, trailName, trailDescription, trailLength, trailLocation } = Astro.props
+const { trailImage, altImage, trailName, trailDescription, trailLength, trailLocation } = Astro.props
 ---
 
 <div class="flex justify-center gap-6 flex-col my-6 md:flex-row lg:flex-row p-2 text-black">
   <div>
     <img
       src={trailImage}
-      alt="Naked Man Beach Trail"
+      alt={altImage}
       class="max-w-sm mx-auto"
     />
   </div>

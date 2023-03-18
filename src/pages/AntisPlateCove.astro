@@ -9,7 +9,7 @@ import AntiConfedAd from "../assets/history/anticonfedad.jpg";
 <MainLayout title={title}>
   <main>
     <HeroBanner backgroundImage={View} heroText={"The Antis of Plate Cove"} />
-    <div class="bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
+    <section class="bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
       <h2 class="text-xl font-semibold mb-2">The Antis of Plate Cove</h2>
         <p>
           Newfoundland joined the Canadian confederation in 1949. The referendum was decided by a one percent margin.  
@@ -34,7 +34,7 @@ import AntiConfedAd from "../assets/history/anticonfedad.jpg";
         </p>
         <br>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-2">
-          <div class="order-2 md:order-1 lg:order-1">
+          <article class="order-2 md:order-1 lg:order-1">
             <p class="max-w-xl mx-auto bg-[#f4f4f4] p-4 rounded-lg border-[1px] border-gray-300">
               Come all ye good people and listen
               To what I have come here to say;
@@ -89,13 +89,13 @@ import AntiConfedAd from "../assets/history/anticonfedad.jpg";
               Then hurrah! for the “Antis” of Plate Cove,
               The “Fortress of Bonavist' Bay”!
             </p>
-          </div>
-        <figure class="order-1 md:order-2 lg:order-2">
-          <img src={AntiConfedAd} alt="Anti Confederation Advertisement" class=" mx-auto">
-          <figcaption class="text-center italic font-semibold text-sm">Anti Confederation Advertisement</figcaption>
-          <figcaption class="text-center italic font-semibold text-sm">"Morning Chronical, St. John's, September 29 / 1869</figcaption>
-        </figure>
+          </article>
+          <figure class="order-1 md:order-2 lg:order-2">
+            <img src={AntiConfedAd} alt="Anti Confederation Advertisement" class=" mx-auto">
+            <figcaption class="text-center italic font-semibold text-sm">Anti Confederation Advertisement</figcaption>
+            <figcaption class="text-center italic font-semibold text-sm">"Morning Chronical, St. John's, September 29 / 1869</figcaption>
+          </figure>
       </div>
-    </div>
+    </section>
   </main>
 </MainLayout>

@@ -13,7 +13,7 @@ import Amenities from "../components/CardActivities.astro";
 <MainLayout title={title}>
   <main>
     <HeroBanner backgroundImage={View} heroText={"Restaurants"} />
-    <div class="flex flex-wrap justify-center my-6 gap-4">
+    <section class="flex flex-wrap justify-center my-6 gap-4">
       <BusinessCard 
           businessImage={BellasRestaurantImage}
           businessName={"Bella's Restaurant"}
@@ -30,6 +30,6 @@ import Amenities from "../components/CardActivities.astro";
           <Amenities slot="before_social" activity={"Gluten Free"} />
           <SocialIcon socialHref={"https://www.facebook.com/RounddaBayInnNL"} socialName={"brandico:facebook-rect"} />
         </BusinessCard>
-      </div>
+      </section>
   </main>
 </MainLayout>
