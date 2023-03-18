@@ -4,16 +4,29 @@ const title = "Plate Cove - History";
 import "../styles/styles.css";
 import HeroBanner from "../components/HeroBanner.astro";
 import View from "../assets/hero_images/view6.jpg";
+import NoSeasOne from "../assets/history/noseas1.jpg";
+import NoSeasTwo from "../assets/history/noseas2.jpg";
+import NoSeasArticle from "../components/NoSeasArticle.astro";
 ---
 
 <MainLayout title={title}>
   <main>
     <HeroBanner backgroundImage={View} heroText={"No Seas To Wash Me Off"} />
-    <div class=" bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
-      <h2 class="text-xl font-semibold mb-2">No Seas To Wash Me Off History.</h2>
-      <p>
-        Information to be added.
-      </p>
-    </div>
+    <section class=" bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
+      <h2 class="text-xl font-semibold mb-2 text-center">No Seas To Wash Me Off</h2>
+      <div class="flex flex-col md:flex-col lg:flex-row gap-10">
+        <div class="flex justify-center gap-2 mx-auto flex-col md:mx-0 md:flex-row lg:flex-col md:justify-around lg:justify-start">
+          <figure class="flex flex-col w-max">
+            <img src={NoSeasOne} alt="No Seas To Wash Me Off" alt="Photo Pius Keough" />
+            <figcaption class="text-center italic font-semibold text-sm">Photo Pius Keough</figcaption>
+          </figure>
+          <figure class="flex flex-col max-w-fit">
+            <img src={NoSeasTwo} alt="No Seas To Wash Me Off" alt="Photo Pius Keough" />
+            <figcaption class="text-center italic font-semibold text-sm">Ocean View</figcaption>
+          </figure>
+        </div>
+        <NoSeasArticle />
+      </div>
+    </section>
   </main>
 </MainLayout>
