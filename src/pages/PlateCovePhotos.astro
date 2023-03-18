@@ -21,6 +21,13 @@ import imageFifteen from "../assets/platecove/photo15.jpg";
 import imageSixteen from "../assets/platecove/photo16.jpg";
 import imageSeventeen from "../assets/platecove/photo17.jpg";
 import imageEighteen from "../assets/platecove/photo18.jpg";
+import imageNineteen from "../assets/platecove/photo19.jpg";
+import imageTwenty from "../assets/platecove/photo20.jpg";
+import imageTwentyOne from "../assets/platecove/photo21.jpg";
+import imageTwentyTwo from "../assets/platecove/photo22.jpg";
+import imageTwentyThree from "../assets/platecove/photo23.jpg";
+import imageTwentyFour from "../assets/platecove/photo24.jpg";
+import imageTwentyFive from "../assets/platecove/photo25.jpg";
 import View from "../assets/hero_images/view4.png";
 import HeroBanner from "../components/HeroBanner.astro";
 ---
@@ -29,7 +36,7 @@ import HeroBanner from "../components/HeroBanner.astro";
   <main>
     <HeroBanner backgroundImage={View} heroText={"Plate Cove"} />
     <div class="carousel w-11/12 mx-auto my-6 md:w-1/2 lg:w-1/3">
-      <CarouselSlider slideNumber={"slide1"} imageSrc={imageOne} slideBack={"#slide18"} slideAhead={"#slide2"} />
+      <CarouselSlider slideNumber={"slide1"} imageSrc={imageOne} slideBack={"#slide25"} slideAhead={"#slide2"} />
       <CarouselSlider slideNumber={"slide2"} imageSrc={imageTwo} slideBack={"#slide1"} slideAhead={"#slide3"} />
       <CarouselSlider slideNumber={"slide3"} imageSrc={imageThree} slideBack={"#slide2"} slideAhead={"#slide4"} />
       <CarouselSlider slideNumber={"slide4"} imageSrc={imageFour} slideBack={"#slide3"} slideAhead={"#slide5"} />
@@ -46,7 +53,14 @@ import HeroBanner from "../components/HeroBanner.astro";
       <CarouselSlider slideNumber={"slide15"} imageSrc={imageFifteen} slideBack={"#slide14"} slideAhead={"#slide16"} />
       <CarouselSlider slideNumber={"slide16"} imageSrc={imageSixteen} slideBack={"#slide15"} slideAhead={"#slide17"} />
       <CarouselSlider slideNumber={"slide17"} imageSrc={imageSeventeen} slideBack={"#slide16"} slideAhead={"#slide18"} />
-      <CarouselSlider slideNumber={"slide18"} imageSrc={imageEighteen} slideBack={"#slide17"} slideAhead={"#slide1"} />
+      <CarouselSlider slideNumber={"slide18"} imageSrc={imageEighteen} slideBack={"#slide17"} slideAhead={"#slide19"} />
+      <CarouselSlider slideNumber={"slide19"} imageSrc={imageNineteen} slideBack={"#slide18"} slideAhead={"#slide20"} />
+      <CarouselSlider slideNumber={"slide20"} imageSrc={imageTwenty} slideBack={"#slide19"} slideAhead={"#slide21"} />
+      <CarouselSlider slideNumber={"slide21"} imageSrc={imageTwentyOne} slideBack={"#slide20"} slideAhead={"#slide22"} />
+      <CarouselSlider slideNumber={"slide22"} imageSrc={imageTwentyTwo} slideBack={"#slide21"} slideAhead={"#slide23"} />
+      <CarouselSlider slideNumber={"slide23"} imageSrc={imageTwentyThree} slideBack={"#slide22"} slideAhead={"#slide24"} />
+      <CarouselSlider slideNumber={"slide24"} imageSrc={imageTwentyFour} slideBack={"#slide23"} slideAhead={"#slide25"} />
+      <CarouselSlider slideNumber={"slide25"} imageSrc={imageTwentyFive} slideBack={"#slide24"} slideAhead={"#slide1"} />
     </div>
   </main>
 </MainLayout>
