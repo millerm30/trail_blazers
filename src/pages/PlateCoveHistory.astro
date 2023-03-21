@@ -8,44 +8,33 @@ import plateCoveWestHistoryOne from "../assets/history/platecoveHistory1.jpg";
 import plateCoveWestHistoryTwo from "../assets/history/platecoveHistory3.jpg";
 import plateCoveWestHistoryThree from "../assets/history/platecoveHistory4.jpg";
 import plateCoveWestHistoryFour from "../assets/history/platecoveHistory5.jpg";
+import plateCoveWestHistoryFive from "../assets/history/boatPhoto.jpg";
+import plateCoveWestHistorySix from "../assets/history/oldWarf.jpg";
 import plateCoveEastHistoryOne from "../assets/history/platecoveHistory2.jpg";
 import plateCoveEastHistoryTwo from "../assets/history/platecoveHistory6.jpg";
 import PlateCoveArticleOne from "../components/PlateCoveArticle.astro";
+import PlateCoveHistoryModals from "../components/PlateCoveHistoryModals.astro";
 ---
 
 <MainLayout title={title}>
   <main>
     <HeroBanner backgroundImage={View} heroText={"Plate Cove History"} />
     <section class="bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
-      <h2 class="text-xl font-semibold mb-2">History</h2>
+      <h2 class="text-xl font-semibold mb-2">Plate Cove History</h2>
       <PlateCoveArticleOne />
       <br>
-      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-2">     
-        <figure>
-          <img src={plateCoveWestHistoryThree} alt="Stripping logs for slipway">
-          <figcaption class="text-center italic font-semibold text-sm">Stripping logs for slipway - Plate Cove West</figcaption>
-        </figure>
-        <figure>
-          <img src={plateCoveWestHistoryOne} alt="Plate Cove West Photo">
-          <figcaption class="text-center italic font-semibold text-sm">Plate Cove West</figcaption>
-        </figure>
-        <figure>
-          <img src={plateCoveWestHistoryTwo} alt="Plate Cove warf repairs">
-          <figcaption class="text-center italic font-semibold text-sm">Plate Cove West - Warf Repairs</figcaption>
-        </figure>
-        <figure>
-          <img src={plateCoveWestHistoryFour} alt="Workers">
-          <figcaption class="text-center italic font-semibold text-sm">Bill Mews, left and Bill Walsh</figcaption>
-        </figure>
-        <figure>
-          <img src={plateCoveEastHistoryOne} alt="Plate Cove East Photo">
-          <figcaption class="text-center italic font-semibold text-sm">Plate Cove East</figcaption>
-        </figure>
-        <figure>
-          <img src={plateCoveEastHistoryTwo} alt="Plate Cove East Boat Damage">
-          <figcaption class="text-center italic font-semibold text-sm">Plate Cove East</figcaption>
-        </figure>
+      <p class="italic">Click the images below to show more info</p>
+      <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-2">
+        <label for="modal-1" class="hover:cursor-pointer"><img src={plateCoveWestHistoryOne} alt="Plate Cove History 1" class="rounded-lg h-full w-full" /></label>
+        <label for="modal-2" class="hover:cursor-pointer"><img src={plateCoveWestHistoryTwo} alt="Plate Cove History 2" class="rounded-lg h-full w-full" /></label>
+        <label for="modal-3" class="hover:cursor-pointer"><img src={plateCoveWestHistoryThree} alt="Plate Cove History 3" class="rounded-lg h-full w-full" /></label>
+        <label for="modal-4" class="hover:cursor-pointer"><img src={plateCoveWestHistoryFour} alt="Plate Cove History 4" class="rounded-lg h-full w-full" /></label>
+        <label for="modal-5" class="hover:cursor-pointer"><img src={plateCoveWestHistoryFive} alt="Plate Cove History 5" class="rounded-lg h-full w-full" /></label>
+        <label for="modal-6" class="hover:cursor-pointer"><img src={plateCoveEastHistoryOne} alt="Plate Cove History 6" class="rounded-lg h-full w-full" /></label>
+        <label for="modal-7" class="hover:cursor-pointer"><img src={plateCoveEastHistoryTwo} alt="Plate Cove History 7" class="rounded-lg h-full w-full" /></label>
+        <label for="modal-8" class="hover:cursor-pointer"><img src={plateCoveWestHistorySix} alt="Plate Cove History 8" class="rounded-lg h-full w-full" /></label>
       </div>
     </section>
+    <PlateCoveHistoryModals />
   </main>
 </MainLayout>
