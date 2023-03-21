@@ -9,6 +9,7 @@ import SomethingFishyImage from "../assets/business_logos/somethingfishy.jpg";
 import TrinityEcoToursImage from "../assets/business_logos/trinityecotours.jpg";
 import BonavistaBiennaleImage from "../assets/business_logos/bonavistabiennale.jpg";
 import DiscoveryGeoPark from "../assets/business_logos/discoverygeo.jpg";
+import KDM from "../assets/business_logos/kdmLogo.png";
 import View from "../assets/hero_images/view4.png";
 import HeroBanner from "../components/HeroBanner.astro";
 import Amenities from "../components/CardActivities.astro";
@@ -98,6 +99,19 @@ import Amenities from "../components/CardActivities.astro";
         <SocialIcon socialHref={"https://www.twitter.com/discoverygeonl"} socialName={"fa:twitter-square"} />
         <SocialIcon socialHref={"https://www.instagram.com/discoverygeonl"} socialName={"fa:instagram"} />
         <SocialIcon socialHref={"https://www.linkedin.com/in/discoverygeopark"} socialName={"fa:linkedin-square"} />
+      </BusinessCard>
+      <BusinessCard 
+        businessImage={KDM}
+        businessName={"KDM Contracting"}
+        businessDescription={"Excavation Services, backfill, grubbing, garage pad construction, land clearing"}
+        businessAddress={"20 Main Road, Plate Cove West, NL, Canada"} 
+        businessPhone={"709-427-2755"} 
+        businessEmail={""} 
+        businessWebsite={""}
+        businessWebName={""}
+      >
+        <Amenities slot="before_social" activity={"Excavation"} />
+        <SocialIcon socialName={"ion:mail-sharp"} />
       </BusinessCard>
     </section>
   </main>
