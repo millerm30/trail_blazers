@@ -2,8 +2,12 @@
 import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - History";
 import "../styles/styles.css";
+import ChurchModals from "../components/ChurchHistoryModals.astro";
 import HeroBanner from "../components/HeroBanner.astro";
 import View from "../assets/hero_images/view1.png";
+import oldChurchPhoto1 from "../assets/history/oldChurch.jpg";
+import oldChurchPhoto2 from "../assets/history/oldChurch2.jpg";
+import oldChurchPhoto3 from "../assets/history/oldChurch3.jpg";
 ---
 
 <MainLayout title={title}>
@@ -23,6 +27,14 @@ import View from "../assets/hero_images/view1.png";
         was built in (The exact date will be here). The new church offers a church, chapel, community center with stage, bathrooms and a kitchen. The present day church 
         is located between Plate Cove West and PLate Cove East and offers church services to present day.
       </p>
+      <br>
+      <p class="italic">Click the images below to show more info</p>
+      <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-2">
+        <label for="modal-1" class="hover:cursor-pointer hover:animate-pulse"><img src={oldChurchPhoto1} alt="Plate Cove History 1" class="rounded-lg h-full w-full" /></label>
+        <label for="modal-2" class="hover:cursor-pointer hover:animate-pulse"><img src={oldChurchPhoto2} alt="Plate Cove History 1" class="rounded-lg h-full w-full" /></label>
+        <label for="modal-3" class="hover:cursor-pointer hover:animate-pulse"><img src={oldChurchPhoto3} alt="Plate Cove History 1" class="rounded-lg h-full w-full" /></label>
+      </div>
     </section>
+    <ChurchModals />
   </main>
 </MainLayout>
