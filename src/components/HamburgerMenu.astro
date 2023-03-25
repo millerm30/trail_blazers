@@ -1,0 +1,75 @@
+---
+
+---
+
+<div onclick="animateHamburgerMenu(this)" class="burger inline-block cursor-pointer p-2">
+  <div id="bar1" class="w-8 h-[3px] bg-white my-1 rounded-sm"></div>
+  <div id="bar2" class="w-6 h-[3px] bg-white my-1 rounded-sm"></div>
+  <div id="bar3" class="w-8 h-[3px] bg-white my-1 rounded-sm"></div>
+  <div id="bar4" class="w-6 h-[3px] bg-white mt-1 rounded-sm"></div>
+</div>
+
+<script is:inline>
+
+  function toggleMobileMenu(x) {
+    let dropdown = document.getElementsByClassName("dropdown-content")[0];
+    if (dropdown.style.display === "block") {
+      dropdown.style.display = "none";
+      x.classList.remove("change");
+    } else {
+      dropdown.style.display = "block";
+       x.classList.add("change");    
+    }
+  };
+
+  function animateHamburgerMenu(x) {
+    x.classList.toggle("change");
+    let bar1 = document.getElementById("bar1");
+    let bar2 = document.getElementById("bar2");
+    let bar3 = document.getElementById("bar3");
+    if (bar1.style.transform === "rotate(45deg)") {
+      bar1.style.transform = "rotate(0deg)";
+      bar1.style.translate = "0 0";
+      bar2.style.opacity = "1";
+      bar4.style.opacity = "1";
+      bar3.style.transform = "rotate(0deg)";
+      bar3.style.translate = "0 0";
+      bar1.style.transition = "0.3s";
+      bar2.style.transition = "0.3s";
+      bar3.style.transition = "0.3s";
+      bar4.style.transition = "0.3s";
+    } else {
+      bar1.style.transform = "rotate(45deg)";
+      bar1.style.translate = "0 7px";
+      bar3.style.translate = "0 -7px";
+      bar2.style.opacity = "0";
+      bar4.style.opacity = "0";
+      bar3.style.transform = "rotate(-45deg)";
+      bar1.style.transition = "0.3s";
+      bar2.style.transition = "0.3s";
+      bar3.style.transition = "0.3s";
+      bar4.style.transition = "0.3s";
+    }
+  };
+
+  document.addEventListener("click", function(event) {
+    let dropdown = document.getElementsByClassName("dropdown-content")[0];
+    let hamburger = document.getElementsByClassName("burger")[0];
+    if (dropdown.style.display === "block" && !dropdown.contains(event.target) && !hamburger.contains(event.target)) {
+      dropdown.style.display = "none";
+      let x = document.getElementsByClassName("change")[0];
+      x.classList.remove("change");
+      bar1.style.transform = "rotate(0deg)";
+      bar1.style.translate = "0 0";
+      bar2.style.opacity = "1";
+      bar4.style.opacity = "1";
+      bar3.style.transform = "rotate(0deg)";
+      bar3.style.translate = "0 0";
+      bar1.style.transition = "0.3s";
+      bar2.style.transition = "0.3s";
+      bar3.style.transition = "0.3s";
+      bar4.style.transition = "0.3s";
+    }
+  });
+  
+</script>
