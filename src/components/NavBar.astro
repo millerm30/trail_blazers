@@ -4,7 +4,7 @@
 
 <script is:inline>
   function toggleMobileMenu(x) {
-    var dropdown = document.getElementsByClassName("dropdown-content")[0];
+    let dropdown = document.getElementsByClassName("dropdown-content")[0];
     if (dropdown.style.display === "block") {
       dropdown.style.display = "none";
     } else {
@@ -13,9 +13,9 @@
   }
   function animateHamburgerMenu(x) {
     x.classList.toggle("change");
-    var bar1 = document.getElementById("bar1");
-    var bar2 = document.getElementById("bar2");
-    var bar3 = document.getElementById("bar3");
+    let bar1 = document.getElementById("bar1");
+    let bar2 = document.getElementById("bar2");
+    let bar3 = document.getElementById("bar3");
     if (bar1.style.transform === "rotate(45deg)") {
       bar1.style.transform = "rotate(0deg)";
       bar1.style.translate = "0 0";
