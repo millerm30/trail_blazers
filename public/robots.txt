@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://master--sunny-babka-7f146e.netlify.app/sitemap-index.xml
