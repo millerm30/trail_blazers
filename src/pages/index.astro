@@ -4,10 +4,13 @@ import WeatherComponent from "../components/WeatherComponent.astro";
 const title = "Plate Cove - Welcome!";
 import "../styles/styles.css";
 import oldRoute235Map from "../assets/other_photos/oldRoute235Map.jpg";
+import HeroBanner from "../components/HeroBanner.astro";
+import heroImage from "../assets/hero_images/view1.png";
 ---
 
 <MainLayout title={title}>
 	<main>
+	<HeroBanner backgroundImage={heroImage} />
 		<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-black">
 			<div class="col-span-1 row-span-2 md:col-span-1 lg:col-span-3 bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 shadow-md shadow-slate-500">
 			<p>

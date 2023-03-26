@@ -1,6 +1,8 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - History";
+import HeroBanner from "../components/HeroBanner.astro";
+import heroImage from "../assets/hero_images/view1.png";
 import "../styles/styles.css";
 import ChurchModals from "../components/ChurchHistoryModals.astro";
 import oldChurchPhoto1 from "../assets/history/oldChurch.jpg";
@@ -10,6 +12,7 @@ import oldChurchPhoto3 from "../assets/history/oldChurch3.jpg";
 
 <MainLayout title={title}>
   <main>
+    <HeroBanner backgroundImage={heroImage} />
     <section class=" bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
       <h2 class="text-xl font-semibold mb-2">Churches of Plate Cove History.</h2>
       <p>

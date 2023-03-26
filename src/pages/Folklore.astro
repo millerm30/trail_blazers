@@ -2,10 +2,13 @@
 import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - Folklore";
 import "../styles/styles.css";
+import HeroBanner from "../components/HeroBanner.astro";
+import heroImage from "../assets/hero_images/view1.png";
 ---
 
 <MainLayout title={title}>
   <main>
+    <HeroBanner backgroundImage={heroImage} />
     <div class="bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
       <p>This section will be dedicated to the folklore of Newfoundland & Labrador.</p>
       <br>
