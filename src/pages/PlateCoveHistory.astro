@@ -2,8 +2,6 @@
 import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - History";
 import "../styles/styles.css";
-import HeroBanner from "../components/HeroBanner.astro";
-import View from "../assets/hero_images/view1.png";
 import plateCoveHistoryOne from "../assets/history/platecoveHistory1.jpg";
 import plateCoveHistoryTwo from "../assets/history/platecoveHistory3.jpg";
 import plateCoveHistoryThree from "../assets/history/platecoveHistory4.jpg";
@@ -22,7 +20,6 @@ import PlateCoveHistoryModals from "../components/PlateCoveHistoryModals.astro";
 
 <MainLayout title={title}>
   <main>
-    <HeroBanner backgroundImage={View} />
     <section class="bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
       <h2 class="text-xl font-semibold mb-2">Plate Cove History</h2>
       <PlateCoveArticleOne />

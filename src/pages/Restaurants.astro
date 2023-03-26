@@ -5,31 +5,28 @@ import "../styles/styles.css";
 import BusinessCard from "../components/BusinessCard.astro";
 import SocialIcon from "../components/SocialIcon.astro";
 import BellasRestaurantImage  from "../assets/business_logos/bellasrestaurant.jpg";
-import View from "../assets/hero_images/view5.jpg";
-import HeroBanner from "../components/HeroBanner.astro";
 import Amenities from "../components/CardActivities.astro";
 ---
 
 <MainLayout title={title}>
   <main>
-    <HeroBanner backgroundImage={View} />
     <section class="flex flex-wrap justify-center my-6 gap-4">
       <BusinessCard 
-          businessImage={BellasRestaurantImage}
-          businessName={"Bella's Restaurant"}
-          businessDescription={"Open daily from 8AM until 7PM from June 13 until Otober 1."}
-          businessAddress={"4 Main Road, Plate Cove West, NL"} 
-          businessPhone={"709-544-2008"} 
-          businessEmail={"rounddabayinn@yahoo.ca"} 
-          businessWebsite={"http://www.rounddabayinn.com/bellas-restaurant"}
-          businessWebName={"www.rounddabayinn.com/bellas-restaurant"}
-        >
-          <Amenities slot="before_social" activity={"Newfoundland Food"} />
-          <Amenities slot="before_social" activity={"Vegetarian"} />
-          <Amenities slot="before_social" activity={"Vegan"} />
-          <Amenities slot="before_social" activity={"Gluten Free"} />
-          <SocialIcon socialHref={"https://www.facebook.com/RounddaBayInnNL"} socialName={"brandico:facebook-rect"} />
-        </BusinessCard>
-      </section>
+        businessImage={BellasRestaurantImage}
+        businessName={"Bella's Restaurant"}
+        businessDescription={"Open daily from 8AM until 7PM from June 13 until Otober 1."}
+        businessAddress={"4 Main Road, Plate Cove West, NL"} 
+        businessPhone={"709-544-2008"} 
+        businessEmail={"rounddabayinn@yahoo.ca"} 
+        businessWebsite={"http://www.rounddabayinn.com/bellas-restaurant"}
+        businessWebName={"www.rounddabayinn.com/bellas-restaurant"}
+      >
+        <Amenities slot="before_social" activity={"Newfoundland Food"} />
+        <Amenities slot="before_social" activity={"Vegetarian"} />
+        <Amenities slot="before_social" activity={"Vegan"} />
+        <Amenities slot="before_social" activity={"Gluten Free"} />
+        <SocialIcon socialHref={"https://www.facebook.com/RounddaBayInnNL"} socialName={"brandico:facebook-rect"} />
+      </BusinessCard>
+    </section>
   </main>
 </MainLayout>
