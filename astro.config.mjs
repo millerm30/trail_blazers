@@ -11,6 +11,6 @@ export default defineConfig({
     },
   },
   site: 'https://millerm30.github.io',
-  base: '/trail_blazers',
+  base: '/',
   integrations: [tailwind(), react()],
 });
