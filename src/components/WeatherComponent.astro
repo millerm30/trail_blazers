@@ -15,7 +15,8 @@ const weatherImageURL = `https://openweathermap.org/img/wn/${data.weather[0].ico
       <span class="flex flex-col justify-between py-2">
         <p class="font-bold">Current Temp:</p>
         <span class="flex justify-center">
-          <p class="text-5xl font-bold py-2">{Math.round(parseFloat(data.main.temp))}&degC</p>
+          <p class="text-5xl font-bold py-2">{Math.round(parseFloat(data.main.temp))}</p>
+          <sup class="text-xl font-bold py-2">&degC</sup>
         </span>
       </span>
     </div>
