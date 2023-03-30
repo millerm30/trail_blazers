@@ -4,6 +4,7 @@ const title = "Plate Cove - History";
 import "../styles/styles.css";
 import HeroBanner from "../components/HeroBanner.astro";
 import heroImage from "../assets/hero_images/view2.jpg";
+import arcticExplorerImage from "../assets/history/arcticExplorer.jpg";
 ---
 
 <MainLayout title={title}>
@@ -12,7 +13,43 @@ import heroImage from "../assets/hero_images/view2.jpg";
     <section class=" bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
       <h2 class="text-xl font-semibold mb-2">Arctic Explorer History</h2>
       <p>
-        Information to be added.
+        The MS Arctic Explorer was a ship which sank off St. Anthony, Newfoundland, in the Strait of Belle Isle, on 3 July 1981.
+        Arctic Explorer was built by the Hoivolds shipyard of Kristiansand, Norway as a sealer. She was laid down in March 1973, 
+        launched in November, and delivered in January 1974. She had a gross tonnage of 991 GT and a deadweight tonnage of 331 DWT, 
+        with a length of 49.5 metres (162 ft) and a beam of 11.5 metres (38 ft). She was powered by a single diesel engine that gave her 
+        a service speed of 12.5 knots (23.2 km/h).
+      </p>
+      <figure class="float-none md:float-right lg:float-right p-2">
+        <img src={arcticExplorerImage} alt="Arctic Explorer" class="max-w-[320px] rounded-lg">
+        <figcaption class="text-sm font-semibold italic">Arctic Explorer</figcaption>
+      </figure>
+      <br>
+      <p>
+        At the time of her loss, Arctic Explorer was owned by the Newfoundland company Carino and 
+        charted to Geophysical Service for the purpose of conducting seismic surveys off the Labrador coast for British Petroleum. 
+        She departed the port of St. Anthony early on the morning of 3 July, and at about 07:40 local time began listing to starboard in the Strait of Belle Isle, 
+        according to a survivor. A few minutes after 08:00, a short distress tone was heard by Canadian Coast Guard stations in St. Anthony and Comfort Cove, 
+        and the St. Anthony station heard an auto-alarm that would typically precede a distress call, though no voice communication was ever heard from Arctic Explorer.
+        The Coast Guard did not investigate the signals. The crew abandoned ship into two liferafts—the ship's list prevented 
+        the launch of lifeboats—and 19 of the 32 crew eventually took refuge on a single undamaged raft.
+      </p>
+      <br>
+      <p>
+        As the Coast Guard had failed to follow up on the signals it received, Arctic Explorer was not reported missing until the following day, 
+        after she had missed three scheduled radio calls with Geophysical Service, which contacted the Coast Guard in the late morning.
+        A DHC-5 Buffalo was dispatched from Summerside, Prince Edward Island, and searched the ocean near St. Anthony all afternoon with no result.
+        On 5 July, additional Coast Guard aircraft and ships reached the area to join the search, and shortly after midnight on 6 July a plane spotted 
+        the liferaft with survivors onboard. The icebreaker Grenfell rescued the raft and its occupants; later in the day, eight bodies were located, 
+        while the remaining five crewmembers were never found. A Transport Canada inquiry found that the cause of the sinking was
+        likely the starboard list, but did not find direct evidence; rather, it came to the conclusion by eliminating other possible causes, 
+        and the reason for the list to occur in the first place was not found.
+      </p>
+      <br>
+      <p>
+        The tragedy took the lives of the following crew members:
+        <ul>
+          <li>Jack Williams King (Captain) aged 46 of Badger's Quay, Newfoundland & Labrador</li>
+        </ul>
       </p>
     </section>
   </main>
