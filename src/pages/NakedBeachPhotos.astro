@@ -3,7 +3,6 @@ import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - Naked Man Beach Photos";
 import "../styles/styles.css";
 import NakedManPhotosModals from "../components/NakedManPhotosModals.astro";
-import HeroBanner from "../components/HeroBanner.astro";
 import heroImage from "../assets/hero_images/view4.jpg";
 import imageOne from "../assets/nakedman_beach/photo1.jpg";
 import imageTwo from "../assets/nakedman_beach/photo2.jpg";
@@ -36,9 +35,8 @@ import imageThirty from "../assets/nakedman_beach/photo30.jpg";
 import imageThirtyOne from "../assets/nakedman_beach/photo31.jpg";
 ---
 
-<MainLayout title={title}>
+<MainLayout title={title} backgroundImage={heroImage}>
   <main>
-    <HeroBanner backgroundImage={heroImage} />
     <section class="bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
       <h2 class="text-xl font-semibold mb-2">Naked Man Beach Photos</h2>
       <br>

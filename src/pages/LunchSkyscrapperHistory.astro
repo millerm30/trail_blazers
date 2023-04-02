@@ -3,13 +3,11 @@ import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - Antis of Plate Cove";
 import "../styles/styles.css";
 import SkyscrapperArticle from "../components/skyscrapperArticle.astro";
-import HeroBanner from "../components/HeroBanner.astro";
 import heroImage from "../assets/hero_images/view1.png";
 ---
 
-<MainLayout title={title}>
+<MainLayout title={title} backgroundImage={heroImage}>
   <main>
-    <HeroBanner backgroundImage={heroImage} />
     <section class="bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
       <h2 class="text-xl font-semibold mb-2">The famous lunch atop a skyscrapper</h2>
         <p>

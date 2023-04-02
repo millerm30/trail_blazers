@@ -6,13 +6,11 @@ import BusinessCard from "../components/BusinessCard.astro";
 import SocialIcon from "../components/SocialIcon.astro";
 import BellasRestaurantImage  from "../assets/business_logos/bellasrestaurant.jpg";
 import Amenities from "../components/CardActivities.astro";
-import HeroBanner from "../components/HeroBanner.astro";
 import heroImage from "../assets/hero_images/view3.png";
 ---
 
-<MainLayout title={title}>
+<MainLayout title={title} backgroundImage={heroImage}>
   <main>
-    <HeroBanner backgroundImage={heroImage} />
     <section class="flex flex-wrap justify-center my-6 gap-4">
       <BusinessCard 
         businessImage={BellasRestaurantImage}

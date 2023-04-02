@@ -5,13 +5,11 @@ import "../styles/styles.css";
 import RedBeachTrailImage from "../assets/red_beach/redBeach.png"
 import TrailComponent from "../components/TrailComponent.astro";
 import TrailActivities from "../components/CardActivities.astro";
-import HeroBanner from "../components/HeroBanner.astro";
-import heroImage from "../assets/hero_images/view4.jpg";
+import heroImage from "../assets/hero_images/view8.jpeg";
 ---
 
-<MainLayout title={title}>
+<MainLayout title={title} backgroundImage={heroImage}>
   <main>
-    <HeroBanner backgroundImage={heroImage} />
     <TrailComponent 
       trailImage={RedBeachTrailImage}
       altImage={"Red Beach Trail"}

@@ -2,7 +2,6 @@
 import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - Red Bech Photos";
 import "../styles/styles.css";
-import HeroBanner from "../components/HeroBanner.astro";
 import heroImage from "../assets/hero_images/view1.png";
 import RedBeachPhotosModals from "../components/RedBeachPhotosModals.astro";
 import imageOne from "../assets/red_beach/photo1.jpg";
@@ -25,9 +24,8 @@ import imageSeventeen from "../assets/red_beach/photo17.jpg";
 import imageEighteen from "../assets/red_beach/photo19.jpg";
 ---
 
-<MainLayout title={title}>
+<MainLayout title={title} backgroundImage={heroImage}>
   <main>
-    <HeroBanner backgroundImage={heroImage} />
     <section class="bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
       <h2 class="text-xl font-semibold mb-2">Red Beach Photos</h2>
       <br>

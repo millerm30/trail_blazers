@@ -2,13 +2,11 @@
 import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - History";
 import "../styles/styles.css";
-import HeroBanner from "../components/HeroBanner.astro";
 import heroImage from "../assets/hero_images/view2.jpg";
 import arcticExplorerImage from "../assets/history/arcticExplorer.jpg";
 ---
 
-<MainLayout title={title}>
-  <HeroBanner backgroundImage={heroImage} />
+<MainLayout title={title} backgroundImage={heroImage}>
   <main>
     <section class=" bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
       <h2 class="text-xl font-semibold mb-2">Arctic Explorer History</h2>

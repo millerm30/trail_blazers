@@ -11,13 +11,11 @@ import BonavistaBiennaleImage from "../assets/business_logos/bonavistabiennale.j
 import DiscoveryGeoPark from "../assets/business_logos/discoverygeo.jpg";
 import KDM from "../assets/business_logos/kdmLogo.png";
 import Amenities from "../components/CardActivities.astro";
-import HeroBanner from "../components/HeroBanner.astro";
-import heroImage from "../assets/hero_images/view3.png";
+import heroImage from "../assets/hero_images/view9.png";
 ---
 
-<MainLayout title={title}>
+<MainLayout title={title} backgroundImage={heroImage}>
   <main>
-    <HeroBanner backgroundImage={heroImage} />
     <section class="flex flex-wrap justify-center my-6 gap-4">
       <BusinessCard 
         businessImage={OutportAcresImage}
