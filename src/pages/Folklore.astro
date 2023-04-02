@@ -2,58 +2,63 @@
 import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - Folklore";
 import "../styles/styles.css";
-import heroImage from "../assets/hero_images/view1.png";
+import heroImage from "../assets/hero_images/view7.jpeg";
+import Accordion from "../components/Accordion.astro";
+import jiggsDinnerImage from "../assets/other_photos/jiggsDinner.png";
+import sheilasBushImage from "../assets/other_photos/sheilasBrush.png";
 ---
 
 <MainLayout title={title} backgroundImage={heroImage}>
   <main>
-    <div class="bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
-      <p>This section will be dedicated to the folklore of Newfoundland & Labrador.</p>
-      <br>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt aperiam praesentium laborum, maiores suscipit dignissimos 
-        quisquam veniam quos voluptatibus veritatis, similique perferendis placeat voluptatem, debitis fugit impedit sint? Inventore nostrum 
-        officiis sunt nemo. Provident odit harum fugiat delectus nostrum. Aliquam vitae, itaque aspernatur nesciunt enim quis libero incidunt ipsa 
-        laboriosam veritatis deserunt. Libero delectus consequatur debitis blanditiis iste provident sunt tempore nostrum officia reiciendis quis, 
-        sit obcaecati praesentium hic perspiciatis omnis a facilis unde id, odit quae in distinctio iure. Quaerat optio et quam, perspiciatis molestias 
-        dolor dolore suscipit nesciunt magni quibusdam facilis similique veritatis quod deleniti atque dignissimos sed!
-      </p>
-      <br>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae modi aliquam deserunt et consequuntur consectetur dolorum repellendus! 
-        Tempora laudantium voluptatibus architecto sint cum exercitationem iste provident fugiat cupiditate dolor odio amet ipsa nisi vero consequatur 
-        mollitia aliquid, ipsam, nemo magni reprehenderit blanditiis illo. Exercitationem repellendus ex in omnis itaque cupiditate molestiae, 
-        hic provident sapiente nam libero laudantium et labore error sint totam dolore iusto numquam reprehenderit ipsum explicabo ipsa? Dolor 
-        cum necessitatibus dolores soluta possimus eius eaque, excepturi quam molestias! Necessitatibus eligendi cupiditate labore ab magni amet 
-        odio accusantium non possimus? Voluptas, dicta corporis placeat ipsum consequatur, maxime adipisci dolorum suscipit vero ex provident 
-        dignissimos saepe illum, ipsam nesciunt repellat architecto fuga labore delectus sequi! Eligendi sequi doloribus quaerat totam, error 
-        impedit quo laudantium similique et cumque suscipit provident sunt fuga, voluptatum exercitationem. Velit ea rerum odio sequi repellat 
-        quidem delectus sapiente voluptatum enim sint! Et explicabo consequuntur iure inventore, nam modi dicta? Et officia molestiae at non 
-        ratione doloribus harum explicabo delectus sequi itaque laboriosam quis odit unde, sed voluptates dolorem. Enim consequuntur dolores 
-        dolorem ut unde sunt aliquam error, tempora inventore sapiente? Architecto sint sapiente voluptas dignissimos perspiciatis! Provident 
-        necessitatibus qui eos omnis quod quia neque ipsam, harum accusamus itaque sapiente repellat fuga corporis quis ut dignissimos facilis 
-        tenetur atque fugiat. Tenetur ullam fugiat id totam dicta in accusantium, consectetur reprehenderit odio, deserunt, eaque laudantium minima 
-        facere expedita consequatur possimus non esse illum? Id commodi consequatur magni atque cupiditate quibusdam consequuntur nulla. Repellendus 
-        qui impedit reprehenderit doloribus tempora.
-      </p>
-      <br>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae modi aliquam deserunt et consequuntur consectetur dolorum repellendus! 
-        Tempora laudantium voluptatibus architecto sint cum exercitationem iste provident fugiat cupiditate dolor odio amet ipsa nisi vero consequatur 
-        mollitia aliquid, ipsam, nemo magni reprehenderit blanditiis illo. Exercitationem repellendus ex in omnis itaque cupiditate molestiae, 
-        hic provident sapiente nam libero laudantium et labore error sint totam dolore iusto numquam reprehenderit ipsum explicabo ipsa? Dolor 
-        cum necessitatibus dolores soluta possimus eius eaque, excepturi quam molestias! Necessitatibus eligendi cupiditate labore ab magni amet 
-        odio accusantium non possimus? Voluptas, dicta corporis placeat ipsum consequatur, maxime adipisci dolorum suscipit vero ex provident 
-        dignissimos saepe illum, ipsam nesciunt repellat architecto fuga labore delectus sequi! Eligendi sequi doloribus quaerat totam, error 
-        impedit quo laudantium similique et cumque suscipit provident sunt fuga, voluptatum exercitationem. Velit ea rerum odio sequi repellat 
-        quidem delectus sapiente voluptatum enim sint! Et explicabo consequuntur iure inventore, nam modi dicta? Et officia molestiae at non 
-        ratione doloribus harum explicabo delectus sequi itaque laboriosam quis odit unde, sed voluptates dolorem. Enim consequuntur dolores 
-        dolorem ut unde sunt aliquam error, tempora inventore sapiente? Architecto sint sapiente voluptas dignissimos perspiciatis! Provident 
-        necessitatibus qui eos omnis quod quia neque ipsam, harum accusamus itaque sapiente repellat fuga corporis quis ut dignissimos facilis 
-        tenetur atque fugiat. Tenetur ullam fugiat id totam dicta in accusantium, consectetur reprehenderit odio, deserunt, eaque laudantium minima 
-        facere expedita consequatur possimus non esse illum? Id commodi consequatur magni atque cupiditate quibusdam consequuntur nulla. Repellendus 
-        qui impedit reprehenderit doloribus tempora.
-      </p>
-    </div>
+    <section class="bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black shadow-md shadow-slate-500">
+      <h2 class="text-xl font-semibold mb-2">Newfoundland Traditions & Folklore</h2>
+      <Accordion 
+        headingText={"Jiggs Dinner"} 
+      >
+        <p class="text-md">
+          According to urban legend, there are more than a few origin stories for the name "Jiggs Dinner". Once legend recalls the Newfoundlanders' adoration of a kitchen
+          party and that they all love to dance and do a jig in the kitchen supposedly while the pot is on the boil.
+          <img src={jiggsDinnerImage} class="float-right rounded m-4" />
+          Another recalls that the salt beef, the most necessary item in the pot, was imported from New York by a company called Jiggs. One more suggests the way you would
+          extract those boiled vegtables and bag of pease pudding out of the pot is reminiscent of jiggging a codfish.
+          While the name "Jiggs Dinner" didn't come around until the turn of the 20<sup>th.</sup> century. It's components have long been part of the Newfoundland
+          and Labrador culinary cannon.
+        </p>
+      </Accordion>
+      <Accordion
+        headingText={"Mummering"}
+      >
+        <p class="text-md">The content will be here</p>
+      </Accordion>
+      <Accordion
+        headingText={"Tibs' Eve"}
+      >
+        <p class="text-md">The content will be here</p>
+      </Accordion>
+      <Accordion
+        headingText={"St. Patrick's Day"}
+      >
+        <p class="text-md">The content will be here</p>
+      </Accordion>
+      <Accordion
+        headingText={"Sheila's Brush"}
+      >
+        <p class="text-md">
+          If you live in Newfoundland, Sheila's Brush needs zero explanation. It is a storm, usually a big storm that occurs on or after St. Patrick's Day.
+          It is typically the last big storm of the season.
+          <img src={sheilasBushImage} class="float-right rounded m-4" />
+          But who is Sheila? The term comes from an Irish legend that says that Sheila was the wife
+          or sister or mother of St. Patrick and that the snow is a result of her sweeping away the old season, which is fitting since Spring begins later the week.
+          There is also a legend that Sheila shows up to punish Newfoundlanders for the heavy partying that happens on St. Patrick's Day.
+          <br><br>
+          Do you believe in Sheila's Brush?.....
+        </p>
+      </Accordion>
+      <Accordion
+        headingText={"In like a lion out like a lamb"}
+      >
+        <p class="text-md">The content will be here</p>
+      </Accordion>
+    </section>
   </main>
 </MainLayout>

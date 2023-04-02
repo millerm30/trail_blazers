@@ -1,0 +1,13 @@
+---
+const { headingText } = Astro.props;
+---
+
+<div class="collapse collapse-plus">
+  <input type="checkbox" /> 
+  <div class="collapse-title text-xl font-medium">
+    <h2>{headingText}</h2>
+  </div>
+  <div class="collapse-content"> 
+    <slot />
+  </div>
+</div>
