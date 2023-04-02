@@ -10,6 +10,7 @@ import TrinityEcoToursImage from "../assets/business_logos/trinityecotours.jpg";
 import BonavistaBiennaleImage from "../assets/business_logos/bonavistabiennale.jpg";
 import DiscoveryGeoPark from "../assets/business_logos/discoverygeo.jpg";
 import KDM from "../assets/business_logos/kdmLogo.png";
+import bethsVarietyImage from "../assets/business_logos/bthsVariety.jpg";
 import Amenities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view9.png";
 ---
@@ -110,6 +111,19 @@ import heroImage from "../assets/hero_images/view9.png";
       >
         <Amenities slot="before_social" activity={"Excavation"} />
         <SocialIcon socialName={"ion:mail-sharp"} />
+      </BusinessCard>
+      <BusinessCard 
+        businessImage={bethsVarietyImage}
+        businessName={"Beth's Variety"}
+        businessDescription={"A little bit of everything! Grocery, great snaks, fresh coffee and more."}
+        businessAddress={"1 Main St, Princeton, NL, Canada"} 
+        businessPhone={"709-462-3496"} 
+        businessEmail={"bethsvariety@gmail.com"}
+        businessWebsite={""}
+        businessWebName={""}
+      >
+        <Amenities slot="before_social" activity={"Convenience Store"} />
+        <SocialIcon socialHref={"https://www.facebook.com/profile.php?id=100063495973259"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
     </section>
   </main>
