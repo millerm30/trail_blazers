@@ -2,21 +2,20 @@
 let lat = import.meta.env.SECRET_lat;
 let lon = import.meta.env.SECRET_lon;
 const apiKey = import.meta.env.SECRET_apiKey;
-const base = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`);
-const response = await base.json();
-const weatherImageURL = response.weather[0].icon;
-const iconUrl = `/assets/${weatherImageURL}.svg`
+const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`);
+const data = await response.json();
+const weatherImageURL = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 ---
 
 <aside class="col-span-2 row-span-1 bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black md:col-span-1 lg:col-span-1">
   <div class="flex justify-around">
     <div class="text-center">
-      <img src={iconUrl} alt={response.weather[0].description} class="w-20 inline" />
-      <p class="uppercase font-bold">{response.weather[0].description}</p>
+      <img src={weatherImageURL} alt={data.weather[0].description} class="w-20 inline" />
+      <p class="uppercase font-bold">{data.weather[0].description}</p>
       <span class="flex flex-col justify-between py-2">
         <p class="font-bold">Current Temp:</p>
         <span class="flex justify-center">
-          <p class="text-5xl font-bold py-2">{Math.round(parseFloat(response.main.temp))}</p>
+          <p class="text-5xl font-bold py-2">{Math.round(parseFloat(data.main.temp))}</p>
           <sup class="text-xl font-bold py-2">&degC</sup>
         </span>
       </span>
@@ -29,15 +28,15 @@ const iconUrl = `/assets/${weatherImageURL}.svg`
       </span>
       <span class="flex justify-between py-2">
         <p class="font-bold">High:</p>
-        <p>{Math.round(parseFloat(response.main.temp_max))} <span class="font-bold">&degC</span></p>
+        <p>{Math.round(parseFloat(data.main.temp_max))} <span class="font-bold">&degC</span></p>
       </span>
       <span class="flex justify-between py-2">
         <p class="font-bold">Low:</p>
-        <p>{Math.round(parseFloat(response.main.temp_min))} <span class="font-bold">&degC</span></p>
+        <p>{Math.round(parseFloat(data.main.temp_min))} <span class="font-bold">&degC</span></p>
       </span>
       <span class="flex justify-between py-2">
         <p class="font-bold">Feels Like:</p>
-        <p>{Math.round(parseFloat(response.main.feels_like))} <span class="font-bold">&degC</span></p>
+        <p>{Math.round(parseFloat(data.main.feels_like))} <span class="font-bold">&degC</span></p>
       </span>
     </div>
   </div>
