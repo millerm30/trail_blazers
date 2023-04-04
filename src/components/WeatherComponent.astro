@@ -5,7 +5,7 @@ const apiKey = import.meta.env.SECRET_apiKey;
 const base = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`);
 const response = await base.json();
 const weatherImageURL = response.weather[0].icon;
-const iconUrl = `/src/assets/icons/${weatherImageURL}.svg`
+const iconUrl = `../assets/icons/${weatherImageURL}.svg`
 ---
 
 <aside class="col-span-2 row-span-1 bg-white my-6 p-4 rounded-lg border-[1px] border-gray-300 mx-4 text-black md:col-span-1 lg:col-span-1">
