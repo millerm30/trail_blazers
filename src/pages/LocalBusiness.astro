@@ -11,6 +11,9 @@ import BonavistaBiennaleImage from "../assets/business_logos/bonavistabiennale.j
 import DiscoveryGeoPark from "../assets/business_logos/discoverygeo.jpg";
 import KDM from "../assets/business_logos/kdmLogo.png";
 import bethsVarietyImage from "../assets/business_logos/bthsVariety.jpg";
+import midwayIrvingImage from "../assets/business_logos/midwayIrving.jpg";
+import taylorsServiceImage from "../assets/business_logos/taylorsStation.jpg";
+import canddConvenienceImage from "../assets/business_logos/canddConvenience.jpg";
 import Amenities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view9.png";
 ---
@@ -110,7 +113,7 @@ import heroImage from "../assets/hero_images/view9.png";
         businessWebName={""}
       >
         <Amenities slot="before_social" activity={"Excavation"} />
-        <SocialIcon socialName={"ion:mail-sharp"} />
+        <SocialIcon socialName={"bi:telephone-fill"} />
       </BusinessCard>
       <BusinessCard 
         businessImage={bethsVarietyImage}
@@ -124,6 +127,48 @@ import heroImage from "../assets/hero_images/view9.png";
       >
         <Amenities slot="before_social" activity={"Convenience Store"} />
         <SocialIcon socialHref={"https://www.facebook.com/profile.php?id=100063495973259"} socialName={"brandico:facebook-rect"} />
+      </BusinessCard>
+      <BusinessCard 
+        businessImage={midwayIrvingImage}
+        businessName={"Midway Irving"}
+        businessDescription={"Gas Station, Convenience Store, Takeout!. Open Monday - Saturday 7am - 9pm, Sunday 9am - 8pm"}
+        businessAddress={"230 Cabot Hiway, Southern Bay, NL, Canada"} 
+        businessPhone={"709-462-3420"} 
+        businessEmail={"scotter@eastlink.ca"}
+        businessWebsite={""}
+        businessWebName={""}
+      >
+        <Amenities slot="before_social" activity={"Fuel"} />
+        <Amenities slot="before_social" activity={"Convenience Store"} />
+        <Amenities slot="before_social" activity={"Takeout"} />
+        <SocialIcon socialHref={"https://www.facebook.com/southernbaynl.ca/"} socialName={"brandico:facebook-rect"} />
+      </BusinessCard>
+      <BusinessCard 
+        businessImage={taylorsServiceImage}
+        businessName={"Taylor's Service Station"}
+        businessDescription={"Gas Station, Convenience Store. Open Monday - Sunday 8am - 10pm"}
+        businessAddress={"38 Main Road, King's Cove, NL, Canada"} 
+        businessPhone={"709-447-2121"} 
+        businessEmail={""}
+        businessWebsite={""}
+        businessWebName={""}
+      >
+        <Amenities slot="before_social" activity={"Fuel"} />
+        <Amenities slot="before_social" activity={"Convenience Store"} />
+        <SocialIcon socialName={"bi:telephone-fill"} />
+      </BusinessCard>
+      <BusinessCard 
+        businessImage={canddConvenienceImage}
+        businessName={"C & D Convenience"}
+        businessDescription={"Grocery Store / Convenience Store."}
+        businessAddress={"5 Main Street, PLate Cove West, NL, Canada"} 
+        businessPhone={"709-545-2176"} 
+        businessEmail={""}
+        businessWebsite={""}
+        businessWebName={""}
+      >
+        <Amenities slot="before_social" activity={"Grocery"} />
+        <SocialIcon socialHref={"https://www.facebook.com/people/C-D-Convenience/100054304399583/"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
     </section>
   </main>

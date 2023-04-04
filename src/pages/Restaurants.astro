@@ -5,6 +5,8 @@ import "../styles/styles.css";
 import BusinessCard from "../components/BusinessCard.astro";
 import SocialIcon from "../components/SocialIcon.astro";
 import BellasRestaurantImage  from "../assets/business_logos/bellasrestaurant.jpg";
+import claytonChipsImage from "../assets/business_logos/claytonChips.jpg";
+import maudieTeaImage from "../assets/business_logos/maudiesTea.jpg";
 import Amenities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view3.png";
 ---
@@ -16,7 +18,7 @@ import heroImage from "../assets/hero_images/view3.png";
         businessImage={BellasRestaurantImage}
         businessName={"Bella's Restaurant"}
         businessDescription={"Open daily from 8AM until 7PM from June 13 until Otober 1."}
-        businessAddress={"4 Main Road, Plate Cove West, NL"} 
+        businessAddress={"4 Main Road, Plate Cove West, NL, Canada"} 
         businessPhone={"709-544-2008"} 
         businessEmail={"rounddabayinn@yahoo.ca"} 
         businessWebsite={"http://www.rounddabayinn.com/bellas-restaurant"}
@@ -27,6 +29,35 @@ import heroImage from "../assets/hero_images/view3.png";
         <Amenities slot="before_social" activity={"Vegan"} />
         <Amenities slot="before_social" activity={"Gluten Free"} />
         <SocialIcon socialHref={"https://www.facebook.com/RounddaBayInnNL"} socialName={"brandico:facebook-rect"} />
+      </BusinessCard>
+      <BusinessCard 
+        businessImage={claytonChipsImage}
+        businessName={"Clayton's Chip Truck"}
+        businessDescription={"We're back with the same original flavor! Homestyle burgers & hand-cut fries, check us out."}
+        businessAddress={"1 Harbour Road, Keels, NL, Canada"} 
+        businessPhone={"709-447-3168"} 
+        businessEmail={""} 
+        businessWebsite={""}
+        businessWebName={""}
+      >
+        <Amenities slot="before_social" activity={"Takuout"} />
+        <Amenities slot="before_social" activity={"Outdoor Seating"} />
+        <SocialIcon socialHref={"https://www.facebook.com/ClaytonsChipTruck"} socialName={"brandico:facebook-rect"} />
+      </BusinessCard>
+      <BusinessCard 
+        businessImage={maudieTeaImage}
+        businessName={"Maudie's Tea Room"}
+        businessDescription={"We're a tea room located in Keels, Bonavista Bay. Be sure to drop by for a cuppa tea and something"}
+        businessAddress={"20 Main Road, Keels, NL, Canada"} 
+        businessPhone={"709-447-3131"} 
+        businessEmail={""} 
+        businessWebsite={""}
+        businessWebName={""}
+      >
+        <Amenities slot="before_social" activity={"Dine-in"} />
+        <Amenities slot="before_social" activity={"Outdoor Seating"} />
+        <Amenities slot="before_social" activity={"Scenic Views"} />
+        <SocialIcon socialHref={"https://www.facebook.com/maudiestearoom"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
     </section>
   </main>
