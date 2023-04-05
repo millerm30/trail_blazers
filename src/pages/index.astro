@@ -9,18 +9,24 @@ import heroImage from "../assets/hero_images/view1.png";
 
 <MainLayout title={title} backgroundImage={heroImage}>
 	<main>
-		<section class="bg-[#253D5B] py-2 my-10">
-			<div class="container mx-auto text-center">
-				<h1 class="text-5xl font-bold text-white mt-8 mb-4">Sights</h1>
-				<p class="text-gray-400 mb-8">Discover the beauty of our community's landmarks.</p>
-				<h1 class="text-5xl font-bold text-white mb-4">History</h1>
-				<p class="text-gray-400 mb-8">Experience our rich cultural heritage.</p>
-				<h1 class="text-5xl font-bold text-white mb-4">People</h1>
-				<p class="text-gray-400 mb-8">Connect with the friendly locals who call this place home.</p>
+		<section class="bg-white my-10 border-t-[1px] border-b-[1px] border-gray-300">
+			<div class="flex flex-col justify-around text-center md:flex-row lg:flex-row">
+				<article class="my-10 md:my-20 lg:my-20">
+					<h1 class="text-5xl font-bold text-gray-800 mb-4">Sights</h1>
+					<p class="text-gray-600">Discover the beauty of our community's landmarks.</p>
+				</article>
+				<article class="my-10 md:my-20 lg:my-20">
+					<h1 class="text-5xl font-bold text-gray-800 mb-4">History</h1>
+					<p class="text-gray-600">Experience our rich cultural heritage.</p>
+				</article>
+				<article class="my-10 md:my-20 lg:my-20">
+					<h1 class="text-5xl font-bold text-gray-800 mb-4">People</h1>
+					<p class="text-gray-600">Connect with the friendly locals who call this place home.</p>
+				</article>
 			</div>
 		</section>
 		<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 text-black">
-			<div class="col-span-1 row-span-2 md:col-span-1 lg:col-span-3 bg-white my-6 p-4 border-[1px] border-gray-300 mx-4 rounded-lg">
+			<div class="col-span-1 row-span-2 md:col-span-1 lg:col-span-3 bg-white mb-6 p-4 border-[1px] border-gray-300 mx-4 rounded-lg">
 			<p>
 				Welcome to Plate Cove. 
 			</p>
