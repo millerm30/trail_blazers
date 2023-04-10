@@ -9,25 +9,14 @@ import oldChurchPhoto2 from "../assets/history/oldChurch2.jpg";
 import oldChurchPhoto3 from "../assets/history/oldChurch3.jpg";
 import oldChurchPhoto4 from "../assets/history/oldChurch4.jpeg";
 import oldChurchPhoto5 from "../assets/history/oldChurch5.jpg";
+import ChurchSchoolArticle from "../components/ChurchSchoolArticle.astro";
 ---
 
 <MainLayout title={title} backgroundImage={heroImage}>
   <main>
     <section class=" bg-white mt-10 p-4 border-t-[1px] border-b-[1px] border-gray-300 text-black">
-      <h2 class="text-xl font-semibold mb-2">Churches of Plate Cove History</h2>
-      <p>
-        Early settlers of Plate Cove would travel to Kings Cove and Open Hall in the 1800's to early 1900's for church services. Alot of early decendants of Plate Cove
-        were burried in Open Hall until the graveyard was established in Plate Cove. The first person to be burried in the new
-        Plate Cove graveyard was Mr. Charlie Tobin of Plate Cove West. Stories from early generations that it's residents couldn't travel the old road from Plate Cove 
-        to Open Hall for the funeral services and burrials that the deceased were transported by boast or across the ice in the winter months. 
-      <br><br>
-        There was a school that ended up being used for church services in the early 1900's which ended up becoming a small local church used up until the new larger church
-        was built in 1955 by local residents. St. Patrick's Parish was established in 1966 which used the church until it succumbed to a fire on November 16th. / 1986 that 
-        completely destroyed the church and parish center. The community used the local St. Aiden Elementary School for weekly church services until a modern style church 
-        was built. The new church offers a church, chapel, community center with stage, bathrooms and a kitchen. The present day church 
-        is located between Plate Cove West and Plate Cove East and offers church services to present day.
-      </p>
-      <br>
+      <h2 class="text-xl font-semibold mb-2">Churches & Schools History</h2>
+      <ChurchSchoolArticle />
       <p class="italic">Click the images below to show more info</p>
       <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-2 auto-rows-[140px]">
         <label for="modal-1" class="hover:cursor-pointer hover:animate-pulse"><img src={oldChurchPhoto1} alt="Church History 1" class="rounded-lg h-full w-full" /></label>
