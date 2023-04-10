@@ -1,0 +1,30 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+const title = "Plate Cove - Plate Cove West Photos";
+import "../styles/styles.css";
+import heroImage from "../assets/hero_images/view8.jpeg";
+import residentImageOne from "../assets/history/oldPhoto.jpeg";
+import residentImageTwo from "../assets/history/oldPhoto1.jpeg";
+import residentImageThree from "../assets/history/oldPhoto2.jpeg";
+import residentImageFour from "../assets/history/oldPhoto3.jpeg";
+import residentImageFive from "../assets/history/oldPhoto4.jpeg";
+import PlateCoveResidentsModals from "../components/PlateCoveResidentsModals.astro";
+---
+
+<MainLayout title={title} backgroundImage={heroImage}>
+  <main>
+    <section class="bg-white mt-10 p-4 border-t-[1px] border-b-[1px] border-gray-300 text-black">
+      <h2 class="text-xl font-semibold mb-2">Residents of Plate Cove Photos</h2>
+      <br>
+      <p class="italic">Click the images below to show more info</p>
+      <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-2 auto-rows-[140px]">
+        <label for="modal-1" class="hover:cursor-pointer hover:animate-pulse"><img src={residentImageOne} alt="Plate Cove Resident Photo 1" class="rounded-lg h-full w-full" /></label>
+        <label for="modal-2" class="hover:cursor-pointer hover:animate-pulse"><img src={residentImageTwo} alt="Plate Cove Resident Photo 2" class="rounded-lg h-full w-full" /></label>
+        <label for="modal-3" class="hover:cursor-pointer hover:animate-pulse"><img src={residentImageThree} alt="Plate Cove Resident Photo 5" class="rounded-lg h-full w-full" /></label>
+        <label for="modal-4" class="hover:cursor-pointer hover:animate-pulse"><img src={residentImageFour} alt="Plate Cove Resident Photo 6" class="rounded-lg h-full w-full" /></label>
+        <label for="modal-5" class="hover:cursor-pointer hover:animate-pulse"><img src={residentImageFive} alt="Plate Cove Resident Photo 7" class="rounded-lg h-full w-full" /></label>
+      </div>
+    </section>
+    <PlateCoveResidentsModals />
+  </main>
+</MainLayout>
