@@ -12,16 +12,27 @@ import heroImage from "../assets/hero_images/view6.jpg";
   <main>
     <TrailComponent 
       trailImage={NakedManTrailImage}
-      altImage={"Naked Man Beach Trail"}
-      trailName={"Naked Man Hiking Trail"}
-      trailDescription={"Generally considered a moderately challenging route, it takes an average of 1 h 47 min to complete. This trail is great for birding, hiking, and walking, and it's unlikely you'll encounter many other people while exploring. The best times to visit this trail are May through September."} 
-      trailLength={"5.1 km"} 
+      altImage={"Naked Man Memorial Trail"}
+      trailName={"Naked Man Memorial Trail"}
+      trailLength={"2.7 km"} 
       trailLocation={"Location of trail here"} 
     >
-    <TrailActivities activity={"running"} />
-    <TrailActivities activity={"hiking"} />
-    <TrailActivities activity={"walking"} />
-    <TrailActivities activity={"birding"} />
+    <p slot="after-trailname">
+      Trail is considered a moderately challenging trail although the hill on the way back will challenge you more! Trail is a 2.7 km return shared nature hike
+      to the coast. Trail is wider for motorized vehicles and possible to see wildlife on the trail and at beach. The beach is nice although best times to see more of
+      the beach with the sand bar is during low tides. Around the beach there is a shallow cave, small waterfall and up the coast you can see the rock formation
+      called <i>"Bacon Strip"</i>.
+      <br><br>
+      There are memory benches on the trail for rest areas and to enjoy being out in nature. The name of this beach came from the pillars in front of the beach which
+      form a naked man sitting down which can be seen on your return from the sand bar. It is asked that you stay on the marked trail and pets are welcomed but
+      must be on a leash while you pass through private land. This trail is within the Plate Cove volcanic belt and under the Discovery Geo Park. This hike was signed
+      and opened by volunteers in 2021. 
+    </p>
+    <TrailActivities activity={"Running"} slot="after-traillocation" />
+    <TrailActivities activity={"Hiking"} slot="after-traillocation" />
+    <TrailActivities activity={"Walking"} slot="after-traillocation" />
+    <TrailActivities activity={"Bird Watching"} slot="after-traillocation" />
+    <TrailActivities activity={"Views"} slot="after-traillocation" />
     </TrailComponent>
   </main>
 </MainLayout>

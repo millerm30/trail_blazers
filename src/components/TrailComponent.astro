@@ -1,5 +1,5 @@
 ---
-const { trailImage, altImage, trailName, trailDescription, trailLength, trailLocation } = Astro.props
+const { trailImage, altImage, trailName, trailLength, trailLocation } = Astro.props
 ---
 
 <section class="flex justify-center gap-6 flex-col mt-10 md:flex-row lg:flex-row p-2 text-black">
@@ -12,9 +12,9 @@ const { trailImage, altImage, trailName, trailDescription, trailLength, trailLoc
   </div>
   <div class="mx-auto md:mx-0 lg:mx-0 bg-white p-6 rounded-lg border-[1px] border-gray-300 max-w-md">
     <h2 class="text-3xl font-bold mb-2">{trailName}</h2>
-    <p class="mb-2">{trailDescription}</p>
-    <p class="mb-2"><span class="font-bold">Length: </span>{trailLength}</p>
+    <slot name="after-trailname"/>
+    <p class="my-2"><span class="font-bold">Length: </span>{trailLength}</p>
     <p><span class="font-bold">Location: </span>{trailLocation}</p>
-    <slot />
+    <slot name="after-traillocation"/>
   </div>
 </section>

@@ -14,14 +14,26 @@ import heroImage from "../assets/hero_images/view5.jpg";
       trailImage={JigginHeadTrailImage} 
       altImage={"Jiggin Head Trail"}
       trailName={"Jiggin Head Hiking Trail"} 
-      trailDescription={"Great views of Summerville and surrounding bay. Access possible from Route 235, though the first 1.4 km of the trail follow a dirt road that is accessible to off road vehicles. The last little portion is a walk through a mix of clearings and woods to the viewpoint"} 
       trailLength={"3.2 km"} 
       trailLocation={"Location of trail here"} 
     >
-    <TrailActivities activity={"Hiking"} />
-    <TrailActivities activity={"Forest"} />
-    <TrailActivities activity={"Views"} />
-    <TrailActivities activity={"Wildlife"} />
+      <p slot="after-trailname">
+        Trail is an easy to moderate trail that is a multi-purpose trail loacted between Plate Cove West and Summerville. This trail is approximately 3.2 km
+        return to a lookout which over looks Summerville and Bonavista Bay. There are rest areas along the trail with memory benches to sit and enjoy the views
+        or to have a snack (If you pack it in / Please pack it out).
+        <br><br>
+        Pets are welcomed on the trail but a leash is always recommended and stay on marked trail. When you get the viewing points where you can see parts of Plate Cove West
+        and at the top Summerville you have to remember to stay back from the cliffs edge. This trail is in the Plate Cove volcanic belt and under the
+        Discovery Geo Park, so look around at the rocks of the volcanic belt! This trail was signed and opened by volunteers in 2022.
+      </p>
+      <TrailActivities activity={"Hiking"} slot="after-traillocation" />
+      <TrailActivities activity={"Bird Watching"} slot="after-traillocation" />
+      <TrailActivities activity={"Picnicking"} slot="after-traillocation" />
+      <TrailActivities activity={"Dog Walking"} slot="after-traillocation" />
+      <TrailActivities activity={"Beach"} slot="after-traillocation" />
+      <TrailActivities activity={"Wildlife"} slot="after-traillocation" />
+      <TrailActivities activity={"Views"} slot="after-traillocation" />
+      <TrailActivities activity={"Kid Friendly"} slot="after-traillocation" />
     </TrailComponent>
   </main>
 </MainLayout>
