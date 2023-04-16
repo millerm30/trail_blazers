@@ -3,15 +3,15 @@ import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - Residents of Plate Cove";
 import "../styles/styles.css";
 import heroImage from "../assets/hero_images/view8.jpeg";
-import residentImageOne from "../assets/history/oldPhoto.jpeg";
-import residentImageTwo from "../assets/history/oldPhoto1.jpeg";
-import residentImageThree from "../assets/history/oldPhoto2.jpeg";
-import residentImageFour from "../assets/history/oldPhoto3.jpeg";
-import residentImageFive from "../assets/history/oldPhoto4.jpeg";
-import residentImageSix from "../assets/history/oldPhoto5.jpeg";
-import residentImageSeven from "../assets/history/oldPhoto6.jpeg";
-import residentImageEight from "../assets/history/oldPhoto9.jpeg";
 import PlateCoveResidentsModals from "../components/PlateCoveResidentsModals.astro";
+const images = await Astro.glob("../assets/history/resident*.*").then(files => {
+  return files.map(file => file.default);
+});
+const sortedImages = images.sort((a, b) => {
+  const aNum = a.match(/\d+/)[0];
+  const bNum = b.match(/\d+/)[0];
+  return aNum - bNum;
+});
 ---
 
 <MainLayout title={title} backgroundImage={heroImage}>
@@ -21,14 +21,12 @@ import PlateCoveResidentsModals from "../components/PlateCoveResidentsModals.ast
       <br>
       <p class="italic">Click the images below to show more info</p>
       <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 xl:grid-cols-10 gap-2 auto-rows-[140px]">
-        <label for="modal-1" class="hover:cursor-pointer hover:animate-pulse"><img src={residentImageOne} alt="Plate Cove Resident Photo 1" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-2" class="hover:cursor-pointer hover:animate-pulse"><img src={residentImageTwo} alt="Plate Cove Resident Photo 2" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-3" class="hover:cursor-pointer hover:animate-pulse"><img src={residentImageThree} alt="Plate Cove Resident Photo 3" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-4" class="hover:cursor-pointer hover:animate-pulse"><img src={residentImageFour} alt="Plate Cove Resident Photo 4" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-5" class="hover:cursor-pointer hover:animate-pulse"><img src={residentImageFive} alt="Plate Cove Resident Photo 5" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-6" class="hover:cursor-pointer hover:animate-pulse"><img src={residentImageSix} alt="Plate Cove Resident Photo 6" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-7" class="hover:cursor-pointer hover:animate-pulse"><img src={residentImageSeven} alt="Plate Cove Resident Photo 7" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-8" class="hover:cursor-pointer hover:animate-pulse"><img src={residentImageEight} alt="Plate Cove Resident Photo 8" class="rounded-lg h-full w-full" /></label>
+        {sortedImages.map((image, index) => {
+          return (
+            <label for={`modal-${index + 1}`} class="hover:cursor-pointer hover:animate-pulse"><img src={image} alt={`Jiggin Head Photo ${index + 1}`} class="rounded-lg h-full w-full" /></label>
+          )
+        })
+        }
       </div>
     </section>
     <PlateCoveResidentsModals />
