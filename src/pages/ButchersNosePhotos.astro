@@ -4,7 +4,7 @@ const title = "Plate Cove - Butcher's Nose Photos";
 import "../styles/styles.css";
 import heroImage from "../assets/hero_images/view8.jpeg";
 import ButchersNosePhotosModal from "../components/ButchersNosePhotosModals.astro";
-const images = await Astro.glob("../assets/butchers_nose/image*.*").then(files => {
+const images = await Astro.glob("../assets/butchers_nose/butchers_nose*.*").then(files => {
   return files.map(file => file.default);
 });
 const sortedImages = images.sort((a, b) => {
