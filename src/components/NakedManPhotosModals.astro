@@ -1,53 +1,63 @@
 ---
 import Modal from "../components/Modal.astro";
-import imageOne from "../assets/nakedman_beach/photo1.jpg";
-import imageTwo from "../assets/nakedman_beach/photo2.jpg";
-import imageThree from "../assets/nakedman_beach/photo3.jpg";
-import imageFour from "../assets/nakedman_beach/photo4.jpg";
-import imageFive from "../assets/nakedman_beach/photo5.jpg";
-import imageSix from "../assets/nakedman_beach/photo6.jpg";
-import imageSeven from "../assets/nakedman_beach/photo7.jpg";
-import imageEight from "../assets/nakedman_beach/photo8.jpg";
-import imageNine from "../assets/nakedman_beach/photo9.jpg";
-import imageTen from "../assets/nakedman_beach/photo10.jpg";
-import imageEleven from "../assets/nakedman_beach/photo11.jpg";
-import imageTwelve from "../assets/nakedman_beach/photo12.jpg";
-import imageThirteen from "../assets/nakedman_beach/photo13.jpg";
-import imageFourteen from "../assets/nakedman_beach/photo14.jpg";
-import imageFifteen from "../assets/nakedman_beach/photo15.jpg";
-import imageSixteen from "../assets/nakedman_beach/photo16.jpg";
-import imageSeventeen from "../assets/nakedman_beach/photo17.jpg";
-import imageNineteen from "../assets/nakedman_beach/photo18.jpg";
-import imageTwenty from "../assets/nakedman_beach/photo19.jpg";
-import imageTwentyOne from "../assets/nakedman_beach/photo20.jpg";
-import imageTwentyTwo from "../assets/nakedman_beach/photo21.jpg";
-import imageTwentyThree from "../assets/nakedman_beach/photo22.jpg";
-import imageTwentyFour from "../assets/nakedman_beach/photo23.jpg";
-import imageTwentySix from "../assets/nakedman_beach/photo24.jpg";
-import imageTwentySeven from "../assets/nakedman_beach/photo25.jpg";
-import imageTwentyEight from "../assets/nakedman_beach/photo26.jpg";
-import imageTwentyNine from "../assets/nakedman_beach/photo27.jpg";
-import imageThirty from "../assets/nakedman_beach/photo28.jpg";
-import imageThirtyOne from "../assets/nakedman_beach/photo29.jpg";
-import imageThirtyTwo from "../assets/nakedman_beach/photo30.jpeg";
-import imageThirtyThree from "../assets/nakedman_beach/photo31.jpg";
-import imageThirtyFour from "../assets/nakedman_beach/photo32.jpeg";
-import imageThirtyFive from "../assets/nakedman_beach/photo33.jpeg";
-import imageThirtySix from "../assets/nakedman_beach/photo34.jpeg";
-import imageThirtySeven from "../assets/nakedman_beach/photo35.jpeg";
-import imageThirtyEight from "../assets/nakedman_beach/photo36.jpeg";
-import imageThirtyNine from "../assets/nakedman_beach/photo37.jpeg";
-import imageForty from "../assets/nakedman_beach/photo38.jpeg";
-import imageFortyOne from "../assets/nakedman_beach/photo39.jpeg";
-import imageFortyTwo from "../assets/nakedman_beach/photo40.jpeg";
-import imageFortyThree from "../assets/nakedman_beach/photo41.jpeg";
-import imageFortyFour from "../assets/nakedman_beach/photo42.jpeg";
-import imageFortyFive from "../assets/nakedman_beach/photo43.jpeg";
-import imageFortySix from "../assets/nakedman_beach/photo44.jpeg";
-import imageFortySeven from "../assets/nakedman_beach/photo45.jpeg";
-import imageFortyEight from "../assets/nakedman_beach/photo46.jpeg";
-import imageFortyNine from "../assets/nakedman_beach/photo47.jpeg";
-import imageFifty from "../assets/nakedman_beach/photo48.jpeg";
+const images = await Astro.glob("../assets/nakedman_beach/photo*.*").then(file => {
+  return file.map(file => file.default)
+})
+const sortedImages = images.sort((a, b) => {
+  const aNum = a.match(/\d+/)[0];
+  const bNum = b.match(/\d+/)[0];
+  return aNum - bNum;
+});
+const [
+  imageOne,
+  imageTwo,
+  imageThree,
+  imageFour,
+  imageFive,
+  imageSix,
+  imageSeven,
+  imageEight,
+  imageNine,
+  imageTen,
+  imageEleven,
+  imageTwelve,
+  imageThirteen,
+  imageFourteen,
+  imageFifteen,
+  imageSixteen,
+  imageSeventeen,
+  imageNineteen,
+  imageTwenty,
+  imageTwentyOne,
+  imageTwentyTwo,
+  imageTwentyThree,
+  imageTwentyFour,
+  imageTwentySix,
+  imageTwentySeven,
+  imageTwentyEight,
+  imageTwentyNine,
+  imageThirty,
+  imageThirtyOne,
+  imageThirtyTwo,
+  imageThirtyThree,
+  imageThirtyFour,
+  imageThirtyFive,
+  imageThirtySix,
+  imageThirtySeven,
+  imageThirtyEight,
+  imageThirtyNine,
+  imageForty,
+  imageFortyOne,
+  imageFortyTwo,
+  imageFortyThree,
+  imageFortyFour,
+  imageFortyFive,
+  imageFortySix,
+  imageFortySeven,
+  imageFortyEight,
+  imageFortyNine,
+  imageFifty,
+] = sortedImages;
 ---
 
 <Modal 

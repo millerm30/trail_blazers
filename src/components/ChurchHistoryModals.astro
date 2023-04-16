@@ -1,10 +1,20 @@
 ---
 import Modal from "../components/Modal.astro";
-import oldChurchPhoto1 from "../assets/history/oldChurch1.jpg";
-import oldChurchPhoto2 from "../assets/history/oldChurch2.jpg";
-import oldChurchPhoto3 from "../assets/history/oldChurch3.jpg";
-import oldChurchPhoto4 from "../assets/history/oldChurch4.jpeg";
-import oldChurchPhoto5 from "../assets/history/oldChurch5.jpg";
+const images = await Astro.glob("../assets/history/oldChurch*.*").then(file => {
+  return file.map(file => file.default)
+})
+const sortedImages = images.sort((a, b) => {
+  const aNum = a.match(/\d+/)[0];
+  const bNum = b.match(/\d+/)[0];
+  return aNum - bNum;
+});
+const [
+  oldChurchPhoto1,
+  oldChurchPhoto2,
+  oldChurchPhoto3,
+  oldChurchPhoto4,
+  oldChurchPhoto5,
+] = sortedImages;
 ---
 
 <Modal 

@@ -1,76 +1,86 @@
 ---
 import Modal from "../components/Modal.astro"
-import imageOne from "../assets/platecove/photo1.jpg";
-import imageTwo from "../assets/platecove/photo2.jpg";
-import imageFive from "../assets/platecove/photo5.jpg";
-import imageSix from "../assets/platecove/photo6.jpg";
-import imageSeven from "../assets/platecove/photo7.jpg";
-import imageNine from "../assets/platecove/photo9.jpg";
-import imageFifteen from "../assets/platecove/photo15.jpg";
-import imageSeventeen from "../assets/platecove/photo17.jpg";
-import imageEighteen from "../assets/platecove/photo18.jpg";
-import imageNineteen from "../assets/platecove/photo19.jpg";
-import imageTwenty from "../assets/platecove/photo20.jpg";
-import imageTwentyOne from "../assets/platecove/photo21.jpg";
-import imageTwentyTwo from "../assets/platecove/photo22.jpg";
-import imageTwentyThree from "../assets/platecove/photo23.jpg";
-import imageTwentyFour from "../assets/platecove/photo24.jpg";
-import imageTwentyFive from "../assets/platecove/photo25.jpg";
-import imageTwentySix from "../assets/platecove/photo26.jpg";
-import imageTwentySeven from "../assets/platecove/photo27.jpg";
-import imageTwentyEight from "../assets/platecove/photo28.jpg";
-import imageTwentyNine from "../assets/platecove/photo29.jpg";
-import imageThirty from "../assets/platecove/photo30.jpeg";
-import imageThirtyOne from "../assets/platecove/photo31.jpeg";
-import imageThirtyTwo from "../assets/platecove/photo32.jpeg";
-import imageThirtyThree from "../assets/platecove/photo33.jpeg";
-import imageThirtyFour from "../assets/platecove/photo34.jpeg";
-import imageThirtyFive from "../assets/platecove/photo35.jpeg";
-import imageThirtySix from "../assets/platecove/photo36.jpeg";
-import imageThirtySeven from "../assets/platecove/photo37.jpeg";
-import imageThirtyEight from "../assets/platecove/photo38.jpeg";
-import imageThirtyNine from "../assets/platecove/photo39.jpeg";
-import imageForty from "../assets/platecove/photo40.jpeg";
-import imageFortyOne from "../assets/platecove/photo41.jpeg";
-import imageFortyTwo from "../assets/platecove/photo42.jpeg";
-import imageFortyThree from "../assets/platecove/photo43.jpeg";
-import imageFortyFour from "../assets/platecove/photo44.jpeg";
-import imageFortyFive from "../assets/platecove/photo45.jpeg";
-import imageFortySix from "../assets/platecove/photo46.jpeg";
-import imageFortySeven from "../assets/platecove/photo47.jpeg";
-import imageFortyEight from "../assets/platecove/photo48.jpeg";
-import imageFortyNine from "../assets/platecove/photo49.jpeg";
-import imageFifty from "../assets/platecove/photo50.jpeg";
-import imageFiftyOne from "../assets/platecove/photo51.jpeg";
-import imageFiftyTwo from "../assets/platecove/photo52.jpeg";
-import imageFiftyThree from "../assets/platecove/photo53.jpeg";
-import imageFiftyFour from "../assets/platecove/photo54.jpeg";
-import imageFiftyFive from "../assets/platecove/photo55.jpeg";
-import imageFiftySix from "../assets/platecove/photo56.jpeg";
-import imageFiftySeven from "../assets/platecove/photo57.jpeg";
-import imageFiftyEight from "../assets/platecove/photo58.jpeg";
-import imageFiftyNine from "../assets/platecove/photo59.jpeg";
-import imageSixty from "../assets/platecove/photo60.jpeg";
-import imageSixtyOne from "../assets/platecove/photo61.jpeg";
-import imageSixtyTwo from "../assets/platecove/photo62.jpeg";
-import imageSixtyThree from "../assets/platecove/photo63.jpeg";
-import imageSixtyFour from "../assets/platecove/photo64.jpeg";
-import imageSixtyFive from "../assets/platecove/photo65.jpeg";
-import imageSixtySix from "../assets/platecove/photo66.jpeg";
-import imageSixtySeven from "../assets/platecove/photo67.jpeg";
-import imageSixtyEight from "../assets/platecove/photo68.jpeg";
-import imageSixtyNine from "../assets/platecove/photo69.jpeg";
-import imageSeventy from "../assets/platecove/photo70.jpeg";
-import imageSeventyOne from "../assets/platecove/photo71.jpeg";
-import imageSeventyTwo from "../assets/platecove/photo72.jpeg";
-import imageSeventyThree from "../assets/platecove/photo73.jpeg";
-import imageSeventyFour from "../assets/platecove/photo74.jpeg";
-import imageSeventyFive from "../assets/platecove/photo75.jpeg";
-import imageSeventySix from "../assets/platecove/photo76.jpeg";
-import imageSeventySeven from "../assets/platecove/photo77.jpeg";
-import imageSeventyEight from "../assets/platecove/photo78.jpeg";
-import imageSeventyNine from "../assets/platecove/photo79.jpeg";
-import imageEighty from "../assets/platecove/photo80.jpeg";
+const images = await Astro.glob("../assets/platecove/photo*.*").then(file => {
+  return file.map(file => file.default)
+})
+const sortedImages = images.sort((a, b) => {
+  const aNum = a.match(/\d+/)[0];
+  const bNum = b.match(/\d+/)[0];
+  return aNum - bNum;
+});
+const [
+  imageOne,
+  imageTwo,
+  imageFive,
+  imageSix,
+  imageSeven,
+  imageNine,
+  imageFifteen,
+  imageSeventeen,
+  imageEighteen,
+  imageNineteen,
+  imageTwenty,
+  imageTwentyOne,
+  imageTwentyTwo,
+  imageTwentyThree,
+  imageTwentyFour,
+  imageTwentyFive,
+  imageTwentySix,
+  imageTwentySeven,
+  imageTwentyEight,
+  imageTwentyNine,
+  imageThirty,
+  imageThirtyOne,
+  imageThirtyTwo,
+  imageThirtyThree,
+  imageThirtyFour,
+  imageThirtyFive,
+  imageThirtySix,
+  imageThirtySeven,
+  imageThirtyEight,
+  imageThirtyNine,
+  imageForty,
+  imageFortyOne,
+  imageFortyTwo,
+  imageFortyThree,
+  imageFortyFour,
+  imageFortyFive,
+  imageFortySix,
+  imageFortySeven,
+  imageFortyEight,
+  imageFortyNine,
+  imageFifty,
+  imageFiftyOne,
+  imageFiftyTwo,
+  imageFiftyThree,
+  imageFiftyFour,
+  imageFiftyFive,
+  imageFiftySix,
+  imageFiftySeven,
+  imageFiftyEight,
+  imageFiftyNine,
+  imageSixty,
+  imageSixtyOne,
+  imageSixtyTwo,
+  imageSixtyThree,
+  imageSixtyFour,
+  imageSixtyFive,
+  imageSixtySix,
+  imageSixtySeven,
+  imageSixtyEight,
+  imageSixtyNine,
+  imageSeventy,
+  imageSeventyOne,
+  imageSeventyTwo,
+  imageSeventyThree,
+  imageSeventyFour,
+  imageSeventyFive,
+  imageSeventySix,
+  imageSeventySeven,
+  imageSeventyEight,
+  imageSeventyNine,
+  imageEighty,
+] = sortedImages;
 ---
 
 <Modal 

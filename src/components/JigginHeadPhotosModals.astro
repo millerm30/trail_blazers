@@ -1,20 +1,30 @@
 ---
 import Modal from "../components/Modal.astro";
-import imageOne from "../assets/jigginhead_trail/photo1.jpg";
-import imageTwo from "../assets/jigginhead_trail/photo2.jpg";
-import imageThree from "../assets/jigginhead_trail/photo3.jpg";
-import imageFour from "../assets/jigginhead_trail/photo4.jpg";
-import imageFive from "../assets/jigginhead_trail/photo5.jpg";
-import imageSix from "../assets/jigginhead_trail/photo6.jpg";
-import imageSeven from "../assets/jigginhead_trail/photo7.jpg";
-import imageEight from "../assets/jigginhead_trail/photo8.jpg";
-import imageNine from "../assets/jigginhead_trail/photo9.jpg";
-import imageTen from "../assets/jigginhead_trail/photo10.jpg";
-import imageEleven from "../assets/jigginhead_trail/photo11.jpg";
-import imageTwelve from "../assets/jigginhead_trail/photo12.jpg";
-import imageThirteen from "../assets/jigginhead_trail/photo13.jpg";
-import imageFourteen from "../assets/jigginhead_trail/photo14.jpeg";
-import imageFifteen from "../assets/jigginhead_trail/photo15.jpeg";
+const images = await Astro.glob("../assets/jigginhead_trail/photo*.*").then(file => {
+  return file.map(file => file.default)
+})
+const sortedImages = images.sort((a, b) => {
+  const aNum = a.match(/\d+/)[0];
+  const bNum = b.match(/\d+/)[0];
+  return aNum - bNum;
+});
+const [
+  imageOne,
+  imageTwo,
+  imageThree,
+  imageFour,
+  imageFive,
+  imageSix,
+  imageSeven,
+  imageEight,
+  imageNine,
+  imageTen,
+  imageEleven,
+  imageTwelve,
+  imageThirteen,
+  imageFourteen,
+  imageFifteen
+] = sortedImages;
 ---
 
 <Modal 

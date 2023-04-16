@@ -1,45 +1,55 @@
 ---
 import Modal from "../components/Modal.astro";
-import imageOne from "../assets/red_beach/photo1.jpg";
-import imageTwo from "../assets/red_beach/photo2.jpg";
-import imageThree from "../assets/red_beach/photo3.jpg";
-import imageFour from "../assets/red_beach/photo4.jpg";
-import imageFive from "../assets/red_beach/photo5.jpg";
-import imageSix from "../assets/red_beach/photo6.jpg";
-import imageSeven from "../assets/red_beach/photo7.jpg";
-import imageEight from "../assets/red_beach/photo8.jpg";
-import imageNine from "../assets/red_beach/photo9.jpg";
-import imageTen from "../assets/red_beach/photo10.jpg";
-import imageEleven from "../assets/red_beach/photo11.jpg";
-import imageTwelve from "../assets/red_beach/photo12.jpg";
-import imageThirteen from "../assets/red_beach/photo13.jpg";
-import imageFourteen from "../assets/red_beach/photo14.jpg";
-import imageFifteen from "../assets/red_beach/photo15.jpg";
-import imageSixteen from "../assets/red_beach/photo16.jpg";
-import imageSeventeen from "../assets/red_beach/photo17.jpg";
-import imageEighteen from "../assets/red_beach/photo18.jpg";
-import imageNineteen from "../assets/red_beach/photo19.jpeg";
-import imageTwenty from "../assets/red_beach/photo20.jpeg";
-import imageTwentyOne from "../assets/red_beach/photo21.jpeg";
-import imageTwentyTwo from "../assets/red_beach/photo22.jpeg";
-import imageTwentyThree from "../assets/red_beach/photo23.jpeg";
-import imageTwentyFour from "../assets/red_beach/photo24.jpeg";
-import imageTwentyFive from "../assets/red_beach/photo25.jpeg";
-import imageTwentySix from "../assets/red_beach/photo26.jpeg";
-import imageTwentySeven from "../assets/red_beach/photo27.jpeg";
-import imageTwentyEight from "../assets/red_beach/photo28.jpeg";
-import imageTwentyNine from "../assets/red_beach/photo29.jpeg";
-import imageThirty from "../assets/red_beach/photo30.jpeg";
-import imageThirtyOne from "../assets/red_beach/photo31.jpeg";
-import imageThirtyTwo from "../assets/red_beach/photo32.jpeg";
-import imageThirtyThree from "../assets/red_beach/photo33.jpeg";
-import imageThirtyFour from "../assets/red_beach/photo34.jpeg";
-import imageThirtyFive from "../assets/red_beach/photo35.jpeg";
-import imageThirtySix from "../assets/red_beach/photo36.jpeg";
-import imageThirtySeven from "../assets/red_beach/photo37.jpeg";
-import imageThirtyEight from "../assets/red_beach/photo38.jpeg";
-import imageThirtyNine from "../assets/red_beach/photo39.jpeg";
-import imageForty from "../assets/red_beach/photo40.jpeg";
+const images = await Astro.glob("../assets/red_beach/photo*.*").then(file => {
+  return file.map(file => file.default)
+})
+const sortedImages = images.sort((a, b) => {
+  const aNum = a.match(/\d+/)[0];
+  const bNum = b.match(/\d+/)[0];
+  return aNum - bNum;
+});
+const [
+  imageOne,
+  imageTwo,
+  imageThree,
+  imageFour,
+  imageFive,
+  imageSix,
+  imageSeven,
+  imageEight,
+  imageNine,
+  imageTen,
+  imageEleven,
+  imageTwelve,
+  imageThirteen,
+  imageFourteen,
+  imageFifteen,
+  imageSixteen,
+  imageSeventeen,
+  imageEighteen,
+  imageNineteen,
+  imageTwenty,
+  imageTwentyOne,
+  imageTwentyTwo,
+  imageTwentyThree,
+  imageTwentyFour,
+  imageTwentyFive,
+  imageTwentySix,
+  imageTwentySeven,
+  imageTwentyEight,
+  imageTwentyNine,
+  imageThirty,
+  imageThirtyOne,
+  imageThirtyTwo,
+  imageThirtyThree,
+  imageThirtyFour,
+  imageThirtyFive,
+  imageThirtySix,
+  imageThirtySeven,
+  imageThirtyEight,
+  imageThirtyNine,
+  imageForty,
+] = sortedImages;
 ---
 
 <Modal 
