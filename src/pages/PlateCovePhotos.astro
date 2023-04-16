@@ -4,7 +4,7 @@ const title = "Plate Cove - Plate Cove Photos";
 import "../styles/styles.css";
 import heroImage from "../assets/hero_images/view8.jpeg";
 import PlateCovePhotosModals from "../components/PlateCovePhotosModals.astro";
-const images = await Astro.glob("../assets/platecove/photo*.*").then(files => {
+const images = await Astro.glob("../assets/plate_cove/photo*.*").then(files => {
   return files.map(file => file.default);
 });
 const sortedImages = images.sort((a, b) => {
