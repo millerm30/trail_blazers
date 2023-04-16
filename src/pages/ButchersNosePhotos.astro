@@ -3,6 +3,7 @@ import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - Butcher's Nose Photos";
 import "../styles/styles.css";
 import heroImage from "../assets/hero_images/view8.jpeg";
+import ButchersNosePhotosModal from "../components/ButchersNosePhotosModals.astro";
 const images = await Astro.glob("../assets/butchers_nose/image*.*").then(files => {
   return files.map(file => file.default);
 });
@@ -11,7 +12,6 @@ const sortedImages = images.sort((a, b) => {
   const bNum = b.match(/\d+/)[0];
   return aNum - bNum;
 });
-import ButchersNosePhotosModal from "../components/ButchersNosePhotosModals.astro";
 ---
 
 <MainLayout title={title} backgroundImage={heroImage}>
