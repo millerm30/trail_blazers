@@ -4,54 +4,14 @@ const title = "Plate Cove - Naked Man Beach Photos";
 import "../styles/styles.css";
 import NakedManPhotosModals from "../components/NakedManPhotosModals.astro";
 import heroImage from "../assets/hero_images/view11.jpg";
-import imageOne from "../assets/nakedman_beach/photo1.jpg";
-import imageTwo from "../assets/nakedman_beach/photo2.jpg";
-import imageThree from "../assets/nakedman_beach/photo3.jpg";
-import imageFour from "../assets/nakedman_beach/photo4.jpg";
-import imageFive from "../assets/nakedman_beach/photo5.jpg";
-import imageSix from "../assets/nakedman_beach/photo6.jpg";
-import imageSeven from "../assets/nakedman_beach/photo7.jpg";
-import imageEight from "../assets/nakedman_beach/photo8.jpg";
-import imageNine from "../assets/nakedman_beach/photo9.jpg";
-import imageTen from "../assets/nakedman_beach/photo10.jpg";
-import imageEleven from "../assets/nakedman_beach/photo11.jpg";
-import imageTwelve from "../assets/nakedman_beach/photo12.jpg";
-import imageThirteen from "../assets/nakedman_beach/photo13.jpg";
-import imageFourteen from "../assets/nakedman_beach/photo14.jpg";
-import imageFifteen from "../assets/nakedman_beach/photo15.jpg";
-import imageSixteen from "../assets/nakedman_beach/photo16.jpg";
-import imageSeventeen from "../assets/nakedman_beach/photo17.jpg";
-import imageNineteen from "../assets/nakedman_beach/photo19.jpg";
-import imageTwenty from "../assets/nakedman_beach/photo20.jpg";
-import imageTwentyOne from "../assets/nakedman_beach/photo21.jpg";
-import imageTwentyTwo from "../assets/nakedman_beach/photo22.jpg";
-import imageTwentyThree from "../assets/nakedman_beach/photo23.jpg";
-import imageTwentyFour from "../assets/nakedman_beach/photo24.jpg";
-import imageTwentySix from "../assets/nakedman_beach/photo26.jpg";
-import imageTwentySeven from "../assets/nakedman_beach/photo27.jpg";
-import imageTwentyEight from "../assets/nakedman_beach/photo28.jpg";
-import imageTwentyNine from "../assets/nakedman_beach/photo29.jpg";
-import imageThirty from "../assets/nakedman_beach/photo30.jpg";
-import imageThirtyOne from "../assets/nakedman_beach/photo31.jpg";
-import imageThirtyTwo from "../assets/nakedman_beach/photo34.jpeg";
-import imageThirtyThree from "../assets/nakedman_beach/photo35.jpg";
-import imageThirtyFour from "../assets/nakedman_beach/photo36.jpeg";
-import imageThirtyFive from "../assets/nakedman_beach/photo37.jpeg";
-import imageThirtySix from "../assets/nakedman_beach/photo38.jpeg";
-import imageThirtySeven from "../assets/nakedman_beach/photo39.jpeg";
-import imageThirtyEight from "../assets/nakedman_beach/photo40.jpeg";
-import imageThirtyNine from "../assets/nakedman_beach/photo41.jpeg";
-import imageForty from "../assets/nakedman_beach/photo42.jpeg";
-import imageFortyOne from "../assets/nakedman_beach/photo43.jpeg";
-import imageFortyTwo from "../assets/nakedman_beach/photo44.jpeg";
-import imageFortyThree from "../assets/nakedman_beach/photo45.jpeg";
-import imageFortyFour from "../assets/nakedman_beach/photo46.jpeg";
-import imageFortyFive from "../assets/nakedman_beach/photo47.jpeg";
-import imageFortySix from "../assets/nakedman_beach/photo48.jpeg";
-import imageFortySeven from "../assets/nakedman_beach/photo49.jpeg";
-import imageFortyEight from "../assets/nakedman_beach/photo50.jpeg";
-import imageFortyNine from "../assets/nakedman_beach/photo51.jpeg";
-import imageFifty from "../assets/nakedman_beach/photo52.jpeg";
+const images = await Astro.glob("../assets/nakedman_beach/photo*.*").then(file => {
+  return file.map(file => file.default);
+})
+const sortedImages = images.sort((a, b) => {
+  const aNum = a.match(/\d+/)[0];
+  const bNum = b.match(/\d+/)[0];
+  return aNum - bNum;
+});
 ---
 
 <MainLayout title={title} backgroundImage={heroImage}>
@@ -62,54 +22,12 @@ import imageFifty from "../assets/nakedman_beach/photo52.jpeg";
       <br>
       <p class="italic">Click the images below to show more info</p>
       <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 xl:grid-cols-10 gap-2 auto-rows-[140px]">
-        <label for="modal-1" class="hover:cursor-pointer hover:animate-pulse"><img src={imageOne} alt="Naked Man Photo 1" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-2" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwo} alt="Naked Man Photo 2" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-3" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThree} alt="Naked Man Photo 3" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-4" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFour} alt="Naked Man Photo 4" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-5" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFive} alt="Naked Man Photo 5" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-6" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSix} alt="Naked Man Photo 6" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-7" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSeven} alt="Naked Man Photo 7" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-8" class="hover:cursor-pointer hover:animate-pulse"><img src={imageEight} alt="Naked Man Photo 8" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-9" class="hover:cursor-pointer hover:animate-pulse"><img src={imageNine} alt="Naked Man Photo 9" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-10" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTen} alt="Naked Man Photo 10" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-11" class="hover:cursor-pointer hover:animate-pulse"><img src={imageEleven} alt="Naked Man Photo 11" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-12" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwelve} alt="Naked Man Photo 12" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-13" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirteen} alt="Naked Man Photo 13" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-14" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFourteen} alt="Naked Man Photo 14" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-15" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFifteen} alt="Naked Man Photo 15" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-16" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSixteen} alt="Naked Man Photo 16" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-17" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSeventeen} alt="Naked Man Photo 17" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-19" class="hover:cursor-pointer hover:animate-pulse"><img src={imageNineteen} alt="Naked Man Photo 18" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-20" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwenty} alt="Naked Man Photo 19" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-21" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentyOne} alt="Naked Man Photo 20" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-22" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentyTwo} alt="Naked Man Photo 21" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-23" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentyThree} alt="Naked Man Photo 22" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-24" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentyFour} alt="Naked Man Photo 23" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-26" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentySix} alt="Naked Man Photo 24" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-27" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentySeven} alt="Naked Man Photo 25" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-28" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentyEight} alt="Naked Man Photo 26" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-29" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentyNine} alt="Naked Man Photo 27" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-30" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirty} alt="Naked Man Photo 28" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-31" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtyOne} alt="Naked Man Photo 29" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-32" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtyTwo} alt="Naked Man Photo 30" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-33" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtyThree} alt="Naked Man Photo 31" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-34" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtyFour} alt="Naked Man Photo 32" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-35" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtyFive} alt="Naked Man Photo 33" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-36" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtySix} alt="Naked Man Photo 34" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-37" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtySeven} alt="Naked Man Photo 35" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-38" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtyEight} alt="Naked Man Photo 36" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-39" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtyNine} alt="Naked Man Photo 37" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-40" class="hover:cursor-pointer hover:animate-pulse"><img src={imageForty} alt="Naked Man Photo 38" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-41" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortyOne} alt="Naked Man Photo 39" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-42" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortyTwo} alt="Naked Man Photo 40" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-43" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortyThree} alt="Naked Man Photo 41" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-44" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortyFour} alt="Naked Man Photo 42" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-45" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortyFive} alt="Naked Man Photo 43" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-46" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortySix} alt="Naked Man Photo 44" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-47" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortySeven} alt="Naked Man Photo 45" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-48" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortyEight} alt="Naked Man Photo 46" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-49" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortyNine} alt="Naked Man Photo 47" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-50" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFifty} alt="Naked Man Photo 48" class="rounded-lg h-full w-full" /></label>
+        {sortedImages.map((image, index) => {
+          return (
+            <label for={`modal-${index + 1}`} class="hover:cursor-pointer hover:animate-pulse"><img src={image} alt={`Jiggin Head Photo ${index + 1}`} class="rounded-lg h-full w-full" /></label>
+          )
+        })
+        }      
       </div>
     </section>
     <NakedManPhotosModals />
