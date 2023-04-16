@@ -1,13 +1,18 @@
 ---
 import Modal from "../components/Modal.astro";
-import plateCoveHistoryOne from "../assets/history/resident1.jpeg";
-import plateCoveHistoryTwo from "../assets/history/resident2.jpeg";
-import plateCoveHistoryThree from "../assets/history/resident3.jpeg";
-import plateCoveHistoryFour from "../assets/history/resident4.jpeg";
-import plateCoveHistoryFive from "../assets/history/resident5.jpeg";
-import plateCoveHistorySix from "../assets/history/resident6.jpeg";
-import plateCoveHistorySeven from "../assets/history/resident7.jpeg";
-import plateCoveHistoryEight from "../assets/history/resident8.jpeg";
+const images = await Astro.glob("../assets/history/resident*.*").then((file => {
+  return file.map(file => file.default);
+}));
+const [
+  plateCoveHistoryOne,
+  plateCoveHistoryTwo,
+  plateCoveHistoryThree, 
+  plateCoveHistoryFour, 
+  plateCoveHistoryFive, 
+  plateCoveHistorySix, 
+  plateCoveHistorySeven, 
+  plateCoveHistoryEight
+  ] = images;
 ---
 
 <Modal 
