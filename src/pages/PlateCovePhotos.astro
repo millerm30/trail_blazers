@@ -3,78 +3,16 @@ import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - Plate Cove Photos";
 import "../styles/styles.css";
 import heroImage from "../assets/hero_images/view8.jpeg";
-import imageOne from "../assets/platecove/photo1.jpg";
-import imageTwo from "../assets/platecove/photo2.jpg";
-import imageFive from "../assets/platecove/photo5.jpg";
-import imageSix from "../assets/platecove/photo6.jpg";
-import imageSeven from "../assets/platecove/photo7.jpg";
-import imageNine from "../assets/platecove/photo9.jpg";
-import imageFifteen from "../assets/platecove/photo15.jpg";
-import imageSeventeen from "../assets/platecove/photo17.jpg";
-import imageEighteen from "../assets/platecove/photo18.jpg";
-import imageNineteen from "../assets/platecove/photo19.jpg";
-import imageTwenty from "../assets/platecove/photo20.jpg";
-import imageTwentyOne from "../assets/platecove/photo21.jpg";
-import imageTwentyTwo from "../assets/platecove/photo22.jpg";
-import imageTwentyThree from "../assets/platecove/photo23.jpg";
-import imageTwentyFour from "../assets/platecove/photo24.jpg";
-import imageTwentyFive from "../assets/platecove/photo25.jpg";
-import imageTwentySix from "../assets/platecove/photo26.jpg";
-import imageTwentySeven from "../assets/platecove/photo27.jpg";
-import imageTwentyEight from "../assets/platecove/photo28.jpg";
-import imageTwentyNine from "../assets/platecove/photo29.jpg";
-import imageThirty from "../assets/platecove/photo30.jpeg";
-import imageThirtyOne from "../assets/platecove/photo31.jpeg";
-import imageThirtyTwo from "../assets/platecove/photo32.jpeg";
-import imageThirtyThree from "../assets/platecove/photo33.jpeg";
-import imageThirtyFour from "../assets/platecove/photo34.jpeg";
-import imageThirtyFive from "../assets/platecove/photo35.jpeg";
-import imageThirtySix from "../assets/platecove/photo36.jpeg";
-import imageThirtySeven from "../assets/platecove/photo37.jpeg";
-import imageThirtyEight from "../assets/platecove/photo38.jpeg";
-import imageThirtyNine from "../assets/platecove/photo39.jpeg";
-import imageForty from "../assets/platecove/photo40.jpeg";
-import imageFortyOne from "../assets/platecove/photo41.jpeg";
-import imageFortyTwo from "../assets/platecove/photo42.jpeg";
-import imageFortyThree from "../assets/platecove/photo43.jpeg";
-import imageFortyFour from "../assets/platecove/photo44.jpeg";
-import imageFortyFive from "../assets/platecove/photo45.jpeg";
-import imageFortySix from "../assets/platecove/photo46.jpeg";
-import imageFortySeven from "../assets/platecove/photo47.jpeg";
-import imageFortyEight from "../assets/platecove/photo48.jpeg";
-import imageFortyNine from "../assets/platecove/photo49.jpeg";
-import imageFifty from "../assets/platecove/photo50.jpeg";
-import imageFiftyOne from "../assets/platecove/photo51.jpeg";
-import imageFiftyTwo from "../assets/platecove/photo52.jpeg";
-import imageFiftyThree from "../assets/platecove/photo53.jpeg";
-import imageFiftyFour from "../assets/platecove/photo54.jpeg";
-import imageFiftyFive from "../assets/platecove/photo55.jpeg";
-import imageFiftySix from "../assets/platecove/photo56.jpeg";
-import imageFiftySeven from "../assets/platecove/photo57.jpeg";
-import imageFiftyEight from "../assets/platecove/photo58.jpeg";
-import imageFiftyNine from "../assets/platecove/photo59.jpeg";
-import imageSixty from "../assets/platecove/photo60.jpeg";
-import imageSixtyOne from "../assets/platecove/photo61.jpeg";
-import imageSixtyTwo from "../assets/platecove/photo62.jpeg";
-import imageSixtyThree from "../assets/platecove/photo63.jpeg";
-import imageSixtyFour from "../assets/platecove/photo64.jpeg";
-import imageSixtyFive from "../assets/platecove/photo65.jpeg";
-import imageSixtySix from "../assets/platecove/photo66.jpeg";
-import imageSixtySeven from "../assets/platecove/photo67.jpeg";
-import imageSixtyEight from "../assets/platecove/photo68.jpeg";
-import imageSixtyNine from "../assets/platecove/photo69.jpeg";
-import imageSeventy from "../assets/platecove/photo70.jpeg";
-import imageSeventyOne from "../assets/platecove/photo71.jpeg";
-import imageSeventyTwo from "../assets/platecove/photo72.jpeg";
-import imageSeventyThree from "../assets/platecove/photo73.jpeg";
-import imageSeventyFour from "../assets/platecove/photo74.jpeg";
-import imageSeventyFive from "../assets/platecove/photo75.jpeg";
-import imageSeventySix from "../assets/platecove/photo76.jpeg";
-import imageSeventySeven from "../assets/platecove/photo77.jpeg";
-import imageSeventyEight from "../assets/platecove/photo78.jpeg";
-import imageSeventyNine from "../assets/platecove/photo79.jpeg";
-import imageEighty from "../assets/platecove/photo80.jpeg";
 import PlateCovePhotosModals from "../components/PlateCovePhotosModals.astro";
+const images = await Astro.glob("../assets/platecove/photo*.*").then(files => {
+  return files.map(file => file.default);
+});
+const sortedImages = images.sort((a, b) => {
+  const aNum = a.match(/\d+/)[0];
+  const bNum = b.match(/\d+/)[0];
+  return aNum - bNum;
+});
+
 ---
 
 <MainLayout title={title} backgroundImage={heroImage}>
@@ -84,77 +22,12 @@ import PlateCovePhotosModals from "../components/PlateCovePhotosModals.astro";
       <br>
       <p class="italic">Click the images below to show more info</p>
       <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 xl:grid-cols-10 gap-2 auto-rows-[140px]">
-        <label for="modal-1" class="hover:cursor-pointer hover:animate-pulse"><img src={imageOne} alt="Plate Cove Photo 1" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-2" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwo} alt="Plate Cove Photo 2" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-3" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFive} alt="Plate Cove Photo 5" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-4" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSix} alt="Plate Cove Photo 6" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-5" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSeven} alt="Plate Cove Photo 7" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-6" class="hover:cursor-pointer hover:animate-pulse"><img src={imageNine} alt="Plate Cove Photo 9" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-7" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFifteen} alt="Plate Cove Photo 14" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-8" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSeventeen} alt="Plate Cove Photo 16" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-9" class="hover:cursor-pointer hover:animate-pulse"><img src={imageEighteen} alt="Plate Cove Photo 17" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-10" class="hover:cursor-pointer hover:animate-pulse"><img src={imageNineteen} alt="Plate Cove Photo 18" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-11" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwenty} alt="Plate Cove Photo 19" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-12" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentyOne} alt="Plate Cove Photo 20" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-13" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentyTwo} alt="Plate Cove Photo 21" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-14" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentyThree} alt="Plate Cove Photo 22" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-15" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentyFour} alt="Plate Cove Photo 23" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-16" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentyFive} alt="Plate Cove Photo 24" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-17" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentySix} alt="Plate Cove Photo 25" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-18" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentySeven} alt="Plate Cove Photo 26" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-19" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentyEight} alt="Plate Cove Photo 27" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-20" class="hover:cursor-pointer hover:animate-pulse"><img src={imageTwentyNine} alt="Plate Cove Photo 28" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-21" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirty} alt="Plate Cove Photo 29" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-22" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtyOne} alt="Plate Cove Photo 30" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-23" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtyTwo} alt="Plate Cove Photo 31" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-24" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtyThree} alt="Plate Cove Photo 32" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-25" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtyFour} alt="Plate Cove Photo 33" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-26" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtyFive} alt="Plate Cove Photo 34" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-27" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtySix} alt="Plate Cove Photo 35" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-28" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtySeven} alt="Plate Cove Photo 36" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-29" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtyEight} alt="Plate Cove Photo 37" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-30" class="hover:cursor-pointer hover:animate-pulse"><img src={imageThirtyNine} alt="Plate Cove Photo 38" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-31" class="hover:cursor-pointer hover:animate-pulse"><img src={imageForty} alt="Plate Cove Photo 39" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-32" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortyOne} alt="Plate Cove Photo 40" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-33" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortyTwo} alt="Plate Cove Photo 41" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-34" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortyThree} alt="Plate Cove Photo 42" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-35" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortyFour} alt="Plate Cove Photo 43" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-36" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortyFive} alt="Plate Cove Photo 44" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-37" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortySix} alt="Plate Cove Photo 45" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-38" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortySeven} alt="Plate Cove Photo 46" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-39" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortyEight} alt="Plate Cove Photo 47" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-40" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFortyNine} alt="Plate Cove Photo 48" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-41" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFifty} alt="Plate Cove Photo 49" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-42" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFiftyOne} alt="Plate Cove Photo 50" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-43" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFiftyTwo} alt="Plate Cove Photo 51" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-44" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFiftyThree} alt="Plate Cove Photo 52" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-45" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFiftyFour} alt="Plate Cove Photo 53" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-46" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFiftyFive} alt="Plate Cove Photo 54" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-47" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFiftySix} alt="Plate Cove Photo 55" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-48" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFiftySeven} alt="Plate Cove Photo 56" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-49" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFiftyEight} alt="Plate Cove Photo 57" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-50" class="hover:cursor-pointer hover:animate-pulse"><img src={imageFiftyNine} alt="Plate Cove Photo 58" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-51" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSixty} alt="Plate Cove Photo 59" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-52" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSixtyOne} alt="Plate Cove Photo 60" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-53" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSixtyTwo} alt="Plate Cove Photo 61" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-54" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSixtyThree} alt="Plate Cove Photo 62" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-55" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSixtyFour} alt="Plate Cove Photo 63" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-56" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSixtyFive} alt="Plate Cove Photo 64" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-57" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSixtySix} alt="Plate Cove Photo 65" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-58" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSixtySeven} alt="Plate Cove Photo 66" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-59" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSixtyEight} alt="Plate Cove Photo 67" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-60" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSixtyNine} alt="Plate Cove Photo 68" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-61" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSeventy} alt="Plate Cove Photo 69" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-62" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSeventyOne} alt="Plate Cove Photo 70" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-63" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSeventyTwo} alt="Plate Cove Photo 71" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-64" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSeventyThree} alt="Plate Cove Photo 72" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-65" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSeventyFour} alt="Plate Cove Photo 73" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-66" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSeventyFive} alt="Plate Cove Photo 74" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-67" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSeventySix} alt="Plate Cove Photo 75" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-68" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSeventySeven} alt="Plate Cove Photo 76" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-69" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSeventyEight} alt="Plate Cove Photo 77" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-70" class="hover:cursor-pointer hover:animate-pulse"><img src={imageSeventyNine} alt="Plate Cove Photo 78" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-71" class="hover:cursor-pointer hover:animate-pulse"><img src={imageEighty} alt="Plate Cove Photo 79" class="rounded-lg h-full w-full" /></label>
+        {sortedImages.map((image, index) => {
+          return (
+            <label for={`modal-${index + 1}`} class="hover:cursor-pointer hover:animate-pulse"><img src={image} alt={`Jiggin Head Photo ${index + 1}`} class="rounded-lg h-full w-full" /></label>
+          )
+        })
+        }
       </div>
     </section>
     <PlateCovePhotosModals />
