@@ -4,7 +4,7 @@ const title = "Plate Cove - Naked Man Beach Photos";
 import "../styles/styles.css";
 import NakedManPhotosModals from "../components/NakedManPhotosModals.astro";
 import heroImage from "../assets/hero_images/view11.jpg";
-const images = await Astro.glob("../assets/nakedman_beach/photo*.*").then(file => {
+const images = await Astro.glob("../assets/nakedman_beach/nakedman_beach*.*").then(file => {
   return file.map(file => file.default);
 })
 const sortedImages = images.sort((a, b) => {
