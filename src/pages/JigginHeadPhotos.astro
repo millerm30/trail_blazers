@@ -4,7 +4,7 @@ const title = "Plate Cove - Jiggin' Head Photos";
 import "../styles/styles.css";
 import JigginHeadPhotosModals from "../components/JigginHeadPhotosModals.astro";
 import heroImage from "../assets/hero_images/view6.jpg";
-const images = await Astro.glob("../assets/jigginhead_trail/photo*.*").then(files => {
+const images = await Astro.glob("../assets/jigginhead_trail/jiggin_head*.*").then(files => {
   return files.map(file => file.default);
 });
 const sortedImages = images.sort((a, b) => {
