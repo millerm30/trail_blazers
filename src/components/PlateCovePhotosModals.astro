@@ -1,6 +1,6 @@
 ---
 import Modal from "../components/Modal.astro"
-const images = await Astro.glob("../assets/plate_cove/photo*.*").then(file => {
+const images = await Astro.glob("../assets/plate_cove/plate_cove*.*").then(file => {
   return file.map(file => file.default)
 })
 const sortedImages = images.sort((a, b) => {
