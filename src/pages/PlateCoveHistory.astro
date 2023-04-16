@@ -3,23 +3,16 @@ import MainLayout from "../layout/MainLayout.astro";
 const title = "Plate Cove - History";
 import "../styles/styles.css";
 import heroImage from "../assets/hero_images/view2.jpg";
-import plateCoveHistoryOne from "../assets/history/platecoveHistory1.jpg";
-import plateCoveHistoryTwo from "../assets/history/platecoveHistory3.jpg";
-import plateCoveHistoryThree from "../assets/history/platecoveHistory4.jpg";
-import plateCoveHistoryFour from "../assets/history/platecoveHistory5.jpg";
-import plateCoveHistoryFive from "../assets/history/boatPhoto.jpg";
-import plateCoveHistorySix from "../assets/history/oldWarf.jpg";
-import plateCoveHistorySeven from "../assets/history/platecoveHistory2.jpg";
-import plateCoveHistoryEight from "../assets/history/platecoveHistory6.jpg";
-import plateCoveHistoryNine from "../assets/history/platecoveHistory7.jpg";
-import plateCoveHistoryTen from "../assets/history/platecoveHistory8.jpg";
-import plateCoveHistoryEleven from "../assets/history/platecoveHistory9.jpg";
-import plateCoveHistoryTwelve from "../assets/history/platecoveHistory10.jpg";
-import plateCoveHistoryThirteen from "../assets/history/platecoveHistory11.jpeg";
-import plateCoveHistoryFourteen from "../assets/history/oldPhoto7.jpeg";
-import plateCoveHistoryFifteen from "../assets/history/oldPhoto8.jpeg";
 import PlateCoveArticleOne from "../components/PlateCoveArticle.astro";
 import PlateCoveHistoryModals from "../components/PlateCoveHistoryModals.astro";
+const images = await Astro.glob("../assets/history/platecoveHistory*.*").then(file => {
+  return file.map(file => file.default);
+});
+const sortedImages = images.sort((a, b) => {
+  const aNum = a.match(/\d+/)[0];
+  const bNum = b.match(/\d+/)[0];
+  return aNum - bNum;
+});
 ---
 
 <MainLayout title={title} backgroundImage={heroImage}>
@@ -30,21 +23,12 @@ import PlateCoveHistoryModals from "../components/PlateCoveHistoryModals.astro";
       <br>
       <p class="italic">Click the images below to show more info</p>
       <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 xl:grid-cols-10 gap-2 auto-rows-[140px]">
-        <label for="modal-1" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistoryOne} alt="Plate Cove History 1" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-2" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistoryTwo} alt="Plate Cove History 2" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-3" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistoryThree} alt="Plate Cove History 3" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-4" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistoryFour} alt="Plate Cove History 4" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-5" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistoryFive} alt="Plate Cove History 5" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-6" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistorySix} alt="Plate Cove History 6" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-7" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistorySeven} alt="Plate Cove History 7" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-8" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistoryEight} alt="Plate Cove History 8" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-9" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistoryNine} alt="Plate Cove History 9" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-10" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistoryTen} alt="Plate Cove History 10" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-11" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistoryEleven} alt="Plate Cove History 11" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-12" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistoryTwelve} alt="Plate Cove History 12" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-13" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistoryThirteen} alt="Plate Cove History 13" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-14" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistoryFourteen} alt="Plate Cove History 14" class="rounded-lg h-full w-full" /></label>
-        <label for="modal-15" class="hover:cursor-pointer hover:animate-pulse"><img src={plateCoveHistoryFifteen} alt="Plate Cove History 15" class="rounded-lg h-full w-full" /></label>
+        {sortedImages.map((image, index) => {
+          return (
+            <label for={`modal-${index + 1}`} class="hover:cursor-pointer hover:animate-pulse"><img src={image} alt={`Plate Cove History ${index + 1}`} class="rounded-lg h-full w-full" /></label>
+          )
+        })
+        }
       </div>
     </section>
     <PlateCoveHistoryModals />
