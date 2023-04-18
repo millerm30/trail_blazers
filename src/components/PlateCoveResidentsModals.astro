@@ -1,5 +1,6 @@
 ---
 import Modal from "../components/Modal.astro";
+const headText = "Residents of Plate Cove";
 const images = await Astro.glob("../assets/history/resident*.*").then((file => {
   return file.map(file => file.default);
 }));
@@ -17,56 +18,56 @@ const [
 
 <Modal 
   modalId={"modal-1"} 
-  headingText={"Residents of Plate Cove"} 
+  headingText={headText} 
   paragraphText={"Mary (Philpott) Hyde, Mary (Heaney) Keough and Mary (Whalen) Keough. Plate Cove West."} 
   imgSource={plateCoveHistoryOne} 
   imgAlt={"History Image 1"}
 />
 <Modal 
   modalId={"modal-2"} 
-  headingText={"Residents of Plate Cove"} 
+  headingText={headText} 
   paragraphText={"From letf to right. Terry Keough, Mary Ellen (Keough) Heaney, Fred Keough, (next 4 people unknown). Top left to right is Mary (Heaney) Keough and Ellen (Braker) Keough. Plate Cove West."} 
   imgSource={plateCoveHistoryTwo} 
   imgAlt={"History Image 2"}
 />
 <Modal 
   modalId={"modal-3"}
-  headingText={"Residents of Plate Cove"} 
+  headingText={headText} 
   paragraphText={"Herbet Keough and his horse. Plate Cove West"}
   imgSource={plateCoveHistoryThree} 
   imgAlt={"History Image 3"}
 />
 <Modal 
   modalId={"modal-4"} 
-  headingText={"Residents of Plate Cove"} 
+  headingText={headText} 
   paragraphText={"Ellen (Braker) Keough in Plate Cove West."} 
   imgSource={plateCoveHistoryFour} 
   imgAlt={"History Image 4"}
 />
 <Modal 
   modalId={"modal-5"} 
-  headingText={"Residents of Plate Cove"} 
+  headingText={headText} 
   paragraphText={"Herbert Keough and Fred Keough enjoying a horse ride in Plate Cove West."} 
   imgSource={plateCoveHistoryFive} 
   imgAlt={"History Image 5"}
 />
 <Modal 
   modalId={"modal-6"} 
-  headingText={"Residents of Plate Cove"} 
+  headingText={headText} 
   paragraphText={"James (Jim) Furlong. Plate Cove West. Dated - 1980's"} 
   imgSource={plateCoveHistorySix} 
   imgAlt={"History Image 6"}
 />
 <Modal 
   modalId={"modal-7"} 
-  headingText={"Residents of Plate Cove"} 
+  headingText={headText} 
   paragraphText={"Patrick Furlong (Pa), Genevieve (Genever) Furlong and son James (Jim) Furlong."} 
   imgSource={plateCoveHistorySeven} 
   imgAlt={"History Image 7"}
 />
 <Modal 
   modalId={"modal-8"} 
-  headingText={"Residents of Plate Cove"} 
+  headingText={headText} 
   paragraphText={"Ellen (Braker) (aka Mother) Keough. Plate Cove West. Dated - Late 1980's"} 
   imgSource={plateCoveHistoryEight} 
   imgAlt={"History Image 8"}
