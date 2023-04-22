@@ -11,7 +11,7 @@ export default defineConfig({
       external: ["svgo"]
     }
   },
-  site: "https://master--sunny-babka-7f146e.netlify.app",
+  site: "https://www.platecove.com",
   base: "/",
   integrations: [tailwind(), react(), sitemap()]
 });
