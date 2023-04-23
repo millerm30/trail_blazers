@@ -30,12 +30,13 @@ import Icon from "astro-icon";
     <meta property="twitter:card" content="summary_large_image" />
     <title>Page Not Found</title>
   </head>
-  <body >
+  <body class="bg-[#f4f4f4]" >
     <main class="flex flex-col justify-center h-screen">
       <img src={plateCoveImage} alt="Plate Cove Logo" class="ml-auto mr-auto" />
-      <div class="max-w-sm bg-white p-4 ml-auto mr-auto mt-6 rounded-lg border-2 border-black">
-        <div>
+      <div class="max-w-sm bg-white p-4 ml-auto mr-auto mt-6 rounded-lg border-2 border-gray-300">
+        <div class="mb-2 flex">
           <h1 class="text-2xl font-bold">Page Not Found</h1>
+          <Icon name="mdi:face-sad-outline" class="w-8 ml-2" />
         </div>
         <div>
           <p>Looks like you've followed a broken link or entered a URL that doesn't exist on this site.</p>
