@@ -1,0 +1,54 @@
+---
+import plateCoveImage from "../assets/platecove_logo.png";
+import Icon from "astro-icon";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="google-site-verification" content="I5pEhLwHlTIGzS7YPv0la4MadgNT3o9lwaIrG4LEL84" />
+    <meta name="msvalidate.01" content="12CF6AA347BB095883D2BF2B62FA405F" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Michael Miller" />
+    <meta name="description" content="Plate Cove, Newfoundland & Labrador, a community located on route 235 on the Bonavista Highway." />
+    <meta name="keywords" content="Plate Cove, Plate Cove West, Plate Cove East, Trail Blazers, Hiking Trails, Newfoundland, Newfoundland Heritage, Route 235, Bonavista Highway, Geo Park" />
+    <meta name="generator" content={Astro.generator} />
+    <!-- Open Graph / Facebook tags -->
+    <meta property="og:title" content="Plate Cove, Newfoundland & Labrador" />
+    <meta property="og:description" content="Plate Cove, Newfoundland & Labrador, a community located on route 235 on the Bonavista Highway. Plate Cove consists of a west and east side of the cove, which work together to provide services to both communities." />
+    <meta property="og:url" content="https://www.platecove.com/" />
+    <meta property="og:image" content="https://platecove.com/assets/view1.b0ba31c4.png" />
+    <meta property="og:type" content="website" />
+    <!-- Open Graph / Twitter tags -->
+    <meta property="twitter:title" content="Plate Cove, Newfoundland & Labrador" />
+    <meta property="twitter:description" content="Plate Cove, Newfoundland & Labrador, a community located on route 235 on the Bonavista Highway. Plate Cove consists of a west and east side of the cove, which work together to provide services to both communities." />
+    <meta property="twitter:url" content="https://www.platecove.com/" />
+    <meta property="twitter:image" content="https://platecove.com/assets/view1.b0ba31c4.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <title>Page Not Found</title>
+  </head>
+  <body >
+    <main class="flex flex-col justify-center h-screen">
+      <img src={plateCoveImage} alt="Plate Cove Logo" class="ml-auto mr-auto" />
+      <div class="max-w-sm bg-white p-4 ml-auto mr-auto mt-6 rounded-lg border-2 border-black">
+        <div>
+          <h1 class="text-2xl font-bold">Page Not Found</h1>
+        </div>
+        <div>
+          <p>Looks like you've followed a broken link or entered a URL that doesn't exist on this site.</p>
+          <p class="flex mt-6">
+            <Icon name="ph:arrow-square-left-duotone" class="w-6 mr-2" />
+            <span class="relative"><a href="/" class="after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#FF9950] after:transition-all after:ease-in-out after:hover:scale-x-100">Return to the home page</a></span>
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+
+
+
