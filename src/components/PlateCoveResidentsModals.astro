@@ -4,6 +4,11 @@ const headText = "Residents of Plate Cove";
 const images = await Astro.glob("../assets/history/resident*.*").then((file => {
   return file.map(file => file.default);
 }));
+const sortedImages = images.sort((a, b) => {
+  const aNum = a.match(/\d+/)[0];
+  const bNum = b.match(/\d+/)[0];
+  return aNum - bNum;
+});
 const [
   plateCoveHistoryOne,
   plateCoveHistoryTwo,
@@ -12,8 +17,20 @@ const [
   plateCoveHistoryFive, 
   plateCoveHistorySix, 
   plateCoveHistorySeven, 
-  plateCoveHistoryEight
-  ] = images;
+  plateCoveHistoryEight,
+  plateCoveHistoryNine,
+  plateCoveHistoryTen,
+  plateCoveHistoryEleven,
+  plateCoveHistoryTwelve,
+  plateCoveHistoryThirteen,
+  plateCoveHistoryFourteen,
+  plateCoveHistoryFifteen,
+  plateCoveHistorySixteen,
+  plateCoveHistorySeventeen,
+  plateCoveHistoryEighteen,
+  plateCoveHistoryNineteen,
+  plateCoveHistoryTwenty,
+  ] = sortedImages;
 ---
 
 <Modal 
@@ -71,5 +88,89 @@ const [
   paragraphText={"Ellen (Braker) (aka Mother) Keough. Plate Cove West. Dated - Late 1980's"} 
   imgSource={plateCoveHistoryEight} 
   imgAlt={"History Image 8"}
+/>
+<Modal 
+  modalId={"modal-9"} 
+  headingText={headText} 
+  paragraphText={"Margaret (Furlong) Dooley. Plate Cove East."} 
+  imgSource={plateCoveHistoryNine} 
+  imgAlt={"History Image 9"}
+/>
+<Modal 
+  modalId={"modal-10"} 
+  headingText={headText} 
+  paragraphText={"James Furlong (left)"} 
+  imgSource={plateCoveHistoryTen} 
+  imgAlt={"History Image 10"}
+/>
+<Modal 
+  modalId={"modal-11"} 
+  headingText={headText} 
+  paragraphText={"Mary (Whalen) Keough, Shirley (brothers) Keough and Johanna (Furlong) Keough. Plate Cove West."} 
+  imgSource={plateCoveHistoryEleven} 
+  imgAlt={"History Image 11"}
+/>
+<Modal 
+  modalId={"modal-12"} 
+  headingText={headText} 
+  paragraphText={"Trina Keough. Plate Cove West. Dated - 1995"} 
+  imgSource={plateCoveHistoryTwelve} 
+  imgAlt={"History Image 12"}
+/>
+<Modal 
+  modalId={"modal-13"} 
+  headingText={headText} 
+  paragraphText={"Cecelia (Keough) Philpott. Plate Cove West"} 
+  imgSource={plateCoveHistoryThirteen} 
+  imgAlt={"History Image 13"}
+/>
+<Modal 
+  modalId={"modal-14"} 
+  headingText={headText} 
+  paragraphText={"Pius Keough. Plate Cove West."} 
+  imgSource={plateCoveHistoryFourteen} 
+  imgAlt={"History Image 14"}
+/>
+<Modal 
+  modalId={"modal-15"} 
+  headingText={headText} 
+  paragraphText={"Owen Keough. Plate Cove West."} 
+  imgSource={plateCoveHistoryFifteen} 
+  imgAlt={"History Image 15"}
+/>
+<Modal 
+  modalId={"modal-16"} 
+  headingText={headText} 
+  paragraphText={"Mary (Keough) Heaney, Herbert Keough, Anastasia (Keough) Gillingham and Regina (Keough) Furlong. Plate Cove West."} 
+  imgSource={plateCoveHistorySixteen} 
+  imgAlt={"History Image 16"}
+/>
+<Modal 
+  modalId={"modal-17"} 
+  headingText={headText} 
+  paragraphText={"Michael Francis Furlong, Daniel Keough, Ellen (Braker) Keough and Nellie (Keough) Furlong. Plate Cove West."} 
+  imgSource={plateCoveHistorySeventeen} 
+  imgAlt={"History Image 17"}
+/>
+<Modal 
+  modalId={"modal-18"} 
+  headingText={headText} 
+  paragraphText={"Johanna (Furlong) Keough. Plate Cove West."} 
+  imgSource={plateCoveHistoryEighteen} 
+  imgAlt={"History Image 18"}
+/>
+<Modal 
+  modalId={"modal-19"} 
+  headingText={headText} 
+  paragraphText={"Ellen (Braker) Keough and Daniel Keough. Plate Cove West."} 
+  imgSource={plateCoveHistoryNineteen} 
+  imgAlt={"History Image 19"}
+/>
+<Modal 
+  modalId={"modal-20"} 
+  headingText={headText} 
+  paragraphText={"Top left to right. Daniel Keough, Fred Keough, Terry Keough, Mary (Keough) Heaney, Patrick Keough, Jerome Keough, Samual Keough, Bottom left to right. Anastasia (Keough) Gillingham, Aiden Keough, Herbert Keough, Regina (Keough) Furlong and Pierce Keough. Plate Cove West."} 
+  imgSource={plateCoveHistoryTwenty} 
+  imgAlt={"History Image 20"}
 />
 
