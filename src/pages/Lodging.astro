@@ -9,6 +9,7 @@ import BrookSideImage from "../assets/business_logos/brookside.jpg";
 import CedarShakeImage from "../assets/business_logos/cedarshake.jpg";
 import princehavenImage from "../assets/business_logos/princehavenCamp.jpg";
 import hillSideCamp from "../assets/business_logos/hillsideCamp.jpg";
+import philpottsLandingImage from "../assets/business_logos/philpottsanding.jpg";
 import Amenities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view2.jpg";
 ---
@@ -101,6 +102,22 @@ import heroImage from "../assets/hero_images/view2.jpg";
           <Amenities slot="before_social" activity={"Playground"} />
           <Amenities slot="before_social" activity={"Hut Rental"} />
           <SocialIcon socialHref={"https://www.facebook.com/profile.php?id=100042171533636"} socialName={"brandico:facebook-rect"} />
+        </BusinessCard>
+        <BusinessCard 
+          businessImage={philpottsLandingImage}
+          businessName={"Philpott's Landing"}
+          businessDescription={"Philpott's Landing is a cozy traditional Newfoundland Saltbox house located in the community of Plate Cove West."}
+          businessAddress={"Plate Cove West, NL, Canada"} 
+          businessPhone={""} 
+          businessEmail={""}
+          businessWebsite={"https://www.airbnb.ca/rooms/889826270893976959"}
+          businessWebName={"www.airbnb.ca/rooms/889826270893976959"}
+        >
+          <Amenities slot="before_social" activity={"Wifi"} />
+          <Amenities slot="before_social" activity={"BBQ Grill"} />
+          <Amenities slot="before_social" activity={"Laundry"} />
+          <Amenities slot="before_social" activity={"Pet Friendly"} />
+          <SocialIcon socialHref={"https://www.airbnb.ca/rooms/889826270893976959"} socialName={"tabler:brand-airbnb"} />
         </BusinessCard>
       </section>
   </main>
