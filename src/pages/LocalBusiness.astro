@@ -14,6 +14,7 @@ import bethsVarietyImage from "../assets/business_logos/bthsVariety.jpg";
 import midwayIrvingImage from "../assets/business_logos/midwayIrving.jpg";
 import taylorsServiceImage from "../assets/business_logos/taylorsStation.jpg";
 import canddConvenienceImage from "../assets/business_logos/canddConvenience.jpg";
+import sitesNSoundsImage from "../assets/business_logos/hikensounds.jpg";
 import Amenities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view9.png";
 ---
@@ -169,6 +170,20 @@ import heroImage from "../assets/hero_images/view9.png";
       >
         <Amenities slot="before_social" activity={"Grocery"} />
         <SocialIcon socialHref={"https://www.facebook.com/people/C-D-Convenience/100054304399583/"} socialName={"brandico:facebook-rect"} />
+      </BusinessCard>
+      <BusinessCard 
+        businessImage={sitesNSoundsImage}
+        businessName={"Hike Sites & Sounds"}
+        businessDescription={"Guided hikes on established trails or off the beaten path. Customize your hike experience."}
+        businessAddress={"Box 17, 5 Moss's Lane, Princeton, NL, Canada"} 
+        businessPhone={"709-427-4888"} 
+        businessEmail={"hikesitesandsounds@gmail.com"}
+        businessWebsite={""}
+        businessWebName={""}
+      >
+        <Amenities slot="before_social" activity={"Tour Guide"} />
+        <Amenities slot="before_social" activity={"Hiking"} />
+        <SocialIcon socialHref={"https://www.facebook.com/hikesitesandsounds"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
     </section>
   </main>
