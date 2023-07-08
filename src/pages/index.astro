@@ -1,6 +1,6 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
-import WeatherComponent from "../components/WeatherComponent.astro";
+import WeatherComponent from "../components/WeatherComponent.jsx";
 import IndexArticle from "../components/IndexArticle.astro";
 const title = "Plate Cove, Newfoundland & Labrador";
 import "../styles/styles.css";
@@ -12,7 +12,7 @@ import heroImage from "../assets/hero_images/view1.png";
 		
 		<section class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-4 text-black">
 			<IndexArticle />
-			<WeatherComponent />
+			<WeatherComponent client:load />
 		</section>
 	</main>
 </MainLayout>
