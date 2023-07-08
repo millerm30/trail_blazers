@@ -20,11 +20,13 @@ export default function WeatherComponent() {
     fetchWeatherData();
   }, []);
 
+  const weatherImage = `https://openweathermap.org/img/w/${weatherData?.weather?.[0].icon}.png`;
+
   return (
     <aside className="col-span-2 row-span-1 bg-white lg:mt-10 mb-6 p-4 lg:rounded-l-lg border-t-[1px] border-l-[1px] border-b-[1px] border-gray-300 lg:ml-4 text-black md:col-span-1 lg:col-span-1">
       <div className="flex justify-around">
         <div className="text-center">
-          <img src={`http://openweathermap.org/img/w/${weatherData?.weather?.[0].icon}.png`} alt={weatherData?.weather?.[0]?.description} className="w-20 inline" />
+          <img src={weatherImage} alt={weatherData?.weather?.[0]?.description} className="w-20 inline" />
           <p className="uppercase font-bold">{weatherData?.weather?.[0]?.description}</p>
           <span className="flex flex-col justify-between py-2">
             <p className="font-bold">Current Temp:</p>
