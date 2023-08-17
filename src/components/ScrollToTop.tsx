@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
-export default function ScrollTop() {
-  const [visible, setVisible] = useState(false);
+export default function ScrollTop(): JSX.Element {
+  const [visible, setVisible] = useState<boolean>(false);
 
-  const toggleVisible = () => {
-    const scrolled = document.documentElement.scrollTop;
+  const toggleVisible = (): void => {
+    const scrolled: number = document.documentElement.scrollTop;
     if (scrolled > 100) {
       setVisible(true);
     } else if (scrolled <= 300) {
@@ -19,12 +19,12 @@ export default function ScrollTop() {
     };
   }, []);
 
-  const scrollToTop = () => {
+  const scrollToTop = (): void => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
-  }
+  };
 
   return (
     <div className="scroll-to-top">

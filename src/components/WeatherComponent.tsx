@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from 'react';
 
-export default function WeatherComponent() {
-  let lat = 48.4999;
-  let lon = -53.49808;
-  let apiKey = '774150fdf98db0b4a2d36904c6b51a62';
-  let apiAddress = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-  const [weatherData, setWeatherData] = useState({});
+interface WeatherData {
+  weather: {
+    icon: string;
+    description: string;
+  }[];
+  main: {
+    temp: number;
+  };
+}
+
+export default function WeatherComponent(): JSX.Element {
+  let lat: number = 48.4999;
+  let lon: number = -53.49808;
+  let apiKey: string = '774150fdf98db0b4a2d36904c6b51a62';
+  let apiAddress: string = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  const [weatherData, setWeatherData] = useState<WeatherData>({ weather: [{ icon: '', description: '' }], main: { temp: 0 } });
 
   useEffect(() => {
     const fetchWeatherData = async () => {
@@ -43,20 +53,15 @@ export default function WeatherComponent() {
             <p>Plate Cove</p>
           </span>
           <span className="flex justify-between py-2">
-            <p className="font-bold">High:</p>
-            <p>{weatherData?.main?.temp_max.toFixed()} <span className="font-bold">&deg;C</span></p>
+            <p className="font-bold">Latitude:</p>
+            <p>{lat.toFixed(4)}</p>
           </span>
           <span className="flex justify-between py-2">
-            <p className="font-bold">Humidity</p>
-            <p>{weatherData?.main?.humidity} <span className="font-bold">%</span></p>
-          </span>
-          <span className="flex justify-between py-2">
-            <p className="font-bold">Feels Like:</p>
-            <p>{weatherData?.main?.feels_like.toFixed()} <span className="font-bold">&deg;C</span></p>
+            <p className="font-bold">Longitude:</p>
+            <p>{lon.toFixed(4)}</p>
           </span>
         </div>
       </div>
     </aside>
   );
-};
-
+}
