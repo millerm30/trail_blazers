@@ -19,11 +19,11 @@ import Amenities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view9.png";
 ---
 
-<MainLayout title={title} backgroundImage={heroImage}>
+<MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
     <section class="flex flex-wrap justify-center mt-10 gap-4">
       <BusinessCard 
-        businessImage={OutportAcresImage}
+        businessImage={OutportAcresImage.src}
         businessName={"Outport Acres"}
         businessDescription={"Family farm, naturally grown produce, and agricultural sustainably."}
         businessAddress={"Main Road, Musgrave Town, NL"} 
@@ -36,7 +36,7 @@ import heroImage from "../assets/hero_images/view9.png";
         <SocialIcon socialHref={"https://www.facebook.com/OutportAcres"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
       <BusinessCard 
-        businessImage={SomethingFishyImage}
+        businessImage={SomethingFishyImage.src}
         businessName={"Somethin' Fishy NL"}
         businessDescription={"Family owned and operated by Furlong Foods of Plate Cove!"}
         businessAddress={"73 Top Road, Plate Cove West, NL"} 
@@ -49,7 +49,7 @@ import heroImage from "../assets/hero_images/view9.png";
         <SocialIcon socialHref={"https://www.facebook.com/somethinfishyNL"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
       <BusinessCard 
-        businessImage={TrinityEcoToursImage}
+        businessImage={TrinityEcoToursImage.src}
         businessName={"Trinity Eco-Tours"}
         businessDescription={"Sea Kayaking, Whale Watching Tours, All Terrain Vehicle Tours, and more!"}
         businessAddress={"1 Stoneman's Lane, Trinity, NL"} 
@@ -71,7 +71,7 @@ import heroImage from "../assets/hero_images/view9.png";
         <SocialIcon socialHref={"https://www.youtube.com/channel/UCYPO-EQs3RZb66gehK1NoUQ"} socialName={"fa:youtube-square"} />
       </BusinessCard>
       <BusinessCard 
-        businessImage={BonavistaBiennaleImage}
+        businessImage={BonavistaBiennaleImage.src}
         businessName={"Bonavista Biennale"}
         businessDescription={"An innovative, rural-based, contemporary art event occuring every two years throughout Newfoundland and Labrador's Bonavista Peninsula."}
         businessAddress={"-"} 
@@ -86,7 +86,7 @@ import heroImage from "../assets/hero_images/view9.png";
         <SocialIcon socialHref={"https://www.instagram.com/bbiennale"} socialName={"fa:instagram"} />
       </BusinessCard>
       <BusinessCard 
-        businessImage={DiscoveryGeoPark}
+        businessImage={DiscoveryGeoPark.src}
         businessName={"Discovery Global Geopark"}
         businessDescription={"Discovery global geopark half a billion years in the making"}
         businessAddress={"P.O. Box 280, Bonavista, NL, Canada"} 
@@ -104,7 +104,7 @@ import heroImage from "../assets/hero_images/view9.png";
         <SocialIcon socialHref={"https://www.linkedin.com/in/discoverygeopark"} socialName={"fa:linkedin-square"} />
       </BusinessCard>
       <BusinessCard 
-        businessImage={KDM}
+        businessImage={KDM.src}
         businessName={"KDM Contracting"}
         businessDescription={"Excavation Services, backfill, grubbing, garage pad construction, land clearing"}
         businessAddress={"20 Main Road, Plate Cove West, NL, Canada"} 
@@ -117,7 +117,7 @@ import heroImage from "../assets/hero_images/view9.png";
         <SocialIcon socialName={"bi:telephone-fill"} />
       </BusinessCard>
       <BusinessCard 
-        businessImage={bethsVarietyImage}
+        businessImage={bethsVarietyImage.src}
         businessName={"Beth's Variety"}
         businessDescription={"A little bit of everything! Grocery, great snaks, fresh coffee and more."}
         businessAddress={"1 Main St, Princeton, NL, Canada"} 
@@ -130,7 +130,7 @@ import heroImage from "../assets/hero_images/view9.png";
         <SocialIcon socialHref={"https://www.facebook.com/profile.php?id=100063495973259"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
       <BusinessCard 
-        businessImage={midwayIrvingImage}
+        businessImage={midwayIrvingImage.src}
         businessName={"Midway Irving"}
         businessDescription={"Gas Station, Convenience Store, Takeout!. Open Monday - Saturday 7am - 9pm, Sunday 9am - 8pm"}
         businessAddress={"230 Cabot Hiway, Southern Bay, NL, Canada"} 
@@ -145,7 +145,7 @@ import heroImage from "../assets/hero_images/view9.png";
         <SocialIcon socialHref={"https://www.facebook.com/southernbaynl.ca/"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
       <BusinessCard 
-        businessImage={taylorsServiceImage}
+        businessImage={taylorsServiceImage.src}
         businessName={"Taylor's Service Station"}
         businessDescription={"Gas Station, Convenience Store. Open Monday - Sunday 8am - 10pm"}
         businessAddress={"38 Main Road, King's Cove, NL, Canada"} 
@@ -159,7 +159,7 @@ import heroImage from "../assets/hero_images/view9.png";
         <SocialIcon socialName={"bi:telephone-fill"} />
       </BusinessCard>
       <BusinessCard 
-        businessImage={canddConvenienceImage}
+        businessImage={canddConvenienceImage.src}
         businessName={"C & D Convenience"}
         businessDescription={"Grocery Store / Convenience Store."}
         businessAddress={"5 Main Road, Plate Cove West, NL, Canada"} 
@@ -172,7 +172,7 @@ import heroImage from "../assets/hero_images/view9.png";
         <SocialIcon socialHref={"https://www.facebook.com/people/C-D-Convenience/100054304399583/"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
       <BusinessCard 
-        businessImage={sitesNSoundsImage}
+        businessImage={sitesNSoundsImage.src}
         businessName={"Hike Sites & Sounds"}
         businessDescription={"Guided hikes on established trails or off the beaten path. Customize your hike experience."}
         businessAddress={"Box 17, 5 Moss's Lane, Princeton, NL, Canada"} 

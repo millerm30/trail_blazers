@@ -11,11 +11,11 @@ import Amenities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view3.png";
 ---
 
-<MainLayout title={title} backgroundImage={heroImage}>
+<MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
     <section class="flex flex-wrap justify-center mt-10 gap-4">
       <BusinessCard 
-        businessImage={BellasRestaurantImage}
+        businessImage={BellasRestaurantImage.src}
         businessName={"Bella's Restaurant"}
         businessDescription={"Open daily from 8AM until 7PM from June 13 until Otober 1."}
         businessAddress={"4 Main Road, Plate Cove West, NL, Canada"} 
@@ -31,7 +31,7 @@ import heroImage from "../assets/hero_images/view3.png";
         <SocialIcon socialHref={"https://www.facebook.com/RounddaBayInnNL"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
       <BusinessCard 
-        businessImage={claytonChipsImage}
+        businessImage={claytonChipsImage.src}
         businessName={"Clayton's Chip Truck"}
         businessDescription={"We're back with the same original flavor! Homestyle burgers & hand-cut fries, check us out."}
         businessAddress={"1 Harbour Road, Keels, NL, Canada"} 
@@ -45,7 +45,7 @@ import heroImage from "../assets/hero_images/view3.png";
         <SocialIcon socialHref={"https://www.facebook.com/ClaytonsChipTruck"} socialName={"brandico:facebook-rect"} />
       </BusinessCard>
       <BusinessCard 
-        businessImage={maudieTeaImage}
+        businessImage={maudieTeaImage.src}
         businessName={"Maudie's Tea Room"}
         businessDescription={"We're a tea room located in Keels, Bonavista Bay. Be sure to drop by for a cuppa tea and something"}
         businessAddress={"20 Main Road, Keels, NL, Canada"} 

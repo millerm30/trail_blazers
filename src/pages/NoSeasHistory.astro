@@ -8,18 +8,18 @@ import NoSeasArticle from "../components/NoSeasArticle.astro";
 import heroImage from "../assets/hero_images/view6.jpg";
 ---
 
-<MainLayout title={title} backgroundImage={heroImage}>
+<MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
     <section class=" bg-white mt-10 p-4 border-t-[1px] border-b-[1px] border-gray-300 text-black">
       <h2 class="text-xl font-semibold mb-2">No Seas To Wash Me Off</h2>
       <div class="flex flex-col md:flex-col lg:flex-row gap-10">
         <div class="flex justify-center gap-2 mx-auto flex-col md:mx-0 md:flex-row lg:flex-col md:justify-around lg:justify-start">
           <figure class="flex flex-col w-max">
-            <img src={NoSeasOne} alt="No Seas To Wash Me Off" alt="Photo Pius Keough" class="rounded-lg" />
+            <img src={NoSeasOne.src} alt="No Seas To Wash Me Off" alt="Photo Pius Keough" class="rounded-lg" />
             <figcaption class="text-center italic font-semibold text-sm">Photo Pius Keough</figcaption>
           </figure>
           <figure class="flex flex-col max-w-fit">
-            <img src={NoSeasTwo} alt="No Seas To Wash Me Off" alt="Red Beach Island" class="rounded-lg" />
+            <img src={NoSeasTwo.src} alt="No Seas To Wash Me Off" alt="Red Beach Island" class="rounded-lg" />
             <figcaption class="text-center italic font-semibold text-sm">Red Beach (Island)</figcaption>
           </figure>
         </div>

@@ -6,7 +6,7 @@ import "../styles/styles.css";
 import ChurchModals from "../components/ChurchHistoryModals.astro";
 import ChurchSchoolArticle from "../components/ChurchSchoolArticle.astro";
 const images = await Astro.glob("../assets/history/oldChurch*.*").then(files => {
-  return files.map(file => file.default);
+  return files.map(file => file.default.src);
 });
 const sortedImages = images.sort((a, b) => {
   const aNum = a.match(/\d+/)[0];
@@ -14,9 +14,11 @@ const sortedImages = images.sort((a, b) => {
   return aNum - bNum;
 });
 
+console.log("sortedImages", sortedImages);
+
 ---
 
-<MainLayout title={title} backgroundImage={heroImage}>
+<MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
     <section class=" bg-white mt-10 p-4 border-t-[1px] border-b-[1px] border-gray-300 text-black">
       <h2 class="text-xl font-semibold mb-2">Churches & Schools History</h2>

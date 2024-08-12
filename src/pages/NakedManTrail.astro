@@ -8,10 +8,10 @@ import TrailActivities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view6.jpg";
 ---
 
-<MainLayout title={title} backgroundImage={heroImage}>
+<MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
     <TrailComponent 
-      trailImage={NakedManTrailImage}
+      trailImage={NakedManTrailImage.src}
       altImage={"Naked Man Memorial Hike"}
       trailName={"Naked Man Memorial Hike"}
       trailLength={"2.7 km"} 

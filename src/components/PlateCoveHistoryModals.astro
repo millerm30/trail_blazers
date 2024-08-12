@@ -2,7 +2,7 @@
 import Modal from "../components/Modal.astro";
 const headText = "Plate Cove History";
 const images = await Astro.glob("../assets/history/platecoveHistory*.*").then(file => {
-  return file.map(file => file.default)
+  return file.map(file => file.default.src);
 })
 const sortedImages = images.sort((a, b) => {
   const aNum = a.match(/\d+/)[0];

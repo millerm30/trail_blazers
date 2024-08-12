@@ -5,7 +5,7 @@ import "../styles/styles.css";
 import heroImage from "../assets/hero_images/view8.jpeg";
 import ButchersNosePhotosModal from "../components/ButchersNosePhotosModals.astro";
 const images = await Astro.glob("../assets/butchers_nose/butchers_nose*.*").then(files => {
-  return files.map(file => file.default);
+  return files.map(file => file.default.src);
 });
 const sortedImages = images.sort((a, b) => {
   const aNum = a.match(/\d+/)[0];
@@ -14,7 +14,7 @@ const sortedImages = images.sort((a, b) => {
 });
 ---
 
-<MainLayout title={title} backgroundImage={heroImage}>
+<MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
     <section class="bg-white mt-10 p-4 border-t-[1px] border-b-[1px] border-gray-300 text-black">
       <h2 class="text-xl font-semibold mb-2">Butcher's Nose Photos</h2>

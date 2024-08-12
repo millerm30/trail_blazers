@@ -8,10 +8,10 @@ import TrailActivities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view8.jpeg";
 ---
 
-<MainLayout title={title} backgroundImage={heroImage}>
+<MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
     <TrailComponent 
-      trailImage={RedBeachTrailImage}
+      trailImage={RedBeachTrailImage.src}
       altImage={"Red Beach Memorial Trail"}
       trailName={"Red Beach Memorial Trail"} 
       trailLength={"1.5 km"} 

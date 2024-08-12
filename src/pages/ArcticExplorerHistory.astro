@@ -6,7 +6,7 @@ import heroImage from "../assets/hero_images/view7.jpeg";
 import arcticExplorerImage from "../assets/history/arcticExplorer.jpg";
 ---
 
-<MainLayout title={title} backgroundImage={heroImage}>
+<MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
     <section class=" bg-white mt-10 p-4 border-t-[1px] border-b-[1px] border-gray-300 text-black">
       <h2 class="text-xl font-semibold mb-2">Arctic Explorer History</h2>
@@ -18,7 +18,7 @@ import arcticExplorerImage from "../assets/history/arcticExplorer.jpg";
         a service speed of 12.5 knots (23.2 km/h).
       </p>
       <figure class="float-none md:float-right lg:float-right p-2">
-        <img src={arcticExplorerImage} alt="Arctic Explorer" class="max-w-[320px] rounded-lg">
+        <img src={arcticExplorerImage.src} alt="Arctic Explorer" class="max-w-[320px] rounded-lg">
         <figcaption class="text-sm font-semibold italic">Arctic Explorer</figcaption>
       </figure>
       <br>
