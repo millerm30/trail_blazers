@@ -31,7 +31,7 @@ export default function ScrollTop(): JSX.Element {
       {visible && (
         <div
           onClick={scrollToTop}
-          className="fixed right-0 bottom-24 bg-[#FB8500] p-4 rounded-l-lg text-white font-bold cursor-pointer"
+          className="fixed right-0 bottom-24 bg-[#FB8500] p-4 rounded-l-lg text-white font-bold cursor-pointer hover:bg-[#FFA41B]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
