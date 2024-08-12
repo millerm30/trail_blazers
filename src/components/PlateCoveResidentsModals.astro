@@ -9,192 +9,66 @@ const sortedImages = images.sort((a, b) => {
   const bNum = b.match(/\d+/)[0];
   return aNum - bNum;
 });
-const [
-  plateCoveHistoryOne,
-  plateCoveHistoryTwo,
-  plateCoveHistoryThree, 
-  plateCoveHistoryFour, 
-  plateCoveHistoryFive, 
-  plateCoveHistorySix, 
-  plateCoveHistorySeven, 
-  plateCoveHistoryEight,
-  plateCoveHistoryNine,
-  plateCoveHistoryTen,
-  plateCoveHistoryEleven,
-  plateCoveHistoryTwelve,
-  plateCoveHistoryThirteen,
-  plateCoveHistoryFourteen,
-  plateCoveHistoryFifteen,
-  plateCoveHistorySixteen,
-  plateCoveHistorySeventeen,
-  plateCoveHistoryEighteen,
-  plateCoveHistoryNineteen,
-  plateCoveHistoryTwenty,
-  plateCoveHistoryTwentyOne,
-  plateCoveHistoryTwentyTwo,
-  plateCoveHistoryTwentyThree,
-  ] = sortedImages;
+
+const imageTexts = [
+  "Mary (Philpott) Hyde, Mary (Heaney) Keough and Mary (Whalen) Keough. Plate Cove West.",
+  "From left to right. Terry Keough, Mary Ellen (Keough) Heaney, Fred Keough, (next 4 people unknown). Top left to right is Mary (Heaney) Keough and Ellen (Braker) Keough. Plate Cove West.",
+  "Herbert Keough and family horse. Plate Cove West",
+  "Ellen (Braker) Keough in Plate Cove West.",
+  "Herbert Keough and Fred Keough enjoying a horse ride in Plate Cove West.",
+  "James (Jim) Furlong. Plate Cove West. Dated - 1980's",
+  "Patrick Furlong (Pa), Genevieve (Genever) Furlong and son James (Jim) Furlong. Plate Cove West.",
+  "Ellen (Braker) (aka Mother) Keough. Plate Cove West. Dated - Late 1980's",
+  "Margaret (Furlong) Dooley. Plate Cove East.",
+  "James Furlong (left)",
+  "Mary (Whalen) Keough, Shirley (brothers) Keough and Johanna (Furlong) Keough. Plate Cove West.",
+  "Trina Keough. Plate Cove West. Dated - 1995",
+  "Cecelia (Keough) Philpott. Plate Cove West",
+  "Pius Keough. Plate Cove West.",
+  "Owen Keough. Plate Cove West.",
+  "Mary (Keough) Heaney, Herbert Keough, Anastasia (Keough) Gillingham and Regina (Keough) Furlong. Plate Cove West.",
+  "Michael Francis Furlong, Daniel Keough, Ellen (Braker) Keough and Nellie (Keough) Furlong. Plate Cove West.",
+  "Johanna (Furlong) Keough. Plate Cove West.",
+  "Ellen (Braker) Keough and Daniel Keough. Plate Cove West.",
+  "Top left to right. Daniel Keough, Fred Keough, Terry Keough, Mary (Keough) Heaney, Patrick Keough, Jerome Keough, Samual Keough, Bottom left to right. Anastasia (Keough) Gillingham, Aiden Keough, Herbert Keough, Regina (Keough) Furlong and Pierce Keough. Plate Cove West.",
+  "Top left to right. Herbert Keough, Johanna (Furlong) Keough, bottom left to right. Warren Keough, Owen Keough and Faye (Keough) Fitzgerald. Plate Cove West.",
+  "Listed in photo are Jim, Mary, Dan, Donald, Angela, Jose, Fred and Mother Keough.",
+  "Thomas Leo Furlong (aka Tom Leo) right & Catherine Blanche Furlong (nee Walsh) known to all as Blanche or 'Mudder'. Plate Cove West. Dated - 1984/85",
+];
+
+const imageAlts = [
+  "History Image 1",
+  "History Image 2",
+  "History Image 3",
+  "History Image 4",
+  "History Image 5",
+  "History Image 6",
+  "History Image 7",
+  "History Image 8",
+  "History Image 9",
+  "History Image 10",
+  "History Image 11",
+  "History Image 12",
+  "History Image 13",
+  "History Image 14",
+  "History Image 15",
+  "History Image 16",
+  "History Image 17",
+  "History Image 18",
+  "History Image 19",
+  "History Image 20",
+  "History Image 21",
+  "History Image 22",
+  "History Image 23",
+];
 ---
 
-<Modal 
-  modalId={"modal-1"} 
-  headingText={headText} 
-  paragraphText={"Mary (Philpott) Hyde, Mary (Heaney) Keough and Mary (Whalen) Keough. Plate Cove West."} 
-  imgSource={plateCoveHistoryOne} 
-  imgAlt={"History Image 1"}
-/>
-<Modal 
-  modalId={"modal-2"} 
-  headingText={headText} 
-  paragraphText={"From left to right. Terry Keough, Mary Ellen (Keough) Heaney, Fred Keough, (next 4 people unknown). Top left to right is Mary (Heaney) Keough and Ellen (Braker) Keough. Plate Cove West."} 
-  imgSource={plateCoveHistoryTwo} 
-  imgAlt={"History Image 2"}
-/>
-<Modal 
-  modalId={"modal-3"}
-  headingText={headText} 
-  paragraphText={"Herbert Keough and family horse. Plate Cove West"}
-  imgSource={plateCoveHistoryThree} 
-  imgAlt={"History Image 3"}
-/>
-<Modal 
-  modalId={"modal-4"} 
-  headingText={headText} 
-  paragraphText={"Ellen (Braker) Keough in Plate Cove West."} 
-  imgSource={plateCoveHistoryFour} 
-  imgAlt={"History Image 4"}
-/>
-<Modal 
-  modalId={"modal-5"} 
-  headingText={headText} 
-  paragraphText={"Herbert Keough and Fred Keough enjoying a horse ride in Plate Cove West."} 
-  imgSource={plateCoveHistoryFive} 
-  imgAlt={"History Image 5"}
-/>
-<Modal 
-  modalId={"modal-6"} 
-  headingText={headText} 
-  paragraphText={"James (Jim) Furlong. Plate Cove West. Dated - 1980's"} 
-  imgSource={plateCoveHistorySix} 
-  imgAlt={"History Image 6"}
-/>
-<Modal 
-  modalId={"modal-7"} 
-  headingText={headText} 
-  paragraphText={"Patrick Furlong (Pa), Genevieve (Genever) Furlong and son James (Jim) Furlong. Plate Cove West."} 
-  imgSource={plateCoveHistorySeven} 
-  imgAlt={"History Image 7"}
-/>
-<Modal 
-  modalId={"modal-8"} 
-  headingText={headText} 
-  paragraphText={"Ellen (Braker) (aka Mother) Keough. Plate Cove West. Dated - Late 1980's"} 
-  imgSource={plateCoveHistoryEight} 
-  imgAlt={"History Image 8"}
-/>
-<Modal 
-  modalId={"modal-9"} 
-  headingText={headText} 
-  paragraphText={"Margaret (Furlong) Dooley. Plate Cove East."} 
-  imgSource={plateCoveHistoryNine} 
-  imgAlt={"History Image 9"}
-/>
-<Modal 
-  modalId={"modal-10"} 
-  headingText={headText} 
-  paragraphText={"James Furlong (left)"} 
-  imgSource={plateCoveHistoryTen} 
-  imgAlt={"History Image 10"}
-/>
-<Modal 
-  modalId={"modal-11"} 
-  headingText={headText} 
-  paragraphText={"Mary (Whalen) Keough, Shirley (brothers) Keough and Johanna (Furlong) Keough. Plate Cove West."} 
-  imgSource={plateCoveHistoryEleven} 
-  imgAlt={"History Image 11"}
-/>
-<Modal 
-  modalId={"modal-12"} 
-  headingText={headText} 
-  paragraphText={"Trina Keough. Plate Cove West. Dated - 1995"} 
-  imgSource={plateCoveHistoryTwelve} 
-  imgAlt={"History Image 12"}
-/>
-<Modal 
-  modalId={"modal-13"} 
-  headingText={headText} 
-  paragraphText={"Cecelia (Keough) Philpott. Plate Cove West"} 
-  imgSource={plateCoveHistoryThirteen} 
-  imgAlt={"History Image 13"}
-/>
-<Modal 
-  modalId={"modal-14"} 
-  headingText={headText} 
-  paragraphText={"Pius Keough. Plate Cove West."} 
-  imgSource={plateCoveHistoryFourteen} 
-  imgAlt={"History Image 14"}
-/>
-<Modal 
-  modalId={"modal-15"} 
-  headingText={headText} 
-  paragraphText={"Owen Keough. Plate Cove West."} 
-  imgSource={plateCoveHistoryFifteen} 
-  imgAlt={"History Image 15"}
-/>
-<Modal 
-  modalId={"modal-16"} 
-  headingText={headText} 
-  paragraphText={"Mary (Keough) Heaney, Herbert Keough, Anastasia (Keough) Gillingham and Regina (Keough) Furlong. Plate Cove West."} 
-  imgSource={plateCoveHistorySixteen} 
-  imgAlt={"History Image 16"}
-/>
-<Modal 
-  modalId={"modal-17"} 
-  headingText={headText} 
-  paragraphText={"Michael Francis Furlong, Daniel Keough, Ellen (Braker) Keough and Nellie (Keough) Furlong. Plate Cove West."} 
-  imgSource={plateCoveHistorySeventeen} 
-  imgAlt={"History Image 17"}
-/>
-<Modal 
-  modalId={"modal-18"} 
-  headingText={headText} 
-  paragraphText={"Johanna (Furlong) Keough. Plate Cove West."} 
-  imgSource={plateCoveHistoryEighteen} 
-  imgAlt={"History Image 18"}
-/>
-<Modal 
-  modalId={"modal-19"} 
-  headingText={headText} 
-  paragraphText={"Ellen (Braker) Keough and Daniel Keough. Plate Cove West."} 
-  imgSource={plateCoveHistoryNineteen} 
-  imgAlt={"History Image 19"}
-/>
-<Modal 
-  modalId={"modal-20"} 
-  headingText={headText} 
-  paragraphText={"Top left to right. Daniel Keough, Fred Keough, Terry Keough, Mary (Keough) Heaney, Patrick Keough, Jerome Keough, Samual Keough, Bottom left to right. Anastasia (Keough) Gillingham, Aiden Keough, Herbert Keough, Regina (Keough) Furlong and Pierce Keough. Plate Cove West."} 
-  imgSource={plateCoveHistoryTwenty} 
-  imgAlt={"History Image 20"}
-/>
-<Modal 
-  modalId={"modal-21"} 
-  headingText={headText} 
-  paragraphText={"Top left to right. Herbert Keough, Johanna (Furlong) Keough, bottom left to right. Warren Keough, Owen Keough and Faye (Keough) Fitzgerald. Plate Cove West."} 
-  imgSource={plateCoveHistoryTwentyOne} 
-  imgAlt={"History Image 21"}
-/>
-<Modal 
-  modalId={"modal-22"} 
-  headingText={headText} 
-  paragraphText={"Listed in photo are Jim, Mary, Dan, Donald, Angela, Jose, Fred and Mother Keough."} 
-  imgSource={plateCoveHistoryTwentyTwo} 
-  imgAlt={"History Image 22"}
-/>
-<Modal 
-  modalId={"modal-23"} 
-  headingText={headText} 
-  paragraphText={"Thomas Leo Furlong (aka Tom Leo) right & Catherine Blanche Furlong (nee Walsh) known to all as Blanche or 'Mudder'. Plate Cove West. Dated - 1984/85"} 
-  imgSource={plateCoveHistoryTwentyThree} 
-  imgAlt={"History Image 23"}
-/>
-
+{sortedImages.map((image, index) => (
+  <Modal 
+    modalId={`modal-${index + 1}`} 
+    headingText={headText} 
+    paragraphText={imageTexts[index]} 
+    imgSource={image} 
+    imgAlt={imageAlts[index]}
+  />
+))}
