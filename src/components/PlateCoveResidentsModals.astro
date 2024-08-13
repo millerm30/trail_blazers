@@ -35,32 +35,6 @@ const imageTexts = [
   "Listed in photo are Jim, Mary, Dan, Donald, Angela, Jose, Fred and Mother Keough.",
   "Thomas Leo Furlong (aka Tom Leo) right & Catherine Blanche Furlong (nee Walsh) known to all as Blanche or 'Mudder'. Plate Cove West. Dated - 1984/85",
 ];
-
-const imageAlts = [
-  "History Image 1",
-  "History Image 2",
-  "History Image 3",
-  "History Image 4",
-  "History Image 5",
-  "History Image 6",
-  "History Image 7",
-  "History Image 8",
-  "History Image 9",
-  "History Image 10",
-  "History Image 11",
-  "History Image 12",
-  "History Image 13",
-  "History Image 14",
-  "History Image 15",
-  "History Image 16",
-  "History Image 17",
-  "History Image 18",
-  "History Image 19",
-  "History Image 20",
-  "History Image 21",
-  "History Image 22",
-  "History Image 23",
-];
 ---
 
 {sortedImages.map((image, index) => (
@@ -69,6 +43,6 @@ const imageAlts = [
     headingText={headText} 
     paragraphText={imageTexts[index]} 
     imgSource={image} 
-    imgAlt={imageAlts[index]}
+    imgAlt={`Image of Plate Cove Residents ${index + 1}`}
   />
 ))}

@@ -1,658 +1,107 @@
 ---
 import Modal from "../components/Modal.astro";
-const headText = "Naked Man Beach Photo"
-const images = await Astro.glob("../assets/nakedman_beach/nakedman_beach*.*").then(file => {
-  return file.map(file => file.default.src);
-})
+const headText = "Naked Man Beach Photo";
+const images = await Astro.glob(
+  "../assets/nakedman_beach/nakedman_beach*.*"
+).then((file) => {
+  return file.map((file) => file.default.src);
+});
 const sortedImages = images.sort((a, b) => {
   const aNum = a.match(/\d+/)[0];
   const bNum = b.match(/\d+/)[0];
   return aNum - bNum;
 });
-const [
-  imageOne,
-  imageTwo,
-  imageThree,
-  imageFour,
-  imageFive,
-  imageSix,
-  imageSeven,
-  imageEight,
-  imageNine,
-  imageTen,
-  imageEleven,
-  imageTwelve,
-  imageThirteen,
-  imageFourteen,
-  imageFifteen,
-  imageSixteen,
-  imageSeventeen,
-  imageNineteen,
-  imageTwenty,
-  imageTwentyOne,
-  imageTwentyTwo,
-  imageTwentyThree,
-  imageTwentyFour,
-  imageTwentySix,
-  imageTwentySeven,
-  imageTwentyEight,
-  imageTwentyNine,
-  imageThirty,
-  imageThirtyOne,
-  imageThirtyTwo,
-  imageThirtyThree,
-  imageThirtyFour,
-  imageThirtyFive,
-  imageThirtySix,
-  imageThirtySeven,
-  imageThirtyEight,
-  imageThirtyNine,
-  imageForty,
-  imageFortyOne,
-  imageFortyTwo,
-  imageFortyThree,
-  imageFortyFour,
-  imageFortyFive,
-  imageFortySix,
-  imageFortySeven,
-  imageFortyEight,
-  imageFortyNine,
-  imageFifty,
-  ImageFiftyOne,
-  ImageFiftyTwo,
-  ImageFiftyThree,
-  ImageFiftyFour,
-  ImageFiftyFive,
-  ImageFiftySix,
-  ImageFiftySeven,
-  ImageFiftyEight,
-  ImageFiftyNine,
-  ImageSixty,
-  ImageSixtyOne,
-  ImageSixtyTwo,
-  ImageSixtyThree,
-  ImageSixtyFour,
-  ImageSixtyFive,
-  ImageSixtySix,
-  ImageSixtySeven,
-  ImageSixtyEight,
-  ImageSixtyNine,
-  ImageSeventy,
-  ImageSeventyOne,
-  ImageSeventTwo,
-  ImageSeventyThree,
-  ImageSeventyFour,
-  ImageSeventFive,
-  ImageSeventySix,
-  ImageSeventySeven,
-  ImageSeventyEight,
-  ImageSeventyNine,
-  ImageEighty,
-  ImageEightyOne,
-  ImageEightyTwo,
-] = sortedImages;
+
+const imageTexts = [
+  "Pillars at Naked Man Beach. Dated - 2021",
+  "Sandbar at beach. Dated - 2021",
+  "Hikers walking the beach. Dated - 2021",
+  "Pillars at the sandbar. Dated - 2021",
+  "Looking up the coast towards the bacon strip from sandbar. Dated - 2022",
+  "Rock pillars at beach. Dated - 2022",
+  "Looking out across Bonavista Bay from trail. Dated - 2022",
+  "View of sandbar on beach from Hogan's Lookout. Dated - 2021",
+  "Hiking trail and viewing Bonavista Bay. Dated - 2020",
+  "Hiking. Dated - 2021",
+  "View from Hogan's Lookout. Dated - 2020",
+  "Looking across Bonavista Bay. Dated - 2021",
+  "Hiking in nature. Dated - 2021",
+  "Hiking. Dated - 2021",
+  "Watching small iceberg from Hogan's Lookout. Dated - 2022",
+  "Iceberg and pillars. Dated - 2022",
+  "Looking up the beach. Dated - 2021",
+  "Sunset at the beach. Dated - 2021",
+  "Bay view. Dated - 2020",
+  "Starting your hike. Dated - 2020",
+  "Beach view. Dated - 2021",
+  "Hiking across a creek. Dated - 2020",
+  "Enjoy the sandy beach. Dated - 2021",
+  "Pillars. Dated - 2020",
+  "Ocean view. Dated - 2021",
+  "Small waterfall at beach. Dated - 2022",
+  "Viewing the beach from boat. Dated - Early 1990's",
+  "Coastal view with beach. Dated - Early 1990's",
+  "Naked Man Beach. Dated - Early 1990's",
+  "Arial view of the beach. Dated - 2018",
+  "Naked Man pillar. Dated - 2019",
+  "Cute bird houses on trail. Dated - 2022",
+  "Viewing the cave and beach from a boat. Dated - 2021",
+  "Cave on the beach. Dated - 2019",
+  "View out of shallow cave on beach. Dated - 2021",
+  "Beautiful sunset at Hogan's Lookout. Dated - 2020",
+  "Coastal views. Dated - 2021",
+  "Waves crashing on the beach. Dated - 2020",
+  "Cloudy day at the beach. Dated - 2020",
+  "Hogan's Lookout over beach. Dated - 2021",
+  "Memory bench and picnic table to view across Bonavista Bay. Dated - 2021",
+  "Stormy day with waves at the pillars. Dated - 2021",
+  "Sit to have a snack and enjoy the view (Pack it in / Pack it out). Dated - 2021",
+  "Highway trail sign. Dated - 2021",
+  "Trail sign. Dated - 2021",
+  "Memory bench with a view. Dated - 2021",
+  "Pillars as you come back from the sandbar to form a naked man sitting down with his legs out (where name of beach came from). Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the ocean from bench. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+  "Viewing the frozen winter scene. Dated - 2021",
+  "Viewing the sandbar at low tide. Dated - 2021",
+];
 ---
 
-<Modal 
-  modalId={"modal-1"} 
-  headingText={headText} 
-  paragraphText={"Pillars at Naked Man Beach. Dated - 2021"} 
-  imgSource={imageOne} 
-  imgAlt={"Naked Man Beach 1"}
-/>
-<Modal 
-  modalId={"modal-2"} 
-  headingText={headText} 
-  paragraphText={"Sandbar at beach. Dated - 2021"} 
-  imgSource={imageTwo} 
-  imgAlt={"Naked Man Beach 2"}
-/>
-<Modal 
-  modalId={"modal-3"} 
-  headingText={headText} 
-  paragraphText={"Hikers walking the beach. Dated - 2021"} 
-  imgSource={imageThree} 
-  imgAlt={"Naked Man Beach 3"}
-/>
-<Modal 
-  modalId={"modal-4"} 
-  headingText={headText} 
-  paragraphText={"Pillars at the sandbar. Dated - 2021"} 
-  imgSource={imageFour} 
-  imgAlt={"Naked Man Beach 4"}
-/>
-<Modal 
-  modalId={"modal-5"} 
-  headingText={headText} 
-  paragraphText={"Looking up the coast towards the bacon strip from sandbar. Dated - 2022"} 
-  imgSource={imageFive} 
-  imgAlt={"Naked Man Beach 5"}
-/>
-<Modal 
-  modalId={"modal-6"} 
-  headingText={headText} 
-  paragraphText={"Rock pillars at beach. Dated - 2022"} 
-  imgSource={imageSix} 
-  imgAlt={"Naked Man Beach 6"}
-/>
-<Modal 
-  modalId={"modal-7"} 
-  headingText={headText} 
-  paragraphText={"Looking out across Bonavista Bay from trail. Dated - 2022"} 
-  imgSource={imageSeven} 
-  imgAlt={"Naked Man Beach 7"}
-/>
-<Modal 
-  modalId={"modal-8"} 
-  headingText={headText} 
-  paragraphText={"View of sandbar on beach from Hogan's Lookout. Dated - 2021"} 
-  imgSource={imageEight} 
-  imgAlt={"Naked Man Beach 8"}
-/>
-<Modal 
-  modalId={"modal-9"} 
-  headingText={headText} 
-  paragraphText={"Hiking trail and viewing Bonavista Bay. Dated - 2020"} 
-  imgSource={imageNine} 
-  imgAlt={"Naked Man Beach 9"}
-/>
-<Modal 
-  modalId={"modal-10"} 
-  headingText={headText} 
-  paragraphText={"Hiking. Dated - 2021"} 
-  imgSource={imageTen} 
-  imgAlt={"Naked Man Beach 10"}
-/>
-<Modal 
-  modalId={"modal-11"} 
-  headingText={headText} 
-  paragraphText={"View from Hogan's Lookout. Dated - 2020"} 
-  imgSource={imageEleven} 
-  imgAlt={"Naked Man Beach 11"}
-/>
-<Modal 
-  modalId={"modal-12"} 
-  headingText={headText} 
-  paragraphText={"Looking across Bonavista Bay. Dated - 2021"} 
-  imgSource={imageTwelve} 
-  imgAlt={"Naked Man Beach 12"}
-/>
-<Modal 
-  modalId={"modal-13"} 
-  headingText={headText} 
-  paragraphText={"Hiking in nature. Dated - 2021"} 
-  imgSource={imageThirteen} 
-  imgAlt={"Naked Man Beach 13"}
-/>
-<Modal 
-  modalId={"modal-14"} 
-  headingText={headText} 
-  paragraphText={"Hiking. Dated - 2021"} 
-  imgSource={imageFourteen} 
-  imgAlt={"Naked Man Beach 14"}
-/>
-<Modal 
-  modalId={"modal-15"} 
-  headingText={headText} 
-  paragraphText={"Watching small iceberg from Hogan's Lookout. Dated - 2022"} 
-  imgSource={imageFifteen} 
-  imgAlt={"Naked Man Beach 15"}
-/>
-<Modal 
-  modalId={"modal-16"} 
-  headingText={headText} 
-  paragraphText={"Iceberg and pillars. Dated - 2022"} 
-  imgSource={imageSixteen} 
-  imgAlt={"Naked Man Beach 16"}
-/>
-<Modal 
-  modalId={"modal-17"} 
-  headingText={headText} 
-  paragraphText={"Looking up the beach. Dated - 2021"}
-  imgSource={imageSeventeen} 
-  imgAlt={"Naked Man Beach 17"}
-/>
-<Modal 
-  modalId={"modal-18"} 
-  headingText={headText} 
-  paragraphText={"Sunset at the beach. Dated - 2021"} 
-  imgSource={imageNineteen} 
-  imgAlt={"Naked Man Beach 19"}
-/>
-<Modal 
-  modalId={"modal-19"} 
-  headingText={headText} 
-  paragraphText={"Bay view. Dated - 2020"} 
-  imgSource={imageTwenty} 
-  imgAlt={"Naked Man Beach 20"}
-/>
-<Modal 
-  modalId={"modal-20"} 
-  headingText={headText} 
-  paragraphText={"Starting your hike. Dated - 2020"} 
-  imgSource={imageTwentyOne} 
-  imgAlt={"Naked Man Beach 21"}
-/>
-<Modal 
-  modalId={"modal-21"} 
-  headingText={headText} 
-  paragraphText={"Beach view. Dated - 2021"} 
-  imgSource={imageTwentyTwo} 
-  imgAlt={"Naked Man Beach 22"}
-/>
-<Modal 
-  modalId={"modal-22"} 
-  headingText={headText} 
-  paragraphText={"Hiking across a creek. Dated - 2020"} 
-  imgSource={imageTwentyThree} 
-  imgAlt={"Naked Man Beach 23"}
-/>
-<Modal 
-  modalId={"modal-23"} 
-  headingText={headText} 
-  paragraphText={"Enjoy the sandy beach. Dated - 2021"} 
-  imgSource={imageTwentyFour} 
-  imgAlt={"Naked Man Beach 24"}
-/>
-<Modal 
-  modalId={"modal-24"} 
-  headingText={headText} 
-  paragraphText={"Pillars. Dated - 2020"} 
-  imgSource={imageTwentySix} 
-  imgAlt={"Naked Man Beach 26"}
-/>
-<Modal 
-  modalId={"modal-25"} 
-  headingText={headText} 
-  paragraphText={"Ocean view. Dated - 2021"} 
-  imgSource={imageTwentySeven} 
-  imgAlt={"Naked Man Beach 27"}
-/>
-<Modal 
-  modalId={"modal-26"} 
-  headingText={headText} 
-  paragraphText={"Small waterfall at beach. Dated - 2022"} 
-  imgSource={imageTwentyEight} 
-  imgAlt={"Naked Man Beach 28"}
-/>
-<Modal 
-  modalId={"modal-27"} 
-  headingText={headText} 
-  paragraphText={"Viewing the beach from boat. Dated - Early 1990's"} 
-  imgSource={imageTwentyNine} 
-  imgAlt={"Naked Man Beach 29"}
-/>
-<Modal 
-  modalId={"modal-28"} 
-  headingText={headText} 
-  paragraphText={"Coastal view with beach. Dated - Early 1990's"} 
-  imgSource={imageThirty} 
-  imgAlt={"Naked Man Beach 30"}
-/>
-<Modal 
-  modalId={"modal-29"} 
-  headingText={headText} 
-  paragraphText={"Naked Man Beach. Dated - Early 1990's"} 
-  imgSource={imageThirtyOne} 
-  imgAlt={"Naked Man Beach 31"}
-/>
-<Modal 
-  modalId={"modal-30"} 
-  headingText={headText} 
-  paragraphText={"Arial view of the beach. Dated - 2018"} 
-  imgSource={imageThirtyTwo} 
-  imgAlt={"Arial view of the beach. Dated - 2018"}
-/>
-<Modal 
-  modalId={"modal-31"} 
-  headingText={headText} 
-  paragraphText={"Naked Man pillar. Dated - 2019"} 
-  imgSource={imageThirtyThree} 
-  imgAlt={"Beautifull beach. Dated - 2019"}
-/>
-<Modal 
-  modalId={"modal-32"} 
-  headingText={headText} 
-  paragraphText={"Cute bird houses on trail. Dated - 2022"} 
-  imgSource={imageThirtyFour} 
-  imgAlt={"Cute bird houses on trail. Dated - 2022"}
-/>
-<Modal 
-  modalId={"modal-33"} 
-  headingText={headText} 
-  paragraphText={"Viewing the cave and beach from a boat. Dated - 2021"} 
-  imgSource={imageThirtyFive} 
-  imgAlt={"Viewing the cave and beach from a boat. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-34"} 
-  headingText={headText} 
-  paragraphText={"Cave on the beach. Dated - 2019"} 
-  imgSource={imageThirtySix} 
-  imgAlt={"Cave on the beach. Dated - 2019"}
-/>
-<Modal 
-  modalId={"modal-35"} 
-  headingText={headText} 
-  paragraphText={"View out of shallow cave on beach. Dated - 2021"} 
-  imgSource={imageThirtySeven} 
-  imgAlt={"View out of shallow cave on beach. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-36"} 
-  headingText={headText} 
-  paragraphText={"Beautiful sunset at Hogan's Lookout. Dated - 2020"} 
-  imgSource={imageThirtyEight} 
-  imgAlt={"Beautiful sunset at Hogan's Lookout. Dated - 2020"}
-/>
-<Modal 
-  modalId={"modal-37"} 
-  headingText={headText} 
-  paragraphText={"Coastal views. Dated - 2021"} 
-  imgSource={imageThirtyNine} 
-  imgAlt={"Coastal views. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-38"} 
-  headingText={headText} 
-  paragraphText={"Waves crashing on the beach. Dated - 2020"} 
-  imgSource={imageForty} 
-  imgAlt={"Waves crashing on the beach. Dated - 2020"}
-/>
-<Modal 
-  modalId={"modal-39"} 
-  headingText={headText} 
-  paragraphText={"Cloudy day at the beach. Dated - 2020"} 
-  imgSource={imageFortyOne} 
-  imgAlt={"Cloudy day at the beach. Dated - 2020"}
-/>
-<Modal 
-  modalId={"modal-40"} 
-  headingText={headText} 
-  paragraphText={"Hogan's Lookout over beach. Dated - 2021"} 
-  imgSource={imageFortyTwo} 
-  imgAlt={"Hogan's Lookout over beach. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-41"} 
-  headingText={headText} 
-  paragraphText={"Memory bench and picnic table to view across Bonavista Bay. Dated - 2021"} 
-  imgSource={imageFortyThree} 
-  imgAlt={"Viewing across Bonavista Bay. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-42"} 
-  headingText={headText} 
-  paragraphText={"Stormy day with waves at the pillars. Dated - 2021"} 
-  imgSource={imageFortyFour} 
-  imgAlt={"Stormy day with waves at the Pillars. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-43"} 
-  headingText={headText} 
-  paragraphText={"Sit to have a snack and enjoy the view (Pack it in / Pack it out). Dated - 2021"} 
-  imgSource={imageFortyFive} 
-  imgAlt={"Sit to have a snack and enjoy the view (Pack it in / Pack it out). Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-44"} 
-  headingText={headText} 
-  paragraphText={"Highway trail sign. Dated - 2021"} 
-  imgSource={imageFortySix} 
-  imgAlt={"Trail sign. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-45"} 
-  headingText={headText} 
-  paragraphText={"Trail sign. Dated - 2021"} 
-  imgSource={imageFortySeven} 
-  imgAlt={"Trail sign. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-46"} 
-  headingText={headText} 
-  paragraphText={"Memory bench with a view. Dated - 2021"} 
-  imgSource={imageFortyEight} 
-  imgAlt={"Memory bench with a view. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-47"} 
-  headingText={headText} 
-  paragraphText={"Pillars as you come back from the sandbar to form a naked man sitting down with his legs out (where name of beach came from). Dated - 2021"} 
-  imgSource={imageFortyNine} 
-  imgAlt={"Pillars at beach"}
-/>
-<Modal 
-  modalId={"modal-48"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2021"} 
-  imgSource={imageFifty} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-49"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2021"} 
-  imgSource={ImageFiftyOne} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-50"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2021"} 
-  imgSource={ImageFiftyTwo} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-51"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2021"} 
-  imgSource={ImageFiftyThree} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-52"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2021"} 
-  imgSource={ImageFiftyFour} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-53"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2021"} 
-  imgSource={ImageFiftyFive} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-54"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2021"} 
-  imgSource={ImageFiftySix} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-55"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2021"} 
-  imgSource={ImageFiftySeven} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-56"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2021"} 
-  imgSource={ImageFiftyEight} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-57"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2021"} 
-  imgSource={ImageFiftyNine} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-58"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2021"} 
-  imgSource={ImageSixty} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-59"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2021"} 
-  imgSource={ImageSixtyOne} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-60"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2021"} 
-  imgSource={ImageSixtyTwo} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-61"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2021"} 
-  imgSource={ImageSixtyThree} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2021"}
-/>
-<Modal 
-  modalId={"modal-62"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSixtyFour} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-63"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSixtyFive} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-64"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSixtySix} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-65"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSixtySeven} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-66"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSixtyEight} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-67"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSixtyNine} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-68"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSeventy} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-69"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSeventyOne} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-70"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSeventTwo} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-71"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSeventyThree} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-72"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSeventyFour} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-73"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSeventFive} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-74"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSeventySix} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-75"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSeventySeven} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-76"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSeventyEight} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-77"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageSeventyNine} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-78"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageEighty} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-79"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageEightyOne} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-<Modal 
-  modalId={"modal-80"} 
-  headingText={headText} 
-  paragraphText={"Viewing the sandbar at low tide. Dated - 2023"} 
-  imgSource={ImageEightyTwo} 
-  imgAlt={"Viewing the sandbar at low tide. Dated - 2023"}
-/>
-
- 
- 
+{sortedImages.map((image, index) => (
+  <Modal
+    modalId={`modal-${index + 1}`}
+    headingText={headText}
+    paragraphText={imageTexts[index]}
+    imgSource={image}
+    imgAlt={`Naked Man Beach Photo ${index + 1}`}
+  />
+))};

@@ -9,127 +9,32 @@ const sortedImages = images.sort((a, b) => {
   const bNum = b.match(/\d+/)[0];
   return aNum - bNum;
 });
-const [
-  imageOne,
-  imageTwo,
-  imageThree,
-  imageFour,
-  imageFive,
-  imageSix,
-  imageSeven,
-  imageEight,
-  imageNine,
-  imageTen,
-  imageEleven,
-  imageTwelve,
-  imageThirteen,
-  imageFourteen,
-  imageFifteen
-] = sortedImages;
+
+const imageTexts = [
+  "Trail sign with rules to start your hike. Dated - 2022",
+  "Trail markers to follow on trail. Dated - 2022",
+  "Start your hike out to the lookout. Dated - 2022",
+  "Stop for a snack on your hike. (If you pack it in, please pack it out.). Dated - 2022",
+  "Relax with a view over parts of Summerville and Bovavista Bay. Dated - 2022",
+  "Viewing the fjords in Bonavista Bay. Dated - 2022",
+  "Beautiful Bonavista Bay. Dated - 2022",
+  "View of the hills of the Plate Cove volcanic belt looking at the beginning of Plate Cove West. Dated - 2022",
+  "Viewing Rattling Pond and the beginning of Plate Cove West. Dated - 2022",
+  "Hiking during the fall. Dated - 2022",
+  "Relax on a memory bench while hiking on trail. Dated - 2022",
+  "Rocks of the Plate Cove volcanic belt at the top. Dated - 2022",
+  "Rest at the top to enjoy the arial view. Dated - 2022",
+  "Lookout over Summerville. Dated - 2022",
+  "The finish line at top of trail. Dated - 2022",
+];
 ---
 
-<Modal 
-  modalId={"modal-1"} 
-  headingText={headText} 
-  paragraphText={"Trail sign with rules to start your hike. Dated - 2022"} 
-  imgSource={imageOne} 
-  imgAlt={"Trail sign with rules to start your hike."}
-/>
-<Modal 
-  modalId={"modal-2"} 
-  headingText={headText} 
-  paragraphText={"Trail markers to follow on trail. Dated - 2022"} 
-  imgSource={imageTwo} 
-  imgAlt={"Trail markers to follow on trail."}
-/>
-<Modal 
-  modalId={"modal-3"} 
-  headingText={headText} 
-  paragraphText={"Start your hike out to the lookout. Dated - 2022"} 
-  imgSource={imageThree} 
-  imgAlt={"Start your hike out to the lookout."}
-/>
-<Modal 
-  modalId={"modal-4"} 
-  headingText={headText} 
-  paragraphText={"Stop for a snack on your hike. (If you pack it in, please pack it out.). Dated - 2022"} 
-  imgSource={imageFour} 
-  imgAlt={"Stop for a snack on your hike. (If you pack it in, please pack it out.)"}
-/>
-<Modal 
-  modalId={"modal-5"} 
-  headingText={headText} 
-  paragraphText={"Relax with a view over parts of Summerville and Bovavista Bay. Dated - 2022"} 
-  imgSource={imageFive} 
-  imgAlt={"Relax with a view over parts of Summerville and Bovavista Bay."}
-/>
-<Modal 
-  modalId={"modal-6"} 
-  headingText={headText} 
-  paragraphText={"Viewing the fjords in Bonavista Bay. Dated - 2022"} 
-  imgSource={imageSix} 
-  imgAlt={"Viewing the fjords in Bobavista Bay."}
-/>
-<Modal 
-  modalId={"modal-7"} 
-  headingText={headText} 
-  paragraphText={"Beautiful Bonavista Bay. Dated - 2022"} 
-  imgSource={imageSeven} 
-  imgAlt={"Beautiful Bonavista Bay."}
-/>
-<Modal 
-  modalId={"modal-8"} 
-  headingText={headText} 
-  paragraphText={"View of the hills of the Plate Cove volcanic belt looking at the beginning of Plate Cove West. Dated - 2022"} 
-  imgSource={imageEight} 
-  imgAlt={"View of thje hills of the Plate Cove volcanic belt looking at the beginning of Plate Cove West."}
-/>
-<Modal 
-  modalId={"modal-9"} 
-  headingText={headText} 
-  paragraphText={"Viewing Rattling Pond and the beginning of Plate Cove West. Dated - 2022"} 
-  imgSource={imageNine} 
-  imgAlt={"Viewing Rattling Pond at parts of Plate Cove West."}
-/>
-<Modal 
-  modalId={"modal-10"} 
-  headingText={headText} 
-  paragraphText={"Hiking during the fall. Dated - 2022"} 
-  imgSource={imageTen} 
-  imgAlt={"Start of the fall colors."}
-/>
-<Modal 
-  modalId={"modal-11"} 
-  headingText={headText} 
-  paragraphText={"Relax on a memory bench while hiking on trail. Dated - 2022"} 
-  imgSource={imageEleven} 
-  imgAlt={"Relax on our memory benches on trail."}
-/>
-<Modal 
-  modalId={"modal-12"} 
-  headingText={headText} 
-  paragraphText={"Rocks of the Plate Cove volcanic belt at the top. Dated - 2022"} 
-  imgSource={imageTwelve} 
-  imgAlt={"Rocks of the Plate Cove volcanic belt at the top."}
-/>
-<Modal 
-  modalId={"modal-13"} 
-  headingText={headText} 
-  paragraphText={"Rest at the top to enjoy the arial view. Dated - 2022"} 
-  imgSource={imageThirteen} 
-  imgAlt={"Rest at the top to enjoy the arial view."}
-/>
-<Modal 
-  modalId={"modal-14"} 
-  headingText={headText} 
-  paragraphText={"Lookout over Summerville. Dated - 2022"} 
-  imgSource={imageFourteen} 
-  imgAlt={"Lookout at the top of the trail."}
-/>
-<Modal 
-  modalId={"modal-15"} 
-  headingText={headText} 
-  paragraphText={"The finish line at top of trail. Dated - 2022"} 
-  imgSource={imageFifteen} 
-  imgAlt={"Lookout at the top of the trail."}
-/>
+{sortedImages.map((image, index) => (
+  <Modal 
+    modalId={`modal-${index + 1}`} 
+    headingText={headText} 
+    paragraphText={imageTexts[index]} 
+    imgSource={image} 
+    imgAlt={`Image of Jiggin' Head Trail ${index + 1}`}
+  />
+))};

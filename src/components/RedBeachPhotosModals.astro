@@ -9,487 +9,77 @@ const sortedImages = images.sort((a, b) => {
   const bNum = b.match(/\d+/)[0];
   return aNum - bNum;
 });
-const [
-  imageOne,
-  imageTwo,
-  imageThree,
-  imageFour,
-  imageFive,
-  imageSix,
-  imageSeven,
-  imageEight,
-  imageNine,
-  imageTen,
-  imageEleven,
-  imageTwelve,
-  imageThirteen,
-  imageFourteen,
-  imageFifteen,
-  imageSixteen,
-  imageSeventeen,
-  imageEighteen,
-  imageNineteen,
-  imageTwenty,
-  imageTwentyOne,
-  imageTwentyTwo,
-  imageTwentyThree,
-  imageTwentyFour,
-  imageTwentyFive,
-  imageTwentySix,
-  imageTwentySeven,
-  imageTwentyEight,
-  imageTwentyNine,
-  imageThirty,
-  imageThirtyOne,
-  imageThirtyTwo,
-  imageThirtyThree,
-  imageThirtyFour,
-  imageThirtyFive,
-  imageThirtySix,
-  imageThirtySeven,
-  imageThirtyEight,
-  imageThirtyNine,
-  imageForty,
-  imageFortyOne,
-  imageFortyTwo,
-  imageFortyThree,
-  imageFortyFour,
-  imageFortyFive,
-  imageFortySix,
-  imageFortySeven,
-  imageFortyEight,
-  imageFortyNine,
-  imageFifty,
-  imageFiftyOne,
-  imageFiftyTwo,
-  imageFiftyThree,
-  imageFiftyFour,
-  imageFiftyFive,
-  imageFiftySix,
-  imageFiftySeven,
-  imageFiftyEight,
-  imageFiftyNine,
-  imageSixty,
-] = sortedImages;
+
+const imageTexts = [
+  "Walking on Red Beach. Dated - 2021",
+  "Looking at Bonavista Bay and Red Beach with a memory bench. Dated - 2021",
+  "Pius Keough memorial at Red Beach Lookout. Dated - 2022",
+  "Red Beach and Bonavista Bay. Dated - 2021",
+  "Viewing Red Beach from Furlong's Lookout. Dated - 2022",
+  "Hiking Red Beach as you pass through Keough's garden. Dated - 2022",
+  "Hiking to Red Beach. Dated - 2021",
+  "Seeing the ocean close to Red Beach. Dated - 2022",
+  "Sign showing the way to Red Beach. Dated - 2022",
+  "Hiking to Red Beach. Dated - 2020",
+  "Looking down the creek to Red Beach. Dated - 2021",
+  "Hiking on Red Beach trail. Dated - 2020",
+  "Painted trail sign. Dated - 2020",
+  "Viewing the cliffs at Red Beach with a memory bench. Dated - 2020",
+  "Red Beach trail sign.",
+  "Ocean rolling at the beach. Dated - 2020",
+  "Viewing Red Beach from boat. Dated - early 1990's",
+  "Viewing Red Beach with memorial bench. Dated - 2020",
+  "Highway direction sign to Red Beach. Dated - 2021",
+  "Trail sign for Red Beach. Dated - 2021",
+  "Red sand and red cliffs at Red Beach. Dated - 2021",
+  "Face in cliff meeting the ocean with someone relaxing on the beach. Dated - 2021",
+  "Memory bench at Furlong's Lookout. Dated - 2021",
+  "Enjoying the views from Furlong's Lookout. Dated - 2021",
+  "Sunsets at the beach. Dated - 2021",
+  "Thunder storm clouds coming with the sun, giving the clouds an amazing colour. Dated - 2021",
+  "Beautiful sunset while looking out Bonavista Bay. Dated - 2021",
+  "Stormy day at the beach. Dated - 2022",
+  "Creek view of beach and Bonavista Bay. Dated - 2021",
+  "Enjoying beach life. Dated - 2021",
+  "Speeding away from the beach. Dated - 2019",
+  "Viewing Bonavista Bay from memorial. Dated - 2022",
+  "Possible to see pigs at the Keough hobby farm while hiking. Dated - 2022",
+  "Pigs on the hobby farm as your hike the trail. Dated - 2022",
+  "Memorial and memory bench. Dated - 2022",
+  "Viewing the beach from Furlong's Lookout. Dated - 2021",
+  "Boat coming to the beach. Dated - 2022",
+  "Memory benches and picnic table to relax and enjoy the views. Dated - 2022",
+  "Watching boats and seadoos. Dated - 2022",
+  "View Red Beach Lookout. Dated - 2021",
+  "View Red Beach Lookout. Dated - 2021",
+  "View Red Beach Lookout. Dated - 2021",
+  "View Red Beach Lookout. Dated - 2021",
+  "View Red Beach Lookout. Dated - 2021",
+  "View Red Beach Lookout. Dated - 2021",
+  "View Red Beach Lookout. Dated - 2023",
+  "View Red Beach Lookout. Dated - 2023",
+  "View Red Beach Lookout. Dated - 2023",
+  "View Red Beach Lookout. Dated - 2023",
+  "View Red Beach Lookout. Dated - 2023",
+  "View Red Beach Lookout. Dated - 2023",
+  "View Red Beach Lookout. Dated - 2023",
+  "View Red Beach Lookout. Dated - 2023",
+  "View Red Beach Lookout. Dated - 2023",
+  "View Red Beach Lookout. Dated - 2023",
+  "View Red Beach Lookout. Dated - 2023",
+  "View Red Beach Lookout. Dated - 2023",
+  "View Red Beach Lookout. Dated - 2023",
+  "View Red Beach Lookout. Dated - 2023",
+  "View Red Beach Lookout. Dated - 2023",
+];
 ---
 
-<Modal 
-  modalId={"modal-1"} 
-  headingText={headText} 
-  paragraphText={"Walking on Red Beach. Dated - 2021"} 
-  imgSource={imageOne} 
-  imgAlt={"Red Beach 1"}
-/>
-<Modal 
-  modalId={"modal-2"} 
-  headingText={headText} 
-  paragraphText={"Looking at Bonavista Bay and Red Beach with a memory bench. Dated - 2021"} 
-  imgSource={imageTwo} 
-  imgAlt={"Red Beach 2"}
-/>
-<Modal 
-  modalId={"modal-3"} 
-  headingText={headText} 
-  paragraphText={"Pius Keough memorial at Red Beach Lookout. Dated - 2022"} 
-  imgSource={imageThree} 
-  imgAlt={"Red Beach 3"}
-/>
-<Modal 
-  modalId={"modal-4"} 
-  headingText={headText} 
-  paragraphText={"Red Beach and Bonavista Bay. Dated - 2021"} 
-  imgSource={imageFour} 
-  imgAlt={"Red Beach 4"}
-/>
-<Modal 
-  modalId={"modal-5"} 
-  headingText={headText} 
-  paragraphText={"Viewing Red Beach from Furlong's Lookout. Dated - 2022"} 
-  imgSource={imageFive} 
-  imgAlt={"Red Beach 5"}
-/>
-<Modal 
-  modalId={"modal-6"} 
-  headingText={headText} 
-  paragraphText={"Hiking Red Beach as you pass through Keough's garden. Dated - 2022"} 
-  imgSource={imageSix} 
-  imgAlt={"Red Beach 6"}
-/>
-<Modal 
-  modalId={"modal-7"} 
-  headingText={headText} 
-  paragraphText={"Hiking to Red Beach. Dated - 2021"} 
-  imgSource={imageSeven} 
-  imgAlt={"Red Beach 7"}
-/>
-<Modal 
-  modalId={"modal-8"} 
-  headingText={headText} 
-  paragraphText={"Seeing the ocean close to Red Beach. Dated - 2022"} 
-  imgSource={imageEight} 
-  imgAlt={"Red Beach 8"}
-/>
-<Modal 
-  modalId={"modal-9"} 
-  headingText={headText} 
-  paragraphText={"Sign showing the way to Red Beach. Dated - 2022"} 
-  imgSource={imageNine} 
-  imgAlt={"Red Beach 9"}
-/>
-<Modal 
-  modalId={"modal-10"} 
-  headingText={headText} 
-  paragraphText={"Hiking to Red Beach. Dated - 2020"} 
-  imgSource={imageTen} 
-  imgAlt={"Red Beach 10"}
-/>
-<Modal 
-  modalId={"modal-11"} 
-  headingText={headText} 
-  paragraphText={"Looking down the creek to Red Beach. Dated - 2021"} 
-  imgSource={imageEleven} 
-  imgAlt={"Red Beach 11"}
-/>
-<Modal 
-  modalId={"modal-12"} 
-  headingText={headText} 
-  paragraphText={"Hiking on Red Beach trail. Dated - 2020"} 
-  imgSource={imageTwelve} 
-  imgAlt={"Red Beach 12"}
-/>
-<Modal 
-  modalId={"modal-13"} 
-  headingText={headText} 
-  paragraphText={"Painted trail sign. Dated - 2020"} 
-  imgSource={imageThirteen} 
-  imgAlt={"Red Beach 13"}
-/>
-<Modal 
-  modalId={"modal-14"} 
-  headingText={headText} 
-  paragraphText={"Viewing the cliffs at Red Beach with a memory bench. Dated - 2020"} 
-  imgSource={imageFourteen} 
-  imgAlt={"Red Beach 14"}
-/>
-<Modal 
-  modalId={"modal-15"} 
-  headingText={headText} 
-  paragraphText={"Red Beach trail sign."} 
-  imgSource={imageFifteen} 
-  imgAlt={"Red Beach 15"}
-/>
-<Modal 
-  modalId={"modal-16"} 
-  headingText={headText} 
-  paragraphText={"Ocean rolling at the beach. Dated - 2020"} 
-  imgSource={imageSixteen} 
-  imgAlt={"Red Beach 16"}
-/>
-<Modal 
-  modalId={"modal-17"} 
-  headingText={headText} 
-  paragraphText={"Viewing Red Beach from boat. Dated - early 1990's"} 
-  imgSource={imageSeventeen} 
-  imgAlt={"Viewing Red Beach from boat. Dated - early 1990's"}
-/>
-<Modal 
-  modalId={"modal-18"} 
-  headingText={headText} 
-  paragraphText={"Viewing Red Beach with memorial bench. Dated - 2020"} 
-  imgSource={imageEighteen} 
-  imgAlt={"Viewing Red Beach with memorial bench. Dated - 2020"}
-/>
-<Modal 
-  modalId={"modal-19"} 
-  headingText={headText} 
-  paragraphText={"Highway direction sign to Red Beach. Dated - 2021"} 
-  imgSource={imageNineteen} 
-  imgAlt={"Highway sign to Red Beach"}
-/>
-<Modal 
-  modalId={"modal-20"} 
-  headingText={headText} 
-  paragraphText={"Trail sign for Red Beach. Dated - 2021"} 
-  imgSource={imageTwenty} 
-  imgAlt={"Trail sign at Red Beach"}
-/>
-<Modal 
-  modalId={"modal-21"} 
-  headingText={headText} 
-  paragraphText={"Red sand and red cliffs at Red Beach. Dated - 2021"} 
-  imgSource={imageTwentyOne} 
-  imgAlt={"Red sand and red cliffs at Red Beach"}
-/>
-<Modal 
-  modalId={"modal-22"} 
-  headingText={headText} 
-  paragraphText={"Face in cliff meeting the ocean with someone relaxing on the beach. Dated - 2021"} 
-  imgSource={imageTwentyTwo} 
-  imgAlt={"Face in cliff meeting the ocean with someone relaxing on the beach"}
-/>
-<Modal 
-  modalId={"modal-23"} 
-  headingText={headText} 
-  paragraphText={"Memory bench at Furlong's Lookout. Dated - 2021"} 
-  imgSource={imageTwentyThree} 
-  imgAlt={"Memory bench at Furlong's Lookout"}
-/>
-<Modal 
-  modalId={"modal-24"} 
-  headingText={headText} 
-  paragraphText={"Enjoying the views from Furlong's Lookout. Dated - 2021"} 
-  imgSource={imageTwentyFour} 
-  imgAlt={"Enjoying the views from Furlong's Lookout"}
-/>
-<Modal 
-  modalId={"modal-25"} 
-  headingText={headText} 
-  paragraphText={"Sunsets at the beach. Dated - 2021"} 
-  imgSource={imageTwentyFive} 
-  imgAlt={"Sunsets at the beach"}
-/>
-<Modal 
-  modalId={"modal-26"} 
-  headingText={headText} 
-  paragraphText={"Thunder storm clouds coming with the sun, giving the clouds an amazing colour. Dated - 2021"} 
-  imgSource={imageTwentySix} 
-  imgAlt={"Thunder storm clouds coming with the sun, giving the clouds an amazing colour"}
-/>
-<Modal 
-  modalId={"modal-27"} 
-  headingText={headText} 
-  paragraphText={"Beautiful sunset while looking out Bonavista Bay. Dated - 2021"} 
-  imgSource={imageTwentySeven} 
-  imgAlt={"Beautiful sunset while looking out Bonavista Bay"}
-/>
-<Modal 
-  modalId={"modal-28"} 
-  headingText={headText} 
-  paragraphText={"Stormy day at the beach. Dated - 2022"} 
-  imgSource={imageTwentyEight} 
-  imgAlt={"Stormy day at the beach"}
-/>
-<Modal 
-  modalId={"modal-29"} 
-  headingText={headText} 
-  paragraphText={"Creek view of beach and Bonavista Bay. Dated - 2021"} 
-  imgSource={imageTwentyNine} 
-  imgAlt={"Creek view of beach and Bonavista Bay"}
-/>
-<Modal 
-  modalId={"modal-30"} 
-  headingText={headText} 
-  paragraphText={"Enjoying beach life. Dated - 2021"} 
-  imgSource={imageThirty} 
-  imgAlt={"Enjoying beach life"}
-/>
-<Modal 
-  modalId={"modal-31"} 
-  headingText={headText} 
-  paragraphText={"Speeding away from the beach. Dated - 2019"} 
-  imgSource={imageThirtyOne} 
-  imgAlt={"Speeding away from the beach"}
-/>
-<Modal 
-  modalId={"modal-32"} 
-  headingText={headText} 
-  paragraphText={"Viewing Bonavista Bay from memorial. Dated - 2022"} 
-  imgSource={imageThirtyTwo} 
-  imgAlt={"Viewing Bonavista Bay from memorial"}
-/>
-<Modal 
-  modalId={"modal-33"} 
-  headingText={headText} 
-  paragraphText={"Possible to see pigs at the Keough hobby farm while hiking. Dated - 2022"} 
-  imgSource={imageThirtyThree} 
-  imgAlt={"Possible to see pigs at the Keough hobby farm while hiking"}
-/>
-<Modal 
-  modalId={"modal-34"} 
-  headingText={headText} 
-  paragraphText={"Pigs on the hobby farm as your hike the trail. Dated - 2022"} 
-  imgSource={imageThirtyFour} 
-  imgAlt={"Pigs on the hobby farm as your hike the trail"}
-/>
-<Modal 
-  modalId={"modal-35"} 
-  headingText={headText} 
-  paragraphText={"Memorial and memory bench. Dated - 2022"} 
-  imgSource={imageThirtyFive} 
-  imgAlt={"Memorial and memory bench"}
-/>
-<Modal 
-  modalId={"modal-36"} 
-  headingText={headText} 
-  paragraphText={"Viewing the beach from Furlong's Lookout. Dated - 2021"} 
-  imgSource={imageThirtySix} 
-  imgAlt={"Viewing the beach from Furlong's Lookout"}
-/>
-<Modal 
-  modalId={"modal-37"} 
-  headingText={headText} 
-  paragraphText={"Boat coming to the beach. Dated - 2022"} 
-  imgSource={imageThirtySeven} 
-  imgAlt={"Boats coming to the beach"}
-/>
-<Modal 
-  modalId={"modal-38"} 
-  headingText={headText} 
-  paragraphText={"Memory benches and picnic table to relax and enjoy the views. Dated - 2022"} 
-  imgSource={imageThirtyEight} 
-  imgAlt={"Picnic table and benches"}
-/>
-<Modal 
-  modalId={"modal-39"} 
-  headingText={headText} 
-  paragraphText={"Watching boats and seadoos. Dated - 2022"} 
-  imgSource={imageThirtyNine} 
-  imgAlt={"Watching boats and seadoos"}
-/>
-<Modal 
-  modalId={"modal-40"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2021"} 
-  imgSource={imageForty} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-41"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2021"} 
-  imgSource={imageFortyOne} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-42"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2021"} 
-  imgSource={imageFortyTwo} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-43"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2021"} 
-  imgSource={imageFortyThree} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-44"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2021"} 
-  imgSource={imageFortyFour} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-45"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2021"} 
-  imgSource={imageFortyFive} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-46"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageFortySix} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-47"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageFortySeven} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-48"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageFortyEight} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-49"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageFortyNine} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-50"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageFifty} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-51"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageFiftyOne} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-52"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageFiftyTwo} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-53"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageFiftyThree} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-54"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageFiftyFour} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-55"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageFiftyFive} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-56"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageFiftySix} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-57"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageFiftySeven} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-58"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageFiftyEight} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-59"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageFiftyNine} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
-<Modal 
-  modalId={"modal-60"} 
-  headingText={headText} 
-  paragraphText={"View Red Beach Lookout. Dated - 2023"} 
-  imgSource={imageSixty} 
-  imgAlt={"Views of Red Beach Lookout"}
-/>
+{sortedImages.map((image, index) => (
+  <Modal 
+    modalId={`modal-${index + 1}`} 
+    headingText={headText} 
+    paragraphText={imageTexts[index]} 
+    imgSource={image} 
+    imgAlt={`Image of Red Beach ${index + 1}`}
+  />
+))};
