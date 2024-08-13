@@ -1,30 +1,37 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
-const title = "Plate Cove - Jiggin Head Trail";
 import "../styles/styles.css";
-import JigginHeadTrailImage from "../assets/jigginhead_trail/jigginhead.png"
+import JigginHeadTrailImage from "../assets/jigginhead_trail/jigginhead.png";
 import TrailComponent from "../components/TrailComponent.astro";
 import TrailActivities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view5.jpg";
+
+const title = "Plate Cove - Jiggin Head Trail";
 ---
 
 <MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
-    <TrailComponent 
-      trailImage={JigginHeadTrailImage.src} 
+    <TrailComponent
+      trailImage={JigginHeadTrailImage.src}
       altImage={"Jiggin Head Trail"}
-      trailName={"Jiggin Head Trail"} 
-      trailLength={"3.2 km"} 
-      trailLocation={"Start on Route 235 between Plate Cove West and Summerville"} 
+      trailName={"Jiggin Head Trail"}
+      trailLength={"3.2 km"}
+      trailLocation={"Start on Route 235 between Plate Cove West and Summerville"}
     >
       <p slot="after-trailname">
-        Trail is an easy to moderate trail that is a multi-purpose trail located between Plate Cove West and Summerville. This trail is approximately 3.2 km
-        return to a lookout which over looks Summerville and Bonavista Bay. There are rest areas along the trail with memory benches to sit and enjoy the views
-        or to have a snack (If you pack it in / Please pack it out).
-        <br><br>
-        Pets are welcomed on the trail but a leash is always recommended and stay on marked trail. When you get to the viewing points where you can see parts of Plate Cove West
-        and at the top Summerville you have to remember to stay back from the cliffs edge. This trail is in the Plate Cove volcanic belt and under the
-        Discovery Geo Park, so look around at the rocks of the volcanic belt! This trail was signed and opened by volunteers in 2022.
+        Trail is an easy to moderate trail that is a multi-purpose trail located
+        between Plate Cove West and Summerville. This trail is approximately 3.2
+        km return to a lookout which over looks Summerville and Bonavista Bay.
+        There are rest areas along the trail with memory benches to sit and
+        enjoy the views or to have a snack (If you pack it in / Please pack it
+        out).
+        <br /><br />
+        Pets are welcomed on the trail but a leash is always recommended and stay
+        on marked trail. When you get to the viewing points where you can see parts
+        of Plate Cove West and at the top Summerville you have to remember to stay
+        back from the cliffs edge. This trail is in the Plate Cove volcanic belt
+        and under the Discovery Geo Park, so look around at the rocks of the volcanic
+        belt! This trail was signed and opened by volunteers in 2022.
       </p>
       <TrailActivities activity={"Hiking"} slot="after-traillocation" />
       <TrailActivities activity={"Bird Watching"} slot="after-traillocation" />

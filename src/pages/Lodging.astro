@@ -1,10 +1,9 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
-const title = "Plate Cove - Lodging";
 import "../styles/styles.css";
 import BusinessCard from "../components/BusinessCard.astro";
 import SocialIcon from "../components/SocialIcon.astro";
-import RoundDaBayInnImage  from "../assets/business_logos/rounddabayinn.jpg";
+import RoundDaBayInnImage from "../assets/business_logos/rounddabayinn.jpg";
 import BrookSideImage from "../assets/business_logos/brookside.jpg";
 import CedarShakeImage from "../assets/business_logos/cedarshake.jpg";
 import princehavenImage from "../assets/business_logos/princehavenCamp.jpg";
@@ -12,113 +11,133 @@ import hillSideCamp from "../assets/business_logos/hillsideCamp.jpg";
 import philpottsLandingImage from "../assets/business_logos/philpottsanding.jpg";
 import Amenities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view2.jpg";
+
+const title = "Plate Cove - Lodging";
 ---
 
 <MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
     <section class="flex flex-wrap justify-center mt-10 gap-4">
-      <BusinessCard 
-          businessImage={RoundDaBayInnImage.src}
-          businessName={"Round Da Bay Inn"}
-          businessDescription={"16 Unique Theme Rooms (1 wheelchair accessible, door 32)"}
-          businessAddress={"4 Main Road, Plate Cove West, NL"} 
-          businessPhone={"709-544-2008"} 
-          businessEmail={"rounddabayinn@yahoo.ca"} 
-          businessWebsite={"http://www.rounddabayinn.com"}
-          businessWebName={"www.rounddabayinn.com"}
-        >
-          <Amenities slot="before_social" activity={"Room Service"} />
-          <Amenities slot="before_social" activity={"Contact-Less Check In"} />
-          <Amenities slot="before_social" activity={"Gift Shop"} />
-          <Amenities slot="before_social" activity={"Gallery"} />
-          <SocialIcon socialHref={"https://www.facebook.com/RoundDaBayInn"} socialName={"brandico:facebook-rect"} />
-        </BusinessCard>
-        <BusinessCard 
-          businessImage={BrookSideImage.src}
-          businessName={"Beautiful Brookside Cottage"}
-          businessDescription={"Beautiful Brookside Cottage has everything you need for a relaxing vacation"}
-          businessAddress={"270 Main Road, Plate Cove West, NL"} 
-          businessPhone={"416-575-8475"} 
-          businessEmail={"-"}
-          businessWebsite={"https://www.airbnb.ca/rooms/37779479"}
-          businessWebName={"www.airbnb.ca/rooms/37779479"}
-        >
-          <Amenities slot="before_social" activity={"Self Check In"} />
-          <Amenities slot="before_social" activity={"Deck"} />
-          <Amenities slot="before_social" activity={"BBQ"} />
-          <Amenities slot="before_social" activity={"Fire Pit"} />
-          <Amenities slot="before_social" activity={"Wifi"} />
-          <Amenities slot="before_social" activity={"Laundry"} />
-          <Amenities slot="before_social" activity={"Air Conditioning"} />
-          <SocialIcon socialHref={"https://www.airbnb.ca/rooms/37779479"} socialName={"tabler:brand-airbnb"} />
-        </BusinessCard>
-        <BusinessCard 
-          businessImage={CedarShakeImage.src}
-          businessName={"The Cedar Shake"}
-          businessDescription={"The Cedar Shake provides a charming base for exploring the undiscovered side of the Bonavista Peninsula"}
-          businessAddress={"176 Main Road, Southern Bay, NL"} 
-          businessPhone={"-"} 
-          businessEmail={"-"}
-          businessWebsite={"https://www.airbnb.ca/h/thecedarshake"}
-          businessWebName={"www.airbnb.ca/h/thecedarshake"}
-        >
-          <Amenities slot="before_social" activity={"Self Check In"} />
-          <Amenities slot="before_social" activity={"Fireplace"} />
-          <Amenities slot="before_social" activity={"BBQ"} />
-          <Amenities slot="before_social" activity={"Wifi"} />
-          <Amenities slot="before_social" activity={"Fire Pit"} />
-          <Amenities slot="before_social" activity={"Bay View"} />
-          <Amenities slot="before_social" activity={"Laundry"} />
-          <SocialIcon socialHref={"https://www.airbnb.ca/h/thecedarshake"} socialName={"tabler:brand-airbnb"} />
-        </BusinessCard>
-        <BusinessCard 
-          businessImage={princehavenImage.src}
-          businessName={"Princehaven Campground"}
-          businessDescription={"Quietly nestled between Princeton Pond and Southern Bay, Princehaven's twenty-eight (28) serviced campsites are waiting for you to stay the night or for the whole season."}
-          businessAddress={"Main Road, Princeton, NL, Canada"} 
-          businessPhone={"709-462-2200"} 
-          businessEmail={"info@princehavencampground.com"}
-          businessWebsite={"https://princehavencampground.com"}
-          businessWebName={"www.princehavencampground.com"}
-        >
-          <Amenities slot="before_social" activity={"Cabins"} />
-          <Amenities slot="before_social" activity={"Camper Sites"} />
-          <Amenities slot="before_social" activity={"Tent Sites"} />
-          <Amenities slot="before_social" activity={"Centrally Local"} />
-          <Amenities slot="before_social" activity={"Scenic Beauty"} />
-          <SocialIcon socialHref={"https://www.facebook.com/princehavencampground/"} socialName={"brandico:facebook-rect"} />
-        </BusinessCard>
-        <BusinessCard 
-          businessImage={hillSideCamp.src}
-          businessName={"Hillside Campground"}
-          businessDescription={"RV Park located in the small community of King's Cove, NL"}
-          businessAddress={"Main Road, King's Cove, NL, Canada"} 
-          businessPhone={"709-447-3110"} 
-          businessEmail={""}
-          businessWebsite={""}
-          businessWebName={""}
-        >
-          <Amenities slot="before_social" activity={"RV Park"} />
-          <Amenities slot="before_social" activity={"Playground"} />
-          <Amenities slot="before_social" activity={"Hut Rental"} />
-          <SocialIcon socialHref={"https://www.facebook.com/profile.php?id=100042171533636"} socialName={"brandico:facebook-rect"} />
-        </BusinessCard>
-        <BusinessCard 
-          businessImage={philpottsLandingImage.src}
-          businessName={"Philpott's Landing"}
-          businessDescription={"Philpott's Landing is a cozy traditional Newfoundland Saltbox house located in the community of Plate Cove West."}
-          businessAddress={"2 Philpott's Lane, Plate Cove West, NL"} 
-          businessPhone={""} 
-          businessEmail={""}
-          businessWebsite={"https://www.airbnb.ca/rooms/889826270893976959"}
-          businessWebName={"www.airbnb.ca/rooms/889826270893976959"}
-        >
-          <Amenities slot="before_social" activity={"Wifi"} />
-          <Amenities slot="before_social" activity={"BBQ Grill"} />
-          <Amenities slot="before_social" activity={"Laundry"} />
-          <Amenities slot="before_social" activity={"Pet Friendly"} />
-          <SocialIcon socialHref={"https://www.airbnb.ca/rooms/889826270893976959"} socialName={"tabler:brand-airbnb"} />
-        </BusinessCard>
-      </section>
+      <BusinessCard
+        businessImage={RoundDaBayInnImage.src}
+        businessName={"Round Da Bay Inn"}
+        businessDescription={"16 Unique Theme Rooms (1 wheelchair accessible, door 32)"}
+        businessAddress={"4 Main Road, Plate Cove West, NL"}
+        businessPhone={"709-544-2008"}
+        businessEmail={"rounddabayinn@yahoo.ca"}
+        businessWebsite={"http://www.rounddabayinn.com"}
+        businessWebName={"www.rounddabayinn.com"}
+      >
+        <Amenities slot="before_social" activity={"Room Service"} />
+        <Amenities slot="before_social" activity={"Contact-Less Check In"} />
+        <Amenities slot="before_social" activity={"Gift Shop"} />
+        <Amenities slot="before_social" activity={"Gallery"} />
+        <SocialIcon
+          socialHref={"https://www.facebook.com/RoundDaBayInn"}
+          socialName={"brandico:facebook-rect"}
+        />
+      </BusinessCard>
+      <BusinessCard
+        businessImage={BrookSideImage.src}
+        businessName={"Beautiful Brookside Cottage"}
+        businessDescription={"Beautiful Brookside Cottage has everything you need for a relaxing vacation"}
+        businessAddress={"270 Main Road, Plate Cove West, NL"}
+        businessPhone={"416-575-8475"}
+        businessEmail={"-"}
+        businessWebsite={"https://www.airbnb.ca/rooms/37779479"}
+        businessWebName={"www.airbnb.ca/rooms/37779479"}
+      >
+        <Amenities slot="before_social" activity={"Self Check In"} />
+        <Amenities slot="before_social" activity={"Deck"} />
+        <Amenities slot="before_social" activity={"BBQ"} />
+        <Amenities slot="before_social" activity={"Fire Pit"} />
+        <Amenities slot="before_social" activity={"Wifi"} />
+        <Amenities slot="before_social" activity={"Laundry"} />
+        <Amenities slot="before_social" activity={"Air Conditioning"} />
+        <SocialIcon
+          socialHref={"https://www.airbnb.ca/rooms/37779479"}
+          socialName={"tabler:brand-airbnb"}
+        />
+      </BusinessCard>
+      <BusinessCard
+        businessImage={CedarShakeImage.src}
+        businessName={"The Cedar Shake"}
+        businessDescription={"The Cedar Shake provides a charming base for exploring the undiscovered side of the Bonavista Peninsula"}
+        businessAddress={"176 Main Road, Southern Bay, NL"}
+        businessPhone={"-"}
+        businessEmail={"-"}
+        businessWebsite={"https://www.airbnb.ca/h/thecedarshake"}
+        businessWebName={"www.airbnb.ca/h/thecedarshake"}
+      >
+        <Amenities slot="before_social" activity={"Self Check In"} />
+        <Amenities slot="before_social" activity={"Fireplace"} />
+        <Amenities slot="before_social" activity={"BBQ"} />
+        <Amenities slot="before_social" activity={"Wifi"} />
+        <Amenities slot="before_social" activity={"Fire Pit"} />
+        <Amenities slot="before_social" activity={"Bay View"} />
+        <Amenities slot="before_social" activity={"Laundry"} />
+        <SocialIcon
+          socialHref={"https://www.airbnb.ca/h/thecedarshake"}
+          socialName={"tabler:brand-airbnb"}
+        />
+      </BusinessCard>
+      <BusinessCard
+        businessImage={princehavenImage.src}
+        businessName={"Princehaven Campground"}
+        businessDescription={"Quietly nestled between Princeton Pond and Southern Bay, Princehaven's twenty-eight (28) serviced campsites are waiting for you to stay the night or for the whole season."}
+        businessAddress={"Main Road, Princeton, NL, Canada"}
+        businessPhone={"709-462-2200"}
+        businessEmail={"info@princehavencampground.com"}
+        businessWebsite={"https://princehavencampground.com"}
+        businessWebName={"www.princehavencampground.com"}
+      >
+        <Amenities slot="before_social" activity={"Cabins"} />
+        <Amenities slot="before_social" activity={"Camper Sites"} />
+        <Amenities slot="before_social" activity={"Tent Sites"} />
+        <Amenities slot="before_social" activity={"Centrally Local"} />
+        <Amenities slot="before_social" activity={"Scenic Beauty"} />
+        <SocialIcon
+          socialHref={"https://www.facebook.com/princehavencampground/"}
+          socialName={"brandico:facebook-rect"}
+        />
+      </BusinessCard>
+      <BusinessCard
+        businessImage={hillSideCamp.src}
+        businessName={"Hillside Campground"}
+        businessDescription={"RV Park located in the small community of King's Cove, NL"}
+        businessAddress={"Main Road, King's Cove, NL, Canada"}
+        businessPhone={"709-447-3110"}
+        businessEmail={""}
+        businessWebsite={""}
+        businessWebName={""}
+      >
+        <Amenities slot="before_social" activity={"RV Park"} />
+        <Amenities slot="before_social" activity={"Playground"} />
+        <Amenities slot="before_social" activity={"Hut Rental"} />
+        <SocialIcon
+          socialHref={"https://www.facebook.com/profile.php?id=100042171533636"}
+          socialName={"brandico:facebook-rect"}
+        />
+      </BusinessCard>
+      <BusinessCard
+        businessImage={philpottsLandingImage.src}
+        businessName={"Philpott's Landing"}
+        businessDescription={"Philpott's Landing is a cozy traditional Newfoundland Saltbox house located in the community of Plate Cove West."}
+        businessAddress={"2 Philpott's Lane, Plate Cove West, NL"}
+        businessPhone={""}
+        businessEmail={""}
+        businessWebsite={"https://www.airbnb.ca/rooms/889826270893976959"}
+        businessWebName={"www.airbnb.ca/rooms/889826270893976959"}
+      >
+        <Amenities slot="before_social" activity={"Wifi"} />
+        <Amenities slot="before_social" activity={"BBQ Grill"} />
+        <Amenities slot="before_social" activity={"Laundry"} />
+        <Amenities slot="before_social" activity={"Pet Friendly"} />
+        <SocialIcon
+          socialHref={"https://www.airbnb.ca/rooms/889826270893976959"}
+          socialName={"tabler:brand-airbnb"}
+        />
+      </BusinessCard>
+    </section>
   </main>
 </MainLayout>

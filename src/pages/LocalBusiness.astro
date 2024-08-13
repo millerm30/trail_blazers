@@ -1,6 +1,5 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
-const title = "Plate Cove - Local Businesses";
 import "../styles/styles.css";
 import BusinessCard from "../components/BusinessCard.astro";
 import SocialIcon from "../components/SocialIcon.astro";
@@ -17,44 +16,52 @@ import canddConvenienceImage from "../assets/business_logos/canddConvenience.jpg
 import sitesNSoundsImage from "../assets/business_logos/hikensounds.jpg";
 import Amenities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view9.png";
+
+const title = "Plate Cove - Local Businesses";
 ---
 
 <MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
     <section class="flex flex-wrap justify-center mt-10 gap-4">
-      <BusinessCard 
+      <BusinessCard
         businessImage={OutportAcresImage.src}
         businessName={"Outport Acres"}
         businessDescription={"Family farm, naturally grown produce, and agricultural sustainably."}
-        businessAddress={"Main Road, Musgrave Town, NL"} 
-        businessPhone={"709-429-0270"} 
-        businessEmail={"adam@outportacres.com"} 
+        businessAddress={"Main Road, Musgrave Town, NL"}
+        businessPhone={"709-429-0270"}
+        businessEmail={"adam@outportacres.com"}
         businessWebsite={"https://www.outportacres.com"}
         businessWebName={"www.outportacres.com"}
       >
         <Amenities slot="before_social" activity={"Agriculture"} />
-        <SocialIcon socialHref={"https://www.facebook.com/OutportAcres"} socialName={"brandico:facebook-rect"} />
+        <SocialIcon
+          socialHref={"https://www.facebook.com/OutportAcres"}
+          socialName={"brandico:facebook-rect"}
+        />
       </BusinessCard>
-      <BusinessCard 
+      <BusinessCard
         businessImage={SomethingFishyImage.src}
         businessName={"Somethin' Fishy NL"}
         businessDescription={"Family owned and operated by Furlong Foods of Plate Cove!"}
-        businessAddress={"73 Top Road, Plate Cove West, NL"} 
-        businessPhone={"709-545-2251"} 
-        businessEmail={"furlongs@nf.sympatico.ca"} 
+        businessAddress={"73 Top Road, Plate Cove West, NL"}
+        businessPhone={"709-545-2251"}
+        businessEmail={"furlongs@nf.sympatico.ca"}
         businessWebsite={"https://www.furlongfoods.ca"}
         businessWebName={"www.furlongfoods.ca"}
       >
         <Amenities slot="before_social" activity={"Seafood Supplier"} />
-        <SocialIcon socialHref={"https://www.facebook.com/somethinfishyNL"} socialName={"brandico:facebook-rect"} />
+        <SocialIcon
+          socialHref={"https://www.facebook.com/somethinfishyNL"}
+          socialName={"brandico:facebook-rect"}
+        />
       </BusinessCard>
-      <BusinessCard 
+      <BusinessCard
         businessImage={TrinityEcoToursImage.src}
         businessName={"Trinity Eco-Tours"}
         businessDescription={"Sea Kayaking, Whale Watching Tours, All Terrain Vehicle Tours, and more!"}
-        businessAddress={"1 Stoneman's Lane, Trinity, NL"} 
-        businessPhone={"709-464-3712"} 
-        businessEmail={"bobbartlett@trinityeco-tours.com"} 
+        businessAddress={"1 Stoneman's Lane, Trinity, NL"}
+        businessPhone={"709-464-3712"}
+        businessEmail={"bobbartlett@trinityeco-tours.com"}
         businessWebsite={"https://www.trinityecotours.com"}
         businessWebName={"www.trinityecotours.com"}
       >
@@ -64,77 +71,116 @@ import heroImage from "../assets/hero_images/view9.png";
         <Amenities slot="before_social" activity={"Accomodations"} />
         <Amenities slot="before_social" activity={"Restaurant"} />
         <Amenities slot="before_social" activity={"Coffee Shop"} />
-        <SocialIcon socialHref={"https://www.facebook.com/TrinityEcoTours"} socialName={"brandico:facebook-rect"} />
-        <SocialIcon socialHref={"https://www.twitter.com/trinityecotours"} socialName={"fa:twitter-square"} />
-        <SocialIcon socialHref={"https://www.instagram.com/trinityecotours"} socialName={"fa:instagram"} />
-        <SocialIcon socialHref={"https://ar.pinterest.com/trinityecotours"} socialName={"fa:pinterest-square"} />
-        <SocialIcon socialHref={"https://www.youtube.com/channel/UCYPO-EQs3RZb66gehK1NoUQ"} socialName={"fa:youtube-square"} />
+        <SocialIcon
+          socialHref={"https://www.facebook.com/TrinityEcoTours"}
+          socialName={"brandico:facebook-rect"}
+        />
+        <SocialIcon
+          socialHref={"https://www.twitter.com/trinityecotours"}
+          socialName={"fa:twitter-square"}
+        />
+        <SocialIcon
+          socialHref={"https://www.instagram.com/trinityecotours"}
+          socialName={"fa:instagram"}
+        />
+        <SocialIcon
+          socialHref={"https://ar.pinterest.com/trinityecotours"}
+          socialName={"fa:pinterest-square"}
+        />
+        <SocialIcon
+          socialHref={"https://www.youtube.com/channel/UCYPO-EQs3RZb66gehK1NoUQ"}
+          socialName={"fa:youtube-square"}
+        />
       </BusinessCard>
-      <BusinessCard 
+      <BusinessCard
         businessImage={BonavistaBiennaleImage.src}
         businessName={"Bonavista Biennale"}
         businessDescription={"An innovative, rural-based, contemporary art event occuring every two years throughout Newfoundland and Labrador's Bonavista Peninsula."}
-        businessAddress={"-"} 
-        businessPhone={"-"} 
-        businessEmail={"admin@bonavistabiennale.com"} 
+        businessAddress={"-"}
+        businessPhone={"-"}
+        businessEmail={"admin@bonavistabiennale.com"}
         businessWebsite={"https://www.bonavistabiennale.com"}
         businessWebName={"www.bonavistabiennale.com"}
       >
         <Amenities slot="before_social" activity={"Art"} />
-        <SocialIcon socialHref={"https://www.facebook.com/bonavistabiennale"} socialName={"brandico:facebook-rect"} />
-        <SocialIcon socialHref={"https://www.twitter.com/BBiennale"} socialName={"fa:twitter-square"} />
-        <SocialIcon socialHref={"https://www.instagram.com/bbiennale"} socialName={"fa:instagram"} />
+        <SocialIcon
+          socialHref={"https://www.facebook.com/bonavistabiennale"}
+          socialName={"brandico:facebook-rect"}
+        />
+        <SocialIcon
+          socialHref={"https://www.twitter.com/BBiennale"}
+          socialName={"fa:twitter-square"}
+        />
+        <SocialIcon
+          socialHref={"https://www.instagram.com/bbiennale"}
+          socialName={"fa:instagram"}
+        />
       </BusinessCard>
-      <BusinessCard 
+      <BusinessCard
         businessImage={DiscoveryGeoPark.src}
         businessName={"Discovery Global Geopark"}
         businessDescription={"Discovery global geopark half a billion years in the making"}
-        businessAddress={"P.O. Box 280, Bonavista, NL, Canada"} 
-        businessPhone={"709-468-7789"} 
-        businessEmail={"info@discoverygeopark.com"} 
+        businessAddress={"P.O. Box 280, Bonavista, NL, Canada"}
+        businessPhone={"709-468-7789"}
+        businessEmail={"info@discoverygeopark.com"}
         businessWebsite={"https://www.discoverygeopark.com"}
         businessWebName={"www.discoverygeopark.com"}
       >
         <Amenities slot="before_social" activity={"Geology"} />
         <Amenities slot="before_social" activity={"Non-Profit"} />
         <Amenities slot="before_social" activity={"Education"} />
-        <SocialIcon socialHref={"https://www.facebook.com/discoveryglobalgeopark"} socialName={"brandico:facebook-rect"} />
-        <SocialIcon socialHref={"https://www.twitter.com/discoverygeonl"} socialName={"fa:twitter-square"} />
-        <SocialIcon socialHref={"https://www.instagram.com/discoverygeonl"} socialName={"fa:instagram"} />
-        <SocialIcon socialHref={"https://www.linkedin.com/in/discoverygeopark"} socialName={"fa:linkedin-square"} />
+        <SocialIcon
+          socialHref={"https://www.facebook.com/discoveryglobalgeopark"}
+          socialName={"brandico:facebook-rect"}
+        />
+        <SocialIcon
+          socialHref={"https://www.twitter.com/discoverygeonl"}
+          socialName={"fa:twitter-square"}
+        />
+        <SocialIcon
+          socialHref={"https://www.instagram.com/discoverygeonl"}
+          socialName={"fa:instagram"}
+        />
+        <SocialIcon
+          socialHref={"https://www.linkedin.com/in/discoverygeopark"}
+          socialName={"fa:linkedin-square"}
+        />
       </BusinessCard>
-      <BusinessCard 
+      <BusinessCard
         businessImage={KDM.src}
         businessName={"KDM Contracting"}
         businessDescription={"Excavation Services, backfill, grubbing, garage pad construction, land clearing"}
-        businessAddress={"20 Main Road, Plate Cove West, NL, Canada"} 
-        businessPhone={"709-427-2755"} 
-        businessEmail={""} 
+        businessAddress={"20 Main Road, Plate Cove West, NL, Canada"}
+        businessPhone={"709-427-2755"}
+        businessEmail={""}
         businessWebsite={""}
         businessWebName={""}
       >
         <Amenities slot="before_social" activity={"Excavation"} />
         <SocialIcon socialName={"bi:telephone-fill"} />
       </BusinessCard>
-      <BusinessCard 
+      <BusinessCard
         businessImage={bethsVarietyImage.src}
         businessName={"Beth's Variety"}
         businessDescription={"A little bit of everything! Grocery, great snaks, fresh coffee and more."}
-        businessAddress={"1 Main St, Princeton, NL, Canada"} 
-        businessPhone={"709-462-3496"} 
+        businessAddress={"1 Main St, Princeton, NL, Canada"}
+        businessPhone={"709-462-3496"}
         businessEmail={"bethsvariety@gmail.com"}
         businessWebsite={""}
         businessWebName={""}
       >
         <Amenities slot="before_social" activity={"Convenience Store"} />
-        <SocialIcon socialHref={"https://www.facebook.com/profile.php?id=100063495973259"} socialName={"brandico:facebook-rect"} />
+        <SocialIcon
+          socialHref={"https://www.facebook.com/profile.php?id=100063495973259"}
+          socialName={"brandico:facebook-rect"}
+        />
       </BusinessCard>
-      <BusinessCard 
+      <BusinessCard
         businessImage={midwayIrvingImage.src}
         businessName={"Midway Irving"}
         businessDescription={"Gas Station, Convenience Store, Takeout!. Open Monday - Saturday 7am - 9pm, Sunday 9am - 8pm"}
-        businessAddress={"230 Cabot Hiway, Southern Bay, NL, Canada"} 
-        businessPhone={"709-462-3420"} 
+        businessAddress={"230 Cabot Hiway, Southern Bay, NL, Canada"}
+        businessPhone={"709-462-3420"}
         businessEmail={"scotter@eastlink.ca"}
         businessWebsite={""}
         businessWebName={""}
@@ -142,14 +188,17 @@ import heroImage from "../assets/hero_images/view9.png";
         <Amenities slot="before_social" activity={"Fuel"} />
         <Amenities slot="before_social" activity={"Convenience Store"} />
         <Amenities slot="before_social" activity={"Takeout"} />
-        <SocialIcon socialHref={"https://www.facebook.com/southernbaynl.ca/"} socialName={"brandico:facebook-rect"} />
+        <SocialIcon
+          socialHref={"https://www.facebook.com/southernbaynl.ca/"}
+          socialName={"brandico:facebook-rect"}
+        />
       </BusinessCard>
-      <BusinessCard 
+      <BusinessCard
         businessImage={taylorsServiceImage.src}
         businessName={"Taylor's Service Station"}
         businessDescription={"Gas Station, Convenience Store. Open Monday - Sunday 8am - 10pm"}
-        businessAddress={"38 Main Road, King's Cove, NL, Canada"} 
-        businessPhone={"709-447-2121"} 
+        businessAddress={"38 Main Road, King's Cove, NL, Canada"}
+        businessPhone={"709-447-2121"}
         businessEmail={""}
         businessWebsite={""}
         businessWebName={""}
@@ -158,32 +207,38 @@ import heroImage from "../assets/hero_images/view9.png";
         <Amenities slot="before_social" activity={"Convenience Store"} />
         <SocialIcon socialName={"bi:telephone-fill"} />
       </BusinessCard>
-      <BusinessCard 
+      <BusinessCard
         businessImage={canddConvenienceImage.src}
         businessName={"C & D Convenience"}
         businessDescription={"Grocery Store / Convenience Store."}
-        businessAddress={"5 Main Road, Plate Cove West, NL, Canada"} 
-        businessPhone={"709-545-2176"} 
+        businessAddress={"5 Main Road, Plate Cove West, NL, Canada"}
+        businessPhone={"709-545-2176"}
         businessEmail={""}
         businessWebsite={""}
         businessWebName={""}
       >
         <Amenities slot="before_social" activity={"Grocery"} />
-        <SocialIcon socialHref={"https://www.facebook.com/people/C-D-Convenience/100054304399583/"} socialName={"brandico:facebook-rect"} />
+        <SocialIcon
+          socialHref={"https://www.facebook.com/people/C-D-Convenience/100054304399583/"}
+          socialName={"brandico:facebook-rect"}
+        />
       </BusinessCard>
-      <BusinessCard 
+      <BusinessCard
         businessImage={sitesNSoundsImage.src}
         businessName={"Hike Sites & Sounds"}
         businessDescription={"Guided hikes on established trails or off the beaten path. Customize your hike experience."}
-        businessAddress={"Box 17, 5 Moss's Lane, Princeton, NL, Canada"} 
-        businessPhone={"709-427-4888"} 
+        businessAddress={"Box 17, 5 Moss's Lane, Princeton, NL, Canada"}
+        businessPhone={"709-427-4888"}
         businessEmail={"hikesitesandsounds@gmail.com"}
         businessWebsite={""}
         businessWebName={""}
       >
         <Amenities slot="before_social" activity={"Tour Guide"} />
         <Amenities slot="before_social" activity={"Hiking"} />
-        <SocialIcon socialHref={"https://www.facebook.com/hikesitesandsounds"} socialName={"brandico:facebook-rect"} />
+        <SocialIcon
+          socialHref={"https://www.facebook.com/hikesitesandsounds"}
+          socialName={"brandico:facebook-rect"}
+        />
       </BusinessCard>
     </section>
   </main>

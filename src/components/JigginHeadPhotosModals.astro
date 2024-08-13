@@ -1,6 +1,7 @@
 ---
 import Modal from "../components/Modal.astro";
 import { jigginHeadPhotosModalImageTexts } from "../components/ImageTexts";
+import { sortImagesByNumber } from "../utils/ImageFunctions";
 
 const headText = "Jiggin' Head Trail";
 const images = await Astro.glob(
@@ -8,11 +9,8 @@ const images = await Astro.glob(
 ).then((file) => {
   return file.map((file) => file.default.src);
 });
-const sortedImages = images.sort((a, b) => {
-  const aNum = a.match(/\d+/)[0];
-  const bNum = b.match(/\d+/)[0];
-  return aNum - bNum;
-});
+
+const sortedImages = sortImagesByNumber(images);
 ---
 
 {

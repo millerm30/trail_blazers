@@ -1,32 +1,45 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
-const title = "Plate Cove - Antis of Plate Cove";
 import "../styles/styles.css";
 import AntisArticle from "../components/AntisArticle.astro";
 import heroImage from "../assets/hero_images/view7.jpeg";
+
+const title = "Plate Cove - Antis of Plate Cove";
 ---
 
 <MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
-    <section class="bg-white mt-10 p-4 border-t-[1px] border-b-[1px] border-gray-300 text-black">
+    <section
+      class="bg-white mt-10 p-4 border-t-[1px] border-b-[1px] border-gray-300 text-black"
+    >
       <h2 class="text-xl font-semibold mb-2">The Antis of Plate Cove</h2>
-        <p>
-          Newfoundland joined the Canadian confederation in 1949. The referendum was decided by a one percent margin.  
-          But 1949 was not the first time that Newfoundlanders had discussed or fought over confederation.
-        <br><br>
-          In 1869, Newfoundlanders voted in a general election to not join Canada. The two sides in the debate fired insults back and forth and the <i>"No"</i>&nbsp; side, 
-          the Anti-Confederates, waged a war of negative publicity that would be the envy of current political parties. They declared that <i>"Newfoundland children 
-          would be drafted into the Canadian Army and die to be left unburied in distant sandy, dry Canadian deserts.”</i>&nbsp; There was also quite evident an amount of 
-          anti-French sentiment.
-        <br><br>
-          In 1868, a local song written by Mark Walker summed up all the No arguments. It was called the Antis of Plate Cove.
-        <br><br>
-          The song is rife with terminology that expressed the Anti's ferocity on the issue. Take for example the phrase <i>“The flag of cursed Confederation…”</i>.&nbsp; 
-          The use of the term “Touters” in the final stanza refers to persons sent by the government to spy on the Antis and to to try to force them into changing their vote.
-          And were lots of <i>"moneyed”</i>&nbsp; people involved in the Anti movement.
-        </p>
-        <br>
-        <AntisArticle />
+      <p>
+        Newfoundland joined the Canadian confederation in 1949. The referendum
+        was decided by a one percent margin. But 1949 was not the first time
+        that Newfoundlanders had discussed or fought over confederation.
+        <br /><br />
+        In 1869, Newfoundlanders voted in a general election to not join Canada.
+        The two sides in the debate fired insults back and forth and the <i
+          >"No"</i
+        >&nbsp; side, the Anti-Confederates, waged a war of negative publicity
+        that would be the envy of current political parties. They declared that <i
+          >"Newfoundland children would be drafted into the Canadian Army and
+          die to be left unburied in distant sandy, dry Canadian deserts.”</i
+        >&nbsp; There was also quite evident an amount of anti-French sentiment.
+        <br /><br />
+        In 1868, a local song written by Mark Walker summed up all the No arguments.
+        It was called the Antis of Plate Cove.
+        <br /><br />
+        The song is rife with terminology that expressed the Anti's ferocity on the
+        issue. Take for example the phrase <i
+          >“The flag of cursed Confederation…”</i
+        >.&nbsp; The use of the term “Touters” in the final stanza refers to
+        persons sent by the government to spy on the Antis and to to try to
+        force them into changing their vote. And were lots of <i>"moneyed”</i
+        >&nbsp; people involved in the Anti movement.
+      </p>
+      <br />
+      <AntisArticle />
     </section>
   </main>
 </MainLayout>

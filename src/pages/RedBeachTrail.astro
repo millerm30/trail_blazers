@@ -1,39 +1,47 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
-const title = "Plate Cove - Red Beach Trail";
 import "../styles/styles.css";
-import RedBeachTrailImage from "../assets/red_beach/redBeach.png"
+import RedBeachTrailImage from "../assets/red_beach/redBeach.png";
 import TrailComponent from "../components/TrailComponent.astro";
 import TrailActivities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view8.jpeg";
+
+const title = "Plate Cove - Red Beach Trail";
 ---
 
 <MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
-    <TrailComponent 
+    <TrailComponent
       trailImage={RedBeachTrailImage.src}
       altImage={"Red Beach Memorial Trail"}
-      trailName={"Red Beach Memorial Trail"} 
-      trailLength={"1.5 km"} 
-      trailLocation={"Start on Berry Path located on Top Road, Plate Cove West"} 
+      trailName={"Red Beach Memorial Trail"}
+      trailLength={"1.5 km"}
+      trailLocation={"Start on Berry Path located on Top Road, Plate Cove West"}
     >
-    <p slot="after-trailname">
-      Trail is in an easy nature trail to the coast. The trail is great for bird watching, seeing whales close to the beach and possibly other animals along
-      the trail. The trail is approximately 1.5 km return and it is asked that you stay on the marked trail. The trail takes you to a beautiful beach that is
-      maintained by volunteers. There are rest areas along the trail through donated benches and picnic tables. (Please do not litter!)
-      <br><br>
-      Pets are welcomed but must be on a leash at all times as parts of this trail does cross private property. For a period in the trail beginning you will pass through
-      the Keough Family Hobby Farm which could at times contain livestock and is signed to not feed the animals. The cliffs around the beach are steep which is within the
-      Plate Cove volcanic belt and under the Discovery Geo Park. The trail was signed and opened by volunteers in 2021.
-    </p>
-    <TrailActivities activity={"Hiking"} slot="after-traillocation" />
-    <TrailActivities activity={"Bird Watching"} slot="after-traillocation" />
-    <TrailActivities activity={"Picnicking"} slot="after-traillocation" />
-    <TrailActivities activity={"Dog Walking"} slot="after-traillocation" />
-    <TrailActivities activity={"Beach"} slot="after-traillocation" />
-    <TrailActivities activity={"Wildlife"} slot="after-traillocation" />
-    <TrailActivities activity={"Views"} slot="after-traillocation" />
-    <TrailActivities activity={"Kid Friendly"} slot="after-traillocation" />
+      <p slot="after-trailname">
+        Trail is in an easy nature trail to the coast. The trail is great for
+        bird watching, seeing whales close to the beach and possibly other
+        animals along the trail. The trail is approximately 1.5 km return and it
+        is asked that you stay on the marked trail. The trail takes you to a
+        beautiful beach that is maintained by volunteers. There are rest areas
+        along the trail through donated benches and picnic tables. (Please do
+        not litter!)
+        <br /><br />
+        Pets are welcomed but must be on a leash at all times as parts of this trail
+        does cross private property. For a period in the trail beginning you will
+        pass through the Keough Family Hobby Farm which could at times contain livestock
+        and is signed to not feed the animals. The cliffs around the beach are steep
+        which is within the Plate Cove volcanic belt and under the Discovery Geo
+        Park. The trail was signed and opened by volunteers in 2021.
+      </p>
+      <TrailActivities activity={"Hiking"} slot="after-traillocation" />
+      <TrailActivities activity={"Bird Watching"} slot="after-traillocation" />
+      <TrailActivities activity={"Picnicking"} slot="after-traillocation" />
+      <TrailActivities activity={"Dog Walking"} slot="after-traillocation" />
+      <TrailActivities activity={"Beach"} slot="after-traillocation" />
+      <TrailActivities activity={"Wildlife"} slot="after-traillocation" />
+      <TrailActivities activity={"Views"} slot="after-traillocation" />
+      <TrailActivities activity={"Kid Friendly"} slot="after-traillocation" />
     </TrailComponent>
   </main>
 </MainLayout>

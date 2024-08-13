@@ -1,33 +1,53 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
-const title = "Plate Cove - Naked Man Beach Photos";
 import "../styles/styles.css";
 import NakedManPhotosModals from "../components/NakedManPhotosModals.astro";
 import heroImage from "../assets/hero_images/view11.jpg";
-const images = await Astro.glob("../assets/nakedman_beach/nakedman_beach*.*").then(file => {
-  return file.map(file => file.default.src);
-})
-const sortedImages = images.sort((a, b) => {
-  const aNum = a.match(/\d+/)[0];
-  const bNum = b.match(/\d+/)[0];
-  return aNum - bNum;
+import { sortImagesByNumber } from "../utils/ImageFunctions";
+
+const title = "Plate Cove - Naked Man Beach Photos";
+const images = await Astro.glob(
+  "../assets/nakedman_beach/nakedman_beach*.*"
+).then((file) => {
+  return file.map((file) => file.default.src);
 });
+
+const sortedImages = sortImagesByNumber(images);
 ---
 
 <MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
-    <section class="bg-white mt-10 p-4 border-t-[1px] border-b-[1px] border-gray-300 text-black">
-      <h2 class="text-xl font-semibold mb-2">Naked Man Memorial Beach Photos</h2>
-      <p><i>"Memorial"</i>&nbsp; comes from the fact that everything was donated in memory of loved ones from the Plate Cove area to start the trail.</p>
-      <br>
+    <section
+      class="bg-white mt-10 p-4 border-t-[1px] border-b-[1px] border-gray-300 text-black"
+    >
+      <h2 class="text-xl font-semibold mb-2">
+        Naked Man Memorial Beach Photos
+      </h2>
+      <p>
+        <i>"Memorial"</i>&nbsp; comes from the fact that everything was donated
+        in memory of loved ones from the Plate Cove area to start the trail.
+      </p>
+      <br />
       <p class="italic">Click the images below to show more info</p>
-      <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 xl:grid-cols-10 gap-2 auto-rows-[140px]">
-        {sortedImages.map((image, index) => {
-          return (
-            <label for={`modal-${index + 1}`} class="hover:cursor-pointer hover:animate-pulse"><img src={image} alt={`Naked Man Beach Photo ${index + 1}`} class="rounded-lg h-full w-full" /></label>
-          )
-        })
-        }      
+      <div
+        class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 xl:grid-cols-10 gap-2 auto-rows-[140px]"
+      >
+        {
+          sortedImages.map((image, index) => {
+            return (
+              <label
+                for={`modal-${index + 1}`}
+                class="hover:cursor-pointer hover:animate-pulse"
+              >
+                <img
+                  src={image}
+                  alt={`Naked Man Beach Photo ${index + 1}`}
+                  class="rounded-lg h-full w-full"
+                />
+              </label>
+            );
+          })
+        }
       </div>
     </section>
     <NakedManPhotosModals />

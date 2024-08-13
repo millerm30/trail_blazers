@@ -1,6 +1,7 @@
 ---
 import Modal from "../components/Modal.astro";
 import { plateCodeResidentsPhotosModalImageTexts } from "../components/ImageTexts";
+import { sortImagesByNumber } from "../utils/ImageFunctions";
 
 const headText = "Residents of Plate Cove";
 const images = await Astro.glob("../assets/history/resident*.*").then(
@@ -8,11 +9,8 @@ const images = await Astro.glob("../assets/history/resident*.*").then(
     return file.map((file) => file.default.src);
   }
 );
-const sortedImages = images.sort((a, b) => {
-  const aNum = a.match(/\d+/)[0];
-  const bNum = b.match(/\d+/)[0];
-  return aNum - bNum;
-});
+
+const sortedImages = sortImagesByNumber(images);
 ---
 
 {

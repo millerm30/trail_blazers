@@ -1,38 +1,55 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
-const title = "Plate Cove - Skyscrapper Lunch";
 import "../styles/styles.css";
 import SkyscrapperArticle from "../components/skyscrapperArticle.astro";
 import heroImage from "../assets/hero_images/view5.jpg";
+
+const title = "Plate Cove - Skyscrapper Lunch";
 ---
 
 <MainLayout title={title} backgroundImage={heroImage.src}>
   <main>
-    <section class="bg-white mt-10 p-4 border-t-[1px] border-b-[1px] border-gray-300 text-black">
-      <h2 class="text-xl font-semibold mb-2">The famous lunch atop a skyscrapper</h2>
-        <p>
-          One of the world's most iconic photos, the photograph depicts eleven men eating lunch while sitting on a steel beam 850 feet (260 meters) above the ground 
-          on the sixty-ninth floor of the near-completed RCA Building (now known as 30 Rockefeller Plaza) at Rockefeller Center in Manhattan, 
-          New York City, on September 20, 1932.
-          <br>
-          <br>
-          <p class="border-[1px] p-4 rounded-lg border-gray-300 bg-[#f4f4f4]">Descendants of the families in Newfoundland and Labrador have passed 
-            down information of family members in the iconic photo, and it is believed that the following people from Newfoundland are in the photo.
-          <i>3rd. from the left - Austin Lawton of King's Cove, 5th from the left - Claude Stagg of Catalina, 3rd. from the right - Bill Moss of Open Hall and 5th. 
-            from the right - Dick Fennell of Plate Cove West.</i>
-          </p>
+    <section
+      class="bg-white mt-10 p-4 border-t-[1px] border-b-[1px] border-gray-300 text-black"
+    >
+      <h2 class="text-xl font-semibold mb-2">
+        The famous lunch atop a skyscrapper
+      </h2>
+      <p>
+        One of the world's most iconic photos, the photograph depicts eleven men
+        eating lunch while sitting on a steel beam 850 feet (260 meters) above
+        the ground on the sixty-ninth floor of the near-completed RCA Building
+        (now known as 30 Rockefeller Plaza) at Rockefeller Center in Manhattan,
+        New York City, on September 20, 1932.
+        <br />
+        <br />
+        <p class="border-[1px] p-4 rounded-lg border-gray-300 bg-[#f4f4f4]">
+          Descendants of the families in Newfoundland and Labrador have passed
+          down information of family members in the iconic photo, and it is
+          believed that the following people from Newfoundland are in the photo.
+          <i
+            >3rd. from the left - Austin Lawton of King's Cove, 5th from the
+            left - Claude Stagg of Catalina, 3rd. from the right - Bill Moss of
+            Open Hall and 5th. from the right - Dick Fennell of Plate Cove West.</i
+          >
         </p>
-        <br>
-        <p>
-          Lunch atop a Skyscraper was arranged as a publicity stunt, part of a campaign 
-          promoting the skyscraper. The photograph was first published in October 1932 during the construction of Rockefeller Center. In 2016 it was acquired 
-          by the Visual China Group. The image is often misattributed to Lewis Hine. The identity of the photographer remains unknown. 
-          Evidence emerged indicating it may have been taken by Charles C. Ebbets, but it was later found that other photographers had been present at the shoot as well. 
-          Many claims have been made regarding the identities of the men in the image, though only a few have been definitively identified. 
-          Ken Johnston, manager of the historic collections of Corbis, called the image as "a piece of American history".
-        </p>
-        <br>
-        <SkyscrapperArticle />
+      </p>
+      <br />
+      <p>
+        Lunch atop a Skyscraper was arranged as a publicity stunt, part of a
+        campaign promoting the skyscraper. The photograph was first published in
+        October 1932 during the construction of Rockefeller Center. In 2016 it
+        was acquired by the Visual China Group. The image is often misattributed
+        to Lewis Hine. The identity of the photographer remains unknown.
+        Evidence emerged indicating it may have been taken by Charles C. Ebbets,
+        but it was later found that other photographers had been present at the
+        shoot as well. Many claims have been made regarding the identities of
+        the men in the image, though only a few have been definitively
+        identified. Ken Johnston, manager of the historic collections of Corbis,
+        called the image as "a piece of American history".
+      </p>
+      <br />
+      <SkyscrapperArticle />
     </section>
   </main>
 </MainLayout>
