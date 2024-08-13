@@ -1,37 +1,28 @@
 ---
 import Modal from "../components/Modal.astro";
+import { butchersNosePhotosModalImageTexts } from "../components/ImageTexts";
+
 const headText = "Butcher's Nose Trail";
-const images = await Astro.glob("../assets/butchers_nose/butchers_nose*.*").then(file => {
-  return file.map(file => file.default.src);
-})
+const images = await Astro.glob(
+  "../assets/butchers_nose/butchers_nose*.*"
+).then((file) => {
+  return file.map((file) => file.default.src);
+});
 const sortedImages = images.sort((a, b) => {
   const aNum = a.match(/\d+/)[0];
   const bNum = b.match(/\d+/)[0];
   return aNum - bNum;
 });
-
-const imageTexts = [
-  "Trail sign. Dated - 2021",
-  "Top of Butcher's Nose overlooking Bald Rock Point with Plate Cove West in the background. Dated - 2021",
-  "Viewing Plate Cove East from the top. Dated - 2021",
-  "Looking across the cove into Bonavista Bay. Dated - 2021",
-  "Looking to Plate Cove West from the top. Dated - 2021",
-  "Direction sign on trail. Dated - 2021",
-  "Trail sign showing the start of incline on trail. Dated - 2021",
-  "Arial view of Bald Rock Point and Plate Cove West in background. Dated - 2021",
-  "Hiking with your pet on a leash to enjoy the views. Dated - 2021",
-  "Enjoy a break while hiking (Pack it in, Please pack it out!). Dated - 2021",
-  "Painted rock with words of encouragement. Dated - 2021",
-  "View over the western side of the cove. Dated - 2021",
-];
 ---
 
-{sortedImages.map((image, index) => (
-  <Modal 
-    modalId={`modal-${index + 1}`} 
-    headingText={headText} 
-    paragraphText={imageTexts[index]} 
-    imgSource={image} 
-    imgAlt={`Image of Butcher's Nose Trail ${index + 1}`}
-  />
-))};
+{
+  sortedImages.map((image, index) => (
+    <Modal
+      modalId={`modal-${index + 1}`}
+      headingText={headText}
+      paragraphText={butchersNosePhotosModalImageTexts[index]}
+      imgSource={image}
+      imgAlt={`Image of Butcher's Nose Trail ${index + 1}`}
+    />
+  ))
+};

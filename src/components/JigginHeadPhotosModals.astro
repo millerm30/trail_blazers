@@ -1,40 +1,28 @@
 ---
 import Modal from "../components/Modal.astro";
+import { jigginHeadPhotosModalImageTexts } from "../components/ImageTexts";
+
 const headText = "Jiggin' Head Trail";
-const images = await Astro.glob("../assets/jigginhead_trail/jiggin_head*.*").then(file => {
-  return file.map(file => file.default.src);
-})
+const images = await Astro.glob(
+  "../assets/jigginhead_trail/jiggin_head*.*"
+).then((file) => {
+  return file.map((file) => file.default.src);
+});
 const sortedImages = images.sort((a, b) => {
   const aNum = a.match(/\d+/)[0];
   const bNum = b.match(/\d+/)[0];
   return aNum - bNum;
 });
-
-const imageTexts = [
-  "Trail sign with rules to start your hike. Dated - 2022",
-  "Trail markers to follow on trail. Dated - 2022",
-  "Start your hike out to the lookout. Dated - 2022",
-  "Stop for a snack on your hike. (If you pack it in, please pack it out.). Dated - 2022",
-  "Relax with a view over parts of Summerville and Bovavista Bay. Dated - 2022",
-  "Viewing the fjords in Bonavista Bay. Dated - 2022",
-  "Beautiful Bonavista Bay. Dated - 2022",
-  "View of the hills of the Plate Cove volcanic belt looking at the beginning of Plate Cove West. Dated - 2022",
-  "Viewing Rattling Pond and the beginning of Plate Cove West. Dated - 2022",
-  "Hiking during the fall. Dated - 2022",
-  "Relax on a memory bench while hiking on trail. Dated - 2022",
-  "Rocks of the Plate Cove volcanic belt at the top. Dated - 2022",
-  "Rest at the top to enjoy the arial view. Dated - 2022",
-  "Lookout over Summerville. Dated - 2022",
-  "The finish line at top of trail. Dated - 2022",
-];
 ---
 
-{sortedImages.map((image, index) => (
-  <Modal 
-    modalId={`modal-${index + 1}`} 
-    headingText={headText} 
-    paragraphText={imageTexts[index]} 
-    imgSource={image} 
-    imgAlt={`Image of Jiggin' Head Trail ${index + 1}`}
-  />
-))};
+{
+  sortedImages.map((image, index) => (
+    <Modal
+      modalId={`modal-${index + 1}`}
+      headingText={headText}
+      paragraphText={jigginHeadPhotosModalImageTexts[index]}
+      imgSource={image}
+      imgAlt={`Image of Jiggin' Head Trail ${index + 1}`}
+    />
+  ))
+};

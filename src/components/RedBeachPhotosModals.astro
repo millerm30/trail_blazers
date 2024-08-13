@@ -1,85 +1,28 @@
 ---
 import Modal from "../components/Modal.astro";
+import { redBeachPhotosModalImageTexts } from "../components/ImageTexts";
+
 const headText = "Red Beach Photo";
-const images = await Astro.glob("../assets/red_beach/red_beach*.*").then(file => {
-  return file.map(file => file.default.src);
-})
+const images = await Astro.glob("../assets/red_beach/red_beach*.*").then(
+  (file) => {
+    return file.map((file) => file.default.src);
+  }
+);
 const sortedImages = images.sort((a, b) => {
   const aNum = a.match(/\d+/)[0];
   const bNum = b.match(/\d+/)[0];
   return aNum - bNum;
 });
-
-const imageTexts = [
-  "Walking on Red Beach. Dated - 2021",
-  "Looking at Bonavista Bay and Red Beach with a memory bench. Dated - 2021",
-  "Pius Keough memorial at Red Beach Lookout. Dated - 2022",
-  "Red Beach and Bonavista Bay. Dated - 2021",
-  "Viewing Red Beach from Furlong's Lookout. Dated - 2022",
-  "Hiking Red Beach as you pass through Keough's garden. Dated - 2022",
-  "Hiking to Red Beach. Dated - 2021",
-  "Seeing the ocean close to Red Beach. Dated - 2022",
-  "Sign showing the way to Red Beach. Dated - 2022",
-  "Hiking to Red Beach. Dated - 2020",
-  "Looking down the creek to Red Beach. Dated - 2021",
-  "Hiking on Red Beach trail. Dated - 2020",
-  "Painted trail sign. Dated - 2020",
-  "Viewing the cliffs at Red Beach with a memory bench. Dated - 2020",
-  "Red Beach trail sign.",
-  "Ocean rolling at the beach. Dated - 2020",
-  "Viewing Red Beach from boat. Dated - early 1990's",
-  "Viewing Red Beach with memorial bench. Dated - 2020",
-  "Highway direction sign to Red Beach. Dated - 2021",
-  "Trail sign for Red Beach. Dated - 2021",
-  "Red sand and red cliffs at Red Beach. Dated - 2021",
-  "Face in cliff meeting the ocean with someone relaxing on the beach. Dated - 2021",
-  "Memory bench at Furlong's Lookout. Dated - 2021",
-  "Enjoying the views from Furlong's Lookout. Dated - 2021",
-  "Sunsets at the beach. Dated - 2021",
-  "Thunder storm clouds coming with the sun, giving the clouds an amazing colour. Dated - 2021",
-  "Beautiful sunset while looking out Bonavista Bay. Dated - 2021",
-  "Stormy day at the beach. Dated - 2022",
-  "Creek view of beach and Bonavista Bay. Dated - 2021",
-  "Enjoying beach life. Dated - 2021",
-  "Speeding away from the beach. Dated - 2019",
-  "Viewing Bonavista Bay from memorial. Dated - 2022",
-  "Possible to see pigs at the Keough hobby farm while hiking. Dated - 2022",
-  "Pigs on the hobby farm as your hike the trail. Dated - 2022",
-  "Memorial and memory bench. Dated - 2022",
-  "Viewing the beach from Furlong's Lookout. Dated - 2021",
-  "Boat coming to the beach. Dated - 2022",
-  "Memory benches and picnic table to relax and enjoy the views. Dated - 2022",
-  "Watching boats and seadoos. Dated - 2022",
-  "View Red Beach Lookout. Dated - 2021",
-  "View Red Beach Lookout. Dated - 2021",
-  "View Red Beach Lookout. Dated - 2021",
-  "View Red Beach Lookout. Dated - 2021",
-  "View Red Beach Lookout. Dated - 2021",
-  "View Red Beach Lookout. Dated - 2021",
-  "View Red Beach Lookout. Dated - 2023",
-  "View Red Beach Lookout. Dated - 2023",
-  "View Red Beach Lookout. Dated - 2023",
-  "View Red Beach Lookout. Dated - 2023",
-  "View Red Beach Lookout. Dated - 2023",
-  "View Red Beach Lookout. Dated - 2023",
-  "View Red Beach Lookout. Dated - 2023",
-  "View Red Beach Lookout. Dated - 2023",
-  "View Red Beach Lookout. Dated - 2023",
-  "View Red Beach Lookout. Dated - 2023",
-  "View Red Beach Lookout. Dated - 2023",
-  "View Red Beach Lookout. Dated - 2023",
-  "View Red Beach Lookout. Dated - 2023",
-  "View Red Beach Lookout. Dated - 2023",
-  "View Red Beach Lookout. Dated - 2023",
-];
 ---
 
-{sortedImages.map((image, index) => (
-  <Modal 
-    modalId={`modal-${index + 1}`} 
-    headingText={headText} 
-    paragraphText={imageTexts[index]} 
-    imgSource={image} 
-    imgAlt={`Image of Red Beach ${index + 1}`}
-  />
-))};
+{
+  sortedImages.map((image, index) => (
+    <Modal
+      modalId={`modal-${index + 1}`}
+      headingText={headText}
+      paragraphText={redBeachPhotosModalImageTexts[index]}
+      imgSource={image}
+      imgAlt={`Image of Red Beach ${index + 1}`}
+    />
+  ))
+};

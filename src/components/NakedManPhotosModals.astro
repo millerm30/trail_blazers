@@ -1,5 +1,7 @@
 ---
 import Modal from "../components/Modal.astro";
+import { nakedManPhotosModalImageTexts } from "../components/ImageTexts";
+
 const headText = "Naked Man Beach Photo";
 const images = await Astro.glob(
   "../assets/nakedman_beach/nakedman_beach*.*"
@@ -11,97 +13,16 @@ const sortedImages = images.sort((a, b) => {
   const bNum = b.match(/\d+/)[0];
   return aNum - bNum;
 });
-
-const imageTexts = [
-  "Pillars at Naked Man Beach. Dated - 2021",
-  "Sandbar at beach. Dated - 2021",
-  "Hikers walking the beach. Dated - 2021",
-  "Pillars at the sandbar. Dated - 2021",
-  "Looking up the coast towards the bacon strip from sandbar. Dated - 2022",
-  "Rock pillars at beach. Dated - 2022",
-  "Looking out across Bonavista Bay from trail. Dated - 2022",
-  "View of sandbar on beach from Hogan's Lookout. Dated - 2021",
-  "Hiking trail and viewing Bonavista Bay. Dated - 2020",
-  "Hiking. Dated - 2021",
-  "View from Hogan's Lookout. Dated - 2020",
-  "Looking across Bonavista Bay. Dated - 2021",
-  "Hiking in nature. Dated - 2021",
-  "Hiking. Dated - 2021",
-  "Watching small iceberg from Hogan's Lookout. Dated - 2022",
-  "Iceberg and pillars. Dated - 2022",
-  "Looking up the beach. Dated - 2021",
-  "Sunset at the beach. Dated - 2021",
-  "Bay view. Dated - 2020",
-  "Starting your hike. Dated - 2020",
-  "Beach view. Dated - 2021",
-  "Hiking across a creek. Dated - 2020",
-  "Enjoy the sandy beach. Dated - 2021",
-  "Pillars. Dated - 2020",
-  "Ocean view. Dated - 2021",
-  "Small waterfall at beach. Dated - 2022",
-  "Viewing the beach from boat. Dated - Early 1990's",
-  "Coastal view with beach. Dated - Early 1990's",
-  "Naked Man Beach. Dated - Early 1990's",
-  "Arial view of the beach. Dated - 2018",
-  "Naked Man pillar. Dated - 2019",
-  "Cute bird houses on trail. Dated - 2022",
-  "Viewing the cave and beach from a boat. Dated - 2021",
-  "Cave on the beach. Dated - 2019",
-  "View out of shallow cave on beach. Dated - 2021",
-  "Beautiful sunset at Hogan's Lookout. Dated - 2020",
-  "Coastal views. Dated - 2021",
-  "Waves crashing on the beach. Dated - 2020",
-  "Cloudy day at the beach. Dated - 2020",
-  "Hogan's Lookout over beach. Dated - 2021",
-  "Memory bench and picnic table to view across Bonavista Bay. Dated - 2021",
-  "Stormy day with waves at the pillars. Dated - 2021",
-  "Sit to have a snack and enjoy the view (Pack it in / Pack it out). Dated - 2021",
-  "Highway trail sign. Dated - 2021",
-  "Trail sign. Dated - 2021",
-  "Memory bench with a view. Dated - 2021",
-  "Pillars as you come back from the sandbar to form a naked man sitting down with his legs out (where name of beach came from). Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the ocean from bench. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-  "Viewing the frozen winter scene. Dated - 2021",
-  "Viewing the sandbar at low tide. Dated - 2021",
-];
 ---
 
-{sortedImages.map((image, index) => (
-  <Modal
-    modalId={`modal-${index + 1}`}
-    headingText={headText}
-    paragraphText={imageTexts[index]}
-    imgSource={image}
-    imgAlt={`Naked Man Beach Photo ${index + 1}`}
-  />
-))};
+{
+  sortedImages.map((image, index) => (
+    <Modal
+      modalId={`modal-${index + 1}`}
+      headingText={headText}
+      paragraphText={nakedManPhotosModalImageTexts[index]}
+      imgSource={image}
+      imgAlt={`Naked Man Beach Photo ${index + 1}`}
+    />
+  ))
+};

@@ -1,30 +1,28 @@
 ---
 import Modal from "../components/Modal.astro";
+import { churchHistoryPhotosModalImageTexts } from "../components/ImageTexts";
+
 const headText = "Churches of Plate Cove";
-const images = await Astro.glob("../assets/history/oldChurch*.*").then(file => {
-  return file.map(file => file.default.src);
-})
+const images = await Astro.glob("../assets/history/oldChurch*.*").then(
+  (file) => {
+    return file.map((file) => file.default.src);
+  }
+);
 const sortedImages = images.sort((a, b) => {
   const aNum = a.match(/\d+/)[0];
   const bNum = b.match(/\d+/)[0];
   return aNum - bNum;
 });
-
-const imageTexts = [
-  "Church on the right was the first church built around 1930 that was replaced with a larger church in the 1950's (left in the picture) Plate Cove East.",
-  "Church when it was originally built in the 1950's with the tower which was later removed when the parish decided to hang the bell on a smaller tower close to the church. Plate Cove East",
-  "Viewing Plate Cove church while boating. Plate Cove East - Dated early 1980's",
-  "The way the church and tower looked at the time it was destroyed by fire. Plate Cove East - Dated 1986.",
-  "Present day church with it's modern style that was built around 1990. The new church houses the church, a chapel, community center, fully equiped kitchen, stage for christmas / st. patrick's day concerts and his/her washrooms. Plate Cove - Dated - 2020",
-];
 ---
 
-{sortedImages.map((image, index) => (
-  <Modal 
-    modalId={`modal-${index + 1}`} 
-    headingText={headText} 
-    paragraphText={imageTexts[index]} 
-    imgSource={image} 
-    imgAlt={`Church Photo ${index + 1}`}
-  />
-))};
+{
+  sortedImages.map((image, index) => (
+    <Modal
+      modalId={`modal-${index + 1}`}
+      headingText={headText}
+      paragraphText={churchHistoryPhotosModalImageTexts[index]}
+      imgSource={image}
+      imgAlt={`Church Photo ${index + 1}`}
+    />
+  ))
+};

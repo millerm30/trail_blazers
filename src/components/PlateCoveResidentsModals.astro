@@ -1,48 +1,28 @@
 ---
 import Modal from "../components/Modal.astro";
+import { plateCodeResidentsPhotosModalImageTexts } from "../components/ImageTexts";
+
 const headText = "Residents of Plate Cove";
-const images = await Astro.glob("../assets/history/resident*.*").then((file => {
-  return file.map(file => file.default.src);
-}));
+const images = await Astro.glob("../assets/history/resident*.*").then(
+  (file) => {
+    return file.map((file) => file.default.src);
+  }
+);
 const sortedImages = images.sort((a, b) => {
   const aNum = a.match(/\d+/)[0];
   const bNum = b.match(/\d+/)[0];
   return aNum - bNum;
 });
-
-const imageTexts = [
-  "Mary (Philpott) Hyde, Mary (Heaney) Keough and Mary (Whalen) Keough. Plate Cove West.",
-  "From left to right. Terry Keough, Mary Ellen (Keough) Heaney, Fred Keough, (next 4 people unknown). Top left to right is Mary (Heaney) Keough and Ellen (Braker) Keough. Plate Cove West.",
-  "Herbert Keough and family horse. Plate Cove West",
-  "Ellen (Braker) Keough in Plate Cove West.",
-  "Herbert Keough and Fred Keough enjoying a horse ride in Plate Cove West.",
-  "James (Jim) Furlong. Plate Cove West. Dated - 1980's",
-  "Patrick Furlong (Pa), Genevieve (Genever) Furlong and son James (Jim) Furlong. Plate Cove West.",
-  "Ellen (Braker) (aka Mother) Keough. Plate Cove West. Dated - Late 1980's",
-  "Margaret (Furlong) Dooley. Plate Cove East.",
-  "James Furlong (left)",
-  "Mary (Whalen) Keough, Shirley (brothers) Keough and Johanna (Furlong) Keough. Plate Cove West.",
-  "Trina Keough. Plate Cove West. Dated - 1995",
-  "Cecelia (Keough) Philpott. Plate Cove West",
-  "Pius Keough. Plate Cove West.",
-  "Owen Keough. Plate Cove West.",
-  "Mary (Keough) Heaney, Herbert Keough, Anastasia (Keough) Gillingham and Regina (Keough) Furlong. Plate Cove West.",
-  "Michael Francis Furlong, Daniel Keough, Ellen (Braker) Keough and Nellie (Keough) Furlong. Plate Cove West.",
-  "Johanna (Furlong) Keough. Plate Cove West.",
-  "Ellen (Braker) Keough and Daniel Keough. Plate Cove West.",
-  "Top left to right. Daniel Keough, Fred Keough, Terry Keough, Mary (Keough) Heaney, Patrick Keough, Jerome Keough, Samual Keough, Bottom left to right. Anastasia (Keough) Gillingham, Aiden Keough, Herbert Keough, Regina (Keough) Furlong and Pierce Keough. Plate Cove West.",
-  "Top left to right. Herbert Keough, Johanna (Furlong) Keough, bottom left to right. Warren Keough, Owen Keough and Faye (Keough) Fitzgerald. Plate Cove West.",
-  "Listed in photo are Jim, Mary, Dan, Donald, Angela, Jose, Fred and Mother Keough.",
-  "Thomas Leo Furlong (aka Tom Leo) right & Catherine Blanche Furlong (nee Walsh) known to all as Blanche or 'Mudder'. Plate Cove West. Dated - 1984/85",
-];
 ---
 
-{sortedImages.map((image, index) => (
-  <Modal 
-    modalId={`modal-${index + 1}`} 
-    headingText={headText} 
-    paragraphText={imageTexts[index]} 
-    imgSource={image} 
-    imgAlt={`Image of Plate Cove Residents ${index + 1}`}
-  />
-))}
+{
+  sortedImages.map((image, index) => (
+    <Modal
+      modalId={`modal-${index + 1}`}
+      headingText={headText}
+      paragraphText={plateCodeResidentsPhotosModalImageTexts[index]}
+      imgSource={image}
+      imgAlt={`Image of Plate Cove Residents ${index + 1}`}
+    />
+  ))
+}
