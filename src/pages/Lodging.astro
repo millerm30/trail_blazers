@@ -11,10 +11,17 @@ import hillSideCamp from "../assets/business_logos/hillsideCamp.jpg";
 import philpottsLandingImage from "../assets/business_logos/philpottsanding.jpg";
 import Amenities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view2.jpg";
-
+import type { Activity, Social } from "../types";
 import { supabase } from "../lib/supabase";
 
-const { data, error } = await supabase.from("businesses").select("*").filter("type", "eq", "lodging");
+const { data, error } = await supabase
+  .from("businesses")
+  .select("*")
+  .filter("type", "eq", "lodging");
+
+if (error) {
+  console.log("Error fetching data from Supabase", error);
+}
 
 const imageMap = {
   "Round Da Bay Inn": RoundDaBayInnImage,
@@ -33,7 +40,6 @@ const title = "Plate Cove - Lodging";
     <section class="flex flex-wrap justify-center mt-10 gap-4">
       {
         data.map((business) => (
-          console.log(business),
           <BusinessCard
             businessImage={imageMap[business.name].src}
             businessName={business.name}
@@ -44,10 +50,10 @@ const title = "Plate Cove - Lodging";
             businessWebsite={business.website}
             businessWebName={business.webName}
           >
-            {business.amenities.map((activity) => (
+            {business.amenities.map((activity: Activity) => (
               <Amenities slot="before_social" activity={activity} />
             ))}
-            {business.socialIcons.map((social) => (
+            {business.socialIcons.map((social: Social) => (
               <SocialIcon
                 socialHref={social.socialHref}
                 socialName={social.socialName}

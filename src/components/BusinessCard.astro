@@ -14,42 +14,42 @@ const {
 ---
 
 <div
-  class="flex justify-between flex-col bg-white border-[1px] border-gray-300 rounded-xl max-w-sm text-black"
+  class="flex justify-between flex-col bg-white border-[1px] border-gray-300 rounded-xl max-w-sm text-black min-w-[384px]"
 >
-  <div>
-    <div class="p-2">
+  <div class="p-8">
+    <div class="mb-4">
       <img
         src={businessImage}
         alt="Business Image"
         class="w-20 rounded-full border-2"
       />
     </div>
-    <div class="p-2">
-      <p class="my-2">{businessDescription}</p>
-      <span class="flex my-2">
-        <Icon name="ion:business-sharp" class="w-6 mr-2" />
-        <p>{businessName}</p>
+    <div>
+      <p class="my-4 text-sm">{businessDescription}</p>
+      <span class="flex my-2 items-center">
+        <Icon name="ion:business-sharp" class="w-5 mr-2" />
+        <p class="text-sm">{businessName}</p>
       </span>
-      <span class="flex my-2">
-        <Icon name="ion:location-sharp" class="w-6 mr-2" />
-        <p>{businessAddress}</p>
+      <span class="flex my-2 items-center">
+        <Icon name="ion:location-sharp" class="w-5 mr-2" />
+        <p class="text-sm">{businessAddress}</p>
       </span>
-      <span class="flex my-2">
-        <Icon name="ion:call-sharp" class="w-6 mr-2" />
-        <p>{businessPhone}</p>
+      <span class="flex my-2 items-center">
+        <Icon name="ion:call-sharp" class="w-5 mr-2" />
+        <p class="text-sm">{businessPhone}</p>
       </span>
-      <span class="flex my-2">
-        <Icon name="ion:mail-sharp" class="w-6 mr-2" />
-        <p class="relative">
+      <span class="flex my-2 items-center">
+        <Icon name="ion:mail-sharp" class="w-5 mr-2" />
+        <p class="relative text-sm">
           <a
             href=`mailto: ${businessEmail}`
             class="after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#FF9950] after:transition-all after:ease-in-out after:hover:scale-x-100"
             >{businessEmail}</a>
         </p>
       </span>
-      <span class="flex my-2">
-        <Icon name="ion:link-sharp" class="w-6 mr-2" />
-        <p class="relative">
+      <span class="flex my-2 items-center">
+        <Icon name="ion:link-sharp" class="w-5 mr-2" />
+        <p class="relative text-sm">
           <a
             href={businessWebsite}
             target="_blank"
@@ -57,7 +57,9 @@ const {
             >{businessWebName}</a>
         </p>
       </span>
-      <slot name="before_social" />
+      <div class="flex flex-wrap gap-2">
+        <slot name="before_social" />
+      </div>
     </div>
   </div>
   <div class="flex justify-end bg-gray-300 p-2 rounded-b-lg">
