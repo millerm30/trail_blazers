@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 
-const { socialHref, socialName } = Astro.props;
+const { socialHref, socialType } = Astro.props;
 ---
 
-<a href={socialHref} target="_blank"><Icon class="w-8 inline mx-1 hover:text-gray-700" name={socialName} /></a>
+<a href={socialHref} target="_blank"><Icon class="w-8 inline mx-1 hover:text-gray-700" name={socialType} /></a>

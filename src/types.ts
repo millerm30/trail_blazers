@@ -4,5 +4,5 @@ export type Activity = {
 
 export type Social = {
   socialHref: string;
-  socialName: string;
+  socialType: string;
 };

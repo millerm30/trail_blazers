@@ -18,6 +18,7 @@ import Amenities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view9.png";
 import type { Activity, Social } from "../types";
 import { supabase } from "../lib/supabase";
+import { socialIconMap } from "../utils/ImageFunctions";
 
 const { data, error } = await supabase
   .from("businesses")
@@ -66,7 +67,7 @@ const title = "Plate Cove - Local Businesses";
             {business.socialIcons.map((social: Social) => (
               <SocialIcon
                 socialHref={social.socialHref}
-                socialName={social.socialName}
+                socialType={socialIconMap[social.socialType]}
               />
             ))}
           </BusinessCard>
