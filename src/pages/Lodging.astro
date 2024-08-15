@@ -3,6 +3,12 @@ import MainLayout from "../layout/MainLayout.astro";
 import "../styles/styles.css";
 import BusinessCard from "../components/BusinessCard.astro";
 import SocialIcon from "../components/SocialIcon.astro";
+import RoundDaBayInnImage from "../assets/business_logos/rounddabayinn.jpg";
+import BrookSideImage from "../assets/business_logos/brookside.jpg";
+import CedarShakeImage from "../assets/business_logos/cedarshake.jpg";
+import princehavenImage from "../assets/business_logos/princehavenCamp.jpg";
+import hillSideCamp from "../assets/business_logos/hillsideCamp.jpg";
+import philpottsLandingImage from "../assets/business_logos/philpottsanding.jpg";
 import Amenities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view2.jpg";
 import type { Activity, Social } from "../types";
@@ -17,6 +23,15 @@ if (error) {
   console.log("Error fetching data from Supabase", error);
 }
 
+const imageMap = {
+  "Round Da Bay Inn": RoundDaBayInnImage,
+  "Beautiful Brookside Cottage": BrookSideImage,
+  "The Cedar Shake": CedarShakeImage,
+  "Princehaven Campground": princehavenImage,
+  "Hillside Campground": hillSideCamp,
+  "Philpott's Landing": philpottsLandingImage,
+};
+
 const title = "Plate Cove - Lodging";
 ---
 
@@ -24,33 +39,28 @@ const title = "Plate Cove - Lodging";
   <main>
     <section class="flex flex-wrap justify-center mt-10 gap-4">
       {
-        data.map(async (business) => {
-          const businessImage = await import(
-            `../assets/business_logos/${business.imageName}.jpg`
-          );
-          return (
-            <BusinessCard
-              businessImage={businessImage.default}
-              businessName={business.name}
-              businessDescription={business.description}
-              businessAddress={business.address}
-              businessPhone={business.phone}
-              businessEmail={business.email}
-              businessWebsite={business.website}
-              businessWebName={business.webName}
-            >
-              {business.amenities.map((activity: Activity) => (
-                <Amenities slot="before_social" activity={activity} />
-              ))}
-              {business.socialIcons.map((social: Social) => (
-                <SocialIcon
-                  socialHref={social.socialHref}
-                  socialName={social.socialName}
-                />
-              ))}
-            </BusinessCard>
-          );
-        })
+        data.map((business) => (
+          <BusinessCard
+            businessImage={imageMap[business.name].src}
+            businessName={business.name}
+            businessDescription={business.description}
+            businessAddress={business.address}
+            businessPhone={business.phone}
+            businessEmail={business.email}
+            businessWebsite={business.website}
+            businessWebName={business.webName}
+          >
+            {business.amenities.map((activity: Activity) => (
+              <Amenities slot="before_social" activity={activity} />
+            ))}
+            {business.socialIcons.map((social: Social) => (
+              <SocialIcon
+                socialHref={social.socialHref}
+                socialName={social.socialName}
+              />
+            ))}
+          </BusinessCard>
+        ))
       }
     </section>
   </main>
