@@ -7,6 +7,7 @@
       "@utils/*": ["./src/utils/*"],
       "@layout/*": ["./src/layout/*"],
       "@assets/*": ["./src/assets/*"],
+      "@styles/*": ["./src/styles/*"],
     }
   },
   "extends": "astro/tsconfigs/base"
