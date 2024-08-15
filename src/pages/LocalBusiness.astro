@@ -3,17 +3,6 @@ import MainLayout from "../layout/MainLayout.astro";
 import "../styles/styles.css";
 import BusinessCard from "../components/BusinessCard.astro";
 import SocialIcon from "../components/SocialIcon.astro";
-import OutportAcresImage from "../assets/business_logos/outportacres.jpg";
-import SomethingFishyImage from "../assets/business_logos/somethingfishy.jpg";
-import TrinityEcoToursImage from "../assets/business_logos/trinityecotours.jpg";
-import BonavistaBiennaleImage from "../assets/business_logos/bonavistabiennale.jpg";
-import DiscoveryGeoPark from "../assets/business_logos/discoverygeo.jpg";
-import KDM from "../assets/business_logos/kdmLogo.png";
-import bethsVarietyImage from "../assets/business_logos/bthsVariety.jpg";
-import midwayIrvingImage from "../assets/business_logos/midwayIrving.jpg";
-import taylorsServiceImage from "../assets/business_logos/taylorsStation.jpg";
-import canddConvenienceImage from "../assets/business_logos/canddConvenience.jpg";
-import sitesNSoundsImage from "../assets/business_logos/hikensounds.jpg";
 import Amenities from "../components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view9.png";
 import type { Activity, Social } from "../types";
@@ -28,20 +17,6 @@ if (error) {
   console.log("Error fetching data from Supabase", error);
 }
 
-const imageMap = {
-  "Trinity Eco-Tours": TrinityEcoToursImage,
-  "Outport Acres": OutportAcresImage,
-  "Somethin' Fishy NL": SomethingFishyImage,
-  "Bonavista Biennale": BonavistaBiennaleImage,
-  "Discovery Global Geopark": DiscoveryGeoPark,
-  "KDM Contracting": KDM,
-  "Beth's Variety": bethsVarietyImage,
-  "Midway Irving": midwayIrvingImage,
-  "Taylor's Service Station": taylorsServiceImage,
-  "C & D Convenience": canddConvenienceImage,
-  "Hike Sites & Sounds": sitesNSoundsImage,
-};
-
 const title = "Plate Cove - Local Businesses";
 ---
 
@@ -49,28 +24,33 @@ const title = "Plate Cove - Local Businesses";
   <main>
     <section class="flex flex-wrap justify-center mt-10 gap-4">
       {
-        data.map((business) => (
-          <BusinessCard
-            businessImage={imageMap[business.name]}
-            businessName={business.name}
-            businessDescription={business.description}
-            businessAddress={business.address}
-            businessPhone={business.phone}
-            businessEmail={business.email}
-            businessWebsite={business.website}
-            businessWebName={business.webName}
-          >
-            {business.amenities.map((activity: Activity) => (
-              <Amenities slot="before_social" activity={activity} />
-            ))}
-            {business.socialIcons.map((social: Social) => (
-              <SocialIcon
-                socialHref={social.socialHref}
-                socialName={social.socialName}
-              />
-            ))}
-          </BusinessCard>
-        ))
+        data.map(async (business) => {
+          const businessImage = await import(
+            `../assets/business_logos/${business.imageName}`
+          );
+          return (
+            <BusinessCard
+              businessImage={businessImage.default}
+              businessName={business.name}
+              businessDescription={business.description}
+              businessAddress={business.address}
+              businessPhone={business.phone}
+              businessEmail={business.email}
+              businessWebsite={business.website}
+              businessWebName={business.webName}
+            >
+              {business.amenities.map((activity: Activity) => (
+                <Amenities slot="before_social" activity={activity} />
+              ))}
+              {business.socialIcons.map((social: Social) => (
+                <SocialIcon
+                  socialHref={social.socialHref}
+                  socialName={social.socialName}
+                />
+              ))}
+            </BusinessCard>
+          );
+        })
       }
     </section>
   </main>
