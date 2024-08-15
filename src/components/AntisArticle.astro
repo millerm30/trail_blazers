@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import AntiConfedAd from "../assets/history/anticonfedad.jpg";
 ---
 
@@ -60,7 +61,7 @@ import AntiConfedAd from "../assets/history/anticonfedad.jpg";
     </p>
   </div>
   <figure class="order-1 md:order-2 lg:order-2">
-    <img src={AntiConfedAd.src} alt="Anti Confederation Advertisement" class="mx-auto rounded-lg">
+    <Image src={AntiConfedAd} alt="Anti Confederation Advertisement" class="mx-auto rounded-lg">
     <figcaption class="text-center italic font-semibold text-sm">Anti Confederation Advertisement</figcaption>
     <figcaption class="text-center italic font-semibold text-sm">"Morning Chronical, St. John's, September 29 / 1869</figcaption>
   </figure>

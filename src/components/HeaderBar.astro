@@ -1,8 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import NavBar from "./NavBar.astro";
 import WebLogo from "../assets/platecove_logo.png"
 ---
 
 <header class="shadow-md bg-white text-center py-4">
-  <img src={WebLogo.src} alt="Trailblazers Logo" class="mx-auto" />
+  <Image src={WebLogo} alt="Trailblazers Logo" class="mx-auto" />
 </header>

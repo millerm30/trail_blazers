@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import oldRoute235Map from "../assets/other_photos/oldRoute235Map.jpg";
 ---
 
@@ -16,7 +17,7 @@ import oldRoute235Map from "../assets/other_photos/oldRoute235Map.jpg";
 	</p>
 	<br>
 	<figure class="float-right p-2">
-		<img src={oldRoute235Map.src} alt="Old Route 235 Map" class="rounded-lg"/>
+		<Image src={oldRoute235Map} alt="Old Route 235 Map" class="rounded-lg"/>
 		<figcaption class="text-center italic font-semibold text-sm">Bonavista Bay - Map (Decks Awash 1984)</figcaption>
 	</figure>
 	<p class="text-sm">

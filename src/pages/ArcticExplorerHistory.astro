@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import MainLayout from "../layout/MainLayout.astro";
 import "../styles/styles.css";
 import heroImage from "../assets/hero_images/view7.jpeg";
@@ -24,8 +25,8 @@ const title = "Plate Cove - Arctic Explorer";
         that gave her a service speed of 12.5 knots (23.2 km/h).
       </p>
       <figure class="float-none md:float-right lg:float-right p-2">
-        <img
-          src={arcticExplorerImage.src}
+        <Image
+          src={arcticExplorerImage}
           alt="Arctic Explorer"
           class="max-w-[320px] rounded-lg"
         />

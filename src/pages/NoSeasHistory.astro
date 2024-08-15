@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import MainLayout from "../layout/MainLayout.astro";
 import "../styles/styles.css";
 import NoSeasOne from "../assets/history/noseas1.jpg";
@@ -20,8 +21,8 @@ const title = "Plate Cove - History";
           class="flex justify-center gap-2 mx-auto flex-col md:mx-0 md:flex-row lg:flex-col md:justify-around lg:justify-start"
         >
           <figure class="flex flex-col w-max">
-            <img
-              src={NoSeasOne.src}
+            <Image
+              src={NoSeasOne}
               alt="No Seas To Wash Me Off"
               alt="Photo Pius Keough"
               class="rounded-lg"
@@ -31,8 +32,8 @@ const title = "Plate Cove - History";
             </figcaption>
           </figure>
           <figure class="flex flex-col max-w-fit">
-            <img
-              src={NoSeasTwo.src}
+            <Image
+              src={NoSeasTwo}
               alt="No Seas To Wash Me Off"
               alt="Red Beach Island"
               class="rounded-lg"
