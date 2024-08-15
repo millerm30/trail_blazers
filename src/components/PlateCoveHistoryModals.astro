@@ -1,7 +1,7 @@
 ---
-import Modal from "../components/Modal.astro";
-import { plateCoveHistoryPhotosModalImageTexts } from "../components/ImageTexts";
-import { sortImagesByNumber } from "../utils/ImageFunctions";
+import Modal from "@components/Modal.astro";
+import { plateCoveHistoryPhotosModalImageTexts } from "@components/ImageTexts";
+import { sortImagesByNumber } from "@utils/ImageFunctions";
 
 const headText = "Plate Cove History";
 const images = await Astro.glob("../assets/history/platecoveHistory*.*").then(

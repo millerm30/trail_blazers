@@ -1,19 +1,19 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
 import "../styles/styles.css";
-import BusinessCard from "../components/BusinessCard.astro";
-import SocialIcon from "../components/SocialIcon.astro";
+import BusinessCard from "@components/BusinessCard.astro";
+import SocialIcon from "@components/SocialIcon.astro";
 import RoundDaBayInnImage from "../assets/business_logos/rounddabayinn.jpg";
 import BrookSideImage from "../assets/business_logos/brookside.jpg";
 import CedarShakeImage from "../assets/business_logos/cedarshake.jpg";
 import princehavenImage from "../assets/business_logos/princehavenCamp.jpg";
 import hillSideCamp from "../assets/business_logos/hillsideCamp.jpg";
 import philpottsLandingImage from "../assets/business_logos/philpottsanding.jpg";
-import Amenities from "../components/CardActivities.astro";
+import Amenities from "@components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view2.jpg";
 import type { Activity, Social } from "../types";
 import { supabase } from "../lib/supabase";
-import { socialIconMap } from "../utils/ImageFunctions";
+import { socialIconMap } from "@utils/ImageFunctions";
 
 const { data, error } = await supabase
   .from("businesses")

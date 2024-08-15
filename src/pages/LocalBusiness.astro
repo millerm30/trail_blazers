@@ -1,8 +1,8 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
 import "../styles/styles.css";
-import BusinessCard from "../components/BusinessCard.astro";
-import SocialIcon from "../components/SocialIcon.astro";
+import BusinessCard from "@components/BusinessCard.astro";
+import SocialIcon from "@components/SocialIcon.astro";
 import OutportAcresImage from "../assets/business_logos/outportacres.jpg";
 import SomethingFishyImage from "../assets/business_logos/somethingfishy.jpg";
 import TrinityEcoToursImage from "../assets/business_logos/trinityecotours.jpg";
@@ -14,11 +14,11 @@ import midwayIrvingImage from "../assets/business_logos/midwayIrving.jpg";
 import taylorsServiceImage from "../assets/business_logos/taylorsStation.jpg";
 import canddConvenienceImage from "../assets/business_logos/canddConvenience.jpg";
 import sitesNSoundsImage from "../assets/business_logos/hikensounds.jpg";
-import Amenities from "../components/CardActivities.astro";
+import Amenities from "@components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view9.png";
 import type { Activity, Social } from "../types";
 import { supabase } from "../lib/supabase";
-import { socialIconMap } from "../utils/ImageFunctions";
+import { socialIconMap } from "@utils/ImageFunctions";
 
 const { data, error } = await supabase
   .from("businesses")

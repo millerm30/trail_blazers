@@ -1,7 +1,7 @@
 ---
 import Modal from "../components/Modal.astro";
-import { churchHistoryPhotosModalImageTexts } from "../components/ImageTexts";
-import { sortImagesByNumber } from "../utils/ImageFunctions";
+import { churchHistoryPhotosModalImageTexts } from "@components/ImageTexts";
+import { sortImagesByNumber } from "@utils/ImageFunctions";
 
 const headText = "Churches of Plate Cove";
 const images = await Astro.glob("../assets/history/oldChurch*.*").then(

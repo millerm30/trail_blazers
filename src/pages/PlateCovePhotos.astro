@@ -2,8 +2,8 @@
 import MainLayout from "../layout/MainLayout.astro";
 import "../styles/styles.css";
 import heroImage from "../assets/hero_images/view8.jpeg";
-import PlateCovePhotosModals from "../components/PlateCovePhotosModals.astro";
-import { sortImagesByNumber } from "../utils/ImageFunctions";
+import PlateCovePhotosModals from "@components/PlateCovePhotosModals.astro";
+import { sortImagesByNumber } from "@utils/ImageFunctions";
 
 const title = "Plate Cove - Plate Cove Photos";
 const images = await Astro.glob("../assets/plate_cove/plate_cove*.*").then(

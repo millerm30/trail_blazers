@@ -2,9 +2,9 @@
 import MainLayout from "../layout/MainLayout.astro";
 import heroImage from "../assets/hero_images/view3.png";
 import "../styles/styles.css";
-import ChurchModals from "../components/ChurchHistoryModals.astro";
+import ChurchModals from "@components/ChurchHistoryModals.astro";
 import ChurchSchoolArticle from "../components/ChurchSchoolArticle.astro";
-import { sortImagesByNumber } from "../utils/ImageFunctions";
+import { sortImagesByNumber } from "@utils/ImageFunctions";
 
 const title = "Plate Cove - Churches & Schools History";
 const images = await Astro.glob("../assets/history/oldChurch*.*").then(

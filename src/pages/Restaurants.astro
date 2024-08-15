@@ -1,16 +1,16 @@
 ---
 import MainLayout from "../layout/MainLayout.astro";
 import "../styles/styles.css";
-import BusinessCard from "../components/BusinessCard.astro";
-import SocialIcon from "../components/SocialIcon.astro";
+import BusinessCard from "@components/BusinessCard.astro";
+import SocialIcon from "@components/SocialIcon.astro";
 import BellasRestaurantImage from "../assets/business_logos/bellasrestaurant.jpg";
 import claytonChipsImage from "../assets/business_logos/claytonChips.jpg";
 import maudieTeaImage from "../assets/business_logos/maudiesTea.jpg";
-import Amenities from "../components/CardActivities.astro";
+import Amenities from "@components/CardActivities.astro";
 import heroImage from "../assets/hero_images/view3.png";
 import type { Activity, Social } from "../types";
 import { supabase } from "../lib/supabase";
-import { socialIconMap } from "../utils/ImageFunctions";
+import { socialIconMap } from "@utils/ImageFunctions";
 
 const { data, error } = await supabase
   .from("businesses")
