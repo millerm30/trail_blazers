@@ -8,6 +8,8 @@
       "@layout/*": ["./src/layout/*"],
       "@assets/*": ["./src/assets/*"],
       "@styles/*": ["./src/styles/*"],
+      "@modals/*": ["./src/modals/*"],
+      "@articles/*": ["./src/articles/*"],
     }
   },
   "extends": "astro/tsconfigs/base"
