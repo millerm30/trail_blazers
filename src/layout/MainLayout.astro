@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import MainHead from "../components/MainHead.astro";
 import FooterBar from "../components/FooterBar.astro";
 import HeaderBar from "../components/HeaderBar.astro";
@@ -6,19 +7,20 @@ import NavBar from "../components/NavBar.astro";
 import HeroBanner from "../components/HeroBanner.astro";
 import ScrollTop from "../components/ScrollToTop";
 
-const { title, backgroundImage } = Astro.props
+const { title, backgroundImage } = Astro.props;
 ---
 
 <html lang="en">
-	<head>
-		<MainHead title={title}/>
-	</head>
-	<body class="bg-[#f4f4f4]">
-		<HeaderBar />
-		<NavBar />
-		<HeroBanner backgroundImage={backgroundImage} />
-		<slot />
-		<ScrollTop client:load />
-		<FooterBar />
-	</body>
+  <head>
+    <MainHead title={title} />
+    <ViewTransitions />
+  </head>
+  <body class="bg-[#f4f4f4]">
+    <HeaderBar />
+    <NavBar />
+    <HeroBanner backgroundImage={backgroundImage} />
+    <slot />
+    <ScrollTop client:load />
+    <FooterBar />
+  </body>
 </html>
