@@ -26,7 +26,7 @@ const title = "Plate Cove - Local Businesses";
       {
         data.map(async (business) => {
           const businessImage = await import(
-            `../assets/business_logos/${business.imageName}`
+            `../assets/business_logos/${business.imageName}.jpg`
           );
           return (
             <BusinessCard
