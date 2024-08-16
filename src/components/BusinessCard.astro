@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import Icon from "astro-icon";
 
+import NoLogo from "../assets/business_logos/nobusinesslogo.jpg";
+
 const {
   businessImage,
   businessName,
@@ -19,11 +21,19 @@ const {
 >
   <div class="p-8">
     <div class="mb-4">
-      <Image
-        src={businessImage}
-        alt="Business Image"
-        class="w-20 rounded-full border-2"
-      />
+      {businessImage ? (
+        <Image
+          src={businessImage}
+          alt="Business Image"
+          class="w-20 rounded-full border-2"
+        />
+      ): (
+        <Image
+          src={NoLogo}
+          alt="No Business Logo"
+          class="w-20 rounded-full border-2"
+        />
+      )}
     </div>
     <div>
       <p class="my-4 text-sm">{businessDescription}</p>
