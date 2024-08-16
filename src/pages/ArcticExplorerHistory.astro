@@ -4,11 +4,9 @@ import MainLayout from "@layout/MainLayout.astro";
 import "@styles/styles.css";
 import heroImage from "@assets/hero_images/view7.jpeg";
 import arcticExplorerImage from "@assets/history/arcticExplorer.jpg";
-
-const title = "Plate Cove - Arctic Explorer";
 ---
 
-<MainLayout title={title} backgroundImage={heroImage.src}>
+<MainLayout title={"Plate Cove - Arctic Explorer"} backgroundImage={heroImage}>
   <main>
     <section
       class="bg-white mt-10 p-4 border-t-[1px] border-b-[1px] border-gray-300 text-black"
@@ -69,7 +67,9 @@ const title = "Plate Cove - Arctic Explorer";
         in the first place was not found.
       </p>
       <br />
-      <p class="text-sm">The tragedy took the lives of the following crew members:</p>
+      <p class="text-sm">
+        The tragedy took the lives of the following crew members:
+      </p>
       <ul class="list-disc pl-6 text-sm">
         <li>Jack Williams King (Captain) aged 46 of Badger's Quay, NL</li>
         <li>Gerrard Cyril Butler (First Mate) aged 28, St. John's, NL</li>

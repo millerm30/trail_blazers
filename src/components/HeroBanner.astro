@@ -1,7 +1,8 @@
 ---
+import { Image } from "astro:assets";
 const { backgroundImage } = Astro.props;
 ---
 
 <section class="flex flex-col justify-center items-center h-full relative" id="heroImage">
-	<img src={backgroundImage} alt="Hero Image" class="w-full h-72 opacity-80 object-cover object-center" />
+	<Image src={backgroundImage} alt="Hero Image" class="w-full h-72 opacity-80 object-cover object-center" />
 </section>

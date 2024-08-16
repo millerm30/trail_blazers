@@ -4,8 +4,6 @@ import "@styles/styles.css";
 import heroImage from "@assets/hero_images/view8.jpeg";
 import PlateCovePhotosModals from "@modals/PlateCovePhotosModals.astro";
 import { sortImagesByNumber } from "@utils/ImageFunctions";
-
-const title = "Plate Cove - Plate Cove Photos";
 const images = await Astro.glob("../assets/plate_cove/plate_cove*.*").then(
   (files) => {
     return files.map((file) => file.default.src);
@@ -15,7 +13,7 @@ const images = await Astro.glob("../assets/plate_cove/plate_cove*.*").then(
 const sortedImages = sortImagesByNumber(images);
 ---
 
-<MainLayout title={title} backgroundImage={heroImage.src}>
+<MainLayout title={"Plate Cove - Plate Cove Photos"} backgroundImage={heroImage}>
   <main>
     <section
       class="bg-white mt-10 p-4 border-t-[1px] border-b-[1px] border-gray-300 text-black"
