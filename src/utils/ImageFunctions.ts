@@ -1,12 +1,18 @@
+import type { SocialType } from "../types";
+
 export const sortImagesByNumber = (images: string[]): string[] => {
   return images.sort((a, b) => {
-    const aNum = a.match(/\d+/)[0];
-    const bNum = b.match(/\d+/)[0];
-    return parseInt(aNum) - parseInt(bNum);
+    const aMatch = a.match(/\d+/);
+    const bMatch = b.match(/\d+/);
+
+    const aNum = aMatch ? parseInt(aMatch[0]) : 0;
+    const bNum = bMatch ? parseInt(bMatch[0]) : 0;
+
+    return aNum - bNum;
   });
 }
 
-export const socialIconMap = {
+export const socialIconMap: { [key in SocialType ]: string } = {
   facebook: "brandico:facebook-rect",
   airbnb: "tabler:brand-airbnb",
   youtube: "fa:youtube-square",

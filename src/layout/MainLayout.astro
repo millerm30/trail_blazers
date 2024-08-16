@@ -6,6 +6,10 @@ import HeaderBar from "@components/HeaderBar.astro";
 import NavBar from "@components/NavBar.astro";
 import HeroBanner from "@components/HeroBanner.astro";
 import ScrollTop from "@components/ScrollToTop";
+interface Props {
+  title: string;
+  backgroundImage: ImageMetadata;
+}
 
 const { title, backgroundImage } = Astro.props;
 ---

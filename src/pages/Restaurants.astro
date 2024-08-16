@@ -8,20 +8,20 @@ import claytonChipsImage from "@assets/business_logos/claytonChips.jpg";
 import maudieTeaImage from "@assets/business_logos/maudiesTea.jpg";
 import Amenities from "@components/CardActivities.astro";
 import heroImage from "@assets/hero_images/view3.png";
-import type { Activity, Social } from "../types";
+import type { Activity, Social, Business, ImageMap } from "../types";
 import { supabase } from "../lib/supabase";
 import { socialIconMap } from "@utils/ImageFunctions";
 
 const { data, error } = await supabase
   .from("businesses")
   .select("*")
-  .filter("type", "eq", "restaurant");
+  .filter("type", "eq", "restaurant").returns<Business[]>();
 
 if (error) {
   console.log("Error fetching data from Supabase", error);
 }
 
-const imageMap = {
+const imageMap: ImageMap = {
   "Bella's Restaurant": BellasRestaurantImage,
   "Clayton's Chip Truck": claytonChipsImage,
   "Maudie's Tea Room": maudieTeaImage,
@@ -32,31 +32,31 @@ const imageMap = {
   <main>
     <section class="flex flex-wrap justify-center mt-10 gap-4">
       {
-        data.map(
-          (business) => (
-            (
-              <BusinessCard
-                businessImage={imageMap[business.name]}
-                businessName={business.name}
-                businessDescription={business.description}
-                businessAddress={business.address}
-                businessPhone={business.phone}
-                businessEmail={business.email}
-                businessWebsite={business.website}
-                businessWebName={business.webName}
-              >
-                {business.amenities.map((activity: Activity) => (
-                  <Amenities slot="before_social" activity={activity} />
-                ))}
-                {business.socialIcons.map((social: Social) => (
-                  <SocialIcon
-                    socialHref={social.socialHref}
-                    socialType={socialIconMap[social.socialType]}
-                  />
-                ))}
-              </BusinessCard>
-            )
-          )
+        data ? (
+          data.map((business) => (
+            <BusinessCard
+              businessImage={imageMap[business.name]}
+              businessName={business.name}
+              businessDescription={business.description}
+              businessAddress={business.address}
+              businessPhone={business.phone}
+              businessEmail={business.email}
+              businessWebsite={business.website}
+              businessWebName={business.webName}
+            >
+              {business.amenities?.map((activity: Activity) => (
+                <Amenities slot="before_social" activity={activity} />
+              ))}
+              {business.socialIcons?.map((social: Social) => (
+                <SocialIcon
+                  socialHref={social.socialHref}
+                  socialType={socialIconMap[social.socialType]}
+                />
+              ))}
+            </BusinessCard>
+          ))
+        ) : (
+          <p>No businesses found.</p>
         )
       }
     </section>

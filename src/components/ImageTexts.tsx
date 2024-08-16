@@ -1,4 +1,4 @@
-export const nakedManPhotosModalImageTexts = [
+export const nakedManPhotosModalImageTexts: string[] = [
   "Pillars at Naked Man Beach. Dated - 2021",
   "Sandbar at beach. Dated - 2021",
   "Hikers walking the beach. Dated - 2021",
@@ -81,7 +81,7 @@ export const nakedManPhotosModalImageTexts = [
   "Viewing the sandbar at low tide. Dated - 2021",
 ];
 
-export const butchersNosePhotosModalImageTexts = [
+export const butchersNosePhotosModalImageTexts: string[] = [
   "Trail sign. Dated - 2021",
   "Top of Butcher's Nose overlooking Bald Rock Point with Plate Cove West in the background. Dated - 2021",
   "Viewing Plate Cove East from the top. Dated - 2021",
@@ -96,7 +96,7 @@ export const butchersNosePhotosModalImageTexts = [
   "View over the western side of the cove. Dated - 2021",
 ];
 
-export const churchHistoryPhotosModalImageTexts = [
+export const churchHistoryPhotosModalImageTexts: string[] = [
   "Church on the right was the first church built around 1930 that was replaced with a larger church in the 1950's (left in the picture) Plate Cove East.",
   "Church when it was originally built in the 1950's with the tower which was later removed when the parish decided to hang the bell on a smaller tower close to the church. Plate Cove East",
   "Viewing Plate Cove church while boating. Plate Cove East - Dated early 1980's",
@@ -104,7 +104,7 @@ export const churchHistoryPhotosModalImageTexts = [
   "Present day church with it's modern style that was built around 1990. The new church houses the church, a chapel, community center, fully equiped kitchen, stage for christmas / st. patrick's day concerts and his/her washrooms. Plate Cove - Dated - 2020",
 ];
 
-export const jigginHeadPhotosModalImageTexts = [
+export const jigginHeadPhotosModalImageTexts: string[] = [
   "Trail sign with rules to start your hike. Dated - 2022",
   "Trail markers to follow on trail. Dated - 2022",
   "Start your hike out to the lookout. Dated - 2022",
@@ -122,7 +122,7 @@ export const jigginHeadPhotosModalImageTexts = [
   "The finish line at top of trail. Dated - 2022",
 ];
 
-export const plateCoveHistoryPhotosModalImageTexts = [
+export const plateCoveHistoryPhotosModalImageTexts: string[] = [
   "Keough family mill towards the point located in Plate Cove West. Dated - 1984",
   "As you enter Plate Cove East. Dated - 1984",
   "Stripping logs for repairs to slipway located in Plate Cove East. Dated - 1984",
@@ -140,7 +140,7 @@ export const plateCoveHistoryPhotosModalImageTexts = [
   "Daniel Keough's motorboat being launched on Bayview Drive (formely known as the back lane). Wife - Ellen (braker) Keough upper middle of picture in white dress. Genevieve Furlong to the right of Ellen Keough (4th. to the right in a dress). Plate Cove West - Dated - 1960's",
 ];
 
-export const plateCovePhotosModalImageTexts = [
+export const plateCovePhotosModalImageTexts: string[] = [
   "Butcher's Nose Lookout with Plate Cove East in the foreground and Plate Cove West in the background. Dated - 2021",
   "View from main road of wharf with iceberg in the distance. Plate Cove West. Dated - 2022",
   "View of wharf and boats in Plate Cove West. Dated - 2022",
@@ -227,7 +227,7 @@ export const plateCovePhotosModalImageTexts = [
   "Arial view of Plate Cove West. Dated - Early 1990's",
 ];
 
-export const plateCodeResidentsPhotosModalImageTexts = [
+export const plateCodeResidentsPhotosModalImageTexts: string[] = [
   "Mary (Philpott) Hyde, Mary (Heaney) Keough and Mary (Whalen) Keough. Plate Cove West.",
   "From left to right. Terry Keough, Mary Ellen (Keough) Heaney, Fred Keough, (next 4 people unknown). Top left to right is Mary (Heaney) Keough and Ellen (Braker) Keough. Plate Cove West.",
   "Herbert Keough and family horse. Plate Cove West",
@@ -253,7 +253,7 @@ export const plateCodeResidentsPhotosModalImageTexts = [
   "Thomas Leo Furlong (aka Tom Leo) right & Catherine Blanche Furlong (nee Walsh) known to all as Blanche or 'Mudder'. Plate Cove West. Dated - 1984/85",
 ];
 
-export const redBeachPhotosModalImageTexts = [
+export const redBeachPhotosModalImageTexts: string[] = [
   "Walking on Red Beach. Dated - 2021",
   "Looking at Bonavista Bay and Red Beach with a memory bench. Dated - 2021",
   "Pius Keough memorial at Red Beach Lookout. Dated - 2022",

@@ -10,7 +10,8 @@
       "@styles/*": ["./src/styles/*"],
       "@modals/*": ["./src/modals/*"],
       "@articles/*": ["./src/articles/*"],
-    }
+    },
+    "strict": true,
   },
   "extends": "astro/tsconfigs/base"
 }
