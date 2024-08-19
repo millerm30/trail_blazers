@@ -36,7 +36,7 @@ export default function WeatherComponent(): JSX.Element {
   const weatherImage = `https://openweathermap.org/img/w/${weatherData?.weather?.[0].icon}.png`;
 
   return (
-    <aside className="col-span-2 row-span-1 bg-white lg:mt-10 mb-6 p-4 lg:rounded-l-lg border-t-[1px] border-l-[1px] border-b-[1px] border-gray-300 lg:ml-4 text-black md:col-span-1 lg:col-span-1">
+    <aside className="col-span-2 row-span-1 bg-white lg:mt-10 mb-6 p-4 lg:rounded-l-lg border-t-[1px] border-l-[1px] border-b-[1px] border-gray-300 lg:ml-4 text-black md:col-span-1 lg:col-span-1 shadow-md shadow-gray-400">
       <div className="flex justify-around">
         <div className="text-center">
           <img
