@@ -1,5 +1,5 @@
 # Plate Cove Website
-<p>This website design will be used for the community of Plate Cove East/West.</p>
+<p>This website design will be used for the community of Plate Cove East/West, NL.</p>
 <p>
 As a Website Designer/Developer, I am responsible for designing and creating a website 
 for a local community using Astro JS and Tailwind CSS. My main tasks include collaborating
