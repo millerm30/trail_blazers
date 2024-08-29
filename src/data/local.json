@@ -1,0 +1,187 @@
+[
+  {
+    "id": 1,
+    "type": "local",
+    "name": "Trinity Eco-Tours",
+    "description": "Sea Kayaking, Whale Watching Tours, All Terrain Vehicle Tours, and more!",
+    "address": "1 Stoneman's Lane, Trinity, NL",
+    "phone": "709-464-3712",
+    "email": "bobbartlett@trinityeco-tours.com",
+    "website": "https://www.trinityecotours.com",
+    "webName": "www.trinityecotours.com",
+    "amenities": ["Sea Kayaking", "Whale Watching", "ATV Tours", "Accomodations", "Restaurant", "Coffee Shop"],
+    "socialIcons": [
+      {"socialHref": "https://www.facebook.com/TrinityEcoTours", "socialType": "facebook"},
+      {"socialHref": "https://www.twitter.com/trinityecotours", "socialType": "twitter"},
+      {"socialHref": "https://www.instagram.com/trinityecotours", "socialType": "instagram"},
+      {"socialHref": "https://ar.pinterest.com/trinityecotours", "socialType": "pinterest"},
+      {"socialHref": "https://www.youtube.com/channel/UCYPO-EQs3RZb66gehK1NoUQ", "socialType": "youtube"}
+    ],
+    "imageName": "trinityecotours"
+  },
+  {
+    "id": 2,
+    "type": "local",
+    "name": "Outport Acres",
+    "description": "Family farm, naturally grown produce, and agricultural sustainably.",
+    "address": "Main Road, Musgrave Town, NL",
+    "phone": "709-429-0270",
+    "email": "adam@outportacres.com",
+    "website": "https://www.outportacres.com",
+    "webName": "www.outportacres.com",
+    "amenities": ["Agriculture"],
+    "socialIcons": [
+      {"socialHref": "https://www.facebook.com/OutportAcres", "socialType": "facebook"}
+    ],
+    "imageName": "outportacres"
+  },
+  {
+    "id": 3,
+    "type": "local",
+    "name": "Somethin' Fishy NL",
+    "description": "Family owned and operated by Furlong Foods of Plate Cove!",
+    "address": "73 Top Road, Plate Cove West, NL",
+    "phone": "709-545-2251",
+    "email": "furlongs@nf.sympatico.ca",
+    "website": "https://www.furlongfoods.ca",
+    "webName": "www.furlongfoods.ca",
+    "amenities": ["Seafood Supplier"],
+    "socialIcons": [
+      {"socialHref": "https://www.facebook.com/somethinfishyNL", "socialType": "facebook"}
+    ],
+    "imageName": "somethingfishy"
+  },
+  {
+    "id": 4,
+    "type": "local",
+    "name": "Hike Sites & Sounds",
+    "description": "Guided hikes on established trails or off the beaten path. Customize your hike experience.",
+    "address": "Box 17, 5 Moss's Lane, Princeton, NL, Canada",
+    "phone": "709-427-4888",
+    "email": "hikesitesandsounds@gmail.com",
+    "website": null,
+    "webName": null,
+    "amenities": ["Tour Guide", "Hiking"],
+    "socialIcons": [
+      {"socialHref": "https://www.facebook.com/hikesitesandsounds", "socialType": "facebook"}
+    ],
+    "imageName": "hikensounds"
+  },
+  {
+    "id": 5,
+    "type": "local",
+    "name": "C & D Convenience",
+    "description": "Grocery Store / Convenience Store.",
+    "address": "5 Main Road, Plate Cove West, NL, Canada",
+    "phone": "709-545-2176",
+    "email": null,
+    "website": null,
+    "webName": null,
+    "amenities": ["Grocery"],
+    "socialIcons": [
+      {"socialHref": "https://www.facebook.com/people/C-D-Convenience/100054304399583/", "socialType": "facebook"}
+    ],
+    "imageName": "canddConvenience"
+  },
+  {
+    "id": 6,
+    "type": "local",
+    "name": "Taylor's Service Station",
+    "description": "Gas Station, Convenience Store. Open Monday - Sunday 8am - 10pm.",
+    "address": "38 Main Road, King's Cove, NL, Canada",
+    "phone": "709-447-2121",
+    "email": null,
+    "website": null,
+    "webName": null,
+    "amenities": ["Fuel", "Convenience Store"],
+    "socialIcons": [
+      {"socialType": "telephone"}
+    ],
+    "imageName": "taylorsStation"
+  },
+  {
+    "id": 7,
+    "type": "local",
+    "name": "Midway Irving",
+    "description": "Gas Station, Convenience Store, Takeout!. Open Monday - Saturday 7am - 9pm, Sunday 9am - 8pm.",
+    "address": "230 Cabot Hiway, Southern Bay, NL, Canada",
+    "phone": "709-462-3420",
+    "email": "scotter@eastlink.ca",
+    "website": null,
+    "webName": null,
+    "amenities": ["Fuel", "Convenience Store", "Takeout"],
+    "socialIcons": [
+      {"socialHref": "https://www.facebook.com/southernbaynl.ca/", "socialType": "facebook"}
+    ],
+    "imageName": "midwayIrving"
+  },
+  {
+    "id": 8,
+    "type": "local",
+    "name": "Beth's Variety",
+    "description": "A little bit of everything! Grocery, great snaks, fresh coffee and more.",
+    "address": "1 Main St, Princeton, NL, Canada",
+    "phone": "709-462-3496",
+    "email": "bethsvariety@gmail.com",
+    "website": null,
+    "webName": null,
+    "amenities": ["Convenience Store"],
+    "socialIcons": [
+      {"socialHref": "https://www.facebook.com/profile.php?id=100063495973259", "socialType": "facebook"}
+    ],
+    "imageName": "bthsVariety"
+  },
+  {
+    "id": 9,
+    "type": "local",
+    "name": "KDM Contracting",
+    "description": "Excavation Services, backfill, grubbing, garage pad construction, land clearing.",
+    "address": "20 Main Road, Plate Cove West, NL, Canada",
+    "phone": "709-427-2755",
+    "email": null,
+    "website": null,
+    "webName": null,
+    "amenities": ["Excavation"],
+    "socialIcons": [
+      {"socialType": "telephone"}
+    ],
+    "imageName": "kdmLogo"
+  },
+  {
+    "id": 10,
+    "type": "local",
+    "name": "Discovery Global Geopark",
+    "description": "Discovery global geopark half a billion years in the making.",
+    "address": "P.O. Box 280, Bonavista, NL, Canada",
+    "phone": "709-468-7789",
+    "email": "info@discoverygeopark.com",
+    "website": "https://www.discoverygeopark.com",
+    "webName": "www.discoverygeopark.com",
+    "amenities": ["Geology", "Non-Profit", "Education"],
+    "socialIcons": [
+      {"socialHref": "https://www.facebook.com/discoveryglobalgeopark", "socialType": "facebook"},
+      {"socialHref": "https://www.twitter.com/discoverygeonl", "socialType": "twitter"},
+      {"socialHref": "https://www.instagram.com/discoverygeonl", "socialType": "instagram"},
+      {"socialHref": "https://www.linkedin.com/in/discoverygeopark", "socialType": "linkedin"}
+    ],
+    "imageName": "discoverygeo"
+  },
+  {
+    "id": 11,
+    "type": "local",
+    "name": "Bonavista Biennale",
+    "description": "An innovative, rural-based, contemporary art event occuring every two years throughout Newfoundland and Labrador's Bonavista Peninsula.",
+    "address": null,
+    "phone": null,
+    "email": "admin@bonavistabiennale.com",
+    "website": "https://www.bonavistabiennale.com",
+    "webName": "www.bonavistabiennale.com",
+    "amenities": ["Art"],
+    "socialIcons": [
+      {"socialHref": "https://www.facebook.com/bonavistabiennale", "socialType": "facebook"},
+      {"socialHref": "https://www.twitter.com/BBiennale", "socialType": "twitter"},
+      {"socialHref": "https://www.instagram.com/bbiennale", "socialType": "instagram"}
+    ],
+    "imageName": "bonavistabiennale"
+  }
+]

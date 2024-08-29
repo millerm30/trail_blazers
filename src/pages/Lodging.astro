@@ -11,18 +11,11 @@ import hillSideCamp from "@assets/business_logos/hillsideCamp.jpg";
 import philpottsLandingImage from "@assets/business_logos/philpottsanding.jpg";
 import Amenities from "@components/CardActivities.astro";
 import heroImage from "@assets/hero_images/view2.jpg";
-import type { Activity, Social, Business, ImageMap } from "../types";
-import { supabase } from "../lib/supabase";
+import type { SocialType, Business, ImageMap } from "../types";
+import lodgings from "@data/lodging.json";
 import { socialIconMap } from "@utils/ImageFunctions";
 
-const { data, error } = await supabase
-  .from("businesses")
-  .select("*")
-  .filter("type", "eq", "lodging").returns<Business[]>();
-
-if (error) {
-  console.log("Error fetching data from Supabase", error);
-}
+const data: Business[] = lodgings as Business[];
 
 const imageMap: ImageMap = {
   "Round Da Bay Inn": RoundDaBayInnImage,
@@ -41,6 +34,7 @@ const imageMap: ImageMap = {
         data ? (
           data.map((business) => (
             <BusinessCard
+              key={business.id}
               businessImage={imageMap[business.name]}
               businessName={business.name}
               businessDescription={business.description}
@@ -50,13 +44,13 @@ const imageMap: ImageMap = {
               businessWebsite={business.website}
               businessWebName={business.webName}
             >
-              {business.amenities?.map((activity: Activity) => (
+              {business.amenities?.map((activity) => (
                 <Amenities slot="before_social" activity={activity} />
               ))}
-              {business.socialIcons?.map((social: Social) => (
+              {business.socialIcons?.map((social) => (
                 <SocialIcon
                   socialHref={social.socialHref}
-                  socialType={socialIconMap[social.socialType]}
+                  socialType={socialIconMap[social.socialType as SocialType]}
                 />
               ))}
             </BusinessCard>

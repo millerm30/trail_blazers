@@ -16,18 +16,11 @@ import canddConvenienceImage from "@assets/business_logos/canddConvenience.jpg";
 import sitesNSoundsImage from "@assets/business_logos/hikensounds.jpg";
 import Amenities from "@components/CardActivities.astro";
 import heroImage from "@assets/hero_images/view9.png";
-import type { Activity, Social, Business, ImageMap } from "../types";
-import { supabase } from "../lib/supabase";
+import type { SocialType, Business, ImageMap } from "../types";
+import local from "@data/local.json";
 import { socialIconMap } from "@utils/ImageFunctions";
 
-const { data, error } = await supabase
-  .from("businesses")
-  .select("*")
-  .filter("type", "eq", "local").returns<Business[]>();
-
-if (error) {
-  console.log("Error fetching data from Supabase", error);
-}
+const data: Business[] = local as Business[];
 
 const imageMap: ImageMap = {
   "Trinity Eco-Tours": TrinityEcoToursImage,
@@ -60,13 +53,13 @@ const imageMap: ImageMap = {
               businessWebsite={business.website}
               businessWebName={business.webName}
             >
-              {business.amenities?.map((activity: Activity) => (
+              {business.amenities?.map((activity) => (
                 <Amenities slot="before_social" activity={activity} />
               ))}
-              {business.socialIcons?.map((social: Social) => (
+              {business.socialIcons?.map((social) => (
                 <SocialIcon
                   socialHref={social.socialHref}
-                  socialType={socialIconMap[social.socialType]}
+                  socialType={socialIconMap[social.socialType as SocialType]}
                 />
               ))}
             </BusinessCard>

@@ -10,6 +10,7 @@
       "@styles/*": ["./src/styles/*"],
       "@modals/*": ["./src/modals/*"],
       "@articles/*": ["./src/articles/*"],
+      "@data/*": ["./src/data/*"],
     },
     "strict": true,
   },
