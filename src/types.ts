@@ -12,6 +12,8 @@ export type Social = {
 export type ImageMap = { [key: string]: ImageMetadata };
 
 export type Business = {
+  id?: number;
+  type?: string;
   name: string;
   description: string;
   address?: string;
@@ -19,6 +21,8 @@ export type Business = {
   email?: string;
   website?: string;
   webName?: string;
-  amenities?: Activity[];
-  socialIcons?: Social[];
+  amenities?: string[];
+  socialIcons?: { socialHref: string; socialType: string }[];
+  imageName?: string;
 };
+

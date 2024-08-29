@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "type": "restaurant",
+    "name": "Bella's Restaurant",
+    "description": "Open daily from 8AM until 7PM from June 13 until Otober 1.",
+    "address": "4 Main Road, Plate Cove West, NL, Canada",
+    "phone": "709-544-2008",
+    "email": "rounddabayinn@yahoo.ca",
+    "website": "http://www.rounddabayinn.com/bellas-restaurant",
+    "webName": "www.rounddabayinn.com/bellas-restaurant",
+    "amenities": 
+      [
+        "Newfoundland Food",
+        "Vegetarian","Vegan",
+        "Gluten Free"
+      ],
+    "socialIcons": [
+      {
+        "socialHref":"https://www.facebook.com/RounddaBayInnNL",
+        "socialType":"facebook"
+      }
+    ],
+    "imageName": "bellasrestaurant.jpg"
+  },
+  {
+    "id": 2,
+    "type": "restaurant",
+    "name": "Clayton's Chip Truck",
+    "description": "We're back with the same original flavor! Homestyle burgers & hand-cut fries, check us out.",
+    "address": "1 Harbour Road, Keels, NL, Canada",
+    "phone": "709-447-3168",
+    "email": null,
+    "website": null,
+    "webName": null,
+    "amenities": [
+      "Takeout",
+      "Outdoor Seating"
+    ],
+    "socialIcons": [
+      {
+        "socialHref":"https://www.facebook.com/ClaytonsChipTruck",
+        "socialType":"facebook"
+      }
+    ],
+    "imageName": "claytonChips.jpg"
+  },
+  {
+    "id": 3,
+    "type": "restaurant",
+    "name": "Maudie's Tea Room",
+    "description": "We're a tea room located in Keels, Bonavista Bay. Be sure to drop by for a cuppa tea and something.",
+    "address": "20 Main Road, Keels, NL, Canada",
+    "phone": "709-447-3131",
+    "email": null,
+    "website": null,
+    "webName": null,
+    "amenities": [
+      "Dine-In",
+      "Outdoor Seating",
+      "Scenic Views"
+    ],
+    "socialIcons": [
+      {
+        "socialHref":"https://www.facebook.com/maudiestearoom",
+        "socialType":"facebook"
+      }
+    ],
+    "imageName": "maudiesTea.jpg"
+  },
+  {
+    "id": 4,
+    "type": "restaurant",
+    "name": "Galley Restaurant",
+    "description": "Delicious home cooked meals served piping hot to your table or call for take out service. Come dine with us today!",
+    "address": "Port Rexton, NL, Canada",
+    "phone": "709-464-3832",
+    "email": "galleypr@hotmail.com",
+    "website": null,
+    "webName": null,
+    "amenities": [
+      "Eat-In",
+      "Takeout"
+    ],
+    "socialIcons": [
+      {
+        "socialHref":"https://www.facebook.com/thegalleyportrexton",
+        "socialType":"facebook"
+      }
+    ],
+    "imageName": "galleyrestaurant.jpg"
+  }
+]
